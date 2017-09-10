@@ -14,7 +14,6 @@ import org.rs2server.rs2.WorldLoader.LoginResult;
 import org.rs2server.rs2.content.StarterMap;
 import org.rs2server.rs2.content.api.*;
 import org.rs2server.rs2.content.areas.CoordinateEvent;
-import org.rs2server.rs2.content.minigames.Barrelchest;
 import org.rs2server.rs2.domain.model.player.PlayerEntity;
 import org.rs2server.rs2.domain.service.api.*;
 import org.rs2server.rs2.domain.service.impl.content.ResourceArenaServiceImpl;
@@ -1151,12 +1150,6 @@ public class World {
 			mob.getWalkingQueue().finish();
 		}
 		return state;
-	}
-
-	private Barrelchest barrelchest = new Barrelchest();
-
-	public Barrelchest getBarrelchest() {
-		return barrelchest;
 	}
 
 	/**

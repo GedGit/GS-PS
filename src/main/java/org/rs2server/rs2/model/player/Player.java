@@ -1447,10 +1447,6 @@ public class Player extends Mob implements Persistable {
 
 	public int dfsWait = 0, dfsCharges = 0;
 
-	public int barrelWait = 0;
-	public int barrelPoints = 0;
-	public boolean barrelChest = false;
-
 	public Banking getBanking() {
 		return banking;
 	}

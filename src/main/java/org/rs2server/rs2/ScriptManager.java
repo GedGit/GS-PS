@@ -11,7 +11,6 @@ import java.io.InputStreamReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 /**
  * Manages server scripts.
  * @author blakeman8192
