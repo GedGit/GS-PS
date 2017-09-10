@@ -1,0 +1,64 @@
+{
+  "rolls": 1,
+  "npcIdentifiers": [
+      970
+  ],
+  "staticDrops": [
+    {
+      "itemID": 526,
+      "hitRollCeil": 100.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    }
+  ],
+  "dynamicDrops": [
+	{
+      "itemID": 1237,
+      "hitRollCeil": 30.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 1239,
+      "hitRollCeil": 30.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+    {
+          "itemID": 1444,
+          "hitRollCeil": 30.0,
+          "maxAmount": 1,
+          "minAmount": 1
+        },
+	{
+      "itemID": 1243,
+      "hitRollCeil": 12.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 886,
+      "hitRollCeil": 30.0,
+      "maxAmount": 15,
+      "minAmount": 15
+    },
+	{
+      "itemID": 828,
+      "hitRollCeil": 12.0,
+      "maxAmount": 3,
+      "minAmount": 3
+    },
+	{
+      "itemID": 555,
+      "hitRollCeil": 30.0,
+      "maxAmount": 15,
+      "minAmount": 15
+    },
+	{
+      "itemID": 995,
+      "hitRollCeil": 12.0,
+      "maxAmount": 1000,
+      "minAmount": 250
+    },
+  ]
+}

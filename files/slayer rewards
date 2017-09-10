@@ -1,0 +1,39 @@
+Rewards-Unlock:
+Id: 262, Value: 46 // slayer task id
+Id: 261, Value: 151 // amount
+player.getActionSender().sendCS2Script(917, new Object[] {-1, -1}, "ii");
+Window Id: 548, Child: 18, Interface Id: 426, Walkable? 0
+Set: 2, Interface Id: 426, Child: 8, Offset: 0, Length: 37
+Set: 1052, Interface Id: 426, Child: 23, Offset: 0, Length: 3
+
+reward points bit = 6, config 661
+
+//1096 bits = 426.cs2:arg8 = getVarbit(1096, 0, 7);
+              426.cs2:arg8 = getVarbit(1096, 8, 15);
+              426.cs2:arg8 = getVarbit(1096, 16, 23);
+              426.cs2:arg8 = getVarbit(1096, 24, 31);
+// for rows 0-3
+
+Rewards-Extend:
+
+
+Block Task:
+Id: 1096, Value: 0
+Id: 661, Value: 889208283
+Id: 1096, Value: 0
+Id: 1096, Value: 0
+Id: 1096, Value: 0
+
+Cancel Task:
+Id: 262, Value: 46
+Id: 661, Value: 889208283
+Id: 263, Value: 0
+Id: 262, Value: 46
+Id: 261, Value: 0
+
+Unblock Task:
+Id: 1096, Value: 0
+Id: 661, Value: 889208283
+Id: 1096, Value: 0
+Id: 1096, Value: 0
+Id: 1096, Value: 0

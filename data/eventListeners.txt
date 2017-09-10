@@ -1,0 +1,6 @@
+>org.rs2server.rs2.model.event.impl.object.StrongholdObjectListener
+>org.rs2server.rs2.model.event.impl.items.SpadeEvent
+>org.rs2server.rs2.model.event.impl.object.BarrowsTunnelListener
+>org.rs2server.rs2.model.event.impl.object.BarrowsCoffinObjectListener
+>org.rs2server.rs2.model.event.impl.object.SlayerTowerAgilityChain
+>org.rs2server.rs2.model.event.impl.object.GodwarsObjectListener

@@ -1,0 +1,118 @@
+{
+  "rolls": 1,
+  "npcIdentifiers": [
+      6914
+  ],
+  "staticDrops": [
+    {
+      "itemID": 526,
+      "hitRollCeil": 100.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    }
+  ],
+  "dynamicDrops": [
+	{
+      "itemID": 13383,
+      "hitRollCeil": 75.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 13377,
+      "hitRollCeil": 20.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 13378,
+      "hitRollCeil": 20.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 13379,
+      "hitRollCeil": 20.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 13380,
+      "hitRollCeil": 20.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 13381,
+      "hitRollCeil": 20.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 5292,
+      "hitRollCeil": 75.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 5294,
+      "hitRollCeil": 75.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 5100,
+      "hitRollCeil": 75.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 5321,
+      "hitRollCeil": 75.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 5297,
+      "hitRollCeil": 20.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 5299,
+      "hitRollCeil": 20.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 5298,
+      "hitRollCeil": 7.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 5300,
+      "hitRollCeil": 7.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 5295,
+      "hitRollCeil": 7.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 5304,
+      "hitRollCeil": 7.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 5303,
+      "hitRollCeil": 7.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    }
+  ]
+}

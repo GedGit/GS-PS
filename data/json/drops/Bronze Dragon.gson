@@ -1,0 +1,118 @@
+{
+  "rolls": 1,
+  "npcIdentifiers": [
+      270
+  ],
+  "staticDrops": [
+	{
+      "itemID": 536,
+      "hitRollCeil": 100.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 2349,
+      "hitRollCeil": 100.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    }
+  ],
+  "dynamicDrops": [
+	{
+      "itemID": 829,
+      "hitRollCeil": 25.0,
+      "maxAmount": 30,
+      "minAmount": 30
+    },
+	{
+      "itemID": 12029,
+      "hitRollCeil": 8.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 1123,
+      "hitRollCeil": 6.6,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 1355,
+      "hitRollCeil": 6.6,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 1197,
+      "hitRollCeil": 6.6,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 1315,
+      "hitRollCeil": 6.6,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 1303,
+      "hitRollCeil": 7,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 4585,
+      "hitRollCeil": 1.5,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 4087,
+      "hitRollCeil": 1.5,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 554,
+      "hitRollCeil": 25.0,
+      "maxAmount": 50,
+      "minAmount": 50
+    },
+	{
+      "itemID": 9142,
+      "hitRollCeil": 9,
+      "maxAmount": 10,
+      "minAmount": 4
+    },
+	{
+      "itemID": 563,
+      "hitRollCeil": 9,
+      "maxAmount": 10,
+      "minAmount": 10
+    },
+	{
+      "itemID": 560,
+      "hitRollCeil": 9,
+      "maxAmount": 25,
+      "minAmount": 25
+    },
+	{
+      "itemID": 2361,
+      "hitRollCeil": 9,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+	{
+      "itemID": 373,
+      "hitRollCeil": 9,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+    {
+      "itemID": 4587,
+      "hitRollCeil": 4,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+  ]
+}

@@ -1,0 +1,110 @@
+  {
+    "npcIds": [
+      6914
+    ],
+    "rarities": [
+      {
+        "itemId": 13383,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 75.0
+      },
+      {
+        "itemId": 13377,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 20.0
+      },
+      {
+        "itemId": 13378,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 20.0
+      },
+      {
+        "itemId": 13379,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 20.0
+      },
+      {
+        "itemId": 13380,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 20.0
+      },
+      {
+        "itemId": 13381,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 20.0
+      },
+      {
+        "itemId": 5292,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 75.0
+      },
+      {
+        "itemId": 5294,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 75.0
+      },
+      {
+        "itemId": 5100,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 75.0
+      },
+      {
+        "itemId": 5321,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 75.0
+      },
+      {
+        "itemId": 5297,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 20.0
+      },
+      {
+        "itemId": 5299,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 20.0
+      },
+      {
+        "itemId": 5298,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 7.0
+      },
+      {
+        "itemId": 5300,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 7.0
+      },
+      {
+        "itemId": 5295,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 7.0
+      },
+      {
+        "itemId": 5304,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 7.0
+      },
+      {
+        "itemId": 5303,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 7.0
+      }
+    ]
+  }
+

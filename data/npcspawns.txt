@@ -1,0 +1,2714 @@
+//northeast = north
+//northwest = southeast
+//WEST = northwest
+//southeast = west
+//southwest = southwest
+//south = east
+//west = south
+
+//NEW HOME AREA - ZEAH
+535 1639 3663 0 NORTH_EAST false //melee shop
+7492 1638 3663 0 NORTH_EAST false //ranged shop
+7608 1637 3663 0 NORTH_EAST false //magic shop
+1152 1636 3663 0 NORTH_EAST false //nurse sarah
+508 1635 3663 0 NORTH_EAST false //general store
+403 1646 3669 0 SOUTH_EAST false //vannaka
+534 1628 3671 0 EAST false //thessalia
+4159 1646 3677 0 WEST false //teleporter
+311 1628 3675 0 SOUTH FALSE // paul - ironman
+2108 1633 3663 0 NORTH_EAST false // wise old man
+4474 1632 3663 0 NORTH_EAST false //blood money exchange
+5449 1626 3663 0 SOUTH false // potion decanter
+2914 1626 3664 0 SOUTH false // Otto Godblessed
+2989 1627 3682 0 SOUTH false // Ak haranu
+637 1627 3680 0 SOUTH false // Aubury
+5527 1626 3666 0 SOUTH false // Twiggy O'Korn achievements
+
+394 1635 3674 0 NORTH false //banker
+394 1637 3674 0 EAST false //banker
+394 1637 3672 0 SOUTH false //banker
+394 1635 3672 0 WEST false //banker
+276 1639 3670 0 WEST false // town crier / guide
+
+//NEW DONATOR ZONE AREA - ENCHANTED VALLEY
+395 3044 4536 0 WEST false //banker
+4159 3041 4532 0 SOUTH_WEST false //teleporter
+5449 3038 4528 0 NORTH_EAST false // potion decanter
+2108 3037 4528 0 NORTH_EAST false // wise old man
+534 3036 4528 0 NORTH_EAST false // thessalia
+311 3035 4528 0 NORTH_EAST false // paul - ironman
+1152 3034 4528 0 NORTH_EAST false // nurse sarah
+4474 3033 4528 0 NORTH_EAST false // blood money exchange
+535 3031 4530 0 SOUTH false //melee shop
+7492 3031 4531 0 SOUTH false //ranged shop
+7608 3031 4532 0 SOUTH false //magic shop
+508 3033 4534 0 SOUTH false //general store
+276 3048 4530 0 SOUTH_EAST false // town crier / guide
+2989 3047 4528 0 NORTH_EAST false // Ak haranu
+// Fishing spot, 0, added by: Salve
+1520 3042 4510 0 SOUTH false
+// Fishing spot, 0, added by: Salve
+4316 3043 4507 0 SOUTH false
+// Fishing spot, 0, added by: Salve
+1517 3041 4510 0 SOUTH false
+// Fishing spot, 0, added by: Salve
+1510 3044 4508 0 SOUTH false
+395 3036 4494 0 SOUTH_EAST false //banker
+395 3036 4510 0 SOUTH false //banker
+2581 3049 4532 0 SOUTH false //Mage of Zamorak (Abyss)
+
+//asgarnia dungeon
+3049 2991 9571 0 NORTH true //hobgob
+3049 2989 9581 0 NORTH true //hobgob
+3049 3000 9580 0 NORTH true //hobgob
+3050 2998 9593 0 NORTH true //hobgob
+3050 2992 9561 0 NORTH true //hobgob
+2882 2998 9550 0 NORTH true //pirate
+2880 3001 9545 0 NORTH true //pirate
+2841 3038 9585 0 NORTH true //ice warrior
+2085 3046 9589 0 NORTH true //ice giant
+2841 3053 9582 0 NORTH true //ice warrior
+2841 3063 9580 0 NORTH true //ice warrior
+2085 3059 9569 0 NORTH true //ice warrior
+2842 3001 9545 0 NORTH true //ice giant
+2842 3051 9575 0 NORTH true //ice giant
+2085 3048 9584 0 NORTH true //ice giant
+2842 3042 9576 0 NORTH true //ice giant
+
+//Zulandra sacred eels spawn
+6825 2189 3071 0 NORTH false //sacred eel spot
+6825 2186 3070 0 NORTH false //sacred eel spot
+6825 2187 3070 0 NORTH false //sacred eel spot
+6825 2200 3066 0 NORTH false //sacred eel spot
+
+//sire
+5890 3104 4843 0 SOUTH true //sire top right
+5890 2979 4843 0 SOUTH true //sire top left
+5890 2969 4779 0 SOUTH true //sire bottom left
+5890 3109 4779 0 SOUTH true //sire bottom right
+
+//ape atoll temple
+5275 2803 2787 0 NORTH true //gorilla
+5276 2798 2790 0 EAST true //gorilla
+5275 2789 2793 0 SOUTH true //gorilla
+5276 2791 2788 0 EAST true //gorilla
+5275 2787 2779 0 NORTH true //gorilla
+5276 2797 2777 0 SOUTH true //gorilla
+5275 2802 2778 0 EAST true //gorilla
+5276 2803 2784 0 NORTH true //gorilla
+5281 2799 9195 0 EAST true //lvl 98 zombie monkey
+5281 2796 9203 0 NORTH true //lvl 98 zombie monkey
+5281 2799 9195 0 SOUTH true //lvl 98 zombie monkey
+5281 2803 9198 0 EAST true //lvl 98 zombie monkey
+5281 2801 9206 0 NORTH true //lvl 98 zombie monkey
+5281 2801 9211 0 SOUTH true //lvl 98 zombie monkey
+5281 2804 9205 0 EAST true //lvl 98 zombie monkey
+5281 2806 9198 0 NORTH true //lvl 98 zombie monkey
+5281 2806 9191 0 EAST true //lvl 98 zombie monkey
+
+0 2811 3463 0 SOUTH true // Tool leprechaun (camelot)
+0 3053 3305 0 SOUTH true // Tool leprechaun (falador)
+0 3603 3528 0 SOUTH true // Tool leprechaun (canifis)
+0 2664 3375 0 SOUTH true // Tool leprechaun (ardougne)
+
+//Crashsite Cavern
+7147 2106 5648 0 SOUTH true // Demonic gorilla
+7147 2103 5642 0 SOUTH true // Demonic gorilla
+7147 2102 5652 0 SOUTH true // Demonic gorilla
+7147 2098 5644 0 SOUTH true // Demonic gorilla
+7147 2096 5649 0 SOUTH true // Demonic gorilla
+7147 2096 5658 0 SOUTH true // Demonic gorilla
+7147 2103 5658 0 SOUTH true // Demonic gorilla
+7147 2112 5662 0 SOUTH true // Demonic gorilla
+7147 2111 5653 0 SOUTH true // Demonic gorilla
+7147 2121 5659 0 SOUTH true // Demonic gorilla
+7147 2150 5650 0 SOUTH true // Demonic gorilla
+7147 2155 5659 0 SOUTH true // Demonic gorilla
+7147 2154 5668 0 SOUTH true // Demonic gorilla
+7147 2152 5676 0 SOUTH true // Demonic gorilla
+7147 2130 5674 0 SOUTH true // Demonic gorilla
+7147 2128 5680 0 SOUTH true // Demonic gorilla
+7147 2124 5676 0 SOUTH true // Demonic gorilla
+7147 2103 5674 0 SOUTH true // Demonic gorilla
+7147 2100 5673 0 SOUTH true // Demonic gorilla
+7147 2098 5677 0 SOUTH true // Demonic gorilla
+7151 2130 5645 0 SOUTH true // tortured gorilla
+7151 2134 5647 0 SOUTH true // tortured gorilla
+7151 2139 5646 0 SOUTH true // tortured gorilla
+7151 2142 5648 0 SOUTH true // tortured gorilla
+7151 2147 5644 0 SOUTH true // tortured gorilla
+7151 2151 5650 0 SOUTH true // tortured gorilla
+7151 2153 5658 0 SOUTH true // tortured gorilla
+7151 2157 5658 0 SOUTH true // tortured gorilla
+
+//Rogues den
+3194 3042 4972 1 SOUTH false //Emerald Benedict
+5919 3050 4962 1 SOUTH_EAST false //Emerald Benedict
+3193 3046 4970 1 SOUTH_EAST true //Martin Thwait
+
+//puro puro imp spawns
+1635 2592 4315 0 WEST true // imps
+1636 2592 4316 0 WEST true // imps
+1637 2592 4317 0 WEST true // imps
+1638 2592 4318 0 WEST true // imps
+1639 2592 4319 0 WEST true // imps
+1640 2592 4314 0 WEST true // imps
+1641 2592 4313 0 WEST true // imps
+1642 2588 4316 0 WEST true // imps
+1643 2588 4317 0 WEST true // imps
+1644 2592 4318 0 WEST true // imps
+
+//Edgeville NPC spawns
+535 3091 3506 0 WEST false //Melee Shop
+7493 3092 3506 0 WEST false //Range Shop
+7608 3093 3506 0 WEST false //Magic Shop
+508 3078 3509 0 SOUTH false // General store
+2581 3106 3558 0 WEST false //Mage of Zamorak(Abyss)
+4474 3082 3509 0 SOUTH false //blood money exchange
+
+// Camelot
+502 2820 3463 0 SOUTH false // Vanessa (farming shop)
+
+//corp
+319 2990 4383 2 SOUTH true //Corporeal Beast
+
+3835 2152 3859 0 SOUTH true // Oneiromancer
+2996 3462 3558 0 SOUTH true // Old Crone
+3253 3026 3379 0 SOUTH true // Wyson the gardener
+5082 3202 3424 0 SOUTH false // Gypsy Aris
+
+1755 2660 2648 0 SOUTH true // Void knight shop
+
+342 1817 3773 0 SOUTH true // Molly
+
+//Lizardman
+6766 1425 3718 0 SOUTH true // Lizardman Shaman
+6766 1438 3718 0 SOUTH true // Lizardman Shaman
+6766 1436 3704 0 SOUTH true // Lizardman Shaman
+6766 1423 3704 0 SOUTH true // Lizardman Shaman
+
+6914 1487 3701 0 SOUTH true // Lizardman
+6914 1489 3697 0 SOUTH true // Lizardman
+6914 1494 3700 0 SOUTH true // Lizardman
+6914 1498 3698 0 SOUTH true // Lizardman
+6914 1499 3703 0 SOUTH true // Lizardman
+6914 1503 3706 0 SOUTH true // Lizardman
+6914 1507 3702 0 SOUTH true // Lizardman
+6914 1505 3701 0 SOUTH true // Lizardman
+6914 1509 3693 0 SOUTH true // Lizardman
+6914 1513 3696 0 SOUTH true // Lizardman
+6914 1517 3694 0 SOUTH true // Lizardman
+6914 1522 3691 0 SOUTH true // Lizardman
+6914 1527 3691 0 SOUTH true // Lizardman
+6914 1526 3687 0 SOUTH true // Lizardman
+6914 1493 3696 0 SOUTH true // Lizardman
+6914 1495 3705 0 SOUTH true // Lizardman
+6914 1499 3704 0 SOUTH true // Lizardman
+6914 1506 3707 0 SOUTH true // Lizardman
+6914 1504 3701 0 SOUTH true // Lizardman
+
+//Giant mole
+5779 1761 5185 0 NORTH_EAST true // Giant mole
+
+//Bankers
+394 1796 3792 0 WEST false
+394 1800 3792 0 WEST false
+394 1804 3792 0 WEST false
+394 1808 3792 0 WEST false
+1517 1827 3770 0 WEST false
+
+//Piscatoris fishing colony
+1600 2329 3689 0 WEST true
+4316 2337 3703 0 WEST false
+4316 2352 3703 0 WEST false
+
+//Fally (East)
+394 2945 3366 0 NORTH_EAST false
+394 2946 3366 0 NORTH_EAST false
+394 2947 3366 0 NORTH_EAST false
+394 2948 3366 0 NORTH_EAST false
+394 2949 3366 0 NORTH_EAST false
+//Fally (West)
+394 3010 3353 0 NORTH_EAST false
+394 3011 3353 0 NORTH_EAST false
+394 3012 3353 0 NORTH_EAST false
+394 3013 3353 0 NORTH_EAST false
+394 3014 3353 0 NORTH_WEST false
+394 3015 3353 0 NORTH_EAST false
+//Edgeville
+394 3096 3491 0 SOUTH_EAST false
+394 3096 3489 0 SOUTH_EAST false
+394 3096 3492 0 NORTH_EAST false
+394 3098 3492 0 NORTH_EAST false
+//Varrock (West)
+394 3187 3436 0 SOUTH_EAST false
+394 3187 3438 0 SOUTH_EAST false
+394 3187 3440 0 SOUTH_EAST false
+394 3187 3442 0 SOUTH_EAST false
+394 3187 3444 0 SOUTH_EAST false
+//Varrock (East)
+394 3251 3418 0 NORTH_EAST false
+394 3252 3418 0 NORTH_EAST false
+394 3253 3418 0 NORTH_WEST false
+394 3254 3418 0 NORTH_EAST false
+394 3255 3418 0 NORTH_EAST false
+394 3256 3418 0 NORTH_EAST false
+//Seers village
+394 2721 3495 0 WEST false
+394 2722 3495 0 WEST false
+394 2724 3495 0 WEST false
+394 2727 3495 0 WEST false
+394 2728 3495 0 WEST false
+394 2729 3495 0 WEST false
+
+2461 2846 3539 2 SOUTH_EAST false
+239 2272 4700 0 SOUTH true // KBD
+315 3095 3503 0 WEST true // bh homie
+1510 2837 3431 0 WEST false
+1510 2846 3429 0 WEST false
+1518 2844 3429 0 WEST false
+1518 2839 3431 0 WEST false
+1520 2853 3423 0 WEST false
+3078 3224 3215 0 WEST true //man
+3083 3223 3225 0 WEST true //woman
+505 3230 3203 0 WEST false //bob
+822 3069 3517 0 WEST true //Oziach
+1045 2834 3443 0 WEST true
+
+2914 2500 3488 0 SOUTH false //Otto Godblessed(Zammy hasta creator)
+
+2040 2205 3056 0 WEST true //Zul-Areth
+3078 2966 3371 0 WEST true //man
+3083 2967 3376 0 WEST true //woman
+402 3510 3507 0 WEST true // Mazchna canifis
+3078 3096 3509 0 NORTH true //man
+3079 3094 3511 0 NORTH true //man
+3010 2964 3392 0 EAST true // Guard
+3010 2967 3394 0 WEST true // Guard
+3010 2967 3392 0 SOUTH true // Guard
+2578 3052 3491 0 WEST true // Brother Jered(Prayer cape)
+2658 3142 3448 0 WEST true // Head Chef(Cooking cape)
+1044 2823 3443 0 WEST false // Hickton(Fletching cape)
+118 2711 3432 0 WEST true // Ignatius Vulcan(Firemaking cape)
+3193 2896 3542 0 WEST true // Martin Thwait(Thieving cape)
+5810 3024 3354 0 WEST true // Master Crafter(Crafting cape)
+2913 2607 3390 0 WEST true // Master fisher(Fishing cape)
+3249 2594 3090 1 WEST true // Robe Store owner(Magic cape)
+3343 3364 3275 0 WEST true // Surgeon General Tafani(Hitpoints cape)
+4733 2998 3149 0 WEST true // Thurgo(Smithing cape)
+3226 3233 3233 0 WEST true // Woodsman Tutor(Woodcutting cape)
+405 2884 9795 0 WEST true // Duradel(Slayer cape)
+3363 3018 3338 0 WEST true // Dwarf(Mining cape)
+5832 3083 3248 0 WEST true // Martin(Farming cape)
+
+3078 1797 3745 0 WEST true //man
+3083 1804 3738 0 WEST true //woman
+3078 1794 3757 0 WEST true //man
+3083 1789 3756 0 WEST true //woman
+3078 1788 3747 0 WEST true //man
+
+//Skeletal Wyvern
+465 3050 9545 0 WEST true // Skeletal Wyvern
+465 3053 9553 0 WEST true // Skeletal Wyvern
+465 3062 9551 0 WEST true // Skeletal Wyvern
+465 3064 9543 0 WEST true // Skeletal Wyvern
+465 3058 9541 0 WEST true // Skeletal Wyvern
+
+//Experiment Cave
+1275 3564 9962 0 WEST true // Experiment(Sheep)
+1275 3552 9945 0 WEST true // Experiment(Sheep)
+1275 3550 9935 0 WEST true // Experiment(Sheep)
+1275 3537 9928 0 WEST true // Experiment(Sheep)
+1275 3510 9933 0 WEST true // Experiment(Sheep)
+1275 3482 9943 0 WEST true // Experiment(Sheep)
+1275 3505 9926 0 WEST true // Experiment(Sheep)
+
+1274 3550 9956 0 WEST true // Experiment(Spider)
+1274 3550 9956 0 WEST true // Experiment(Spider)
+1274 3556 9928 0 WEST true // Experiment(Spider)
+1274 3525 9932 0 WEST true // Experiment(Spider)
+1274 3489 9937 0 WEST true // Experiment(Spider)
+1274 3490 9946 0 WEST true // Experiment(Spider)
+1274 3528 9966 0 WEST true // Experiment(Spider)
+
+//Dagganoths
+2267 2919 4444 0 WEST true // Dagannoth Rex
+2266 2913 4455 0 WEST true // Dagannoth Prime
+2265 2909 4448 0 WEST true // Dagannoth Supreme
+
+970 2504 10145 0 WEST true // Dagannoth
+970 2506 10150 0 WEST true // Dagannoth
+970 2513 10151 0 WEST true // Dagannoth
+970 2512 10144 0 WEST true // Dagannoth
+970 2516 10141 0 WEST true // Dagannoth
+970 2519 10147 0 WEST true // Dagannoth
+970 2519 10150 0 WEST true // Dagannoth
+970 2525 10148 0 WEST true // Dagannoth
+970 2527 10141 0 WEST true // Dagannoth
+
+//Lunar isle
+3839 2138 3944 0 SOUTH true // Meteora
+
+//Port sarim
+3855 3047 3235 0 SOUTH true // Lokar
+
+//Fishing guild
+1512 2603 3417 0 WEST false //Trout and Salmon fishing spot
+1510 2604 3419 0 WEST false //Lobster fishing spot
+1510 2601 3422 0 WEST false //Lobster fishing spot
+1520 2605 3424 0 WEST false //Shark fishing spot
+1520 2602 3413 0 WEST false //Shark fishing spot
+
+//Barbarian Village
+1512 3110 3433 0 WEST false //fishing spot
+1512 3104 3425 0 WEST false //fishing spot
+
+//Skillcape Masters
+3216 3217 3238 0 SOUTH true // Melee tutor Defence
+2473 2865 3550 0 SOUTH true // Sloane Strength
+6059 2656 3440 0 SOUTH true // Armour salesman Range
+
+//Varrock
+3010 3177 3425 0 EAST true // Guard
+3010 3172 3425 0 WEST true // Guard
+3010 3174 3430 0 SOUTH true // Guard
+3010 3275 3430 0 EAST true // Guard
+3010 3276 3425 0 WEST true // Guard
+3010 3270 3425 0 SOUTH true // Guard
+637 3254 3402 0 WEST false // Aubury
+514 3216 3414 0 WEST true // General Store
+5449 3155 3480 0 WEST true // Bob Barter(G.E)
+
+//Draynor Village
+3257 3080 3249 0 WEST true // Master Farmer
+
+//Desert Treasure
+684 3306 3212 0 WEST true //Archaeologist
+1902 3260 3452 0 WEST true //Historian Minas
+
+//Warriors Guild Cyclops
+2465 2851 3536 2 WEST true //Cyclops (lvl 56)
+2466 2856 3539 2 WEST true //Cyclops (lvl 76)
+2465 2863 3539 2 WEST true //Cyclops (lvl 56)
+2466 2869 3543 2 WEST true //Cyclops (lvl 76)
+2465 2870 3549 2 WEST true //Cyclops (lvl 56)
+2466 2866 3552 2 WEST true //Cyclops (lvl 76)
+2465 2862 3548 2 WEST true //Cyclops (lvl 56)
+2466 2856 3552 2 WEST true //Cyclops (lvl 76)
+2465 2852 3547 2 WEST true //Cyclops (lvl 56)
+2466 2840 3544 2 WEST true //Cyclops (lvl 76)
+2465 2843 3552 2 WEST true //Cyclops (lvl 56)
+
+//LUMBRIDGE
+996 3217 9616 0 NORTH true // nardok - cellar
+1512 3239 3244 0 WEST false //fishing spot
+1512 3238 3253 0 WEST false //fishing spot
+2692 3233 3297 0 WEST true //Chicken
+2692 3234 3299 0 WEST true //Chicken
+2692 3231 3298 0 WEST true //Chicken
+2692 3228 3299 0 WEST true //Chicken
+2692 3231 3299 0 WEST true //Chicken
+2692 3227 3297 0 WEST true //Chicken
+2692 3233 3293 0 WEST true //Chicken
+2692 3228 3295 0 WEST true //Chicken
+//Start Goblin
+3029 3148 3222 0 WEST true
+3030 3137 3229 0 WEST true
+3031 3149 3234 0 WEST true
+3033 3153 3227 0 WEST true
+3034 3162 3227 0 WEST true
+3029 3176 3228 0 WEST true
+3030 3178 3223 0 WEST true
+3031 3178 3126 0 WEST true
+3033 3134 3424 0 WEST true
+3034 3177 3241 0 WEST true
+3029 3127 3434 0 WEST true
+3030 3176 3244 0 WEST true
+3031 3172 3248 0 WEST true
+3033 3168 3244 0 WEST true
+3034 3165 3248 0 WEST true
+3029 3176 3244 0 WEST true
+3030 3180 3236 0 WEST true
+3031 3178 3250 0 WEST true
+3033 3182 3253 0 WEST true
+3034 3191 3246 0 WEST true
+3029 3201 3238 0 WEST true
+3030 3197 3230 0 WEST true
+3031 3196 3223 0 WEST true
+3033 3194 3207 0 WEST true
+3034 3184 3212 0 WEST true
+3031 3185 3217 0 WEST true
+3033 3120 3407 0 WEST true
+3034 3177 3227 0 WEST true
+3029 3245 3237 0 WEST true
+3030 3244 3237 0 WEST true
+3031 3249 3229 0 WEST true
+3033 3255 3230 0 WEST true
+3034 3260 3228 0 WEST true
+3031 3262 3220 0 WEST true
+3033 3263 3217 0 WEST true
+3034 3263 3232 0 WEST true
+//End Goblin
+//Start Cow
+2805 3257 3263 0 WEST true
+2805 3261 3260 0 WEST true
+2805 3263 3269 0 WEST true
+2805 3260 3272 0 WEST true
+2805 3257 3278 0 WEST true
+2805 3254 3281 0 WEST true
+2805 3253 3296 0 WEST true
+2805 3249 3291 0 WEST true
+2805 3245 3294 0 WEST true
+2805 3256 3293 0 WEST true
+2805 3261 3288 0 WEST true
+2805 3261 3273 0 WEST true
+2805 3254 3276 0 WEST true
+2805 3255 3260 0 WEST true
+//End cow
+//ROCK CRABS
+100 2669 3717 0 WEST true
+100 2674 3713 0 WEST true
+100 2681 3716 0 WEST true
+100 2685 3714 0 WEST true
+100 2686 3722 0 WEST true
+100 2680 3739 0 WEST true
+100 2684 3731 0 WEST true
+100 2680 3722 0 WEST true
+100 2674 3714 0 WEST true
+100 2667 3711 0 WEST true
+100 2675 3717 0 WEST true
+100 2670 3726 0 WEST true
+100 2672 3731 0 WEST true
+100 2676 3728 0 WEST true
+100 2685 3726 0 WEST true
+3935 2664 3692 0 WEST true //Skulgrimen battle gear
+
+//TAVERLY DUNGEON
+70 2884 9816 0 WEST true // Skeleton
+70 2883 9814 0 EAST true // Skeleton
+70 2884 9811 0 WEST true // Skeleton
+70 2884 9823 0 SOUTH true // Skeleton
+85 2898 9849 0 WEST true // Ghost
+85 2903 9849 0 EAST true // Ghost
+85 2908 9849 0 WEST true // Ghost
+85 2919 9818 0 SOUTH true // Ghost
+85 2924 9818 0 WEST true // Ghost
+2834 2912 9837 0 WEST true // Giant bat
+2834 2910 9841 0 EAST true // Giant bat
+2834 2908 9828 0 WEST true // Giant bat
+2834 2918 9829 0 SOUTH true // Giant bat
+2834 2923 9831 0 WEST true // Giant bat
+2878 2931 9850 0 EAST true // Chaos Druid
+2878 2930 9848 0 WEST true // Chaos Druid
+2878 2932 9846 0 SOUTH true // Chaos Druid
+2878 2934 9846 0 WEST true // Chaos Druid
+2878 2937 9848 0 EAST true // Chaos Druid
+2878 2934 9849 0 WEST true // Chaos Druid
+2878 2931 9844 0 SOUTH true // Chaos Druid
+2878 2929 9845 0 WEST true // Chaos Druid
+2874 2939 9811 0 WEST true // Black Knight
+2874 2938 9815 0 WEST true // Black Knight
+2874 2941 9805 0 SOUTH true // Black Knight
+2844 2958 9781 0 SOUTH true // Magic Axe
+2844 2958 9785 0 WEST true // Magic Axe
+2844 2961 9779 0 EAST true // Magic Axe
+2844 2964 9780 0 WEST true // Magic Axe
+291 2922 9760 0 WEST true // Chaos Dwarf
+291 2925 9766 0 EAST true // Chaos Dwarf
+291 2927 9762 0 WEST true // Chaos Dwarf
+291 2925 9763 0 SOUTH true // Chaos Dwarf
+291 2918 9758 0 WEST true // Chaos Dwarf
+291 2921 9758 0 EAST true // Chaos Dwarf
+2005 2932 9809 0 EAST true // Leser Demon
+2005 2929 9805 0 WEST true // Leser Demon
+2005 2932 9779 0 WEST true // Leser Demon
+2005 2936 9794 0 SOUTH true // Leser Demon
+2005 2935 9789 0 EAST true // Leser Demon
+241 2919 9802 0 EAST true // Baby blue dragon
+241 2919 9799 0 SOUTH true // Baby blue dragon
+241 2914 9802 0 WEST true // Baby blue dragon
+265 2900 9801 0 EAST true // Blue dragon
+265 2895 9797 0 SOUTH true // Blue dragon
+265 2900 9801 0 WEST true // Blue dragon
+2048 2862 9769 0 WEST true // Black demon
+2048 2859 9781 0 SOUTH true // Black demon
+2048 2870 9776 0 EAST true // Black demon
+2048 2867 9772 0 WEST true // Black demon
+252 2832 9826 0 SOUTH true // Black dragon
+252 2837 9825 0 WEST true // Black dragon
+104 2857 9836 0 SOUTH true // Hell hound
+104 2860 9837 0 EAST true // Hell hound
+104 2856 9841 0 WEST true // Hell hound
+104 2856 9848 0 WEST true // Hell hound
+104 2853 9833 0 SOUTH true // Hell hound
+
+//Varrock Sewer
+2863 3236 9870 0 WEST true // Giant rat
+2863 3232 9867 0 WEST true // Giant rat
+2863 3242 9867 0 SOUTH true // Giant rat
+2854 3239 9867 0 WEST true // Rat
+2854 3236 9866 0 WEST true // Rat
+2854 3234 9868 0 SOUTH true // Rat
+2854 3245 9868 0 SOUTH true // Rat
+2854 3249 9868 0 SOUTH true // Rat
+2854 3253 9870 0 SOUTH true // Rat
+2854 3242 9891 0 SOUTH true // Rat
+2854 3245 9891 0 SOUTH true // Rat
+2854 3245 9894 0 SOUTH true // Rat
+41 3243 9893 0 SOUTH true // Zombie
+41 3251 9900 0 SOUTH true // Zombie
+3024 6256 9906 0 SOUTH true // Scorpion
+3024 3249 9907 0 SOUTH true // Scorpion
+2863 3276 9893 0 WEST true // Giant rat
+2863 3282 9897 0 SOUTH true // Giant rat
+2520 3279 9908 0 SOUTH true // Skeleton
+2520 3276 9910 0 SOUTH true // Skeleton
+2520 3274 9912 0 SOUTH true // Skeleton
+2520 3272 9913 0 SOUTH true // Skeleton
+2520 3255 9915 0 SOUTH true // Skeleton
+2520 3251 9916 0 SOUTH true // Skeleton
+2520 3248 9914 0 SOUTH true // Skeleton
+92 3241 9910 0 SOUTH true // Ghost
+92 3241 9913 0 SOUTH true // Ghost
+92 3234 9907 0 SOUTH true // Ghost
+41 3229 9905 0 SOUTH true // Zombie
+41 3227 9908 0 SOUTH true // Zombie
+41 3223 9906 0 SOUTH true // Zombie
+41 3220 9907 0 SOUTH true // Zombie
+2520 3213 9907 0 SOUTH true // Skeleton
+2520 3209 9906 0 SOUTH true // Skeleton
+3018 3210 9899 0 SOUTH true // Spider
+3018 3212 9891 0 SOUTH true // Spider
+3018 3213 9889 0 SOUTH true // Spider
+3018 3216 9890 0 SOUTH true // Spider
+3018 3216 9890 0 SOUTH true // Spider
+3018 3218 9890 0 SOUTH true // Spider
+3018 3218 9897 0 SOUTH true // Spider
+3021 3192 9890 0 SOUTH true // Red Spider
+3021 3169 9894 0 SOUTH true // Red Spider
+3021 3172 9885 0 SOUTH true // Red Spider
+3021 3174 9883 0 SOUTH true // Red Spider
+3021 3177 9883 0 SOUTH true // Red Spider
+3021 3169 9884 0 SOUTH true // Red Spider
+3021 3178 9880 0 SOUTH true // Red Spider
+2090 3168 9882 0 WEST true // Moss giant
+2090 3165 9880 0 WEST true // Moss giant
+2090 3164 9887 0 WEST true // Moss giant
+2090 3164 9881 0 WEST true // Moss giant
+2090 3158 9901 0 WEST true // Moss giant
+2090 3155 9906 0 WEST true // Moss giant
+2090 3160 9903 0 WEST true // Moss giant
+
+//Mourner Tunnels
+4005 1992 4660 0 WEST true // Dark Beast
+4005 1997 4660 0 WEST true // Dark Beast
+4005 1989 4655 0 WEST true // Dark Beast
+4005 1992 4655 0 WEST true // Dark Beast
+4005 1995 4651 0 WEST true // Dark Beast
+4005 1990 4648 0 WEST true // Dark Beast
+4005 1996 4645 0 WEST true // Dark Beast
+4005 2000 4646 0 WEST true // Dark Beast
+4005 2002 4640 0 WEST true // Dark Beast
+4005 2028 4654 0 WEST true // Dark Beast
+4005 2028 4659 0 WEST true // Dark Beast
+4005 2035 4659 0 WEST true // Dark Beast
+4005 2029 4662 0 WEST true // Dark Beast
+4005 2022 4666 0 WEST true // Dark Beast
+4005 2033 4665 0 WEST true // Dark Beast
+
+//Stronghold Slayer Cave
+6798 2432 3424 0 SOUTH true // Steve
+
+484 2435 9790 0 SOUTH true // Bloodveld
+484 2436 9795 0 SOUTH true // Bloodveld
+484 2431 9789 0 SOUTH true // Bloodveld
+484 2419 9787 0 SOUTH true // Bloodveld
+484 2415 9787 0 SOUTH true // Bloodveld
+484 2417 9783 0 SOUTH true // Bloodveld
+484 2423 9779 0 SOUTH true // Bloodveld
+484 2426 9776 0 SOUTH true // Bloodveld
+484 2425 9774 0 SOUTH true // Bloodveld
+
+104 2408 9785 0 EAST true // Hell hound
+104 2410 9781 0 WEST true // Hell hound
+104 2406 9781 0 WEST true // Hell hound
+104 2405 9785 0 SOUTH true // Hell hound
+104 2413 9776 0 EAST true // Hell hound
+104 2411 9772 0 WEST true // Hell hound
+104 2417 9772 0 WEST true // Hell hound
+104 2417 9776 0 SOUTH true // Hell hound
+
+8 2423 9758 0 EAST true // Nechryael
+8 2425 9755 0 WEST true // Nechryael
+8 2427 9752 0 WEST true // Nechryael
+8 2421 9756 0 SOUTH true // Nechryael
+8 2421 9753 0 EAST true // Nechryael
+8 2418 9755 0 WEST true // Nechryael
+8 2416 9756 0 WEST true // Nechryael
+8 2407 9762 0 SOUTH true // Nechryael
+8 2403 9765 0 WEST true // Nechryael
+8 2407 9766 0 WEST true // Nechryael
+8 2410 9764 0 SOUTH true // Nechryael
+
+412 2428 9744 0 SOUTH true // Gargoyle
+412 2427 9739 0 SOUTH true // Gargoyle
+412 2426 9735 0 SOUTH true // Gargoyle
+412 2424 9737 0 SOUTH true // Gargoyle
+412 2421 9736 0 SOUTH true // Gargoyle
+412 2419 9739 0 SOUTH true // Gargoyle
+412 2418 9741 0 SOUTH true // Gargoyle
+
+415 2413 9749 0 SOUTH true // Abby demon
+415 2406 9747 0 SOUTH true // Abby demon
+415 2403 9749 0 SOUTH true // Abby demon
+415 2405 9751 0 SOUTH true // Abby demon
+415 2407 9753 0 SOUTH true // Abby demon
+415 2405 9741 0 SOUTH true // Abby demon
+415 2403 9740 0 SOUTH true // Abby demon
+415 2395 9740 0 SOUTH true // Abby demon
+415 2393 9739 0 SOUTH true // Abby demon
+
+2514 2376 9740 0 SOUTH true // Ankou
+2514 2371 9744 0 SOUTH true // Ankou
+2514 2374 9746 0 SOUTH true // Ankou
+2514 2376 9751 0 SOUTH true // Ankou
+2514 2377 9753 0 SOUTH true // Ankou
+2514 2377 9756 0 SOUTH true // Ankou
+
+2025 2363 9742 0 SOUTH true // Greater Demon
+2025 2360 9740 0 SOUTH true // Greater Demon
+2025 2357 9738 0 SOUTH true // Greater Demon
+2025 2363 9750 0 SOUTH true // Greater Demon
+2025 2360 9755 0 SOUTH true // Greater Demon
+2025 2365 9755 0 SOUTH true // Greater Demon
+2025 2364 9765 0 SOUTH true // Greater Demon
+2025 2363 9773 0 SOUTH true // Greater Demon
+2025 2362 9777 0 SOUTH true // Greater Demon
+
+498 3737 5790 0 SOUTH true // Smoke Devil
+498 3739 5785 0 SOUTH true // Smoke Devil
+498 3746 5787 0 SOUTH true // Smoke Devil
+498 3749 5778 0 SOUTH true // Smoke Devil
+498 3744 5780 0 SOUTH true // Smoke Devil
+498 3753 5774 0 SOUTH true // Smoke Devil
+498 3759 5768 0 SOUTH true // Smoke Devil
+498 3743 5767 0 SOUTH true // Smoke Devil
+498 3736 5773 0 SOUTH true // Smoke Devil
+498 3734 5779 0 SOUTH true // Smoke Devil
+498 3729 5783 0 SOUTH true // Smoke Devil
+498 3730 5793 0 SOUTH true // Smoke Devil
+498 3732 5801 0 SOUTH true // Smoke Devil
+498 3740 5798 0 SOUTH true // Smoke Devil
+498 3746 5799 0 SOUTH true // Smoke Devil
+498 3754 5797 0 SOUTH true // Smoke Devil
+498 3758 5789 0 SOUTH true // Smoke Devil
+498 3752 5782 0 SOUTH true // Smoke Devil
+498 3750 5769 0 SOUTH true // Smoke Devil
+498 3744 5793 0 SOUTH true // Smoke Devil
+498 3754 5803 0 SOUTH true // Smoke Devil
+498 3763 5806 0 SOUTH true // Smoke Devil
+498 3766 5798 0 SOUTH true // Smoke Devil
+498 3765 5781 0 SOUTH true // Smoke Devil
+498 3764 5770 0 SOUTH true // Smoke Devil
+498 3726 5769 0 SOUTH true // Smoke Devil
+498 3728 5796 0 SOUTH true // Smoke Devil
+498 3671 5768 0 SOUTH true // Smoke Devil
+498 3664 5765 0 SOUTH true // Smoke Devil
+498 3656 5768 0 SOUTH true // Smoke Devil
+498 3656 5775 0 SOUTH true // Smoke Devil
+498 3663 5770 0 SOUTH true // Smoke Devil
+498 3671 5773 0 SOUTH true // Smoke Devil
+498 3672 5778 0 SOUTH true // Smoke Devil
+498 3672 5771 0 SOUTH true // Smoke Devil
+498 3653 5773 0 SOUTH true // Smoke Devil
+498 3659 5773 0 SOUTH true // Smoke Devil
+498 3668 5763 0 SOUTH true // Smoke Devil
+499 3664 5777 0 SOUTH true // Thermonuclear Smoke Devil
+
+2 2376 9770 0 SOUTH true // Aberrant Spectre
+2 2372 9768 0 SOUTH true // Aberrant Spectre
+2 2371 9773 0 SOUTH true // Aberrant Spectre
+2 2373 9777 0 SOUTH true // Aberrant Spectre
+2 2382 9776 0 SOUTH true // Aberrant Spectre
+2 2384 9771 0 SOUTH true // Aberrant Spectre
+2 2388 9769 0 SOUTH true // Aberrant Spectre
+2 2388 9773 0 SOUTH true // Aberrant Spectre
+2 2392 9780 0 SOUTH true // Aberrant Spectre
+2 2396 9774 0 SOUTH true // Aberrant Spectre
+2 2397 9777 0 SOUTH true // Aberrant Spectre
+2 2403 9774 0 SOUTH true // Aberrant Spectre
+
+2075 2354 9774 0 WEST true // Fire giant
+2075 2350 9773 0 WEST true // Fire giant
+2075 2355 9770 0 WEST true // Fire giant
+2075 2351 9768 0 WEST true // Fire giant
+2075 2354 9762 0 WEST true // Fire giant
+2075 2351 9759 0 WEST true // Fire giant
+2075 2352 9755 0 WEST true // Fire giant
+2075 2346 9765 0 WEST true // Fire giant
+2075 2344 9764 0 WEST true // Fire giant
+2075 2345 9761 0 WEST true // Fire giant
+
+252 2335 9758 0 SOUTH true // Black dragon
+252 2338 9752 0 WEST true // Black dragon
+252 2331 9750 0 SOUTH true // Black dragon
+252 2331 9745 0 WEST true // Black dragon
+252 2285 9741 0 SOUTH true // Black dragon
+252 2291 9741 0 WEST true // Black dragon
+252 2297 9741 0 SOUTH true // Black dragon
+252 2299 9753 0 WEST true // Black dragon
+252 2302 9758 0 SOUTH true // Black dragon
+252 2286 9751 0 WEST true // Black dragon
+
+270 2349 9743 0 WEST true // Bronze dragon
+270 2349 9734 0 EAST true // Bronze dragon
+270 2342 9734 0 SOUTH true // Bronze Dragon
+
+272 2329 9736 0 EAST true // Iron dragon
+272 2322 9735 0 EAST true // Iron dragon
+272 2313 9734 0 EAST true // Iron dragon
+272 2311 9743 0 EAST true // Iron dragon
+272 2316 9747 0 EAST true // Iron dragon
+272 2313 9753 0 EAST true // Iron dragon
+
+274 2318 9761 0 EAST true // Steel dragon
+274 2323 9765 0 EAST true // Steel dragon
+274 2323 9769 0 EAST true // Steel dragon
+274 2319 9777 0 EAST true // Steel dragon
+274 2311 9774 0 EAST true // Steel dragon
+
+265 2277 9760 0 EAST true // Blue dragon
+265 2269 9758 0 SOUTH true // Blue dragon
+265 2256 9756 0 WEST true // Blue dragon
+265 2251 9748 0 EAST true // Blue dragon
+265 2258 9745 0 SOUTH true // Blue dragon
+265 2263 9741 0 WEST true // Blue dragon
+265 2267 9747 0 SOUTH true // Blue dragon
+265 2273 9747 0 WEST true // Blue dragon
+
+2048 2298 9773 0 WEST true // Black demon
+2048 2294 9782 0 SOUTH true // Black demon
+2048 2281 9778 0 EAST true // Black demon
+2048 2276 9775 0 WEST true // Black demon
+2048 2272 9781 0 WEST true // Black demon
+2048 2262 9781 0 WEST true // Black demon
+2048 2255 9777 0 SOUTH true // Black demon
+2048 2253 9773 0 EAST true // Black demon
+2048 2257 9768 0 WEST true // Black demon
+2048 2263 9767 0 WEST true // Black demon
+
+//Karamja Volcano
+2005 2834 9563 0 WEST true // Leser Demon
+2005 2837 9558 0 SOUTH true // Leser Demon
+2005 2843 9558 0 EAST true // Leser Demon
+
+//Slayer Tower
+8 3436 3575 2 SOUTH true // Nechraeyel
+8 3433 3566 2 SOUTH true // Nechraeyel
+8 3442 3569 2 SOUTH true // Nechraeyel
+8 3450 3571 2 SOUTH true // Nechraeyel
+8 3439 3556 2 SOUTH true // Nechraeyel
+8 3447 3561 2 SOUTH true // Nechraeyel
+448 3411 3537 0 SOUTH true // Crawling Hand
+448 3408 3537 0 SOUTH true // Crawling Hand
+448 3413 3536 0 SOUTH true // Crawling Hand
+448 3410 3540 0 SOUTH true // Crawling Hand
+448 3411 3549 0 SOUTH true // Crawling Hand
+448 3413 3546 0 SOUTH true // Crawling Hand
+448 3415 3572 0 SOUTH true // Crawling Hand
+448 3411 3571 0 SOUTH true // Crawling Hand
+448 3416 3558 0 SOUTH true // Crawling Hand
+448 3413 3561 0 SOUTH true // Crawling Hand
+448 3414 3556 0 SOUTH true // Crawling Hand
+448 3411 3556 0 SOUTH true // Crawling Hand
+448 3411 3558 0 SOUTH true // Crawling Hand
+448 3417 3572 0 SOUTH true // Crawling Hand
+448 3420 3574 0 SOUTH true // Crawling Hand
+448 3434 3574 0 SOUTH true // Crawling Hand
+448 3437 3570 0 SOUTH true // Crawling Hand
+448 3432 3570 0 SOUTH true // Crawling Hand
+448 3432 3562 0 SOUTH true // Crawling Hand
+448 3438 3562 0 SOUTH true // Crawling Hand
+
+455 3419 3544 0 SOUTH true // Crawling Hand Large
+455 3420 3551 0 SOUTH true // Crawling Hand Large
+455 3429 3543 0 SOUTH true // Crawling Hand Large
+455 3425 3542 0 SOUTH true // Crawling Hand Large
+
+414 3433 3552 0 SOUTH true // Banshee
+414 3435 3549 0 SOUTH true // Banshee
+414 3442 3548 0 SOUTH true // Banshee
+414 3446 35444 0 SOUTH true // Banshee
+414 3448 3539 0 SOUTH true // Banshee
+414 3448 3534 0 SOUTH true // Banshee
+414 3442 3536 0 SOUTH true // Banshee
+
+484 3422 3574 1 SOUTH true // Bloodveld
+484 3419 3573 1 SOUTH true // Bloodveld
+484 3424 3573 1 SOUTH true // Bloodveld
+//484 3410 3574 1 SOUTH true // Bloodveld
+//484 3414 3573 1 SOUTH true // Bloodveld
+//484 3410 3570 1 SOUTH true // Bloodveld
+484 3408 3574 1 SOUTH true // Bloodveld
+484 3421 3562 1 SOUTH true // Bloodveld
+484 3418 3566 1 SOUTH true // Bloodveld
+484 3423 3566 1 SOUTH true // Bloodveld
+484 3425 3560 1 SOUTH true // Bloodveld
+484 3418 3560 1 SOUTH true // Bloodveld
+
+443 3441 3556 1 SOUTH true // Infernal mage
+443 3435 3557 1 SOUTH true // Infernal mage
+443 3433 3557 1 SOUTH true // Infernal mage
+443 3434 3564 1 SOUTH true // Infernal mage
+443 3437 3565 1 SOUTH true // Infernal mage
+443 3442 3563 1 SOUTH true // Infernal mage
+443 3449 3572 1 SOUTH true // Infernal mage
+443 3443 3574 1 SOUTH true // Infernal mage
+443 3438 3571 1 SOUTH true // Infernal mage
+
+2 3424 3550 1 SOUTH true // Aberrant Spectre
+2 3414 3551 1 SOUTH true // Aberrant Spectre
+2 3412 3547 1 SOUTH true // Aberrant Spectre
+2 3424 3542 1 SOUTH true // Aberrant Spectre
+2 3428 3539 1 SOUTH true // Aberrant Spectre
+2 3421 3537 1 SOUTH true // Aberrant Spectre
+
+412 3434 3539 2 SOUTH true // Gargoyle
+412 3440 3539 2 SOUTH true // Gargoyle
+412 3444 3540 2 SOUTH true // Gargoyle
+412 3446 3535 2 SOUTH true // Gargoyle
+412 3448 3548 2 SOUTH true // Gargoyle
+412 3442 3551 2 SOUTH true // Gargoyle
+412 3435 3551 2 SOUTH true // Gargoyle
+
+415 3420 3571 2 SOUTH true // Abby demon
+415 3428 3572 2 SOUTH true // Abby demon
+415 3420 3563 2 SOUTH true // Abby demon
+415 3416 3559 2 SOUTH true // Abby demon
+415 3412 3563 2 SOUTH true // Abby demon
+415 3410 3573 2 SOUTH true // Abby demon
+
+//Brimhaven Dungeon
+2048 2702 9483 0 WEST true // Black demon
+2048 2701 9489 0 SOUTH true // Black demon
+2048 2708 9487 0 EAST true // Black demon
+2048 2710 9480 0 WEST true // Black demon
+2048 2719 9484 0 WEST true // Black demon
+270 2734 9480 0 WEST true // Bronze dragon
+270 2733 9493 0 EAST true // Bronze dragon
+270 2744 9487 0 SOUTH true // Bronze Dragon
+272 2742 9430 0 EAST true // Iron dragon
+272 2739 9454 0 EAST true // Iron dragon
+272 2718 9461 0 EAST true // Iron dragon
+272 2702 9458 0 EAST true // Iron dragon
+272 2710 9450 0 EAST true // Iron dragon
+272 2703 9425 0 EAST true // Iron dragon
+272 2711 9420 0 EAST true // Iron dragon
+274 2714 9433 0 EAST true // Steel dragon
+274 2712 9444 0 EAST true // Steel dragon
+274 2729 9445 0 EAST true // Steel dragon
+274 2729 9458 0 EAST true // Steel dragon
+
+//Shilo village
+1600 2852 2954 0 NORTH_EAST false
+
+//Godwars
+2215 2872 5361 2 WEST true // General Graardor
+2216 2867 5362 2 WEST true // Sergeant Strongstack
+2217 2871 5354 2 WEST true // Sergeant Steelwill
+2218 2874 5360 2 WEST true // Sergeant Grimspike
+
+3162 2833 5303 2 WEST true // Kree'Arra
+3164 2830 5300 2 WEST true // Flockleader Geerin
+3165 2839 5301 2 WEST true // Flight Kilisa
+3163 2830 5304 2 WEST true // Wingman Skree
+
+2205 2898 5266 0 WEST true // Commander Zilyana
+2206 2901 5271 0 WEST true // Starlight
+2207 2903 5261 0 WEST true // Growler
+2208 2893 5267 0 WEST true // Bree
+
+3129 2926 5324 2 WEST true // K'ril Tsutsaroth
+3130 2923 5322 2 WEST true // Tstanon Karlak
+3131 2931 5327 2 WEST true // Zakl'n Gritch
+3132 2932 5322 2 WEST true // Balfrug Kreeyath
+
+//Al Kharid
+3231 3276 3193 0 WEST false // Ellis
+1510 3267 3148 0 WEST false //fishing spot
+1510 3275 3140 0 WEST false //fishing spot
+
+//Fremennik Slayer Dungeon
+406 2797 9996 0 WEST true // Cave Crawler
+406 2793 9998 0 WEST true // Cave Crawler
+406 2792 9993 0 WEST true // Cave Crawler
+406 2790 9997 0 WEST true // Cave Crawler
+406 2787 9994 0 WEST true // Cave Crawler
+406 2784 9995 0 WEST true // Cave Crawler
+406 2782 10000 0 WEST true // Cave Crawler
+406 2785 9999 0 WEST true // Cave Crawler
+421 2794 10016 0 WEST true // Rockslug
+421 2792 10019 0 WEST true // Rockslug
+421 2800 10013 0 WEST true // Rockslug
+421 2798 10018 0 WEST true // Rockslug
+421 2802 10021 0 WEST true // Rockslug
+421 2804 10017 0 WEST true // Rockslug
+421 2806 10021 0 WEST true // Rockslug
+419 2802 10032 0 WEST true // Cockatrice
+419 2797 10031 0 WEST true // Cockatrice
+419 2800 10036 0 WEST true // Cockatrice
+419 2796 10034 0 WEST true // Cockatrice
+419 2792 10037 0 WEST true // Cockatrice
+419 2788 10034 0 WEST true // Cockatrice
+419 2785 10038 0 WEST true // Cockatrice
+433 2757 10011 0 WEST true // pyrefiend
+433 2761 10012 0 WEST true // pyrefiend
+433 2760 10008 0 WEST true // pyrefiend
+433 2757 10006 0 WEST true // pyrefiend
+433 2759 10003 0 WEST true // pyrefiend
+433 2762 10005 0 WEST true // pyrefiend
+433 2766 10002 0 WEST true // pyrefiend
+433 2760 10000 0 WEST true // pyrefiend
+433 2766 10004 0 WEST true // pyrefiend
+433 2761 9997 0 WEST true // pyrefiend
+417 2745 10004 0 WEST true // basilisk
+417 2740 10005 0 WEST true // basilisk
+417 2740 10010 0 WEST true // basilisk
+417 2746 10008 0 WEST true // basilisk
+417 2743 10012 0 WEST true // basilisk
+417 2746 10014 0 WEST true // basilisk
+417 2741 10016 0 WEST true // basilisk
+437 2711 10031 0 WEST true // jelly
+437 2712 10026 0 WEST true // jelly
+437 2709 10023 0 WEST true // jelly
+437 2707 10028 0 WEST true // jelly
+437 2705 10025 0 WEST true // jelly
+437 2703 10022 0 WEST true // jelly
+437 2699 10023 0 WEST true // jelly
+437 2697 10027 0 WEST true // jelly
+437 2700 10030 0 WEST true // jelly
+437 2703 10032 0 WEST true // jelly
+427 2716 10010 0 WEST true // turoth
+428 2720 10012 0 WEST true // turoth
+429 2720 10008 0 WEST true // turoth
+428 2719 10004 0 WEST true // turoth
+427 2723 10006 0 WEST true // turoth
+427 2724 10011 0 WEST true // turoth
+429 2726 10007 0 WEST true // turoth
+428 2722 10001 0 WEST true // turoth
+427 2722 9995 0 WEST true // turoth
+428 2729 9994 0 WEST true // turoth
+410 2703 10001 0 WEST true // kurask
+410 2704 9995 0 WEST true // kurask
+410 2696 9994 0 WEST true // kurask
+410 2695 10002 0 WEST true // kurask
+410 2699 9998 0 WEST true // kurask
+
+//Tzhaar
+2182 2445 5179 0 WEST false // Tzhaar Banker
+2180 2440 5168 0 NORTH_EAST false // Tzhaar-Mej-Jal
+2183 2477 5146 0 WEST true // Tzhaar-hur-tel equipment
+2184 2464 5149 0 WEST true // Tzhaar-hur-lek
+2167 2439 5171 0 WEST true // Tzhaar-xil
+2167 2449 5169 0 WEST true // Tzhaar-xil
+2167 2456 5160 0 WEST true // Tzhaar-xil
+2167 2455 5156 0 WEST true // Tzhaar-xil
+2167 2465 5163 0 WEST true // Tzhaar-xil
+2167 2463 5170 0 WEST true // Tzhaar-xil
+2167 2471 5168 0 WEST true // Tzhaar-xil
+2167 2477 5169 0 WEST true // Tzhaar-xil
+2167 2475 5153 0 WEST true // Tzhaar-xil
+2167 2439 5171 0 WEST true // Tzhaar-xil
+2167 2483 5154 0 WEST true // Tzhaar-xil
+2173 2469 5163 0 WEST true // Tzhaar-ket
+2173 2481 5159 0 WEST true // Tzhaar-ket
+2173 2462 5142 0 WEST true // Tzhaar-ket
+2173 2452 5143 0 WEST true // Tzhaar-ket
+2173 2453 5155 0 WEST true // Tzhaar-ket
+
+//Member zone
+1536 1253 3533 0 WEST false // Dark crab fishing spot
+6825 1261 3522 0 WEST false // Angler Fishing
+1520 1264 3520 0 WEST false // harpoon fishing
+4316 1254 3532 0 WEST false //monkfish fishing
+7378 1263 3501 0 NORTH false //navigator
+
+//Wilderness
+6599 3183 3945 0 NORTH_EAST false // Mandrith(Resource arena)
+13 3181 3939 0 WEST true // Piles
+1536 3185 3926 0 WEST false // Dark crab fishing spot
+1536 3183 3926 0 WEST false // Dark crab fishing spot
+1536 3181 3926 0 WEST false // Dark crab fishing spot
+260 3337 3673 0 WEST true // Green Dragons
+260 3341 3678 0 WEST true // Green Dragons
+260 3342 3694 0 WEST true // Green Dragons
+260 3332 3674 0 WEST true // Green Dragons
+260 3333 3686 0 WEST true // Green Dragons
+260 3337 3682 0 WEST true // Green Dragons
+260 2973 3620 0 WEST true // Green Dragons
+260 2983 3620 0 WEST true // Green Dragons
+260 2979 3610 0 WEST true // Green Dragons
+260 3146 3698 0 WEST true // Green Dragons
+260 3141 3707 0 WEST true // Green Dragons
+260 3153 3706 0 WEST true // Green Dragons
+260 3160 3708 0 WEST true // Green Dragons
+260 3160 3715 0 WEST true // Green Dragons
+260 3146 3716 0 WEST true // Green Dragons
+6593 3212 3846 0 WEST true // Lava Dragon
+6593 3215 3812 0 WEST true // Lava Dragon
+6593 3216 3821 0 WEST true // Lava Dragon
+6593 3210 3838 0 WEST true // Lava Dragon
+6593 3194 3832 0 WEST true // Lava Dragon
+6593 3201 3818 0 WEST true // Lava Dragon
+6593 3186 3816 0 WEST true // Lava Dragon
+2054 3253 3921 0 WEST true // Chaos Elemental
+6610 3338 3741 0 WEST true // Venenatis
+6619 2979 3846 0 WEST true // Chaos Fanatic
+
+//Waterfall 
+2075 2582 9897 0 WEST true // Fire giant
+2075 2576 9899 0 WEST true // Fire giant
+2075 2573 9894 0 WEST true // Fire giant
+2075 2575 9890 0 WEST true // Fire giant
+2075 2579 9891 0 WEST true // Fire giant
+2075 2582 9894 0 WEST true // Fire giant
+2075 2568 9889 0 WEST true // Fire giant
+2075 2564 9886 0 WEST true // Fire giant
+2075 2570 9886 0 WEST true // Fire giant
+
+//Cave horror Cave
+3209 3734 9352 0 WEST true // Cave horror
+3209 3727 9351 0 WEST true // Cave horror
+3209 3718 9356 0 WEST true // Cave horror
+3209 3724 9369 0 WEST true // Cave horror
+3209 3731 9370 0 WEST true // Cave horror
+3209 3739 9375 0 WEST true // Cave horror
+3209 3739 9385 0 WEST true // Cave horror
+3209 3755 9387 0 WEST true // Cave horror
+3209 3754 9397 0 WEST true // Cave horror
+3209 3735 9400 0 WEST true // Cave horror
+3209 3741 9409 0 WEST true // Cave horror
+3209 3747 9413 0 WEST true // Cave horror
+3209 3762 9409 0 WEST true // Cave horror
+3209 3763 9423 0 WEST true // Cave horror
+3209 3748 9424 0 WEST true // Cave horror
+
+//Various Slayer NPC's
+2090 2565 3401 0 WEST true // Moss giant
+2090 2549 3409 0 WEST true // Moss giant
+2090 2556 3408 0 WEST true // Moss giant
+
+//Mage bank
+1601 2536 4717 0 WEST true // Rune shop
+1600 2534 4713 0 WEST true // Banker
+1603 2541 4716 0 WEST true // Kolodion
+1602 2507 4695 0 WEST true // Chamber guardian
+
+//Ogre's East of Castle Wars
+2095 2499 3093 0 WEST true // Ogre
+2095 2497 3090 0 WEST true // Ogre
+2095 2502 3092 0 WEST true // Ogre
+2095 2500 3095 0 WEST true // Ogre
+2095 2505 3097 0 WEST true // Ogre
+
+//Stronghold of Security
+2482 1872 5242 0 SOUTH_EAST true
+2493 1874 5230 0 WEST true
+2493 1870 5232 0 SOUTH_EAST true
+2490 1871 5228 0 WEST true
+2486 1864 5226 0 WEST true
+2493 1858 5235 0 NORTH_EAST true
+2482 1873 5230 0 NORTH_EAST true
+2493 1871 5241 0 WEST true
+2493 1860 5223 0 WEST true
+2482 1870 5235 0 WEST true
+2493 1862 5222 0 WEST true
+2486 1859 5220 0 NORTH_EAST true
+2493 1874 5234 0 WEST true
+2493 1874 5230 0 WEST true
+2493 1875 5219 0 SOUTH_EAST true
+2482 1872 5217 0 SOUTH_EAST true
+2484 1860 5215 0 WEST true
+2493 1876 5215 0 SOUTH true
+2493 1876 5220 0 WEST true
+2482 1873 5212 0 NORTH_EAST true
+2493 1859 5206 0 WEST true
+2482 1877 5218 0 SOUTH_EAST true
+2484 1859 5203 0 WEST true
+2493 1877 5216 0 SOUTH true
+2493 1862 5201 0 WEST true
+2493 1858 5201 0 SOUTH_EAST true
+2493 1874 5201 0 WEST true
+2482 1877 5216 0 SOUTH_EAST true
+2486 1863 5201 0 WEST true
+2484 1860 5226 0 WEST true
+2493 1858 5202 0 NORTH_EAST true
+2484 1859 5200 0 WEST true
+2484 1860 5199 0 WEST true
+2493 1860 5200 0 SOUTH_EAST true
+2484 1864 5218 0 WEST true
+2493 1875 5197 0 SOUTH_EAST true
+2493 1875 5201 0 WEST true
+2484 1860 5222 0 WEST true
+2493 1861 5194 0 SOUTH true
+2493 1861 5224 0 WEST true
+2482 1875 5218 0 WEST true
+2486 1861 5224 0 WEST true
+2493 1808 5152 0 WEST true
+2482 1808 5152 0 WEST true
+2482 1871 5191 0 WEST true
+2485 1875 5199 0 WEST true
+2493 1860 5192 0 NORTH_EAST true
+2493 1874 5188 0 WEST true
+2493 1867 5188 0 WEST true
+2482 1868 5188 0 WEST true
+2493 1866 5189 0 SOUTH_EAST true
+2482 1861 5189 0 SOUTH_EAST true
+2493 1876 5189 0 WEST true
+2493 1876 5196 0 WEST true
+2493 1876 5188 0 SOUTH_EAST true
+2493 1876 5191 0 SOUTH_EAST true
+2493 1877 5191 0 NORTH_EAST true
+2493 1877 5197 0 WEST true
+2493 1881 5198 0 WEST true
+2489 1880 5200 0 SOUTH_EAST true
+2493 1882 5197 0 WEST true
+2493 1883 5203 0 NORTH_EAST true
+2485 1882 5201 0 SOUTH_EAST true
+2493 1882 5198 0 WEST true
+2487 1881 5199 0 SOUTH_EAST true
+2484 1865 5205 0 WEST true
+2493 1863 5205 0 WEST true
+2493 1883 5205 0 SOUTH_EAST true
+2484 1862 5205 0 NORTH_EAST true
+2488 1808 5152 0 WEST true
+2493 1861 5205 0 SOUTH_EAST true
+2493 1887 5204 0 SOUTH true
+2484 1862 5205 0 NORTH_EAST true
+2493 1863 5205 0 WEST true
+2487 1890 5205 0 NORTH_EAST true
+2493 1883 5205 0 SOUTH_EAST true
+2493 1884 5206 0 WEST true
+2483 1890 5195 0 WEST true
+2484 1864 5206 0 WEST true
+2485 1884 5207 0 WEST true
+2488 1895 5194 0 WEST true
+2488 1890 5215 0 SOUTH_EAST true
+2483 1895 5187 0 NORTH_EAST true
+2488 1892 5216 0 WEST true
+2482 1882 5216 0 WEST true
+2493 1876 5215 0 SOUTH_EAST true
+2493 1879 5215 0 WEST true
+2493 1870 5217 0 WEST true
+2482 1874 5217 0 WEST true
+2488 1888 5221 0 WEST true
+2488 1889 5223 0 WEST true
+2483 1900 5208 0 WEST true
+2493 1881 5221 0 WEST true
+2483 1901 5206 0 NORTH_EAST true
+2493 1871 5218 0 SOUTH true
+2493 1872 5191 0 SOUTH true
+2483 1904 5191 0 WEST true
+2483 1901 5191 0 WEST true
+2483 1904 5194 0 SOUTH_EAST true
+2488 1889 5223 0 WEST true
+2493 1874 5219 0 WEST true
+2488 1892 5224 0 SOUTH_EAST true
+2482 1879 5218 0 WEST true
+2483 1902 5204 0 WEST true
+2482 1874 5215 0 SOUTH_EAST true
+2483 1893 5198 0 WEST true
+2483 1901 5197 0 WEST true
+2483 1900 5210 0 WEST true
+2483 1899 5198 0 WEST true
+2493 1896 5229 0 WEST true
+2493 1884 5228 0 WEST true
+2483 1901 5201 0 WEST true
+2493 1882 5231 0 WEST true
+2487 1897 5232 0 NORTH_EAST true
+2485 1894 5231 0 WEST true
+2493 1882 5234 0 WEST true
+2493 1879 5234 0 SOUTH_EAST true
+2493 1897 5234 0 WEST true
+2493 1884 5234 0 WEST true
+2493 1884 5235 0 SOUTH_EAST true
+2493 1885 5236 0 NORTH_EAST true
+2487 1906 5236 0 SOUTH_EAST true
+2487 1896 5236 0 NORTH_EAST true
+2493 1879 5239 0 WEST true
+2483 1898 5241 0 WEST true
+2493 1893 5243 0 NORTH_EAST true
+2493 1880 5243 0 SOUTH_EAST true
+2493 1882 5241 0 WEST true
+2483 1903 5243 0 NORTH_EAST true
+2493 1902 5242 0 WEST true
+2493 1848 5176 0 WEST true
+2483 1848 5176 0 WEST true
+2483 1901 5245 0 NORTH_EAST true
+2493 1901 5244 0 SOUTH true
+2487 1848 5176 0 WEST true
+2493 1910 5243 0 WEST true
+2493 1911 5235 0 WEST true
+2489 1911 5241 0 NORTH_EAST true
+2493 1881 5243 0 WEST true
+2483 1894 5243 0 WEST true
+2493 1879 5234 0 SOUTH_EAST true
+2493 1880 5234 0 SOUTH_EAST true
+2493 1879 5239 0 WEST true
+2493 1874 5230 0 WEST true
+2482 1873 5238 0 WEST true
+2490 1872 5233 0 WEST true
+2493 1874 5236 0 WEST true
+2487 1904 5235 0 NORTH_EAST true
+2493 1911 5235 0 WEST true
+2493 1912 5243 0 WEST true
+2485 1912 5239 0 WEST true
+2485 1912 5244 0 WEST true
+2493 1912 5238 0 WEST true
+2493 1913 5244 0 WEST true
+2487 1895 5227 0 SOUTH_EAST true
+2483 1892 5241 0 SOUTH_EAST true
+2489 1892 5235 0 WEST true
+2487 1896 5229 0 WEST true
+2487 1894 5234 0 WEST true
+2485 1894 5244 0 SOUTH_EAST true
+2489 1893 5228 0 WEST true
+2483 1893 5239 0 SOUTH true
+2488 1892 5221 0 NORTH_EAST true
+2493 1890 5244 0 WEST true
+2483 1890 5242 0 SOUTH_EAST true
+2488 1893 5219 0 NORTH_EAST true
+2488 1891 5218 0 SOUTH true
+2489 1889 5225 0 SOUTH_EAST true
+2483 1889 5244 0 WEST true
+2493 1907 5204 0 SOUTH_EAST true
+2493 1909 5204 0 SOUTH_EAST true
+2493 1908 5204 0 SOUTH_EAST true
+2483 1897 5196 0 WEST true
+2483 1902 5207 0 WEST true
+2483 1902 5199 0 WEST true
+2487 1896 5229 0 WEST true
+2489 1894 5226 0 WEST true
+2488 1894 5225 0 WEST true
+2488 1893 5227 0 WEST true
+2485 1897 5232 0 WEST true
+2485 1890 5204 0 WEST true
+2488 1892 5216 0 SOUTH_EAST true
+2487 1889 5235 0 WEST true
+2488 1888 5221 0 WEST true
+2493 1889 5206 0 SOUTH true
+2485 1910 5237 0 WEST true
+2483 1892 5236 0 WEST true
+2487 1913 5237 0 SOUTH_EAST true
+2493 1890 5207 0 SOUTH true
+2493 1890 5207 0 NORTH_EAST true
+2493 1912 5237 0 WEST true
+2501 2031 5234 0 WEST true
+2503 2029 5236 0 WEST true
+2502 2045 5222 0 NORTH_EAST true
+2498 2032 5233 0 WEST true
+2504 2029 5231 0 WEST true
+2501 2026 5234 0 NORTH_EAST true
+2502 2041 5219 0 NORTH_EAST true
+2502 2040 5217 0 SOUTH_EAST true
+2502 2044 5214 0 WEST true
+2504 2033 5233 0 WEST true
+2510 2042 5213 0 WEST true
+2503 2031 5235 0 WEST true
+2501 2028 5235 0 WEST true
+2503 2031 5230 0 WEST true
+2502 2039 5212 0 WEST true
+2501 2031 5233 0 WEST true
+2511 2019 5237 0 WEST true
+2510 2020 5236 0 SOUTH true
+2504 2033 5233 0 WEST true
+2512 2016 5237 0 NORTH_EAST true
+2498 2033 5232 0 WEST true
+2498 2018 5236 0 WEST true
+2504 2028 5234 0 WEST true
+
+//Falador Mine
+1051 2999 9825 0 WEST true //general store
+1301 2997 9842 0 WEST true //Nurmof pickaxe shop
+
+// Motherlode mine
+6562 3757 5666 0 WEST true // Prospector Percy
+
+//Monks
+2579 3058 3491 0 SOUTH true //monk
+2579 3058 3484 0 WEST true //monk
+2579 3052 3485 0 EAST true //monk
+2579 3050 3481 0 WEST true //monk
+2579 3045 3484 0 SOUTH true //monk
+2579 3046 3498 0 SOUTH true //monk
+2579 3050 3498 0 WEST true //monk
+3672 3054 3507 0 SOUTH true //farmer
+
+//forgotten cemetary
+2514 2966 3764 0 SOUTH true //ankou
+2514 2963 3756 0 SOUTH true //ankou
+2514 2968 3744 0 SOUTH true //ankou
+2514 2976 3745 0 SOUTH true //ankou
+2514 2987 3756 0 SOUTH true //ankou
+2514 2989 3742 0 SOUTH true //ankou
+//Sand crabs
+7206 1691 3471 0 SOUTH true //small
+7206 1709 3464 0 SOUTH true //small
+7206 1702 3469 0 SOUTH true //small
+7206 1684 3477 0 SOUTH true //small
+7206 1682 3474 0 SOUTH true //small
+7206 1673 3472 0 SOUTH true //small
+7206 1672 3481 0 SOUTH true //small
+7206 1682 3485 0 SOUTH true //small
+7206 1693 3488 0 SOUTH true //small
+7206 1696 3480 0 SOUTH true //small
+7206 1728 3462 0 SOUTH true //small
+7206 1732 3468 0 SOUTH true //small
+7206 1740 3472 0 SOUTH true //small
+7266 1749 3468 0 SOUTH true //king
+7266 1772 3466 0 SOUTH true //king
+7206 1783 3468 0 SOUTH true //small
+7206 1780 3464 0 SOUTH true //small
+
+//Ardougne center
+3078 2662 3306 0 SOUTH true //Man
+3078 2669 3306 0 SOUTH true //Man
+3100 2661 3313 0 SOUTH true //Warrior
+3100 2660 3301 0 SOUTH true //Warrior
+//Kourend
+2098 1662 10071 0 SOUTH true //hillgiant
+2098 1665 10074 0 SOUTH true //hillgiant
+7276 1676 10076 0 SOUTH true //mutated Bloodvelds
+7276 1681 10078 0 SOUTH true //mutated bloodveld
+7276 1677 10073 0 SOUTH true //mutated bloodveld
+7278 1707 10084 0 SOUTH true //greater nech
+7278 1696 10082 0 SOUTH true //greater nech
+7278 1691 10077 0 SOUTH true //greater nech
+2025 1708 10101 0 SOUTH true //greater demon
+2025 1716 10099 0 SOUTH true //greater demon
+2025 1697 10097 0 SOUTH true //greater demon
+2025 1687 10098 0 SOUTH true //greater demon
+415 1672 10098 0 SOUTH true //abby demon
+415 1673 10095 0 SOUTH true //abby demon
+415 1678 10096 0 SOUTH true //abby demon
+415 1673 10087 0 SOUTH true //abby demon
+415 1668 10089 0 SOUTH true //abby demon
+3133 1648 10059 0 SOUTH true //Hellhound
+3133 1648 10059 0 SOUTH true //hellhound
+3133 1650 10063 0 SOUTH true //hellhound
+3133 1647 10067 0 SOUTH true //hellhound
+3133 1645 10072 0 SOUTH true //hellhound
+3133 1638 10062 0 SOUTH true //hellhound
+6440 1639 10047 0 SOUTH true //skele
+6440 1637 10045 0 SOUTH true //skele
+6440 1639 10047 0 SOUTH true //skele
+85 1662 10025 0 SOUTH true //ghost
+85 1666 10021 0 SOUTH true //ghost
+2463 1647 10023 0 SOUTH true //cyclops
+7257 1647 9999 0 SOUTH true //ankou
+7257 1643 9993 0 SOUTH true //ankou
+7257 1639 9994 0 SOUTH true //ankou
+7257 1643 9991 0 SOUTH true //ankou
+7272 1625 9991 0 SOUTH true //twisted banshee
+7272 1623 9997 0 SOUTH true //twisted banshee
+7272 1613 9999 0 SOUTH true //twisted banshee
+7272 1608 9997 0 SOUTH true //twisted banshee
+7272 1610 9994 0 SOUTH true //twisted banshee
+7279 1606 10006 0 SOUTH true //deveant spectre
+7279 1603 10011 0 SOUTH true //deveant spectre
+7279 1605 10017 0 SOUTH true //deveant spectre
+7279 1609 10013 0 SOUTH true //deveant spectre
+1286 1605 10033 0 SOUTH true //fiyre shade
+1286 1605 10043 0 SOUTH true //fiyre shade
+274 1609 10051 0 SOUTH true //steel dragon
+274 1607 10056 0 SOUTH true //steel dragon
+7274 1612 10076 0 SOUTH true //brutal red
+7274 1617 10078 0 SOUTH true //brutal red
+7275 1612 10098 0 SOUTH true //brutal black
+7275 1619 10093 0 SOUTH true //brutal black
+7273 1619 10093 0 SOUTH true //brutal blue
+7259 1664 9992 0 SOUTH true //dag
+7259 1662 9998 0 SOUTH true //dag
+7259 1669 9999 0 SOUTH true //dag
+7259 1673 9995 0 SOUTH true //dag
+7259 1676 9998 0 SOUTH true //dag
+7277 1684 10000 0 SOUTH true //jelly		
+7277 1687 9998 0 SOUTH true //jelly	
+7277 1691 10001 0 SOUTH true //jelly	
+7266 1703 9997 0 SOUTH true //king sand crab
+7266 1709 9993 0 SOUTH true //king sand crab
+7266 1710 10000 0 SOUTH true //king sand crab
+423 1707 10012 0 SOUTH true //dust devil
+423 1713 10013 0 SOUTH true //dust devi
+423 1717 10016 0 SOUTH true //dust devi
+423 1713 10019 0 SOUTH true //dust devi
+423 1715 10029 0 SOUTH true //dust devi
+423 1718 10035 0 SOUTH true //dust devi
+7277 1713 10047 0 SOUTH true //warped jelly
+7277 1715 10051 0 SOUTH true //warped jelly
+7277 1722 10056 0 SOUTH true //warped jelly
+7277 1723 10050 0 SOUTH true //warped jelly
+7277 1727 10043 0 SOUTH true //warped jelly
+2463 1688 10017 0 SOUTH true //cyclops
+2463 1693 10014 0 SOUTH true //cyclops
+891 1692 10031 0 SOUTH true //moss giant
+891 1687 10034 0 SOUTH true //moss giant
+891 1686 10048 0 SOUTH true //moss giant
+85 1686 10062 0 SOUTH true //ghost
+85 1694 10064 0 SOUTH true //ghost
+2098 1679 10057 0 SOUTH true //hill giant
+2098 1674 10060 0 SOUTH true //hill giant
+272 1663 10084 0 SOUTH true //Iron Dragon
+720 1647 10093 0 SOUTH true //Bronze Dragon
+270 1652 10100 0 SOUTH true //Bronze Dragon	
+2005 1709 10068 0 SOUTH true //Lesser Demon	
+2005 1719 10071 0 SOUTH true //Lesser Demon
+2005 1722 10064 0 SOUTH true //Lesser Demon
+2052 1723 10085 0 SOUTH true //Black Demon
+2052 1719 10091 0 SOUTH true //Black Demon
+2075 1629 10020 0 SOUTH true //Fire Giant
+891 1637 10011 0 SOUTH true //Moss Giant
+2463 1629 10031 0 SOUTH true //Cyclop
+2463 1627 10037 0 SOUTH true //Cyclop
+2463 1621 10042 0 SOUTH true //Cyclop	
+2844 1635 10033 0 SOUTH true //Magic Axe		
+2844 1640 10036 0 SOUTH true //Magic Axe	
+2844 1639 10031 0 SOUTH true //Magic Axe	
+4005 1620 10057 0 SOUTH true //Dark Beast	
+4005 1633 10067 0 SOUTH true //Dark Beast	
+2075 1634 10057 0 SOUTH true //Fire Giant	
+2075 1632 10052 0 SOUTH true //Fire Giant		
+2098 1651 10040 0 SOUTH true //Hill Giant
+2098 1652 10035 0 SOUTH true //Hill Giant
+891 1654 10010 0 SOUTH true //Moss Giant
+891 1661 10014 0 SOUTH true //Moss Giant
+
+1410 3040 3466 0 SOUTH true //banker
+1402 3043 3470 0 SOUTH true //banker
+1406 3045 3474 0 SOUTH true //banker
+1412 3036 3471 0 SOUTH true //banker
+1408 3032 3473 0 SOUTH true //banker
+1402 3031 3467 0 SOUTH true //banker
+
+// Dwarf, 10, added by: Salve
+1405 3025 3463 0 SOUTH true
+// Black Guard, 25, added by: Salve
+1411 3028 3458 0 SOUTH true
+// Dwarf, 11, added by: Salve
+1406 3017 3459 0 SOUTH true
+// Dwarf, 11, added by: Salve
+1407 3010 3459 0 SOUTH true
+// Dwarf, 11, added by: Salve
+1401 3016 3450 0 SOUTH true
+// Black Guard, 25, added by: Salve
+1409 3014 3445 0 SOUTH true
+// Dwarf, 7, added by: Salve
+1408 3020 3449 0 SOUTH true
+// Nulodion, 0, added by: Salve
+1400 3010 3453 0 SOUTH false
+// Wild dog, 63, added by: Salve
+112 2682 9563 0 SOUTH true
+// Moss giant, 42, added by: Salve
+2090 2678 9550 0 SOUTH true
+// Moss giant, 42, added by: Salve
+2090 2680 9543 0 SOUTH true
+// Moss giant, 42, added by: Salve
+2090 2671 9544 0 SOUTH true
+// Moss giant, 42, added by: Salve
+2090 2663 9555 0 SOUTH true
+// Moss giant, 42, added by: Salve
+2090 2657 9550 0 SOUTH true
+// Moss giant, 42, added by: Salve
+2090 2660 9543 0 SOUTH true
+// Wild dog, 63, added by: Salve
+112 2669 9560 0 SOUTH true
+// Wild dog, 63, added by: Salve
+112 2675 9546 0 SOUTH true
+// Moss giant, 42, added by: Salve
+2090 2677 9586 0 SOUTH true
+// Moss giant, 42, added by: Salve
+2090 2681 9593 0 SOUTH true
+// Moss giant, 42, added by: Salve
+2090 2660 9591 0 SOUTH true
+// Moss giant, 42, added by: Salve
+2090 2656 9576 0 SOUTH true
+// Moss giant, 42, added by: Salve
+2090 2643 9575 0 SOUTH true
+// Moss giant, 42, added by: Salve
+2090 2640 9583 0 SOUTH true
+// Wild dog, 63, added by: Salve
+112 2634 9590 2 SOUTH true
+// Fire giant, 86, added by: Salve
+2075 2636 9573 2 SOUTH true
+// Fire giant, 86, added by: Salve
+2075 2641 9569 2 SOUTH true
+// Fire giant, 86, added by: Salve
+2075 2639 9561 2 SOUTH true
+// Fire giant, 86, added by: Salve
+2075 2636 9554 2 SOUTH true
+// Fire giant, 86, added by: Salve
+2075 2629 9550 2 SOUTH true
+// Fire giant, 86, added by: Salve
+2075 2630 9542 2 SOUTH true
+// Wild dog, 63, added by: Salve
+112 2628 9547 2 SOUTH true
+// Wild dog, 63, added by: Salve
+112 2637 9563 2 SOUTH true
+// Wild dog, 63, added by: Salve
+112 2627 9529 2 SOUTH true
+// Wild dog, 63, added by: Salve
+112 2632 9509 2 SOUTH true
+// Greater demon, 92, added by: Salve
+2025 2633 9506 2 SOUTH true
+// Greater demon, 92, added by: Salve
+2025 2644 9506 2 SOUTH true
+// Greater demon, 92, added by: Salve
+2025 2636 9496 2 SOUTH true
+// Greater demon, 92, added by: Salve
+2025 2630 9489 2 SOUTH true
+// Wild dog, 63, added by: Salve
+112 2630 9487 2 SOUTH true
+// Greater demon, 92, added by: Salve
+2025 2630 9479 2 SOUTH true
+// Greater demon, 92, added by: Salve
+2025 2649 9478 2 SOUTH true
+// Greater demon, 92, added by: Salve
+2025 2641 9477 2 SOUTH true
+// Wild dog, 63, added by: Salve
+112 2637 9478 2 SOUTH true
+// Moss giant, 42, added by: Salve
+2090 2638 9526 0 SOUTH true
+// Moss giant, 42, added by: Salve
+2090 2644 9534 0 SOUTH true
+// Moss giant, 42, added by: Salve
+2090 2639 9543 0 SOUTH true
+// Wild dog, 63, added by: Salve
+112 2650 9534 0 SOUTH true
+// Wild dog, 63, added by: Salve
+112 2646 9546 0 SOUTH true
+// Wild dog, 63, added by: Salve
+112 2646 9512 0 SOUTH true
+// Wild dog, 63, added by: Salve
+112 2647 9498 0 SOUTH true
+// Fire giant, 86, added by: Salve
+2075 2644 9488 0 SOUTH true
+// Fire giant, 86, added by: Salve
+2075 2653 9487 0 SOUTH true
+// Fire giant, 86, added by: Salve
+2075 2656 9482 0 SOUTH true
+// Fire giant, 86, added by: Salve
+2075 2664 9482 0 SOUTH true
+// Fire giant, 86, added by: Salve
+2075 2667 9490 0 SOUTH true
+// Fire giant, 86, added by: Salve
+2075 2669 9498 0 SOUTH true
+// Wild dog, 63, added by: Salve
+112 2669 9494 0 SOUTH true
+// Red dragon, 152, added by: Salve
+247 2699 9507 0 SOUTH true
+// Red dragon, 152, added by: Salve
+247 2700 9516 0 SOUTH true
+// Red dragon, 152, added by: Salve
+247 2708 9523 0 SOUTH true
+// Red dragon, 152, added by: Salve
+247 2719 9519 0 SOUTH true
+// Red dragon, 152, added by: Salve
+247 2710 9503 0 SOUTH true
+// Red dragon, 152, added by: Salve
+247 2712 9540 0 SOUTH true
+// Red dragon, 152, added by: Salve
+247 2706 9538 0 SOUTH true
+// Red dragon, 152, added by: Salve
+247 2703 9546 0 SOUTH true
+// Goblin, 2, added by: Salve
+3029 3248 3247 0 SOUTH true
+// Goblin, 2, added by: Salve
+3029 3245 3248 0 SOUTH true
+// Goblin, 2, added by: Salve
+3029 3243 3245 0 SOUTH true
+// Goblin, 2, added by: Salve
+3029 3246 3243 0 SOUTH true
+// Goblin, 2, added by: Salve
+3029 3255 3247 0 SOUTH true
+// Goblin, 2, added by: Salve
+3029 3262 3244 0 SOUTH true
+// Goblin, 2, added by: Salve
+3029 3256 3238 0 SOUTH true
+// Grizzly bear, 21, added by: Salve
+2838 2697 3327 0 SOUTH true
+// Grizzly bear, 21, added by: Salve
+2838 2691 3333 0 SOUTH true
+// Grizzly bear, 21, added by: Salve
+2838 2696 3341 0 SOUTH true
+// Grizzly bear, 21, added by: Salve
+2838 2702 3345 0 SOUTH true
+// Grizzly bear, 21, added by: Salve
+2838 2709 3337 0 SOUTH true
+// Grizzly bear, 21, added by: Salve
+2838 2707 3330 0 SOUTH true
+// Grizzly bear, 21, added by: Salve
+2838 2712 3324 0 SOUTH true
+// Grizzly bear, 21, added by: Salve
+2838 2718 3336 0 SOUTH true
+
+//Lumbridge swamp caves
+// Cave bug, 6, added by: Salve
+481 3151 9574 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3148 9578 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3153 9577 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3151 9557 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3149 9551 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3167 9542 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3181 9549 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3186 9550 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3183 9554 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3188 9576 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3186 9581 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3190 9583 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3207 9586 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3211 9588 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3226 9579 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3222 9576 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3224 9572 0 SOUTH true
+// Cave bug, 6, added by: Salve
+481 3229 9569 0 SOUTH true
+// Cave crawler, 23, added by: Salve
+406 3193 9573 0 SOUTH true
+// Cave crawler, 23, added by: Salve
+406 3190 9568 0 SOUTH true
+// Cave crawler, 23, added by: Salve
+406 3187 9570 0 SOUTH true
+// Cave slime, 23, added by: Salve
+480 3166 9589 0 SOUTH true
+// Cave slime, 23, added by: Salve
+480 3161 9588 0 SOUTH true
+// Cave slime, 23, added by: Salve
+480 3156 9591 0 SOUTH true
+// Cave slime, 23, added by: Salve
+480 3151 9563 0 SOUTH true
+// Cave slime, 23, added by: Salve
+480 3157 9560 0 SOUTH true
+// Cave slime, 23, added by: Salve
+480 3166 9546 0 SOUTH true
+// Cave slime, 23, added by: Salve
+480 3170 9545 0 SOUTH true
+// Cave slime, 23, added by: Salve
+480 3208 9552 0 SOUTH true
+// Cave slime, 23, added by: Salve
+480 3211 9556 0 SOUTH true
+// Cave slime, 23, added by: Salve
+480 3206 9556 0 SOUTH true
+// Cave slime, 23, added by: Salve
+480 3209 9572 0 SOUTH true
+// Cave slime, 23, added by: Salve
+480 3210 9569 0 SOUTH true
+// Cave slime, 23, added by: Salve
+480 3250 9580 0 SOUTH true
+// Cave slime, 23, added by: Salve
+480 3255 9579 0 SOUTH true
+// Cave slime, 23, added by: Salve
+480 3253 9575 0 SOUTH true
+// Cave slime, 23, added by: Salve
+480 3255 9572 0 SOUTH true
+// Giant frog, 99, added by: Salve
+477 3232 9547 0 SOUTH true
+// Big frog, 24, added by: Salve
+478 3221 9549 0 SOUTH true
+// Big frog, 24, added by: Salve
+478 3225 9546 0 SOUTH true
+// Big frog, 24, added by: Salve
+478 3242 9579 0 SOUTH true
+// Big frog, 24, added by: Salve
+478 3245 9574 0 SOUTH true
+// Big frog, 24, added by: Salve
+478 3240 9571 0 SOUTH true
+// Big frog, 24, added by: Salve
+478 3176 9546 0 SOUTH true
+// Big frog, 24, added by: Salve
+478 3151 9547 0 SOUTH true
+// Big frog, 24, added by: Salve
+478 3155 9545 0 SOUTH true
+// Big frog, 24, added by: Salve
+478 3157 9547 0 SOUTH true
+// Al-Kharid warrior, 9, added by: Salve
+7323 3283 3171 0 SOUTH true
+// Al-Kharid warrior, 9, added by: Salve
+7323 3285 3168 0 SOUTH true
+// Al-Kharid warrior, 9, added by: Salve
+7323 3282 3176 0 SOUTH true
+// Al-Kharid warrior, 9, added by: Salve
+7323 3288 3169 0 SOUTH true
+// Al-Kharid warrior, 9, added by: Salve
+7323 3295 3172 0 SOUTH true
+// Al-Kharid warrior, 9, added by: Salve
+7323 3300 3176 0 SOUTH true
+// Al-Kharid warrior, 9, added by: Salve
+7323 3303 3173 0 SOUTH true
+// Al-Kharid warrior, 9, added by: Salve
+7323 3300 3170 0 SOUTH true
+// Al-Kharid warrior, 9, added by: Salve
+7323 3301 3168 0 SOUTH true
+// Banker, 0, added by: Salve
+394 3267 3164 0 SOUTH false
+// Banker, 0, added by: Salve
+394 3267 3167 0 SOUTH false
+// Banker, 0, added by: Salve
+394 3267 3169 0 SOUTH false
+// Scorpion, 14, added by: Salve
+3024 3298 3279 0 SOUTH true
+// Scorpion, 14, added by: Salve
+3024 3299 3287 0 SOUTH true
+// Scorpion, 14, added by: Salve
+3024 3295 3296 0 SOUTH true
+// Scorpion, 14, added by: Salve
+3024 3300 3303 0 SOUTH true
+// Scorpion, 14, added by: Salve
+3024 3299 3311 0 SOUTH true
+// Skeleton, 22, added by: Salve
+70 3095 9898 0 SOUTH true
+// Skeleton, 22, added by: Salve
+70 3096 9908 0 SOUTH true
+// Skeleton, 22, added by: Salve
+70 3110 9909 0 SOUTH true
+// Skeleton, 22, added by: Salve
+70 3121 9909 0 SOUTH true
+// Vannaka, 0, added by: Salve
+403 3146 9914 0 SOUTH false
+// Zombie, 13, added by: Salve
+26 3146 9907 0 SOUTH true
+// Zombie, 13, added by: Salve
+26 3146 9900 0 SOUTH true
+// Zombie, 13, added by: Salve
+26 3141 9904 0 SOUTH true
+// Zombie, 13, added by: Salve
+26 3140 9894 0 SOUTH true
+// Zombie, 13, added by: Salve
+26 3145 9889 0 SOUTH true
+// Zombie, 13, added by: Salve
+26 3150 9890 0 SOUTH true
+// Zombie, 13, added by: Salve
+26 3140 9884 0 SOUTH true
+// Desert Lizard, 24, added by: Salve
+459 3438 3036 0 SOUTH true
+// Desert Lizard, 24, added by: Salve
+459 3431 3045 0 SOUTH true
+// Desert Lizard, 24, added by: Salve
+459 3429 3037 0 SOUTH true
+// Desert Lizard, 24, added by: Salve
+459 3421 3025 0 SOUTH true
+// Desert Lizard, 24, added by: Salve
+459 3413 3033 0 SOUTH true
+// Desert Lizard, 24, added by: Salve
+459 3412 3044 0 SOUTH true
+// Desert Lizard, 24, added by: Salve
+459 3403 3049 0 SOUTH true
+// Desert Lizard, 24, added by: Salve
+459 3399 3040 0 SOUTH true
+// Desert Lizard, 24, added by: Salve
+459 3394 3054 0 SOUTH true
+// Desert Lizard, 24, added by: Salve
+459 3405 3060 0 SOUTH true
+// Desert Lizard, 24, added by: Salve
+459 3415 3057 0 SOUTH true
+// Desert Lizard, 24, added by: Salve
+459 3412 3065 0 SOUTH true
+// Desert Lizard, 24, added by: Salve
+459 3400 3070 0 SOUTH true
+// Desert Lizard, 24, added by: Salve
+459 3388 3066 0 SOUTH true
+// Cave kraken, 127, added by: Salve
+492 2467 9808 0 SOUTH true
+// Cave kraken, 127, added by: Salve
+492 2472 9808 0 SOUTH true
+// Cave kraken, 127, added by: Salve
+492 2475 9810 0 SOUTH true
+// Cave kraken, 127, added by: Salve
+492 2481 9809 0 SOUTH true
+// Cave kraken, 127, added by: Salve
+492 2488 9806 0 SOUTH true
+// Cave kraken, 127, added by: Salve
+492 2496 9807 0 SOUTH true
+// Cave kraken, 127, added by: Salve
+492 2499 9802 0 SOUTH true
+// Cave kraken, 127, added by: Salve
+492 2507 9804 0 SOUTH true
+// Suqah, 111, added by: Salve
+787 2126 3874 0 SOUTH true
+// Suqah, 111, added by: Salve
+787 2138 3861 0 SOUTH true
+// Suqah, 111, added by: Salve
+787 2148 3856 0 SOUTH true
+// Suqah, 111, added by: Salve
+787 2135 3851 0 SOUTH true
+// Suqah, 111, added by: Salve
+787 2123 3857 0 SOUTH true
+// Suqah, 111, added by: Salve
+787 2113 3849 0 SOUTH true
+// Suqah, 111, added by: Salve
+787 2108 3862 0 SOUTH true
+// Suqah, 111, added by: Salve
+787 2102 3869 0 SOUTH true
+// Suqah, 111, added by: Salve
+787 2092 3863 0 SOUTH true
+// Suqah, 111, added by: Salve
+787 2078 3865 0 SOUTH true
+// Suqah, 111, added by: Salve
+787 2079 3883 0 SOUTH true
+// Suqah, 111, added by: Salve
+787 2069 3879 0 SOUTH true
+// Suqah, 111, added by: Salve
+787 2062 3891 0 SOUTH true
+// Lowe, 0, added by: Salve
+536 3232 3421 0 SOUTH false
+// Horvik, 0, added by: Salve
+535 3228 3439 0 SOUTH false
+// Hill Giant, 28, added by: Salve
+2098 3117 9850 0 SOUTH true
+// Hill Giant, 28, added by: Salve
+2098 3122 9844 0 SOUTH true
+// Hill Giant, 28, added by: Salve
+2098 3117 9843 0 SOUTH true
+// Hill Giant, 28, added by: Salve
+2098 3111 9840 0 SOUTH true
+// Hill Giant, 28, added by: Salve
+2098 3110 9845 0 SOUTH true
+// Hill Giant, 28, added by: Salve
+2098 3108 9836 0 SOUTH true
+// Hill Giant, 28, added by: Salve
+2098 3112 9831 0 SOUTH true
+// Hill Giant, 28, added by: Salve
+2098 3117 9832 0 SOUTH true
+// Hill Giant, 28, added by: Salve
+2098 3118 9836 0 SOUTH true
+// Hill Giant, 28, added by: Salve
+2098 3107 9827 0 SOUTH true
+// Hill Giant, 28, added by: Salve
+2098 3101 9832 0 SOUTH true
+// Hill Giant, 28, added by: Salve
+2098 3099 9834 0 SOUTH true
+// Thug, 10, added by: Salve
+2883 3129 9929 0 SOUTH true
+// Thug, 10, added by: Salve
+2883 3133 9932 0 SOUTH true
+// Thug, 10, added by: Salve
+2883 3128 9934 0 SOUTH true
+// Thug, 10, added by: Salve
+2883 3125 9929 0 SOUTH true
+// Chaos druid, 13, added by: Salve
+2878 3112 9928 0 SOUTH true
+// Chaos druid, 13, added by: Salve
+2878 3115 9925 0 SOUTH true
+// Chaos druid, 13, added by: Salve
+2878 3114 9934 0 SOUTH true
+// Chaos druid, 13, added by: Salve
+2878 3111 9933 0 SOUTH true
+// Chaos druid, 13, added by: Salve
+2878 3105 9935 0 SOUTH true
+// Chaos druid, 13, added by: Salve
+2878 3105 9940 0 SOUTH true
+// Chaos druid, 13, added by: Salve
+2878 3109 9942 0 SOUTH true
+// Chaos druid, 13, added by: Salve
+2878 3111 9938 0 SOUTH true
+// Black demon, 172, added by: Salve
+240 3094 9957 0 SOUTH true
+// Black demon, 172, added by: Salve
+240 3084 9954 0 SOUTH true
+// Black demon, 172, added by: Salve
+240 3087 9960 0 SOUTH true
+// Aberrant spectre, 96, added by: Salve
+2 3435 3549 1 SOUTH true
+// Aberrant spectre, 96, added by: Salve
+2 3442 3545 1 SOUTH true
+// Fire elemental, 35, added by: Salve
+1365 3210 9378 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3218 9366 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3216 9362 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3212 9360 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3215 9354 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3210 9349 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3222 9346 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3235 9360 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3233 9364 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3236 9367 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3221 9377 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3224 9379 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3228 9391 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3224 9394 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3225 9402 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3230 9398 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3234 9395 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3245 9400 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3249 9401 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3259 9382 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3259 9372 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3250 9350 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3242 9348 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 3237 9351 0 SOUTH true
+// Dommik, 0, added by: Salve
+531 3322 3195 0 SOUTH false
+// Shop keeper, 0, added by: Salve
+508 3316 3181 0 SOUTH false
+// Louie Legs, 0, added by: Salve
+528 3316 3175 0 SOUTH false
+// Ranael, 0, added by: Salve
+530 3316 3163 0 SOUTH false
+// Zeke, 0, added by: Salve
+527 3287 3190 0 SOUTH false
+// Man, 2, added by: Salve
+3078 3282 3195 0 SOUTH true
+// Man, 2, added by: Salve
+3078 3292 3205 0 SOUTH true
+// Gem trader, 0, added by: Salve
+526 3288 3212 0 SOUTH false
+// Gaius, 0, added by: Salve
+1173 2884 3450 0 SOUTH false
+// Spinolyp, 76, added by: Salve
+5947 2897 4452 0 SOUTH true
+// Spinolyp, 76, added by: Salve
+5947 2902 4462 0 SOUTH true
+// Spinolyp, 76, added by: Salve
+5947 2911 4465 0 SOUTH true
+// Spinolyp, 76, added by: Salve
+5947 2921 4463 0 SOUTH true
+// Spinolyp, 76, added by: Salve
+5947 2928 4455 0 SOUTH true
+// Spinolyp, 76, added by: Salve
+5947 2930 4447 0 SOUTH true
+// Spinolyp, 76, added by: Salve
+5947 2928 4438 0 SOUTH true
+// Spinolyp, 76, added by: Salve
+5947 2920 4434 0 SOUTH true
+// Spinolyp, 76, added by: Salve
+5947 2910 4433 0 SOUTH true
+// Spinolyp, 76, added by: Salve
+5947 2900 4437 0 SOUTH true
+// Spinolyp, 76, added by: Salve
+5947 2897 4444 0 SOUTH true
+// Kent, 0, added by: Salve
+5074 2716 3299 0 SOUTH true
+// Bartender, 0, added by: Salve
+687 2956 3371 0 SOUTH true
+// Bartender, 0, added by: Salve
+687 3226 3401 0 SOUTH true
+// Bartender, 0, added by: Salve
+687 2574 3321 0 SOUTH true
+// Bartender, 0, added by: Salve
+687 2694 3496 0 SOUTH true
+// Matthias, 0, added by: Salve
+1340 2365 3619 0 SOUTH true
+// Giant rat, 26, added by: Salve
+2510 3294 3383 0 SOUTH true
+// Paul, 0, added by: Salve
+317 3230 3228 0 SOUTH true
+
+// ---- START OF GODWARS DUNGEON ----
+// Aviansie, 69, added by: Salve
+3169 2870 5262 2 SOUTH true
+// Aviansie, 79, added by: Salve
+3170 2863 5259 2 SOUTH true
+// Aviansie, 84, added by: Salve
+3171 2857 5265 2 SOUTH true
+// Aviansie, 69, added by: Salve
+3169 2863 5269 2 SOUTH true
+// Aviansie, 83, added by: Salve
+3172 2852 5272 2 SOUTH true
+// Aviansie, 92, added by: Salve
+3173 2846 5261 2 SOUTH true
+// Aviansie, 97, added by: Salve
+3174 2842 5265 2 SOUTH true
+// Aviansie, 137, added by: Salve
+3175 2837 5267 2 SOUTH true
+// Aviansie, 148, added by: Salve
+3176 2840 5276 2 SOUTH true
+// Aviansie, 71, added by: Salve
+3177 2846 5280 2 SOUTH true
+// Aviansie, 73, added by: Salve
+3178 2841 5285 2 SOUTH true
+// Aviansie, 97, added by: Salve
+3174 2834 5284 2 SOUTH true
+// Aviansie, 137, added by: Salve
+3175 2835 5290 2 SOUTH true
+// Aviansie, 131, added by: Salve
+3183 2875 5284 2 SOUTH true
+// Aviansie, 97, added by: Salve
+3182 2868 5288 2 SOUTH true
+// Aviansie, 94, added by: Salve
+3181 2859 5283 2 SOUTH true
+// Aviansie, 89, added by: Salve
+3180 2850 5289 2 SOUTH true
+// Aviansie, 79, added by: Salve
+3179 2847 5298 2 SOUTH true
+// Aviansie, 73, added by: Salve
+3178 2855 5299 2 SOUTH true
+// Aviansie, 71, added by: Salve
+3177 2860 5297 2 SOUTH true
+// Aviansie, 148, added by: Salve
+3176 2861 5291 2 SOUTH true
+// Aviansie, 148, added by: Salve
+3176 2881 5294 2 SOUTH true
+// Spiritual warrior, 115, added by: Salve
+3159 2874 5288 2 SOUTH true
+// Spiritual ranger, 118, added by: Salve
+3160 2880 5283 2 SOUTH true
+// Spiritual mage, 121, added by: Salve
+3161 2886 5289 2 SOUTH true
+// Spiritual warrior, 115, added by: Salve
+3159 2870 5294 2 SOUTH true
+// Spiritual ranger, 118, added by: Salve
+3160 2861 5291 2 SOUTH true
+// Spiritual mage, 121, added by: Salve
+3161 2861 5285 2 SOUTH true
+// Spiritual warrior, 115, added by: Salve
+3159 2855 5300 2 SOUTH true
+// Spiritual ranger, 118, added by: Salve
+3160 2856 5305 2 SOUTH true
+// Spiritual mage, 121, added by: Salve
+3161 2875 5299 2 SOUTH true
+// Saradomin priest, 113, added by: Salve
+2209 2886 5282 2 SOUTH true
+// Knight of Saradomin, 103, added by: Salve
+2213 2890 5284 2 SOUTH true
+// Knight of Saradomin, 101, added by: Salve
+2214 2893 5291 2 SOUTH true
+// Saradomin priest, 113, added by: Salve
+2209 2888 5296 2 SOUTH true
+// Saradomin priest, 113, added by: Salve
+2209 2900 5294 2 SOUTH true
+// Knight of Saradomin, 103, added by: Salve
+2213 2902 5300 2 SOUTH true
+// Spiritual mage, 120, added by: Salve
+2212 2910 5299 2 SOUTH true
+// Saradomin priest, 113, added by: Salve
+2209 2898 5307 2 SOUTH true
+// Knight of Saradomin, 103, added by: Salve
+2213 2895 5310 2 SOUTH true
+// Knight of Saradomin, 101, added by: Salve
+2214 2890 5303 2 SOUTH true
+// Spiritual ranger, 122, added by: Salve
+2211 2888 5300 2 SOUTH true
+// Spiritual mage, 120, added by: Salve
+2212 2895 5300 2 SOUTH true
+// Spiritual warrior, 125, added by: Salve
+2210 2882 5300 2 SOUTH true
+// Saradomin priest, 113, added by: Salve
+2209 2919 5295 1 SOUTH true
+// Spiritual warrior, 125, added by: Salve
+2210 2916 5286 1 SOUTH true
+// Spiritual ranger, 122, added by: Salve
+2211 2922 5288 1 SOUTH true
+// Knight of Saradomin, 103, added by: Salve
+2213 2921 5282 1 SOUTH true
+// Knight of Saradomin, 101, added by: Salve
+2214 2918 5277 1 SOUTH true
+// Knight of Saradomin, 101, added by: Salve
+2214 2918 5272 0 SOUTH true
+// Spiritual warrior, 125, added by: Salve
+2210 2912 5270 0 SOUTH true
+// Saradomin priest, 113, added by: Salve
+2209 2912 5265 0 SOUTH true
+// Hellhound, 127, added by: Salve
+3133 2894 5314 2 SOUTH true
+// Imp, 7, added by: Salve
+3134 2887 5318 2 SOUTH true
+// Werewolf, 93, added by: Salve
+3135 2891 5323 2 SOUTH true
+// Werewolf, 93, added by: Salve
+3136 2896 5321 2 SOUTH true
+// Vampire, 77, added by: Salve
+3137 2891 5328 2 SOUTH true
+// Bloodveld, 81, added by: Salve
+3138 2886 5326 2 SOUTH true
+// Pyrefiend, 48, added by: Salve
+3139 2882 5319 2 SOUTH true
+// Icefiend, 18, added by: Salve
+3140 2875 5325 2 SOUTH true
+// Gorak, 149, added by: Salve
+3141 2877 5330 2 SOUTH true
+// Hellhound, 127, added by: Salve
+3133 2870 5327 2 SOUTH true
+// Imp, 7, added by: Salve
+3134 2872 5338 2 SOUTH true
+// Werewolf, 93, added by: Salve
+3135 2868 5340 2 SOUTH true
+// Werewolf, 93, added by: Salve
+3136 2874 5341 2 SOUTH true
+// Icefiend, 18, added by: Salve
+3140 2872 5346 2 SOUTH true
+// Hellhound, 127, added by: Salve
+3133 2887 5352 2 SOUTH true
+// Imp, 7, added by: Salve
+3134 2887 5360 2 SOUTH true
+// Werewolf, 93, added by: Salve
+3135 2890 5362 2 SOUTH true
+// Werewolf, 93, added by: Salve
+3136 2892 5357 2 SOUTH true
+// Vampire, 77, added by: Salve
+3137 2897 5358 2 SOUTH true
+// Bloodveld, 81, added by: Salve
+3138 2896 5352 2 SOUTH true
+// Imp, 7, added by: Salve
+3134 2903 5363 2 SOUTH true
+// Pyrefiend, 48, added by: Salve
+3139 2904 5353 2 SOUTH true
+// Icefiend, 18, added by: Salve
+3140 2905 5346 2 SOUTH true
+// Gorak, 149, added by: Salve
+3141 2913 5347 2 SOUTH true
+// Hellhound, 127, added by: Salve
+3133 2911 5355 2 SOUTH true
+// Imp, 7, added by: Salve
+3134 2914 5361 2 SOUTH true
+// Werewolf, 93, added by: Salve
+3135 2920 5354 2 SOUTH true
+// Werewolf, 93, added by: Salve
+3136 2928 5355 2 SOUTH true
+// Vampire, 77, added by: Salve
+3137 2936 5351 2 SOUTH true
+// Bloodveld, 81, added by: Salve
+3138 2930 5344 2 SOUTH true
+// Icefiend, 18, added by: Salve
+3140 2922 5346 2 SOUTH true
+// Gorak, 149, added by: Salve
+3141 2917 5340 2 SOUTH true
+// Bloodveld, 81, added by: Salve
+3138 2926 5340 2 SOUTH true
+// Spiritual warrior, 115, added by: Salve
+3159 2926 5347 2 SOUTH true
+// Spiritual warrior, 123, added by: Salve
+3166 2918 5343 2 SOUTH true
+// Vampire, 77, added by: Salve
+3137 2918 5350 2 SOUTH true
+// Spiritual ranger, 127, added by: Salve
+3167 2923 5360 2 SOUTH true
+// Spiritual mage, 122, added by: Salve
+3168 2912 5353 2 SOUTH true
+// Spiritual warrior, 123, added by: Salve
+3166 2907 5349 2 SOUTH true
+// Spiritual ranger, 127, added by: Salve
+3167 2903 5356 2 SOUTH true
+// Spiritual mage, 122, added by: Salve
+3168 2894 5360 2 SOUTH true
+// Spiritual warrior, 123, added by: Salve
+3166 2885 5354 2 SOUTH true
+// Spiritual warrior, 123, added by: Salve
+3166 2881 5323 2 SOUTH true
+// Spiritual ranger, 127, added by: Salve
+3167 2871 5322 2 SOUTH true
+// Spiritual mage, 122, added by: Salve
+3168 2867 5333 2 SOUTH true
+// Ogre, 58, added by: Salve
+2233 2857 5330 2 SOUTH true
+// Jogre, 58, added by: Salve
+2234 2861 5325 2 SOUTH true
+// Cyclops, 81, added by: Salve
+2235 2854 5325 2 SOUTH true
+// Cyclops, 81, added by: Salve
+2236 2860 5316 2 SOUTH true
+// Ork, 107, added by: Salve
+2237 2854 5311 2 SOUTH true
+// Goblin, 17, added by: Salve
+2245 2863 5310 2 SOUTH true
+// Hobgoblin, 47, added by: Salve
+2241 2868 5314 2 SOUTH true
+// Goblin, 12, added by: Salve
+2246 2871 5319 2 SOUTH true
+// Spiritual mage, 121, added by: Salve
+2244 2863 5333 2 SOUTH true
+// Spiritual warrior, 134, added by: Salve
+2243 2859 5311 2 SOUTH true
+// Spiritual mage, 121, added by: Salve
+2244 2866 5305 2 SOUTH true
+// Spiritual ranger, 115, added by: Salve
+2242 2873 5305 2 SOUTH true
+// Ogre, 58, added by: Salve
+2233 2875 5313 2 SOUTH true
+// Spiritual ranger, 115, added by: Salve
+2242 2879 5300 2 SOUTH true
+// Spiritual warrior, 134, added by: Salve
+2243 2894 5292 2 SOUTH true
+// Goblin, 17, added by: Salve
+2245 2889 5309 2 SOUTH true
+// Goblin, 17, added by: Salve
+2245 2881 5327 2 SOUTH true
+// Goblin, 13, added by: Salve
+2249 2877 5328 2 SOUTH true
+// Goblin, 15, added by: Salve
+2248 2873 5329 2 SOUTH true
+// ---- END OF GODWARS DUNGEON ----
+
+// Experiment, 25, added by: Salve
+1274 3563 9943 0 SOUTH true
+// Experiment, 25, added by: Salve
+1275 3563 9949 0 SOUTH true
+// Experiment, 25, added by: Salve
+1274 3569 9952 0 SOUTH true
+// Experiment, 25, added by: Salve
+1275 3569 9957 0 SOUTH true
+// Experiment, 25, added by: Salve
+1274 3574 9959 0 SOUTH true
+// Experiment, 25, added by: Salve
+1275 3561 9957 0 SOUTH true
+// Experiment, 25, added by: Salve
+1274 3557 9959 0 SOUTH true
+// Experiment, 25, added by: Salve
+1275 3550 9952 0 SOUTH true
+// Experiment, 25, added by: Salve
+1274 3554 9940 0 SOUTH true
+// Experiment, 25, added by: Salve
+1275 3550 9934 0 SOUTH true
+// Experiment, 25, added by: Salve
+1274 3568 9934 0 SOUTH true
+// Experiment, 25, added by: Salve
+1275 3572 9929 0 SOUTH true
+// Hobgoblin, 28, added by: Salve
+3049 3117 9869 0 SOUTH true
+// Hobgoblin, 42, added by: Salve
+3050 3126 9863 0 SOUTH true
+// Hobgoblin, 28, added by: Salve
+3049 3123 9875 0 SOUTH true
+// Hobgoblin, 28, added by: Salve
+3049 3123 9879 0 SOUTH true
+// Hobgoblin, 42, added by: Salve
+3050 3129 9874 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1746 3474 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1755 3472 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1756 3470 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1763 3467 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1765 3469 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1791 3464 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1793 3463 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1799 3468 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1802 3460 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1802 3456 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1810 3458 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1811 3446 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1803 3445 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1800 3446 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1817 3453 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1822 3452 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1826 3449 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1831 3453 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1837 3450 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1836 3460 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1842 3464 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1839 3472 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1847 3471 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1852 3475 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1857 3470 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1862 3474 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1868 3472 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1869 3480 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1877 3480 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1872 3488 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1875 3495 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1877 3503 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1874 3511 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1879 3511 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1878 3514 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1865 3500 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1860 3508 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1862 3516 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1855 3519 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1848 3524 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1844 3531 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1843 3540 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1849 3548 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1856 3545 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1856 3538 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1864 3541 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1871 3549 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1873 3557 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1876 3554 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1874 3550 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1880 3550 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1868 3562 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1858 3562 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1850 3568 0 SOUTH true
+// Ice block, 0, added by: Salve
+706 1847 3575 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1842 3582 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1838 3589 0 SOUTH true
+// Sand Crab, 15, added by: Salve
+7206 1829 3586 0 SOUTH true
+// Banker, 0, added by: Salve
+394 3090 3245 0 SOUTH false
+// Banker, 0, added by: Salve
+394 3090 3243 0 SOUTH false
+// Banker, 0, added by: Salve
+394 3090 3242 0 SOUTH false
+// Dark wizard, 7, added by: Salve
+2870 3092 3227 0 SOUTH true
+// Shop keeper, 0, added by: Salve
+508 2930 3546 0 SOUTH true
+// Turael, 0, added by: Salve
+401 2931 3536 0 SOUTH false
+// Bartender, 0, added by: Salve
+687 2908 3537 0 SOUTH true
+// Banker, 0, added by: Salve
+394 2615 3094 0 SOUTH false
+// Banker, 0, added by: Salve
+394 2615 3092 0 SOUTH false
+// Banker, 0, added by: Salve
+394 2615 3091 0 SOUTH false
+// Zaff, 0, added by: Salve
+532 3203 3435 0 SOUTH false
+// Thessalia, 0, added by: Salve
+534 3205 3417 0 SOUTH false
+// Cassie, 0, added by: Salve
+1046 2975 3383 0 SOUTH false
+// Party Pete, 0, added by: Salve
+5792 3050 3377 0 SOUTH true
+// Man, 2, added by: Salve
+3078 3235 3215 0 SOUTH true
+// Man, 2, added by: Salve
+3078 3230 3207 0 SOUTH true
+// Man, 2, added by: Salve
+3078 2803 3430 0 SOUTH true
+// Banker, 0, added by: Salve
+394 2807 3443 0 SOUTH false
+// Banker, 0, added by: Salve
+394 2809 3443 0 SOUTH false
+// Banker, 0, added by: Salve
+394 2811 3443 0 SOUTH false
+// Man, 2, added by: Salve
+3078 2816 3443 0 SOUTH true
+// Banker, 0, added by: Salve
+394 2584 3419 0 SOUTH false
+// Banker, 0, added by: Salve
+394 2584 3421 0 SOUTH false
+// Cow, 2, added by: Salve
+2805 3037 3311 0 SOUTH true
+// Cow, 2, added by: Salve
+2805 3040 3307 0 SOUTH true
+// Cow, 2, added by: Salve
+2805 3034 3302 0 SOUTH true
+// Cow, 2, added by: Salve
+2805 3031 3307 0 SOUTH true
+// Cow, 2, added by: Salve
+2805 3026 3306 0 SOUTH true
+// Cow, 2, added by: Salve
+2805 3028 3300 0 SOUTH true
+// Cow, 2, added by: Salve
+2805 3022 3299 0 SOUTH true
+// Banker, 0, added by: Salve
+394 3514 3483 0 SOUTH false
+// Banker, 0, added by: Salve
+394 3514 3481 0 SOUTH false
+// Banker, 0, added by: Salve
+394 3514 3479 0 SOUTH false
+// Undead cow, 2, added by: Salve
+2992 3623 3529 0 SOUTH true
+// Undead cow, 2, added by: Salve
+2992 3622 3525 0 SOUTH true
+// Undead cow, 2, added by: Salve
+2992 3619 3523 0 SOUTH true
+// Undead cow, 2, added by: Salve
+2992 3617 3527 0 SOUTH true
+// Undead cow, 2, added by: Salve
+2992 3614 3527 0 SOUTH true
+// Undead cow, 2, added by: Salve
+2992 3609 3525 0 SOUTH true
+// Shantay, 0, added by: Salve
+4642 3304 3121 0 SOUTH true
+// Shantay Guard, 22, added by: Salve
+4643 3299 3122 0 SOUTH true
+// Cook, 0, added by: Salve
+4626 1657 3670 0 NORTH_EAST false
+// Cow, 2, added by: Salve
+2805 3255 3262 0 SOUTH true
+// Cow, 2, added by: Salve
+2805 3256 3268 0 SOUTH true
+// Crazy archaeologist, 204, added by: Salve
+6618 2967 3703 0 SOUTH true
+// Lesser demon, 82, added by: Salve
+2005 2844 9557 0 SOUTH true
+// Lesser demon, 82, added by: Salve
+2005 2839 9552 0 SOUTH true
+// Lesser demon, 82, added by: Salve
+2005 2833 9563 0 SOUTH true
+// Ghommal, 0, added by: Salve
+2457 2877 3547 0 SOUTH true
+// Harrallak Menarous, 0, added by: Salve
+2458 2868 3544 0 SOUTH true
+// Ajjat, 0, added by: Salve
+2460 2845 3553 0 SOUTH true
+// Lilly, 0, added by: Salve
+2470 2840 3553 0 SOUTH true
+// Shanomi, 0, added by: Salve
+2462 2854 3540 0 SOUTH true
+// Banker, 0, added by: Salve
+394 2841 3543 0 SOUTH false
+// Banker, 0, added by: Salve
+1764 2668 2651 0 NORTH_EAST false
+// Banker, 0, added by: Salve
+1764 2666 2651 0 NORTH_EAST false
+// Squire, 0, added by: Salve
+1767 2665 2660 0 SOUTH false
+// Squire, 0, added by: Salve
+1765 2658 2654 0 SOUTH false
+// Squire, 0, added by: Salve
+1769 2658 2674 0 SOUTH true
+// Squire, 0, added by: Salve
+1768 2650 2664 0 SOUTH false
+// Pyromancer, 0, added by: Salve
+7371 1624 3941 0 SOUTH true
+// Wintertoad, 0, added by: Salve
+7381 1622 3933 0 SOUTH true
+// Ignisia, 0, added by: Salve
+7374 1635 3946 0 SOUTH true
+// Banker, 0, added by: Salve
+395 3208 3222 2 SOUTH true
+// Wizard Distentor, 0, added by: Salve
+3248 2591 3086 0 SOUTH true
+// Magic Store owner, 0, added by: Salve
+3247 2593 3084 1 SOUTH true
+// Shop keeper, 0, added by: Salve
+508 2957 3388 0 SOUTH false
+// Flynn, 0, added by: Salve
+1049 2950 3387 0 SOUTH false
+// Hairdresser, 0, added by: Salve
+1305 2944 3381 0 SOUTH true
+// Thessalia, 0, added by: Salve
+534 2944 3381 0 SOUTH false
+// Wayne, 0, added by: Salve
+1050 2972 3312 0 SOUTH false
+// Bartender, 0, added by: Salve
+687 3045 3257 0 SOUTH false
+// Brian, 0, added by: Salve
+1028 3028 3251 0 SOUTH false
+// Betty, 0, added by: Salve
+1052 3012 3259 0 SOUTH false
+// Grum, 0, added by: Salve
+1025 3013 3247 0 SOUTH false
+// Gerrant, 0, added by: Salve
+1027 3014 3228 0 SOUTH false
+// Wydin, 0, added by: Salve
+1026 3013 3206 0 SOUTH false
+// Chicken, 1, added by: Salve
+2692 3196 3352 0 SOUTH true
+// Chicken, 1, added by: Salve
+2692 3198 3354 0 SOUTH true
+// Chicken, 1, added by: Salve
+2692 3196 3355 0 SOUTH true
+// Chicken, 1, added by: Salve
+2692 3198 3359 0 SOUTH true
+// Scavvo, 0, added by: Salve
+523 3192 3354 1 SOUTH true
+// Valaine, 0, added by: Salve
+522 3191 3361 1 SOUTH true
+// Shop keeper, 0, added by: Salve
+508 3415 2907 0 SOUTH false
+// Seddu, 0, added by: Salve
+4754 3407 2923 0 SOUTH false
+// Rokuh, 0, added by: Salve
+4761 3431 2914 0 SOUTH false
+// Nardah Banker, 0, added by: Salve
+4762 3425 2889 0 SOUTH false
+// Nardah Banker, 0, added by: Salve
+4762 3425 2891 0 SOUTH false
+// Nardah Banker, 0, added by: Salve
+4762 3425 2893 0 SOUTH false
+// Nardah Banker, 0, added by: Salve
+4762 3425 2894 0 SOUTH false
+// Barbarian, 17, added by: Salve
+3055 3079 3440 0 SOUTH true
+// Barbarian, 10, added by: Salve
+3056 3078 3442 0 SOUTH true
+// Barbarian, 10, added by: Salve
+3059 3076 3440 0 SOUTH true
+// Barbarian, 10, added by: Salve
+3070 3081 3444 0 SOUTH true
+// Barbarian, 9, added by: Salve
+3072 3082 3436 0 SOUTH true
+// Barbarian, 17, added by: Salve
+3057 3080 3427 0 SOUTH true
+// Barbarian, 17, added by: Salve
+3058 3086 3418 0 SOUTH true
+// Barbarian, 10, added by: Salve
+3059 3076 3417 0 SOUTH true
+// Barbarian, 17, added by: Salve
+3062 3079 3422 0 SOUTH true
+// Peksa, 0, added by: Salve
+524 3075 3430 0 SOUTH false
+// Litara, 0, added by: Salve
+2493 3081 3421 0 SOUTH false
+// Banker, 0, added by: Salve
+394 2657 3286 0 SOUTH_EAST false
+// Banker, 0, added by: Salve
+394 2657 3283 0 SOUTH_EAST false
+// Banker, 0, added by: Salve
+394 2657 3280 0 SOUTH_EAST false
+// Zenesha, 0, added by: Salve
+1176 2651 3294 0 SOUTH false
+// Banker, 0, added by: Salve
+394 2615 3330 0 NORTH_EAST false
+// Banker, 0, added by: Salve
+394 2618 3330 0 NORTH_EAST false
+// Banker, 0, added by: Salve
+394 2619 3330 0 NORTH_EAST false
+// TzHaar-Mej-Roh, 0, added by: Salve
+2185 2461 5125 0 SOUTH true
+// Moss giant, 84, added by: Salve
+891 1689 10029 0 SOUTH true
+// Cyclops, 56, added by: Salve
+2463 1653 10023 0 SOUTH true
+// Greater Nechryael, 200, added by: Salve
+7278 1693 10084 0 SOUTH true
+// Greater Nechryael, 200, added by: Salve
+7278 1706 10080 0 SOUTH true
+// Greater Nechryael, 200, added by: Salve
+7278 1710 10081 0 SOUTH true
+// Warped Jelly, 112, added by: Salve
+7277 1717 10043 0 SOUTH true
+// Dust devil, 93, added by: Salve
+423 1710 10034 0 SOUTH true
+// Warped Jelly, 112, added by: Salve
+7277 1690 9994 0 SOUTH true
+// Cyclops, 56, added by: Salve
+2463 1689 10011 0 SOUTH true
+// Moss giant, 84, added by: Salve
+891 1689 10044 0 SOUTH true
+// Ghost, 19, added by: Salve
+85 1690 10064 0 SOUTH true
+// Ghost, 19, added by: Salve
+85 1700 10062 0 SOUTH true
+// Spiritual mage, 120, added by: Salve
+2212 2907 5301 2 SOUTH true
+// Yak, 22, added by: Salve
+5816 2319 3796 0 SOUTH true
+// Yak, 22, added by: Salve
+5816 2317 3793 0 SOUTH true
+// Yak, 22, added by: Salve
+5816 2316 3790 0 SOUTH true
+// Yak, 22, added by: Salve
+5816 2321 3789 0 SOUTH true
+// Yak, 22, added by: Salve
+5816 2324 3791 0 SOUTH true
+// Yak, 22, added by: Salve
+5816 2327 3793 0 SOUTH true
+// Yak, 22, added by: Salve
+5816 2322 3794 0 SOUTH true
+// Yak, 22, added by: Salve
+5816 2326 3797 0 SOUTH true
+// Yak, 22, added by: Salve
+5816 2323 3798 0 SOUTH true
+// Tool Leprechaun, 0, added by: Salve
+0 2436 3413 0 SOUTH true
+// Tool Leprechaun, 0, added by: Salve
+0 2938 3438 0 SOUTH true
+// Tool Leprechaun, 0, added by: Salve
+0 3002 3373 0 SOUTH true
+// Tool Leprechaun, 0, added by: Salve
+0 3231 3459 0 SOUTH true
+// Tool Leprechaun, 0, added by: Salve
+0 3191 3231 0 SOUTH true
+// Cow, 2, added by: Salve
+2805 2924 3289 0 SOUTH true
+// Cow, 2, added by: Salve
+2805 2919 3289 0 SOUTH true
+// Cow, 2, added by: Salve
+2805 2926 3282 0 SOUTH true
+// Cow, 2, added by: Salve
+2805 2924 3277 0 SOUTH true
+// Cow, 2, added by: Salve
+2805 2924 3271 0 SOUTH true
+// Cow, 2, added by: Salve
+2805 2930 3269 0 SOUTH true
+// Cow, 2, added by: Salve
+2805 2933 3273 0 SOUTH true

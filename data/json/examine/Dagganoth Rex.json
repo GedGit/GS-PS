@@ -1,0 +1,212 @@
+  {
+    "npcIds": [
+      2267
+    ],
+    "rarities": [
+      {
+        "itemId": 12073,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 3.0
+      },
+      {
+        "itemId": 1343,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 30.0
+      },
+      {
+        "itemId": 1357,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 30.0
+      },
+      {
+        "itemId": 12645,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 0.285
+      },
+      {
+        "itemId": 1315,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 1273,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 1359,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 1373,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 6.0
+      },
+      {
+        "itemId": 6739,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 2.0
+      },
+      {
+        "itemId": 1193,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 30.0
+      },
+      {
+        "itemId": 1119,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 30.0
+      },
+      {
+        "itemId": 1073,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 3758,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 3748,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 6.0
+      },
+      {
+        "itemId": 6129,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 6.0
+      },
+      {
+        "itemId": 6130,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 6.0
+      },
+      {
+        "itemId": 6737,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 2.0
+      },
+      {
+        "itemId": 6735,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 2.0
+      },
+      {
+        "itemId": 2436,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 2440,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 2442,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 2434,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 2452,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 2436,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 2361,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 448,
+        "minAmount": 25,
+        "maxAmount": 25,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 454,
+        "minAmount": 100,
+        "maxAmount": 100,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 441,
+        "minAmount": 150,
+        "maxAmount": 150,
+        "rarity": 6.0
+      },
+      {
+        "itemId": 2354,
+        "minAmount": 15,
+        "maxAmount": 38,
+        "rarity": 6.0
+      },
+      {
+        "itemId": 366,
+        "minAmount": 5,
+        "maxAmount": 5,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 374,
+        "minAmount": 5,
+        "maxAmount": 5,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 386,
+        "minAmount": 5,
+        "maxAmount": 5,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 207,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 12.0
+      },
+      {
+        "itemId": 995,
+        "minAmount": 500,
+        "maxAmount": 5000,
+        "rarity": 12.0
+      }
+    ]
+  }
+

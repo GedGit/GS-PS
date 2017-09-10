@@ -1,0 +1,10 @@
+Send String: [Id: 177, Child: 0, Text: <col=00008B>Congratulations, you have just advanced a Woodcutting level!]
+Send String: [Id: 177, Child: 1, Text: You have now reached level 5.]
+Interface: walkable=0, id=177, target={548, 122}
+
+
+Interface: walkable=0, id=305, target={548, 122}
+Send String: [Id: 305, Child: 9, Text: <br><br><br><br>15 Arrow Shafts]
+Send String: [Id: 305, Child: 13, Text: <br><br><br><br>Short Bow]
+Send String: [Id: 305, Child: 17, Text: <br><br><br><br>Long Bow]
+Send String: [Id: 305, Child: 21, Text: <br><br><br><br>Crossbow Stock]

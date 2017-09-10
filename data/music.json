@@ -1,0 +1,37 @@
+[
+  {
+    "region": 12850,
+    "name": "Harmony",
+    "song": 76,
+    "frame": 6,
+    "button": 6
+  },
+    {
+    "region": 12851,
+    "name": "Harmony",
+    "song": 76,
+    "frame": 6,
+    "button": 6
+  },
+  {
+    "region": 12594,
+    "name": "Flute salad",
+    "song": 163,
+    "frame": 6,
+    "button": 14
+  },
+  {
+    "region": 12595,
+    "name": "Flute salad",
+    "song": 163,
+    "frame": 6,
+    "button": 14
+  },
+  {
+    "region": 12851,
+    "name": "Flute salad",
+    "song": 163,
+    "frame": 6,
+    "button": 14
+  }  
+]

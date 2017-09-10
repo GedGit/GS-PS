@@ -1,0 +1,16 @@
+{
+  "rolls": 1,
+  "npcIdentifiers": [
+      2844
+  ],
+  "staticDrops": [
+    {
+      "itemID": 1363,
+      "hitRollCeil": 100.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    }
+  ],
+  "dynamicDrops": [
+  ]
+}

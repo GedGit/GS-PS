@@ -1,0 +1,93 @@
+  {
+    "npcIds": [
+      412,
+      7407
+    ],
+    "rarities": [
+      {
+        "itemId": 1311,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 25.0
+      },
+      {
+        "itemId": 1353,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 25.0
+      },
+      {
+        "itemId": 1365,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 25.0
+      },
+      {
+        "itemId": 4129,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 5.0
+      },
+      {
+        "itemId": 1163,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 2.5
+      },
+      {
+        "itemId": 4153,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 2.5
+      },
+      {
+        "itemId": 4101,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 2.5
+      },
+      {
+        "itemId": 554,
+        "minAmount": 37,
+        "maxAmount": 37,
+        "rarity": 25.0
+      },
+      {
+        "itemId": 561,
+        "minAmount": 15,
+        "maxAmount": 15,
+        "rarity": 10.0
+      },
+      {
+        "itemId": 560,
+        "minAmount": 5,
+        "maxAmount": 5,
+        "rarity": 10.0
+      },
+      {
+        "itemId": 995,
+        "minAmount": 150,
+        "maxAmount": 220,
+        "rarity": 25.0
+      },
+      {
+        "itemId": 2353,
+        "minAmount": 3,
+        "maxAmount": 3,
+        "rarity": 25.0
+      },
+      {
+        "itemId": 2359,
+        "minAmount": 3,
+        "maxAmount": 3,
+        "rarity": 25.0
+      },
+      {
+        "itemId": 2357,
+        "minAmount": 1,
+        "maxAmount": 1,
+        "rarity": 25.0
+      }
+    ]
+  }
+

@@ -1,0 +1,268 @@
+{
+  "rolls": 3,
+  "npcIdentifiers": [
+      7031
+  ],
+  "staticDrops": [
+    {
+      "itemID": 532,
+      "hitRollCeil": 100.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+    {
+      "itemID": 13307,
+      "hitRollCeil": 100.0,
+      "maxAmount": 50000,
+      "minAmount": 50000
+    }
+  ],
+  "dynamicDrops": [
+    {
+      "itemID": 6334,
+      "hitRollCeil": 100.0,
+      "maxAmount": 4,
+      "minAmount": 4
+    },
+    {
+      "itemID": 199,
+      "hitRollCeil": 100.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+  {
+      "itemID": 201,
+      "hitRollCeil": 100.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+ {
+      "itemID": 203,
+      "hitRollCeil": 100.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+ {
+      "itemID": 205,
+      "hitRollCeil": 100.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+{
+      "itemID": 207,
+      "hitRollCeil": 50.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+{
+      "itemID": 209,
+      "hitRollCeil": 50.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+{
+      "itemID": 211,
+      "hitRollCeil": 50.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+{
+      "itemID": 213,
+      "hitRollCeil": 50.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+{
+      "itemID": 215,
+      "hitRollCeil": 50.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+{
+      "itemID": 217,
+      "hitRollCeil": 50.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+{
+      "itemID": 219,
+      "hitRollCeil": 1.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+{
+      "itemID": 2485,
+      "hitRollCeil": 50.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+    {
+      "itemID": 1355,
+      "hitRollCeil": 100.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5281,
+      "hitRollCeil": 100.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5304,
+      "hitRollCeil": 5.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5302,
+      "hitRollCeil": 25.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5303,
+      "hitRollCeil": 25.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5300,
+      "hitRollCeil": 25.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5321,
+      "hitRollCeil": 25.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5322,
+      "hitRollCeil": 50.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5298,
+      "hitRollCeil": 50.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5320,
+      "hitRollCeil": 50.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5323,
+      "hitRollCeil": 50.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5301,
+      "hitRollCeil": 50.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5280,
+      "hitRollCeil": 50.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5106,
+      "hitRollCeil": 50.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5299,
+      "hitRollCeil": 50.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5319,
+      "hitRollCeil": 100.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5318,
+      "hitRollCeil": 100.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5297,
+      "hitRollCeil": 100.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5296,
+      "hitRollCeil": 100.0,
+      "maxAmount": 2,
+      "minAmount": 1
+    },
+    {
+      "itemID": 5324,
+      "hitRollCeil": 100.0,
+      "maxAmount": 3,
+      "minAmount": 1
+    },
+    {
+      "itemID": 8901,
+      "hitRollCeil": 0.3,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+    {
+      "itemID": 1161,
+      "hitRollCeil": 50.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+    {
+      "itemID": 1213,
+      "hitRollCeil": 50.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+    {
+      "itemID": 1197,
+      "hitRollCeil": 50.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+    {
+      "itemID": 561,
+      "hitRollCeil": 100.0,
+      "maxAmount": 18,
+      "minAmount": 6
+    },
+    {
+      "itemID": 8783,
+      "hitRollCeil": 100.0,
+      "maxAmount": 4,
+      "minAmount": 2
+    },
+    {
+      "itemID": 225,
+      "hitRollCeil": 100.0,
+      "maxAmount": 1,
+      "minAmount": 1
+    },
+    {
+      "itemID": 995,
+      "hitRollCeil": 100.0,
+      "maxAmount": 920,
+      "minAmount": 420
+    }
+  ]
+}
