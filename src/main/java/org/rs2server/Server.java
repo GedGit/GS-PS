@@ -24,7 +24,7 @@ public class Server {
 	/**
 	 * Constructs the login server.
 	 */
-	private static LoginServer loginServer = new LoginServer();
+	private static LoginServer loginServer = new LoginServer(); 
 
 	/**
 	 * The protocol version.
@@ -32,7 +32,7 @@ public class Server {
 	public static final int VERSION = 83;
 
 	/**
-	 * Constructs the applet logger.
+	 * Construct the Applet logger.
 	 */
 	private static final Logger logger = LoggerFactory.getLogger(Server.class);
 

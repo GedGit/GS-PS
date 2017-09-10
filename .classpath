@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="lib" path="extradeps/everythingrs-api.jar"/>
+	<classpathentry kind="lib" path="extradeps/jdbj-0.1.9.jar"/>
+	<classpathentry kind="lib" path="extradeps/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="extradeps/netty-3.2.9.Final.jar"/>
+	<classpathentry kind="lib" path="extradeps/netty-all-5.0.0.Alpha1-sources.jar"/>
+	<classpathentry kind="lib" path="extradeps/netty-all-5.0.0.Alpha1.jar"/>
+	<classpathentry kind="lib" path="extradeps/reflections-0.9.10.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

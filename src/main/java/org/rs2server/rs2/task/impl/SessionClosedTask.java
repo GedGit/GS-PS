@@ -1,4 +1,4 @@
-package org.rs2server.rs2.task.impl;
+package org.rs2server.rs2.task.impl; 
 
 import org.apache.mina.core.session.IoSession;
 import org.rs2server.rs2.model.World;
@@ -19,7 +19,7 @@ public class SessionClosedTask implements Task {
 	/**
 	 * Logger instance.
 	 */
-	private static final Logger logger = LoggerFactory.getLogger(SessionClosedTask.class);
+	private static final Logger logger = LoggerFactory.getLogger(SessionClosedTask.class); 
 
 	/**
 	 * The session that closed.
