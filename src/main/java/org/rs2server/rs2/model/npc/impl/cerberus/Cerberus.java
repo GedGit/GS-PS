@@ -29,7 +29,7 @@ import java.util.Random;
 /**
  * @author Twelve
  */
-public final class Cerberus extends CombatNpc<Cerberus> {
+public class Cerberus extends CombatNpc<Cerberus> {
 
 	public static final int NPC_ID = 5862;
 

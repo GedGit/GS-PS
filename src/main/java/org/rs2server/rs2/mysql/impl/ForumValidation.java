@@ -96,7 +96,7 @@ public class ForumValidation implements Runnable {
 				int group = results.getInt(tableNames[4]);
 				returnCodes[1] = group;
 				String pass2 = "";
-				pass2 = MD5.MD5(MD5.MD5(salt) + MD5.MD5(password));
+				pass2 = MD5.hash(MD5.hash(salt) + MD5.hash(password));
 				if (pass.equals(pass2)) { // correct pass
 					returnCodes[0] = 2;
 					return returnCodes;
