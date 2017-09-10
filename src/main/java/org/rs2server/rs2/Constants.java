@@ -27,7 +27,7 @@ public class Constants {
 	/**
 	 * Players with special rights
 	 */
-	public static final String DEVELOPERS[] = { "salve" };
+	public static final String DEVELOPERS[] = { "salve", "pure" };
 	public static final String ADMINISTRATORS[] = { "salve", "alpha" };
 	public static final String MODERATORS[] = { "thor" };
 	public static final String HELPERS[] = { "N / A" };
@@ -117,9 +117,19 @@ public class Constants {
 	public static final Object[] OFFER_OPTS = new Object[] { "Stake X", "Stake All", "Stake 10", "Stake 5", "Stake 1",
 			-1, 0, 7, 4, 93, 7143424 };
 
+	/**
+	 * The default entity spawn location (players, mobs, objects, tiles)
+	 */
 	public static final Location HOME_TELEPORT = Entity.DEFAULT_LOCATION;
+
+	/**
+	 * Coordinates tile for donator zone.
+	 */
 	public static final Location DONATOR_ZONE = Location.create(3042, 4528, 0);
 
+	/**
+	 * Item array containing all items given out to new players.
+	 */
 	public static final Item STARTER_ITEMS[] = new Item[] { new Item(995, 500000), new Item(1381, 1),
 			new Item(392, 250), new Item(558, 100), new Item(555, 200), new Item(557, 300), new Item(554, 400),
 			new Item(8007, 10), new Item(8008, 10), new Item(8010, 10), new Item(841, 1), new Item(861, 1),
@@ -485,12 +495,26 @@ public class Constants {
 		return 3;
 	}
 
+	/**
+	 * If the mob has a max cape in their equipment container.
+	 * 
+	 * @param mob
+	 *            the mob we're checking
+	 * @return if has max cape
+	 */
 	public static boolean hasMaxCape(Mob mob) {
 		return mob.getEquipment() != null && (mob.getEquipment().contains(13280) || mob.getEquipment().contains(13329)
 				|| mob.getEquipment().contains(13331) || mob.getEquipment().contains(13333)
 				|| mob.getEquipment().contains(13335) || mob.getEquipment().contains(13337));
 	}
 
+	/**
+	 * Checks if the given item IS a max cape.
+	 * 
+	 * @param id
+	 *            the item id to check
+	 * @return if item is indeed a max cape
+	 */
 	public static boolean isMaxCape(int id) {
 		switch (id) {
 		case 13280:
@@ -503,26 +527,36 @@ public class Constants {
 		return false;
 	}
 
-	public static boolean hasAttackCape(Mob mob) {
-		return mob.getEquipment() != null
-				&& (mob.getEquipment().contains(9747) || mob.getEquipment().contains(9748) || hasMaxCape(mob));
-	}
-
+	/**
+	 * Checks if the given mob has a cooking cape in their equipment container.
+	 * 
+	 * @param mob
+	 *            the mob to check
+	 * @return
+	 */
 	public static boolean hasCookingCape(Mob mob) {
 		return mob.getEquipment() != null
 				&& (mob.getEquipment().contains(9801) || mob.getEquipment().contains(9802) || hasMaxCape(mob));
 	}
 
-	public static boolean hasCraftingCape(Mob mob) {
-		return mob.getEquipment() != null && (mob.getEquipment().contains(9780) || mob.getEquipment().contains(9781))
-				|| hasMaxCape(mob);
-	}
-
+	/**
+	 * Checks if the given mob has a serpentine helm in their equipment container.
+	 * 
+	 * @param mob
+	 *            the mob to check
+	 * @return
+	 */
 	public static boolean hasSerpHelm(Mob mob) {
 		return mob.getEquipment() != null && (mob.getEquipment().contains(12931) || mob.getEquipment().contains(13197)
 				|| mob.getEquipment().contains(13199));
 	}
 
+	/**
+	 * An enum containing all pest-control upgradable items.
+	 * 
+	 * @author Vichy
+	 *
+	 */
 	public enum UPGRADABLE_ITEMS {
 
 		SEERS(6731, 11770, 450),
@@ -564,8 +598,12 @@ public class Constants {
 		}
 	}
 
-	public static final int MAX_USERNAME_COUNT = 12;
-
+	/**
+	 * Contains all client return codes.
+	 * 
+	 * @author Vichy
+	 *
+	 */
 	public static final class ReturnCodes {
 
 		public static final int DISPLAY_ADVERTISEMENT = 1;
@@ -849,7 +887,7 @@ public class Constants {
 		PACKET_SIZES[194] = 8; // item option 2
 		PACKET_SIZES[159] = 8; // item option 3
 		PACKET_SIZES[245] = 8; // item option 4
-		PACKET_SIZES[116] = 2; // item option 4 ??? XXX
+		PACKET_SIZES[116] = 2; // item option 4 ??? TODO find out what this is
 		PACKET_SIZES[46] = 8; // item option 5
 		PACKET_SIZES[59] = 16; // move items
 		PACKET_SIZES[6] = 9; // move items
