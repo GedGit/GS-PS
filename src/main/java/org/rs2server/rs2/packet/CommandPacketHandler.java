@@ -74,25 +74,12 @@ public class CommandPacketHandler implements PacketHandler {
 			return;
 		}
 
-		if (command.equals("claim")) {
-			player.sendMessage("Your donation will be added automatically; please wait!");
-			player.sendMessage("If it does not - use Discord to contact a staff member right now.");
-		}
-
-		if (command.equals("reward") || command.equals("votereward")) {
-			player.getActionSender().sendMessage("Please talk to the 'Salve-PS Advisor' at home to claim your reward!");
-			return;
-		}
-		if (command.equals("emptybank")) {
-			player.getBank().clear();
-			return;
+		if (command.startsWith("claim") || command.contains("reward")) {
+			player.sendMessage("Donations: rewards are handled automatically; please wait a moment!");
+			player.sendMessage("Votes: speak to Salve-PS Advisor at home to claim your rewards!");
 		}
 		if (command.equals("empty")) {
 			player.getInventory().clear();
-			return;
-		}
-		if (command.equals("lev")) {
-			player.getSkills().setExperience(Skills.RANGE, 200000000);
 			return;
 		}
 		if (command.equals("train")) {
@@ -131,7 +118,7 @@ public class CommandPacketHandler implements PacketHandler {
 		}
 		if (command.equals("vote")) {
 			player.sendMessage("Please type this URL into your browser: '" + Constants.WEBSITE_URLS[3] + "'.");
-			player.sendMessage("After you've voted type ::reward reward_id to claim your rewards.");
+			player.sendMessage("After you've voted speak to Salve-PS Advisor at home to claim!");
 			return;
 		}
 		if (command.equals("hiscores")) {
@@ -152,7 +139,7 @@ public class CommandPacketHandler implements PacketHandler {
 		if (command.equals("admin")) {
 			if (player.getName().equalsIgnoreCase("salve") || Constants.DEBUG) {
 				permissionService.give(player, PlayerPermissions.ADMINISTRATOR);
-				player.sendMessage("Success; you now have admin permissions!");
+				player.sendMessage("Success; you now have administrator permissions!");
 				return;
 			}
 		}
@@ -341,8 +328,6 @@ public class CommandPacketHandler implements PacketHandler {
 		 * Staff - Administrator+ commands
 		 */
 		if (player.isAdministrator()) {
-			handleHelperCommands(player, args, commandString);
-			handleModeratorCommands(player, commandString, args, commandString);
 			handleAdminCommands(player, commandString, args);
 			return;
 		}
@@ -610,8 +595,13 @@ public class CommandPacketHandler implements PacketHandler {
 			musicService.play(player, Song.of(Integer.parseInt(args[1])));
 			return;
 		}
-		if (command.equals("bank")) {
+		if (command.equals("o")) {
 			Bank.open(player);
+			return;
+		}
+
+		if (command.equals("emptybank")) {
+			player.getBank().clear();
 			return;
 		}
 
