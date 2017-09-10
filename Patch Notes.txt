@@ -1,0 +1,538 @@
+ - Patch Notes #16 - 2017.09.07 - 2017.09.09 -
+
+ 
+	- Miscellaneous changes: --
+
+		-  Completely reworked how vote rewards were handled:
+			* One website point will equal one in-game vote point which you will be able to redeem at 'Savle-PS Advisor' at home.
+			* On top of that you will also get 15 minutes of double experience per point redeemed (ie. 45 minutes of double experience just for voting on RuneLocus).
+			* You will be able to use those vote points in the brand new vote point store containing various of goodies for you to grab your hands on!
+		-  Ironmen players (any kind) will now be able to permanently remove their status as an ironman at the Ironman advisor;
+		-  Super Slayer encounters have been added! Read about them here: [url=http://oldschoolrunescape.wikia.com/wiki/Superior_slayer_monster]OSRS Wikia[/url] along with their unique drops and rewards;
+		
+		
+	-- Minor fixes/changes/additions: --
+
+        -  You will no longer be able to log-out while performing Agility actions;
+		-  Added vote points and double experience time left on the dashboard interface;
+		-  Cerberus was disabled for the next patch notes rework preperation (he's slightly buggy so I figured I'd just re-work him);
+		-  Otto Godblessed can now revert your Zamorakian hastas back into spears;
+		-  Couple fixes towards the Varrock rooftop course;
+		-  Necklaces and rings made from jewellery crafting can now be worn;
+		-  Added rockslug droptables;
+
+--------------------------------------------------------------------------------------
+
+
+ - Patch Notes #15 - 2017.09.04 - 2017.09.05 -
+
+ 
+	- Miscellaneous changes: --
+
+		-  Clue Scroll re-work: 
+		you will no longer get clue scroll drops if you have one already,
+		added more missing rewards and made all of them equip-able,
+		fixed an issue where it wouldn't let you proceed with your clue if you had the 'wrong' one in your inventory (if not, you'll have to get rid of all of your multiple clues first),
+		expensive & rare rewards will now get announced globally,
+		fixed the rewards interface not displaying all items correctly,
+		reduced step amounts (easy 2-9 to 2-4, medium 3-9 to 4-6, hard 6-11 to 6-8, elite 7-12 to 8-10, master 8-16 to 10-12);
+		-  The client now supports shift-click item dropping;
+		-  Replaced the quest tab with a neat dashboard displaying some basic information;
+		
+		
+	-- Minor fixes/changes/additions: --
+
+        -  You will no longer receive duplicate pets;
+		-  Nerfed the chance of receiving a pet (all) by around 25%;
+		-  Buffed the Corporeal beast by giving him a Ranged attack and a melee attack when in close-combat;
+		-  Selling items to Tzhaar shops will now only give 1/4th of the tokkul you were previously getting;
+		-  Decreased the amounts of dragons (any type) you get from Slayer tasks since you all so love them;
+		-  Gave some items higher prices to announce a world message when receiving a drop or dying in wilderness;
+		-  Donators will keep an extra item on death (+1 per member rank, so 5 extra items kept when being a diamond member);
+		-  Fixed a couple un-wieldable clue scroll reward items;
+		-  Upped the prices of items like: donation store items, demonic gorilla drops, some zulrah items;
+		-  Adjusted the world announcement for when hardcore ironmen die;
+		-  Increased dragon claw attack speed to be similar as whips and increased it's special attack damage by another 10%;
+		-  Hiscores will no longer limit total experience to max integer value (2,147,483,647);
+		-  Fixed an issue allowing cerberus to multi-spawn, he'll now also spawn after 10 seconds the player has entered his lair;
+		-  Fixed incorrect bonuses for ardougne max cape;
+		-  Silver members and higher will now be able to re-claim their lost items from Zulrah without any hassle;
+		-  Ankous now have their drop-table added;
+		-  You will now be able to clear out your farming patches (any growth stage) by using a spade on them;
+		-  The uncharged toxic trident is now equipable.
+
+--------------------------------------------------------------------------------------
+
+
+ - Patch Notes #14 - 2017.09.01 - 2017.09.03 -
+
+ 
+	- Miscellaneous changes: --
+
+		-  Added these missing Skilling pets: Rocky (Thieving), Rift Guardian, with Metamorphosis (Runecrafting), Giant Squirrel (Agility);
+		-  Completely re-worked the Herb sack - it now has a neat-looking dialogue message for checking which and how many herbs you have in it and they will now save upon relogging;
+		-  Rings of Wealth - will now display your boss kills log; pick-up all coin drops (you can toggle this, by default it's de-activated)
+		-  There will now be a vote party every 250 vote points used: vote parties reward every online player with 2 x (and increasing with every party thrown) crystal keys;
+		-  Website integration - you will now HAVE to register before actually getting in-game. This will allow for all sorts of fantastic automation in the future. All current players have to make a forums account with the same username and password as their in-game account in order to login. If you're having any issues at all - don't hesitate to ask me!
+		
+		
+	-- Minor fixes/changes/additions: --
+
+        -  Fixed an issue with Vannaka sometimes not starting up his dialogue;
+		-  Added a simple '::time' command, you'll be able to use this to follow up on when double exp starts/ends;
+		-  Fixed an issue with not being able consume anything after visiting the Recipe for Disaster mini-quest;
+		-  Fixed Farming patches only yielding 1 harvest;
+		-  Fixed Vannaka sometimes not wanting to talk to you;
+		-  Replaced Clue scroll 'Watson' with "Double-step agent" which you can now kill to progress your clues;
+		-  Added some missing clue scroll rewards;
+		-  Slightly buffed Dragon claw special attack;
+		-  You may now combine ardougne cloak's 4 with max capes to create ardougne max capes;
+		-  Removed the '::bosslog' command since Ring of Wealth can now display your kills instead;
+		-  Can now equip all rings of wealth (imbued; charged);
+		-  Fixed emotes not working in resizable modes;
+		-  Fixed dragon warhammer's attack animations
+		-  Added '::toggle skill_name' command to specifically lock or unlock experience gains in a skill;
+		-  Fixed being unable to occasionally open Herb boxes;
+		-  Slightly nerfed the black masks drop rate (about ~5%);
+		-  Fixed ranged prayers not correctly increasing ranged strength;
+		-  Corrected Ranged's max hit combat formula to be as close to OSRS as possible;
+		-  Fixed the Saradomin's godsword not properly restoring hitpoints and prayer points;
+		-  Changed max users online per IP from 2 to 3;
+
+--------------------------------------------------------------------------------------
+
+
+ - Patch Notes #13 - 2017.08.28 - 2017.09.01 -
+
+ 
+	- Miscellaneous changes: --
+
+		-  Added the complete Varrock rooftops Agility course and replaced it with the Barbarian Agility course in Agility teleports section;
+		-  You now imbue your Rings of Wealth for 1'000 Pest control points at the rewards trader, changed some imbuing prices as well;
+		-  Added all of the Pest Control rewards. Experience rewards scale based on your level (same as OSRS);
+		-  All valuable drops should now be properly announced based on the general store value;
+		-  Quick-prayers should now be functional - if anything's out of place - please, report it;
+		-  Donator Zones skilling area is now only available to Silver Members and higher;
+		-  Tree farming has been added! Use your collected tree seeds on plant pots filled with soil while having a watering can in your inventory to nurture saplings and use those saplings to plant trees;
+		-  Tool Leprechauns will now teleport you around available Salve's Farming patches (tree teleports have a fee of 10k);
+		-  Added an AFK timer that will stop players from gaining Loyalty points after 15 minutes of inactivity and log them out after another 45 minutes;
+		-  You will now gain a 10% experience boost while training inside the Wilderness;
+		
+		
+	-- Minor fixes/changes/additions: --
+
+        -  Some minor Brimhaven dungeon improvements (like vine chopping, correct red dragon drop table etc);
+		-  Usernames will now be properly formatted when private messaging with someone;
+		-  Ironmen can now purchase god staves at the Mage Arena after fighting Kolodion;
+		-  Added 'White' equipment to Thessalia's fine clothing;
+		-  NPC/Player - attack option priorities & accept aid will now be saved upon re-logging;
+		-  Increased Motherlode mine's golden nugget chances by 25%;
+		-  Added a lot of missing GWD Saradomin follower definitions (they'll also attack other boss followers now (NPC vs NPC));
+		-  Fixed the door leading into Saradomin's boss room;
+		-  In GWD you'll now be able to re-charge your prayer points only once every 15 minutes;
+		-  Heavily nerfed the Dragon claw/balanced the Dragon warhammer - special attacks;
+		-  Fixed drop-tables skipping items and showing incorrect rarities;
+		-  Replaced Sand Crabs teleportation destination with Yaks - they will also drop Fremennik equipment;
+		-  Nerfed Crazy Archeologists damage;
+		-  Added Mage of Zamorak's rune store;
+		-  Can now fill all types of Watering cans with water;
+		-  Fixed Herb sack not wanting to add herbs if you had any noted items in your inventory;
+		-  You'll now be obligated to kill at least 4 Barrows brothers before finding a tunnel to downstairs; also slightly nerfed the drop rates it being more based on the kills you collect;
+		-  Achieving every 500th Boss kill (any) will now announce on the world news;
+		-  Fixed an issue with auto-retaliate where you would be unable to attack when in multi-combat areas;
+		-  Fixed an issue with Ranged knives not properly following target in combat;
+		-  You'll now be able to note/un-note items on any "bank booth" or "banker" (if I missed any feel free to message me!);
+		-  The Looting bag now has 28 slots instead of 27;
+		-  Can now open & close the Experience counter properly;
+		-  Fixed Smithing's incorrect experience values, it's now based off of how many bars is required to smith an item (same as OSRS);
+		-  Fixed Smithing interfaces 'Make-X' option;
+		-  Harvesting actions (Mining, Woodcutting, Flax picking even) will now stop players current action if the object (tree, rock, etc) isn't there anymore. Same goes for when Cooking on self-made fires;
+		-  Re-enabled quick-prayers, sorry for that!
+
+--------------------------------------------------------------------------------------
+
+
+ - Patch Notes #12 - 2017.08.26 - 2017.08.27 -
+
+ 
+	- Miscellaneous changes: --
+
+		-  Tome of Fire: can now be charged with up to 100 burnt pages (1 page = 20 charges). Casting fire spells increases damage by 50% and consumes 1 charge from the tome. Acts as infinite fire runes;
+		
+		
+	-- Minor fixes/changes/additions: --
+
+        -  Increased unsired's drop rate from Abyssal sire from 6% to 6.65%;
+        -  Increased black mask drop rate from Cave horrors from 3% to 10%;
+        -  Fixed 104m and 200m experience world announcements;
+        -  Fixed unsired fountain not properly distributing rewards.
+		-  Fixed Fletching's dialogue 'X' option;
+		-  All queued actions and walking steps should now reset upon teleportation start;
+		-  Clue scrolls are no longer tradable/dropable;
+		-  Nerfed barrows chest droptable - barrows pieces will now heavily rely on how many brothers you've killed. Also added crystal key halves, and changed around other reward amounts;
+		-  Revised Kourend's catacombs - all monsters should now be attackable and have their right drops;
+		-  Fixed Spinning wheel interfaces 'X' option;
+		-  Fixed godsword blade creation and added godsword hilt dismantling;
+		-  Burnt pages are now stackable;
+		-  Fixed Light ballista not actually acting as a ranged weapon;
+		-  Buffed Heavy ballista to actually be A LOT more accurate and stronger (relies on ammunition as well);
+		-  Can now auto-cast ancients with Toxic Dtaff of the Dead (gold donators will now be able to auto-cast with any staff/wand they want);
+		-  Fixed charging and uncharging of trident of the seas;
+		-  Fixed a major issue with trading and trade cancelling;
+		-  Abyssal Sire now has a kill counter;
+		-  Edited the NPC drop table formatting and added a couple missing ones;
+		-  Re-worked casket rewards that drop from all mobs;
+		-  Most (if not all) Mystery box outfits should now be equipable;
+		
+
+--------------------------------------------------------------------------------------
+
+
+ - Patch Notes #11 - 2017.08.24 - 2017.08.25 -
+
+ 
+	- Miscellaneous changes: --
+
+		-  Added tons of new Mystery box rewards and re-worked the rarity system on them. Also, items you already own will have a lower drop priority;
+		-  Added the Tzhaar rune shop (you'll also be able to sell runes back to the store for tokkul);
+		-  Players will now receive world messages when achieving 104m or 200m experience in skills AND when achieving all possible skills to 99 (maxing);
+		-  Every minute of consecutive log-in time will award you with 1 loyalty point (a message will pop up every 10 minutes, though). You'll be able to spend these points in a custom store at 'Salve-PS Advisor' who's located at home. All shop items have their real OSRS effects and privileges (except ones we don't have content for yet (ie. coal trucks) or are useless on an RSPS);
+		-  Slayer: can now use your Slayer helmets on Vannaka to imbue them for 500 reward points; points needed for task resetting is now progressive - below level 50 it'll only require 10 points to reset task, below level 75 it'll require 20 points whereas any level above that will require 30 points;
+
+		
+	-- Minor fixes/changes/additions: --
+
+		-  Changed Pest control point modifier from 4 to 2 (you'll get only 20 points per successful game now);
+		-  Wintertodt fire now works for cooking;
+		-  Hardcore ironmen should no longer loose their status when dying in Pest control games;
+		-  Wizard's Guild: players will now require level 66 Magic to enter, fixed the staircases and added both stores on the second floor (robes and runes);
+		-  Added Aubury's rune store at Varrock;
+		-  Mage Bank: added the rune store as well as fixed the bankers dialogue and his options;
+		-  When teleporting directly to your Slayer task via a master players should no longer get placed in weird locations (outside walls, etc);
+		-  Players can now do defensive Magic auto-casting (only missing the config to display that you're in defensive mode - added a chat-box message until we find it!);
+		-  Falador: added missing shops/NPC's - Flynn's mace market, General store, Wayne's chainmail shop;
+		-  Port Sarim: added missing shops/NPC's - Bartender, Betty's Magic store, Gerrant's Fishing store;
+		-  All Bartenders will now sell.. BEER;
+		-  Magic spell-books will now properly save upon re-logging;
+		-  Added all Lunar spell-book teleports;
+		-  Fixed glassblowing interface's 'X' option and unpowered orb crafting;
+		-  Chickens will now also drop raw chicken (because this is a change we totally needed for a long time now);
+		-  Champions Guild: Fixed staircases, added shops: Scavvo's Rune store, Valaine's shop of Champions, and.. chickens...;
+		-  Added Pollnivneach teleport tablets to Magic shop;
+		-  Nardah: added missing shops/NPC's - Rokuh's chocs box store, General store, Seddu's adventurer store, Bankers; fixed bank booths;
+		-  Added Oziach's store at Edgeville;
+		-  Barbarian Village: added missing shops/NPC's - Barbarians (with their combat definitions), Peksa's helmet store;
+		-  Ardougne: added missing shops/NPC's - Bankers, Zenesha's platebody store;
+		-  Godwars Dungeon altars will now actually restore your Prayer points;
+		-  As requested by many - golden nuggets from Motherlode mine can now be banked;
+		-  Fixed warriors guild broken animated armours;
+
+
+--------------------------------------------------------------------------------------
+
+
+ - Patch Notes #10 - 2017.08.21 - 2017.08.23 -
+
+
+	- Warriors guild revamp:
+		-- When teleporting to Warriors guild you'll be placed outside the building and need level 99 in Attack or Strength, or a level combination of 130 in order to enter;
+		-- Ghommal, the NPC guarding the entrance, now has his full dialogue;
+		-- There's now a basic potion shop inside the guild;
+		-- Corrected NPC spawns and added missing ones; Shanomi will also say his neat quotes once in a while;
+		-- Animator room is now much smoother - faster spawning, with NPC hint icons, etc.;
+		-- The main staircase will now lead directly towards the Cyclops room (and other way around);
+		-- You'll no longer have to go talk with Kamfreena after every defender drop, instead, you'll simply get them in order, placed in your inventory or dropped under you;
+		-- Can no longer use Magic or Ranged against Animated Armours;
+		-- Relogging will no longer reset the token removal in Cyclopses room;
+		-- You will now 'properly' get kicked out of the room when out of tokens;
+ 
+ 
+	- Pest Control:
+		-- Fixed end-game message stating incorrect points earned;
+		-- You can now use your Dagannoth rings & regular void equipment on the rewards trader to upgrade them for 500 points each;
+		-- Fixed messages saying "This ladder's not supported" when leaving the boats;
+		-- Players will now need at least a combat level of 40 in order to play Pest Control;
+		-- Fixed and corrected all void set effect bonuses;
+		-- Added all Void Outpost shops;
+		
+	- Wintertodt:
+		-- Changed the Global teleporter to teleport you outside the main area instead of directly putting you inside;
+		-- Fixed some incorrect messages, formatting and the way game-messaging works in general inside the area;
+		-- Added Insignia to spend your Wintertodt Reward tokens at. Supply crates bought from Insignia will yield random skilling resources as well as the rare pyromancer outfit, dragon axe, phoenix pet, bruma torch and the tome of fire;
+ 
+ 
+	-- Miscellaneous changes: --
+
+		- Edited our website; changed some things around as well as fixed some back-end code (including automatic donations);
+		- All blood money shop upgrade kits can now be applied onto items as well as reverted back to get their counter-parts;
+		- You will now be able to upgrade your Zamorakian spears into hastas at Otto Godblessed for 300k;
+		- Completely re-worked Font of Consumptions (Abyssal Sire unsired trading) rewards table and how it was handled. You'll now also be able to receive the pet Abyssal Orphan as well as the Abyssal head that's used to create red slayer helmets (if you've unlocked the reward option at Slayer rewards);
+		- Ironmen players of all types may now re-claim their special ironmen armour from the Ironman advisor if somehow lost;
+		- Added an NPC 'Salve-PS' at home at whom you'll be able to claim your vote rewards that much easier;
+		- Added full molten glass crafting. You can buy glassblowing pipes from the General store;
+  
+ 
+	--- Minor fixes/changes/additions: ---
+
+		- Fixed loading toxic blowpipes with other types of darts (bronze-rune);
+		- Fixed darts & knifes missing definitions since javelin update;
+		- All black masks, slayer helms and imbued slayer helms will now provide their correct on-task bonuses;
+		- Bolt racks and javelins will no longer get saved by Ava's backpack effect;
+		- Using an item on an anvil that cannot be smithed will now display a message saying so;
+		- Increased Abyssal Sire's unsired item drop from 1% to 6%;
+		- Donators will no longer be able to insert special images or code into the ::yell command;
+		- Special ironmen armour is now destroyable and player-bound;
+		- Changed Zul-Areth's item retrieval from 75k to 100k (free for Silver members and higher);
+		- Nurse Sarah now properly heal you from Venom;
+		- Hiscores should no longer add multiple rows of the same player;
+		- All game players online will now display on our websites homepage;
+		- Re-logging will no longer reset your Venom timer;
+		- Fixed auto-casting Iban's blast spell;
+		- Increased the price tag on when Crystal chest announces expensive item drops (from at least 150k to 500k);
+		- Fixed item definitions for granite equipment - everything's wear-able now;
+		- Fixed un-choppable willow trees at Draynor village;
+		- Fixed cows not dropping correct items;
+		- Added missing log spawns, bronze pickaxe spawns, knife spawns and Banker NPC spawn in Lumbridge castle;
+		- When doing harvesting actions (woodcutting, mining, etc) the player will now correctly face the object;
+		- Fixed item set (box) exchanging for items at bank booths;
+		- Fixed item bonuses for item: Necklace of Anguish;
+		- Ultimate ironmen will now get their vote/donation rewards dropped on the floor if inventory full;
+		- You should no longer randomly stop fishing;
+		- Increased Hitpoints experience gained by x2 times;
+		- Fixed Zulrah's, Kraken's and Cerberus's drop messages.
+		
+
+--------------------------------------------------------------------------------------
+
+
+- Patch Notes #9 - 2017.08.20 - 2017.08.21 -
+
+ --- Minor fixes/changes/additions: ---
+
+- Made A LOT of items un-trade-able (meanining they won't be sell-able either);
+- Re-applied the 'Destroy' item option from previous patch notes, it should now be working as intended;
+- Your pets will now teleport with you everywhere you go as well as you can now use the 'Call follower' button IF they ever go missing;
+- Valuing an item in shops/price checker will no longer show its price tag if it's not tradable;
+- When smelting items requiring a gold bar (jewellery) the interface will no longer stay open;
+- All staves will now correctly provide their unlimited runes;
+- Added Zenyte jewellery enchanting;
+- Ironmen are now allowed to access the blood money store;
+- Added light/heavy ballista fletching;
+- Fixed light/heavy ballista attack styles;
+- Changed all javelins to act as ammunition for ballistas instead of individual weapons;
+- Fixed Zulrah not displaying dropped items locally;
+- Fixed incorrect crafting data of toxic blowpipe and serpentine helm;
+- When dying in barrows tunnels your loot will now appear on top of barrows hills;
+- Fixed bone burying and using on altar Prayer experience gains;
+- Added the Coal and Gem bags;
+- Added Prospector Percy's golden nugget shop at the Motherlode mine;
+- Added Motherlode mines to the Mining teleport options;
+- Added Tzhaar shops: Weapon store & Gem store;
+- You may now uncharge your Tridents of the swamp as well as combine them back together.
+
+
+--------------------------------------------------------------------------------------
+
+
+ - Patch Notes #8 - 2017.08.17 - 2017.08.20 -
+
+ 
+ -- Miscellaneous changes: --
+
+- The Donator Zone is now LIVE; type ::dz to go there. While training in the area you'll gain a 10% experience boost on top of your donator rank boost;
+
+
+ --- Minor fixes/changes/additions: ---
+
+- Fixed Shark and Monkfish fishing spots;
+- Fixed the Culinaromancers glove shop;
+- Added options to buy x500 and x1000 of items from the shops at a time;
+- Fixed the Vengeance spell;
+- Most (if not all) ladders should now be fully functional;
+- Fight caves will now be safe for Hardcore ironmen;
+- Gambling Fire capes for the Tzrek Jad pet will now say whether you were lucky or not;
+- You can now enter Zamorak boss's (K'ril Tsutsaroths) boss chamber;
+
+
+--------------------------------------------------------------------------------------
+
+
+ - Patch Notes #7 - 2017.08.16 - 2017.08.17 -
+
+ 
+ -- Miscellaneous changes: --
+
+- Revised the WHOLE home area, removed useless objects and re-organised everything (I'll be waiting input on how well I did :));
+- Improved the Crystal chest reward table - added a lot of useful items and some higher-tier equipment. You'll now also be able to see all rewards available by pressing on the signpost next to the chest;
+- Added Boss tasks to Slayer options that'll reward you 40 points on task completion;
+- Got rid of all Slayer masters and replaced them with just one. You'll be able to choose your task difficulty manually;
+- Replaced old thieving stalls with new, custom ones. You'll be able to steal a wide variety of items and skilling resources;
+
+
+ --- Minor fixes/changes/additions: ---
+
+- Increased drop rates by about 25% for ballista parts and zenyte shards from Demonic gorillas;
+- Fixed a couple un-walkable tiles at home;
+- Nurse Sarah will now also restore your run energy;
+- Ironmen players will no longer be able to open shops they can't buy from;
+- Populated some home shops with a lot of new items to choose from;
+- Fixed not being able to drop items;
+- Added a potion decanter (Bob Barter) to our home area;
+- Thessalia will now also sell clothing as well as Initiate and Proselyte armour;
+- Added a ::commands command to a see a list of available commands;
+- Slightly improved the new-player starter package;
+- All monsters will now drop a casket in a 1/65 chance that'll yield random amounts of coins OR a rare'r herb box - upon opening;
+- Back end work - a lot of old & unused code cleaning, as well as improved code functionality.
+
+
+--------------------------------------------------------------------------------------
+
+
+ - Patch Notes #6 - 2017.08.13 - 2017.08.14 -
+
+ -- Miscellaneous changes: --
+
+- You'll now be able to quickly teleport to your last teleport destination via the Teleporter guy;
+- Added Cerberus boss. You may directly teleport to his lair via the Teleporter. Cerberus has a chance of dropping primordial/eternal/pegasian - crystals which can be used to make the best-in-slot boots as well as the super rare Hellpuppy pet;
+- The Voting page has been given a rework, implementing a vote system provided by [url=http://everythingrs.com]EverythingRS[/url]. Their system rewards players with special points for each website voted which can be traded in for rewards on our server by typing ::reward <reward_id> in the chatbox;
+- Temporarily disabled the Donation page. Donations will also be handled by a system provided by [url=http://everythingrs.com]EverythingRS[/url]. It'll be up in the next couple days;
+- Improved our client to support some neat buttons just above the play screen. This is still experimental and I'll be more than happy to listen to suggestions on how to improve on this;
+
+
+ --- Minor fixes/changes/additions: ---
+
+- Added quick teleports to: Chaos Elemental, Venenatis, Chaos Fanatic and Crazy Archaeologist (more to come soon);
+- Watson, the double agent clue scroll NPC - can now be attacked via auto-retaliate;
+- You should no longer receive another Clue scroll drop if you already have one on you;
+- Most items with a 'Destroy' option now actually will be destroyable rather than dropping on the ground;
+
+
+--------------------------------------------------------------------------------------
+
+
+ - Patch Notes #5 - 2017.08.12 - 2017.08.13 -
+
+ -- Miscellaneous game changes: --
+
+- Nothing major; just quality of life updates and fixes;
+
+
+ --- Minor fixes/changes/additions: ---
+
+- Added an ironman only shop just west of our main home area (I'm all open to suggestions of what other items should be in the shop);
+- Replaced Shops 'Sell-50' option with 'Sell-All' to quickly sell all your goodies; 
+- Spiritual mages are now back on the Slayer task table;
+- All options on these items should now be fully functional: Serpentine helm, Trident of the Seas, Tanzanite helm, Magma helm, Magic fang, Toxic Staff of the Dead, Tanzanite Fang, Toxic Blowpipe, Abyssal Tentacle;
+- Fixed some unworking Slayer tasks (Tzhaar's in particular);
+- Fixed issues with Smithing dart tips; anvils can now be left-clicked;
+- Corrected the Woodcutting experience gained;
+- Fixed the Death altar teleport (The Abyss);
+ 
+ 
+--------------------------------------------------------------------------------------
+
+
+ - Patch Notes #4 - 2017.08.06 - 2017.08.10 -
+
+ -- Miscellaneous game changes: --
+
+- Fixed and changed all experience rates as well as drastically increasing and balancing them;
+
+
+ --- Minor fixes/changes/additions: ---
+
+- Fixed an issue with not being able to get new Slayer tasks;
+- Fixed Farming skillcapes being able to worn without level 99 Farming;
+- Vote and Donation rewards will now be given automatically;
+- Fixed an issue with players randomly becoming ironmen;
+- Antidote+ and antidote++ are now drinkable and provide poison immunity for large amounts of time;
+- Added new weapons and equipment to the Mage shops;
+- You will now be able to buy a Slayer skillcape from any Slayer masters shop (only at level 99);
+- Adjusted the modern spellbook home teleport animation to be the exact same as in RS;
+- All Slayer-related equipment can now be equipped;
+- Slayer helmets can now get disassembled;
+- Black masks can now be un-charged;
+- Spiritual creatures and Cave horrors now require a higher Slayer level to be fought.
+ 
+ 
+--------------------------------------------------------------------------------------
+
+
+ - [b]Patch Notes #3 - 2017.08.04 - 2017.08.05[/b] -
+
+ -- [b]Miscellaneous game changes:[/b] --
+
+Added Wallsafe cracking at Rogue's den available from level 50 Thieving;
+The Global teleporters locations have been revised and improved giving it a cleaner look and more options to choose from;
+Added a custom Recipe for Disaster mini-quest which can be started just east of the main home area. You'll have to defeat 5 strong opponents in order to complete it and you will gain more access to the culinaromancers chest every opponent slain;
+ 
+
+ --- [b]Minor fixes/changes/additions:[/b] ---
+
+Added A LOT more NPC spawns around the world/dungeons;
+Fixed the Double experience weekend not actually giving double experience;
+Added Cassie the shield seller at Falador;
+Changed Slayers teleport-to-task option fee from 100k to 25k;
+Added Harry the fishing supply store at Catherby;
+Added all of the missing runes to the Mage shop;
+Added Shantay pass shop and made the gates work to be able to enter Kharidian Desert;
+You should no longer receive Slayer tasks that can not be reached or aren't completable;
+Added a ::train command with low-level NPC's to train on (aimed to improve new player experience);
+You will now be able to Metamorphose your Snakeling (Zulrah) pets;
+
+ 
+ 
+--------------------------------------------------------------------------------------
+
+
+ - [b]Patch Notes #2 - 2017.08.03 - 2017.08.04[/b] -
+
+ -- [b]Miscellaneous game changes:[/b] --
+
+Greatly improved the Crystal chests reward table, with new additions like rune armour, dragon equipment, resources (ores, bars, cooking raws, etc);
+Added the full Smoke Dungeon for Dust Devils as well as their Slayer tele-to-task location;
+All of Al'Kharid's shops and features are now accessible and functioning;
+The General store NPC got a make-over - he now sells all tools required for skilling as well as some skilling related supplies (herblore secondaries, essence, etc.);
+Added 'Grace' NPC at Rogue's den at whom you will be able to exchange your Marks of Grace for Graceful outfit pieces as well as recolour them;
+
+
+ --- [b]Minor fixes/changes/additions:[/b] ---
+
+Hidden the Quest tab buttons (achievement diary, mini-games and kourend favor) since they have no use at the moment;
+Fixed an issue with shops removing default stock items;
+Fixed selling noted items to shops, before the fix they were being sold and shown as noted versions in the shop;
+Added and corrected combat prayer damages and accuracy formulas;
+Hardcore ironman armour will now get replaced with regular ironman armour on player death;
+Populated Lunar isle with Suqah's and added their tele-to-task location;
+Added Gaius's 2h shop in Taverley;
+Added Spinolyp's with their full combat script to the Dagannoth king's lair;
+Added a spade item spawn at Barrow's mini-game entrance;
+Corrected Fishing experience rates;
+Added lower tier amulets (ie amulet of strength, magic) to shops around home;
+Spawned in a LOT of missing clue scroll NPC's.
+ 
+ 
+--------------------------------------------------------------------------------------
+
+
+ - [b]Patch Notes #1 - 2017.08.02 - 2017.08.03[/b] -
+
+ -- [b]Miscellaneous game changes:[/b] --
+
+All Spinning wheels around the world should now be fully functional;
+Shop items will now restore at a much higher rate (from 15 to 5 ticks to be exact) as well as player-sold items will now get removed from General stores at the same tick rate;
+You can now purchase Max capes from Mac for 2M gold who is located West of the main home area (inside the castle). Max capes can also be used with other capes to create combat style specific capes;
+Added the full Stronghold Slayer cave along with the Kraken boss;
+All dragons will now successfuly charge your Dragonfire shield and you'll be able to check how many charges it has by inspecting it as well as emptying the them;
+You will now be able to directly teleport to your Slayer task (a few tasks do NOT have a teleport location at the moment) by talking to any Slayer master around Salve-PS for a fee of 100k gold coins;
+
+
+ --- [b]Minor fixes/changes/additions:[/b] ---
+
+Pickpocketing the Master farmer will now give correct seeds;
+Increased the item prices gained from stealing at home stalls;
+Corrected some shops ironman can and can't buy from (they won't be able to buy items sold by players from the general store either);
+Corrected combat experience gains, hitpoints and ranged in particular;
+Steel dragons should now count towards your Slayer task;
+Fixed an issue with Fight caves player death;
+
