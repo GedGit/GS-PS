@@ -3,6 +3,11 @@
 
 # Ignore Gradle GUI config
 gradle-app.setting
+/bin
+/extradeps
+/data/savedGames
+/data/punishments
+/data/logs
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
