@@ -1,6 +1,5 @@
 package org.rs2server.rs2.model.npc.impl.kraken;
 
-import org.rs2server.rs2.domain.service.impl.content.KrakenServiceImpl;
 import org.rs2server.rs2.model.*;
 import org.rs2server.rs2.model.combat.CombatState;
 import org.rs2server.rs2.model.npc.impl.CombatNpc;

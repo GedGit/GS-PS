@@ -7,6 +7,7 @@ public class SlayerKillLog {
 	/**
 	 * Sends the Interface/CS2Script/Access Mask to the entity.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	public static void handleSlayerLog(Player player) {
 	//	final CacheNPCDefinition npcDefinition = new CacheNPCDefinition();
 	//	final int npcId = npcDefinition.getId();

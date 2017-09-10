@@ -3,7 +3,6 @@ package org.rs2server.rs2.model.combat.npcs;
 import org.rs2server.rs2.model.Animation;
 import org.rs2server.rs2.model.Graphic;
 import org.rs2server.rs2.model.Hit;
-import org.rs2server.rs2.model.Location;
 import org.rs2server.rs2.model.Mob;
 import org.rs2server.rs2.model.Prayers;
 import org.rs2server.rs2.model.Projectile;
@@ -12,7 +11,6 @@ import org.rs2server.rs2.model.World;
 import org.rs2server.rs2.model.combat.CombatState.AttackType;
 import org.rs2server.rs2.model.combat.impl.AbstractCombatAction;
 import org.rs2server.rs2.model.npc.NPC;
-import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.tickable.Tickable;
 import org.rs2server.rs2.util.Misc;
 
@@ -87,19 +85,14 @@ public class Skotizo extends AbstractCombatAction {
 			});
 			break;
 		}
-		int clientSpeed;
 		int gfxDelay;
 		if(attacker.getLocation().isWithinDistance(attacker, victim, 1)) {
-			clientSpeed = 70;
 			gfxDelay = 80;
 		} else if(attacker.getLocation().isWithinDistance(attacker, victim, 5)) {
-			clientSpeed = 90;
 			gfxDelay = 100;
 		} else if(attacker.getLocation().isWithinDistance(attacker, victim, 8)) {
-			clientSpeed = 110;
 			gfxDelay = 120;
 		} else {
-			clientSpeed = 130;
 			gfxDelay = 140;
 		}
 		int delay = (gfxDelay / 20) - 1;

@@ -206,7 +206,8 @@ public class Venenatis extends AbstractCombatAction {
         hit = preHit;
         World.getWorld().submit(new Tickable(hitDelay) {
 
-            @Override
+            @SuppressWarnings("incomplete-switch")
+			@Override
             public void execute() {
                 this.stop();
                 if (preStyle != CombatStyle.MELEE && (preStyle == CombatStyle.ENTANGLE && hit > 0)) {

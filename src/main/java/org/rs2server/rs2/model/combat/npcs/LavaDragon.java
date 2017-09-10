@@ -70,7 +70,6 @@ public class LavaDragon extends AbstractCombatAction {
         int randomHit;
         int hitDelay;
         boolean blockAnimation;
-        final int hit;
 
         if (attacker.getLocation().isWithinDistance(attacker, victim, 2)) {
             switch (random.nextInt(3)) {
@@ -100,7 +99,6 @@ public class LavaDragon extends AbstractCombatAction {
                 if (randomHit > victim.getSkills().getLevel(Skills.HITPOINTS)) {
                     randomHit = victim.getSkills().getLevel(Skills.HITPOINTS);
                 }
-                hit = randomHit;
                 break;
             default:
             case MAGIC:

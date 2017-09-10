@@ -1,11 +1,9 @@
 package org.rs2server.rs2.model.combat.npcs;
 
 import org.rs2server.rs2.model.Animation;
-import org.rs2server.rs2.model.Graphic;
 import org.rs2server.rs2.model.Hit;
 import org.rs2server.rs2.model.Mob;
 import org.rs2server.rs2.model.Prayers;
-import org.rs2server.rs2.model.Projectile;
 import org.rs2server.rs2.model.Skills;
 import org.rs2server.rs2.model.World;
 import org.rs2server.rs2.model.combat.CombatAction;

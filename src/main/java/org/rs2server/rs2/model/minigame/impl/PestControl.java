@@ -119,6 +119,7 @@ public class PestControl extends AbstractMinigame {
 		// game tick
 		gameTick = new Tickable(1) {
 
+			@SuppressWarnings("unlikely-arg-type")
 			@Override
 			public void execute() {
 				gameTicks--;

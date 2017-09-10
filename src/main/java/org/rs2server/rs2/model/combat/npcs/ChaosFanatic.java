@@ -6,7 +6,6 @@ import org.rs2server.rs2.model.combat.CombatState;
 import org.rs2server.rs2.model.combat.impl.AbstractCombatAction;
 import org.rs2server.rs2.model.npc.NPC;
 import org.rs2server.rs2.model.player.Player;
-import org.rs2server.rs2.model.region.Region;
 import org.rs2server.rs2.tickable.Tickable;
 import org.rs2server.rs2.util.Misc;
 
@@ -64,10 +63,7 @@ public class ChaosFanatic extends AbstractCombatAction {
             return; //this should be an NPC!
         }
 
-        int maxHit = 31;
         int randomHit;
-        int hitDelay;
-        boolean blockAnimation = false;
         final int hit;
         int clientSpeed;
         int gfxDelay;
@@ -100,7 +96,6 @@ public class ChaosFanatic extends AbstractCombatAction {
                     clientSpeed = 110;
                     gfxDelay = 120;
                 }
-                hitDelay = (gfxDelay / 20) - 1;
                 attacker.playProjectile(Projectile.create(attacker.getCentreLocation(), victim.getCentreLocation(), RED_GFX, 45, 50, clientSpeed, 43, 35, victim.getProjectileLockonIndex(), 10, 48));
                 randomHit = damage(31, attacker, victim, CombatState.AttackType.MAGIC, Skills.MAGIC, Prayers.PROTECT_FROM_MAGIC, false, false);
                 if (randomHit > victim.getSkills().getLevel(Skills.HITPOINTS)) {
@@ -138,7 +133,8 @@ public class ChaosFanatic extends AbstractCombatAction {
         hit = preHit;
         World.getWorld().submit(new Tickable((gfxDelay / 20) - 1) {
 
-            @Override
+            @SuppressWarnings("incomplete-switch")
+			@Override
             public void execute() {
                 this.stop();
                 List<Player> enemies = new ArrayList<>();

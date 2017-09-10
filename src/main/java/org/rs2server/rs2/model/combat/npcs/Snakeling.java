@@ -4,8 +4,6 @@ import org.rs2server.rs2.model.*;
 import org.rs2server.rs2.model.combat.CombatAction;
 import org.rs2server.rs2.model.combat.CombatState;
 import org.rs2server.rs2.model.combat.impl.AbstractCombatAction;
-import org.rs2server.rs2.model.npc.NPC;
-import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.tickable.Tickable;
 import org.rs2server.rs2.util.Misc;
 
