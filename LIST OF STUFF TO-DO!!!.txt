@@ -1,0 +1,22 @@
+ - Godwars dungeon needs a full revamp
+ - Zanaris (lost city)
+ - can't craft combat bracelets
+ - skillcape perks - needs revision update? i think lol
+ - make overrides for outfits AND animations. flying anim is 1501 :)
+ - Pressing check steps on a clue scroll makes it say You can't wear this item, any way to remove this option?
+ - figure out how to do f key bindings and client zoom saving
+ - look at skele wyverns, a bit too op?
+ - pest control portals, should have more hp and monsters should not drop items
+ - torcher npc death anims
+ - rewards shop is buggy, the exp things say not enough points .-.
+ - donator mystery boxes, try rename them via server defs and client-sided
+      5$ each, give like really good random gears
+ - matthias at falconry, he seems to be inside the fence :[
+ - dragon thrownaxes projectile incorrect
+ - make resource supply crates and consumption (pots, foods) supply crates for donator store
+ - can't chop oak at seers village with bronze axe appearently? Might be related to wintertodt!
+ - check out localnpcupdate things, might be able to change pet options for other players (change npc id to one with no opts)
+ - can't add pages to unfinished god books
+ 
+ 
+hazel cult 101:29  or 223:9   or 1021:32
