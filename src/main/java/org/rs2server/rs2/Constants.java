@@ -28,7 +28,7 @@ public class Constants {
 	 * Players with special rights
 	 */
 	public static final String DEVELOPERS[] = { "salve", "pure" };
-	public static final String ADMINISTRATORS[] = { "salve", "alpha" };
+	public static final String ADMINISTRATORS[] = { "salve", "alpha", "cloud" };
 	public static final String MODERATORS[] = { "thor" };
 	public static final String HELPERS[] = { "N / A" };
 
