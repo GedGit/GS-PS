@@ -474,7 +474,7 @@ public class NPC extends Mob {
 		return Bosses.of(id) != null;
 	}
 
-	public Player getLooter(Player player, int id, int amount, PrivateChat clan) {
+	public Player getLooters(Player player, int id, int amount, PrivateChat clan) {
 		Player done = player;
 		if (clan != null) {
 			if (clan.getLootRank().getId() > -1) {
