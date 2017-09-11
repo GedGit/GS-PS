@@ -93,7 +93,7 @@ public class Smelting extends ProductionAction {
 		// Goldsmith gaunts
 		if (getMob().isPlayer() && mob.getEquipment().contains(776) && bar.getProducedBar().getId() == 2357)
 			exp *= 2;
-		
+
 		return exp;
 	}
 

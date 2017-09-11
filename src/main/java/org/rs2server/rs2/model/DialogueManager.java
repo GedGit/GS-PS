@@ -509,9 +509,11 @@ public class DialogueManager {
 					"'Ello and what are you after then?");
 			player.getInterfaceState().setNextDialogueId(0, 6991);
 			break;
-		case 6991:
-			player.getActionSender().sendDialogue("Select an Option", DialogueType.OPTION, -1, FacialAnimation.DEFAULT,
-					"I need another assignment.|Do you have anything for trade?|About the task system...|Er...nothing...");
+			
+			// selecting another assignment 
+            case 6991:
+	        player.getActionSender().sendDialogue("Select an Option", DialogueType.OPTION, -1, FacialAnimation.DEFAULT,
+		    "I need another assignment.|Do you have anything for trade?|About the task system...|Er...nothing...");
 			player.getInterfaceState().setNextDialogueId(0, 6992);
 			player.getInterfaceState().setNextDialogueId(1, 6993);
 			player.getInterfaceState().setNextDialogueId(2, 6994);
@@ -758,13 +760,14 @@ public class DialogueManager {
 					"A wise choice, " + player.getName() + "!");
 			player.getInterfaceState().setNextDialogueId(0, -1);
 			break;
-
+//Slayer master
 		case 500:
 			player.getActionSender().sendDialogue(CacheNPCDefinition.get(player.getAttribute("talkingNpc")).getName(),
 					DialogueType.NPC, player.getAttribute("talkingNpc"), FacialAnimation.DEFAULT,
 					"'Ello and what are you after then?");
 			player.getInterfaceState().setNextDialogueId(0, 501);
 			break;
+			//Slayer master options 
 		case 501:
 			player.getActionSender().sendDialogue("Select an Option", DialogueType.OPTION, -1, FacialAnimation.DEFAULT,
 					"I need another assignment.|Do you have anything for trade?|Could you teleport me to my task?|Er...nothing...");
@@ -812,11 +815,13 @@ public class DialogueManager {
 					"Certainly, though it will cost you 25k gold coins!");
 			player.getInterfaceState().setNextDialogueId(0, 524);
 			break;
+			
+			//case 524 is slayer master 
 		case 524:
 			player.getActionSender().sendDialogue("Teleport to task for 25k?", DialogueType.OPTION, -1,
 					FacialAnimation.DEFAULT, "Yes.|No.");
 			player.getInterfaceState().setNextDialogueId(0, 525);
-			player.getInterfaceState().setNextDialogueId(1, 526);
+			player.getInterfaceState().setNextDialogueId(1, 501);
 			break;
 
 		case 525:
