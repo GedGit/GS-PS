@@ -15,4 +15,10 @@
  - can't chop oak at seers village with bronze axe appearently? Might be related to wintertodt!
  - check out localnpcupdate things, might be able to change pet options for other players (change npc id to one with no opts)
  - can't add pages to unfinished god books
+ - re-check the whole taverley dungeon wilderness part
+ - make demonic gorilla waterfall tiles unwalkable
+ - nerf d hally spec damage
+ - entangle doesn't go for full 15 seconds, halved if magic protect prayer
+ - add varrock shops
+ - make unsired do range and mage hits, also nerf his main hits 60's a bit too op
  - re-check the whole edgeville dungeon wilderness part
