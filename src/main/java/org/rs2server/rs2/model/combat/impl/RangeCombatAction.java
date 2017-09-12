@@ -384,7 +384,7 @@ public class RangeCombatAction extends AbstractCombatAction {
 				player.playAnimation(Animation.create(5061));
 				attacker.playProjectile(
 						Projectile.create(attacker.getLocation(), victim, projectile, 20, 50, 35, 38, 36, 13, 64));
-				randomHit *= 1.5;
+				randomHit *= 1.05;
 
 				player.getSkills().increaseLevelToMaximum(Skills.HITPOINTS, (randomHit / 2) + 1);
 			}
@@ -397,10 +397,9 @@ public class RangeCombatAction extends AbstractCombatAction {
 					case 9244:
 						boolean fire = true;
 						Item shield = victim.getEquipment().get(Equipment.SLOT_SHIELD);
-						if (shield != null
-								&& (shield.getId() == 11283 || shield.getId() == 1540 || shield.getId() == 20714)) {
+						// Check whether the dragon bolts (e) can special attack
+						if (shield != null && (shield.getId() == 11283 || shield.getId() == 1540))
 							fire = false;
-						}
 						if (fire) {
 							if (CombatFormula.fullVoidRange(attacker))
 								randomHit = Misc.random(45, 57);
@@ -419,10 +418,7 @@ public class RangeCombatAction extends AbstractCombatAction {
 									? 0.40
 									: 1;
 							if (protectionPrayer != 1) {
-								double protectionHit = randomHit * protectionPrayer; // +1
-																						// as
-																						// its
-																						// exclusive
+								double protectionHit = randomHit * protectionPrayer;
 								randomHit -= protectionHit;
 								if (randomHit < 1)
 									randomHit = 0;
@@ -436,14 +432,17 @@ public class RangeCombatAction extends AbstractCombatAction {
 					case 9241:
 					case 9243:
 					case 9245:
-						special = true;
+						if (!attacker.getCombatState().isSpecialOn())
+							special = true;
 						break;
 					case 9242:
 						int selfDamage = (int) (attacker.getSkills().getLevel(Skills.HITPOINTS) * 0.1);
-						if (selfDamage < attacker.getSkills().getLevel(Skills.HITPOINTS)) {
+						if (selfDamage < attacker.getSkills().getLevel(Skills.HITPOINTS)
+								&& !attacker.getCombatState().isSpecialOn()) {
 							randomHit += victim.getSkills().getLevel(Skills.HITPOINTS) * 0.2;
 							attacker.inflictDamage(new Hit(selfDamage), victim);
-							special = true;
+							if (!attacker.getCombatState().isSpecialOn())
+								special = true;
 						}
 						break;
 					}
@@ -469,7 +468,7 @@ public class RangeCombatAction extends AbstractCombatAction {
 
 		final int hit = randomHit;
 		if (special)
-			special(attacker, victim, hit);
+			special(attacker, victim, hit, false);
 
 		boolean avaEffect = false;
 
@@ -535,7 +534,7 @@ public class RangeCombatAction extends AbstractCombatAction {
 						boolean dropUnder = false;
 						if (victim.isNPC()) {
 							NPC n = (NPC) victim;
-							if (n.getId() == 1101 || n instanceof Zulrah || n instanceof Kraken
+							if (n.getId() == 1101 || n instanceof Zulrah || n instanceof Kraken 
 									|| n instanceof Whirlpool) {
 								dropUnder = true;
 							}
@@ -611,8 +610,8 @@ public class RangeCombatAction extends AbstractCombatAction {
 	}
 
 	@Override
-	public void special(Mob attacker, Mob victim, int damage) {
-		super.special(attacker, victim, damage);
+	public void special(Mob attacker, Mob victim, int damage, boolean boltSpecial) {
+		super.special(attacker, victim, damage, boltSpecial);
 	}
 
 	@Override

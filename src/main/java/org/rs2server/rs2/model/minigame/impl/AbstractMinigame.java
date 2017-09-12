@@ -11,40 +11,39 @@ import org.rs2server.rs2.tickable.Tickable;
 
 import java.util.List;
 
-
 /**
- * Provides a skeletal implementation for <code>Minigame</code>s on which
- * other code should base their code off.
+ * Provides a skeletal implementation for <code>Minigame</code>s on which other
+ * code should base their code off.
  * <p>
  * This implementation contains code common to ALL implementations.
+ * 
  * @author Michael Bull
  *
  */
 
 public class AbstractMinigame implements Minigame {
-	
+
 	/**
 	 * Initializes the minigames instance.
 	 */
 	public void init() {
-		if(getItemSafety() == ItemSafety.SAFE) {
-			BoundaryManager.addBoundary(Boundary.create("SafeZone", getBoundary().getBottomLeft(), getBoundary().getTopRight())); //we only need to add safe zones as it would be default to lose items
+		if (getItemSafety() == ItemSafety.SAFE) {
+			BoundaryManager.addBoundary(
+					Boundary.create("SafeZone", getBoundary().getBottomLeft(), getBoundary().getTopRight()));
 		}
 		BoundaryManager.addBoundary(getBoundary());
-		if(getGameCycle() != null) {
+		if (getGameCycle() != null)
 			World.getWorld().submit(getGameCycle());
-		}
 	}
 
 	@Override
 	public void end() {
-		for(Player participant : getParticipants()) {
+		for (Player participant : getParticipants()) {
 			participant.setTeleportTarget(getStartLocation());
 			participant.resetVariousInformation();
 		}
-		if(getGameCycle() != null) {
+		if (getGameCycle() != null)
 			getGameCycle().stop();
-		}
 	}
 
 	@Override
@@ -54,11 +53,10 @@ public class AbstractMinigame implements Minigame {
 		player.setTeleportTarget(getStartLocation());
 		player.setLocation(getStartLocation());
 		player.resetVariousInformation();
-		if(getParticipants() != null) {
+		if (getParticipants() != null) {
 			getParticipants().remove(player);
-			if(getParticipants().size() < 1) {
+			if (getParticipants().size() < 1)
 				end();
-			}
 		}
 	}
 
@@ -103,9 +101,8 @@ public class AbstractMinigame implements Minigame {
 
 	@Override
 	public void movementHook(Player player) {
-		if(!BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), getBoundary())) {
+		if (!BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), getBoundary()))
 			quit(player);
-		}
 	}
 
 	@Override

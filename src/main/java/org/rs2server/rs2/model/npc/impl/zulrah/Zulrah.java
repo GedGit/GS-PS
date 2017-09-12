@@ -556,6 +556,6 @@ public final class Zulrah extends CombatNpc<Zulrah> {
 
 	public final List<NPC> getActiveMinions() {
 		return activeMinions;
-	}
+	} 
 
 }

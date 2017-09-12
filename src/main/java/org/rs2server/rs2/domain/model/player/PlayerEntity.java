@@ -84,6 +84,7 @@ public final @Setter @Getter class PlayerEntity extends MongoEntity {
 	private int votePoints;
 	private int doubleExp;
 	private boolean rockyReset;
+	private boolean defenceCape;
 
 	public PlayerSettingsEntity getPlayerSettings() {
 		return playerSettings;
@@ -323,5 +324,13 @@ public final @Setter @Getter class PlayerEntity extends MongoEntity {
 
 	public void resetRocky() {
 		this.rockyReset = true;
+	}
+
+	public boolean hasDefenceCape() {
+		return defenceCape;
+	}
+	
+	public void toggleDefenceCape() {
+		this.defenceCape = !this.defenceCape;
 	}
 }

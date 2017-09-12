@@ -122,8 +122,8 @@ public class InterfaceState {
 	private int chatboxInterface = 0;
 
 	/**
-	 * The item id which is to be destroyed when the player is in the 'Are you
-	 * sure you want to destroy this item' interface.
+	 * The item id which is to be destroyed when the player is in the 'Are you sure
+	 * you want to destroy this item' interface.
 	 */
 	private int destroyItemId = -1;
 	private int currentInventoryInterface = -1;
@@ -221,8 +221,7 @@ public class InterfaceState {
 	}
 
 	/**
-	 * Adds a listener to an interface that is closed when the inventory is
-	 * closed.
+	 * Adds a listener to an interface that is closed when the inventory is closed.
 	 * 
 	 * @param container
 	 *            The container.
@@ -372,37 +371,32 @@ public class InterfaceState {
 				break;
 			/*
 			 * case 320://Skill tab if (amount > 99) { player.getActionSender().
-			 * sendMessage("You can only set a stat level 1 through 99.");
-			 * return; } int skill_id =
-			 * player.getInterfaceAttribute("skillLevelChange"); String
+			 * sendMessage("You can only set a stat level 1 through 99."); return; } int
+			 * skill_id = player.getInterfaceAttribute("skillLevelChange"); String
 			 * skill_name = ""; double exp =
-			 * player.getSkills().getExperienceForLevel(amount); if (skill_id ==
-			 * 0) { skill_name = "Attack"; } else if (skill_id == 1) {
-			 * skill_name = "Defence"; } else if (skill_id == 2) { skill_name =
-			 * "Strength"; } else if (skill_id == 3) { skill_name = "Hitpoints";
-			 * } else if (skill_id == 4) { skill_name = "Range"; } else if
-			 * (skill_id == 5) { skill_name = "Prayer"; } else if (skill_id ==
-			 * 6) { skill_name = "Magic"; } if(skill_id == 1) { int[] equipment
-			 * = new int[] { Equipment.SLOT_BOOTS, Equipment.SLOT_BOTTOMS,
-			 * Equipment.SLOT_CHEST, Equipment.SLOT_CAPE, Equipment.SLOT_GLOVES,
-			 * Equipment.SLOT_HELM, Equipment.SLOT_SHIELD }; for(int i = 0; i <
-			 * equipment.length; i++) {
+			 * player.getSkills().getExperienceForLevel(amount); if (skill_id == 0) {
+			 * skill_name = "Attack"; } else if (skill_id == 1) { skill_name = "Defence"; }
+			 * else if (skill_id == 2) { skill_name = "Strength"; } else if (skill_id == 3)
+			 * { skill_name = "Hitpoints"; } else if (skill_id == 4) { skill_name = "Range";
+			 * } else if (skill_id == 5) { skill_name = "Prayer"; } else if (skill_id == 6)
+			 * { skill_name = "Magic"; } if(skill_id == 1) { int[] equipment = new int[] {
+			 * Equipment.SLOT_BOOTS, Equipment.SLOT_BOTTOMS, Equipment.SLOT_CHEST,
+			 * Equipment.SLOT_CAPE, Equipment.SLOT_GLOVES, Equipment.SLOT_HELM,
+			 * Equipment.SLOT_SHIELD }; for(int i = 0; i < equipment.length; i++) {
 			 * if(player.getEquipment().get(equipment[i]) != null) {
 			 * player.getActionSender().
 			 * sendMessage("You can't change your Defence level whilst wearing equipment."
-			 * ); return; } } } if(skill_id == 0 || skill_id == 2 || skill_id ==
-			 * 4 || skill_id == 6) {
-			 * if(player.getEquipment().get(Equipment.SLOT_WEAPON) != null) {
-			 * player.getActionSender().sendMessage("You can't change your " +
-			 * skill_name + " level whilst wielding any equipment."); return; }
-			 * } if (skill_id == 5) { player.getSkills().setPrayerPoints(amount,
-			 * true); player.getSkills().setExperience(skill_id, exp); } else {
+			 * ); return; } } } if(skill_id == 0 || skill_id == 2 || skill_id == 4 ||
+			 * skill_id == 6) { if(player.getEquipment().get(Equipment.SLOT_WEAPON) != null)
+			 * { player.getActionSender().sendMessage("You can't change your " + skill_name
+			 * + " level whilst wielding any equipment."); return; } } if (skill_id == 5) {
+			 * player.getSkills().setPrayerPoints(amount, true);
+			 * player.getSkills().setExperience(skill_id, exp); } else {
 			 * player.getSkills().setLevel(skill_id, amount);
 			 * player.getSkills().setExperience(skill_id, exp); }
 			 * player.getActionSender().sendMessage("Your "+ skill_name
 			 * +" level has been set to "+ amount +".");
-			 * player.getInterfaceAttributes().remove("skillLevelChange");
-			 * break;
+			 * player.getInterfaceAttributes().remove("skillLevelChange"); break;
 			 */
 			}
 		} finally {
@@ -485,7 +479,7 @@ public class InterfaceState {
 	 * @return the nextDialogueId
 	 */
 	public int getNextDialogueId(int index) {
-		return nextDialogueId[index]; 
+		return nextDialogueId[index];
 	}
 
 	/**

@@ -118,8 +118,8 @@ public class MagicCombatAction extends AbstractCombatAction {
 	}
 
 	@Override
-	public void special(Mob attacker, Mob victim, int damage) {
-		super.special(attacker, victim, damage);
+	public void special(Mob attacker, Mob victim, int damage, boolean boltSpecial) {
+		super.special(attacker, victim, damage, false);
 	}
 
 	@Override
@@ -157,11 +157,13 @@ public class MagicCombatAction extends AbstractCombatAction {
 		if (attacker.isPlayer() && victim.isNPC()) {
 			final Player player = (Player) attacker;
 			final NPC npc = (NPC) victim;
-			if (player.getSlayer().getSlayerTask() != null
-					&& player.getSlayer().getSlayerTask().getName().contains(npc.getDefinition().getName())
-					&& CombatFormula.hasImbuedSlayerHelm(player)) {
-				EA *= 1.15;
-				maxHit *= 1.15;
+			if (player.getSlayer().getSlayerTask() != null && CombatFormula.hasImbuedSlayerHelm(player)) {
+				for (String taskName : player.getSlayer().getSlayerTask().getName()) {
+					if (npc.getDefinition().getName().contains(taskName)) {
+						EA *= 1.15;
+						maxHit *= 1.15;
+					}
+				}
 			}
 		}
 		if (random.nextFloat() <= 0.25f && CombatFormula.fullAhrim(attacker)
@@ -695,11 +697,11 @@ public class MagicCombatAction extends AbstractCombatAction {
 				boolean isPlayer = attacker.isPlayer();
 				if (isPlayer) {
 					Player player = (Player) attacker;
-					
+
 					// tome of fire exception
 					if (spell != null && spell.getSpellName().startsWith("fire"))
 						fire = true;
-					
+
 					if (player.isMultiplayerDisabled())
 						player.getActionSender().sendStillGFX(hit < 0 ? 85 : graphic.getId(),
 								hit < 0 ? 100 : graphic.getHeight(), enemy.getCentreLocation());
@@ -727,7 +729,7 @@ public class MagicCombatAction extends AbstractCombatAction {
 							int finalTimer = freezeTimer;
 							if (enemy.getCombatState().getPrayer(Prayers.PROTECT_FROM_MAGIC))
 								finalTimer = finalTimer / 2;
-							
+
 							enemy.setFrozenBy(attacker);
 							enemy.getCombatState().setCanMove(false);
 							enemy.getCombatState().setCanBeFrozen(false);
@@ -986,7 +988,8 @@ public class MagicCombatAction extends AbstractCombatAction {
 				mob.getActionSender().sendConfig(108, config);
 				mob.getActionSender().sendString(593, 2, "Combat lvl: " + mob.getSkills().getCombatLevel());
 
-				//mob.getActionSender().sendMessage("<img=32> <col=ff0000>Defensive auto-casting: " + defensive + ".");
+				// mob.getActionSender().sendMessage("<img=32> <col=ff0000>Defensive
+				// auto-casting: " + defensive + ".");
 			}
 		}
 		int pane = mob.getAttribute("tabmode");

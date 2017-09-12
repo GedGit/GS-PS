@@ -58,8 +58,8 @@ public class ItemOptionPacketHandler implements PacketHandler {
 	 * @param packet
 	 *            The packet.
 	 */
-	private void handleItemOption1(Player player, Packet packet) {
-		int interfaceValue = packet.getInt();
+	private void handleItemOption1(Player player, Packet packet) { 
+		int interfaceValue = packet.getInt(); 
 		int slot = packet.getShort() & 0xFFFF;
 		int id = packet.getShort() & 0xFFFF;
 		int interfaceId = interfaceValue >> 16;
@@ -169,6 +169,29 @@ public class ItemOptionPacketHandler implements PacketHandler {
 					}
 
 					switch (item.getId()) {
+					
+					case 9750:
+					case 9751:
+						player.teleport(Location.create(2866, 3544, 0), 6, 6, false); 
+						break;
+					
+					case 9948:
+					case 9949:
+						DialogueManager.openDialogue(player, 9948);
+						break;
+					
+					case 9798:
+					case 9799:
+						player.teleport(Location.create(2604, 3401, 0), 1, 1, false); 
+						break;
+
+					case 9753:
+					case 9754:
+						player.getDatabaseEntity().toggleDefenceCape();
+						player.sendMessage("Your defence cape will "
+								+ (player.getDatabaseEntity().hasDefenceCape() ? "now" : "no longer")
+								+ " act as a ring of life.");
+						return;
 
 					case 11808:
 						if (player.getInventory().freeSlots() < 2) {
@@ -828,6 +851,14 @@ public class ItemOptionPacketHandler implements PacketHandler {
 				case 6199:
 					MysteryBox mysteryBox = new MysteryBox(player);
 					mysteryBox.handleReward(slot);
+					break;
+				case 5070:
+				case 5071:
+				case 5072:
+				case 5073:
+				case 5074:
+					BirdNests nest = new BirdNests(player, item);
+					nest.handleReward(slot);
 					break;
 				case 405:
 					Casket casket = new Casket(player);

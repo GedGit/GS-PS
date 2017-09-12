@@ -28,7 +28,7 @@ public class SmithingUtils {
 
 		MITHRIL(2359, 50,
 				new int[] { 1209, 1285, 1329, 1299, 1315, 1355, 1428, 1343, 1369, -1, 1109, 1071, 1085, 1121, 4822,
-						1143, 1159, 1181, 1197, -1, -1, 822, 42, 866, 9379, 9427, 9416, 9427, 9379, 19576 },
+						1143, 1159, 1181, 1197, -1, -1, 822, 42, 866, 9416, 9427, 9379, 9427, 9379, 19576 },
 				50, new int[] { 66, 170, 210, 267 }),
 
 		ADAMANT(2361, 70,
@@ -189,7 +189,7 @@ public class SmithingUtils {
 		}
 	}
 
-	public static final int[] CHILD_IDS = new int[29];
+	public static final int[] CHILD_IDS = new int[29]; 
 
 	public static final int[] CLICK_OPTIONS = { 1, 5, 10, 32767, 9 };
 

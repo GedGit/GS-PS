@@ -83,7 +83,7 @@ public class MeleeCombatAction extends AbstractCombatAction {
 			randomHit = victim.getSkills().getLevel(Skills.HITPOINTS);
 		final int hit = randomHit; // +1 as its exclusive
 		if (special)
-			special(attacker, victim, hit);
+			special(attacker, victim, hit, false);
 
 		if (!special) {
 			int attackAnimationIndex = attacker.getCombatState().getCombatStyle().getId();
@@ -194,8 +194,8 @@ public class MeleeCombatAction extends AbstractCombatAction {
 	}
 
 	@Override
-	public void special(Mob attacker, Mob victim, int damage) {
-		super.special(attacker, victim, damage);
+	public void special(Mob attacker, Mob victim, int damage, boolean boltSpecial) { 
+		super.special(attacker, victim, damage, false);
 	}
 
 	@Override

@@ -53,4 +53,9 @@ public final class Spinner extends PestControlNpc {
 		playGraphics(Graphic.create(658));
 		portal.getSkills().increaseLevelToMaximum(Skills.HITPOINTS, portal.getSkills().getLevelForExperience(Skills.HITPOINTS) / 10);
 	}
+
+	@Override
+	public void dropLoot(Mob killer) {
+		// Override it to do nothing since pest control mobs don't drop items.
+	}
 }

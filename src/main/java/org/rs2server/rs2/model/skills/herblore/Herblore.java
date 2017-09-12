@@ -2,16 +2,19 @@ package org.rs2server.rs2.model.skills.herblore;
 
 import com.google.common.collect.ArrayListMultimap;
 import org.rs2server.cache.format.CacheItemDefinition;
+import org.rs2server.rs2.Constants;
 import org.rs2server.rs2.action.impl.ProductionAction;
-import org.rs2server.rs2.model.Animation;
-import org.rs2server.rs2.model.Graphic;
-import org.rs2server.rs2.model.Item;
-import org.rs2server.rs2.model.Mob;
-import org.rs2server.rs2.model.Skills;
+import org.rs2server.rs2.model.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Handles all herblore actions, from potion making to herb cleaning.
+ * 
+ * @author Vichy
+ *
+ */
 public class Herblore extends ProductionAction {
 
 	/**
@@ -47,6 +50,12 @@ public class Herblore extends ProductionAction {
 		this.secondaryIngredient = secondaryIngredient;
 	}
 
+	/**
+	 * An enum containing all herbs used for potions.
+	 * 
+	 * @author Vichy
+	 *
+	 */
 	public static enum Herb {
 
 		GUAM(199, 249, 1, 2.5),
@@ -107,8 +116,7 @@ public class Herblore extends ProductionAction {
 		 * 
 		 * @param item
 		 *            The item id.
-		 * @return The <code>Herb</code> or <code>null</code> if the item is not
-		 *         a herb.
+		 * @return The <code>Herb</code> or <code>null</code> if the item is not a herb.
 		 */
 		public static Herb forId(int item) {
 			return herbs.get(item);
@@ -162,10 +170,11 @@ public class Herblore extends ProductionAction {
 	/**
 	 * Represents types of primary ingredients.
 	 * 
-	 * @author Michael (Scu11).
+	 * @author Vichy
 	 * 
 	 */
 	public static enum PrimaryIngredient {
+
 		/**
 		 * Guam leaf.
 		 */
@@ -236,7 +245,80 @@ public class Herblore extends ProductionAction {
 		 */
 		SNAPDRAGON(3000, 3004, 63, new Item(227)),
 
-		IRIT_2(259, 5951, 79, new Item(5935));
+		/**
+		 * Second Irit leaf.
+		 */
+		IRIT_2(259, 5951, 79, new Item(5935)),
+
+		/**
+		 * Guam leaf.
+		 */
+		GRIMY_GUAM(199, 91, 3, new Item(227)),
+
+		/**
+		 * Marrentill leaf.
+		 */
+		GRIMY_MARRENTILL(201, 93, 5, new Item(227)),
+
+		/**
+		 * Tarromin leaf.
+		 */
+		GRIMY_TARROMIN(203, 95, 12, new Item(227)),
+
+		/**
+		 * Harralander leaf.
+		 */
+		GRIMY_HARRALANDER(205, 97, 22, new Item(227)),
+
+		/**
+		 * Ranarr leaf.
+		 */
+		GRIMY_RANARR(207, 99, 30, new Item(227)),
+
+		/**
+		 * Irit leaf.
+		 */
+		GRIMY_IRIT(209, 101, 45, new Item(227)),
+
+		/**
+		 * Avantoe leaf.
+		 */
+		GRIMY_AVANTOE(211, 103, 50, new Item(227)),
+
+		/**
+		 * Kwuarm leaf.
+		 */
+		GRIMY_KWUARM(213, 105, 55, new Item(227)),
+
+		/**
+		 * Cadantine leaf.
+		 */
+		GRIMY_CADANTINE(215, 107, 66, new Item(227)),
+
+		/**
+		 * Lantadyme leaf.
+		 */
+		GRIMY_LANTADYME(2485, 2483, 69, new Item(227)),
+
+		/**
+		 * Dwarf Weed leaf.
+		 */
+		GRIMY_DWARF_WEED(217, 109, 72, new Item(227)),
+
+		/**
+		 * Torstol leaf.
+		 */
+		GRIMY_TORSTOL(219, 111, 78, new Item(227)),
+
+		/**
+		 * Toadflax leaf.
+		 */
+		GRIMY_TOADFLAX(3049, 3002, 34, new Item(227)),
+
+		/**
+		 * Snapdragon leaf.
+		 */
+		GRIMY_SNAPDRAGON(3051, 3004, 63, new Item(227));
 
 		/**
 		 * The id.
@@ -265,8 +347,8 @@ public class Herblore extends ProductionAction {
 		 * 
 		 * @param item
 		 *            The item id.
-		 * @return The PrimaryIngredient, or <code>null</code> if the object is
-		 *         not a PrimaryIngredient.
+		 * @return The PrimaryIngredient, or <code>null</code> if the object is not a
+		 *         PrimaryIngredient.
 		 */
 		public static PrimaryIngredient forId(int item) {
 			return ingredients.get(item).get(0);
@@ -277,8 +359,8 @@ public class Herblore extends ProductionAction {
 		 *
 		 * @param item
 		 *            The item id.
-		 * @return The PrimaryIngredient, or <code>null</code> if the object is
-		 *         not a PrimaryIngredient.
+		 * @return The PrimaryIngredient, or <code>null</code> if the object is not a
+		 *         PrimaryIngredient.
 		 */
 		public static PrimaryIngredient forId(int item, int vial) {
 			for (int i = 0; i < ingredients.get(item).size(); i++) {
@@ -341,7 +423,7 @@ public class Herblore extends ProductionAction {
 	/**
 	 * Represents types of secondary ingredients.
 	 * 
-	 * @author Michael (Scu11).
+	 * @author Vichy.
 	 * 
 	 */
 	public static enum SecondaryIngredient {
@@ -512,8 +594,8 @@ public class Herblore extends ProductionAction {
 		 * 
 		 * @param item
 		 *            The item id.
-		 * @return The PrimaryIngredient, or <code>null</code> if the object is
-		 *         not a PrimaryIngredient.
+		 * @return The PrimaryIngredient, or <code>null</code> if the object is not a
+		 *         PrimaryIngredient.
 		 */
 		public static SecondaryIngredient forId(int item) {
 			return ingredients.get(item);
@@ -594,6 +676,15 @@ public class Herblore extends ProductionAction {
 
 	@Override
 	public boolean canProduce() {
+		if (herbloreType == HerbloreType.PRIMARY_INGREDIENT) {
+			if (CacheItemDefinition.get(primaryIngredient.getId()).getName().startsWith("Grimy")) {
+				if (!getMob().getEquipment().containsOneItem(9774, 9775) && !Constants.hasMaxCape(getMob())) {
+					getMob().getActionSender().sendItemDialogue(primaryIngredient.getId(),
+							"To make unfinished potions with grimy herbs you'll need a Herblore cape or a Max cape equipped.");
+					return false;
+				}
+			}
+		}
 		return true;
 	}
 
@@ -622,6 +713,12 @@ public class Herblore extends ProductionAction {
 	public double getExperience() {
 		switch (herbloreType) {
 		case PRIMARY_INGREDIENT:
+			if (herbloreType == HerbloreType.PRIMARY_INGREDIENT) {
+				if (CacheItemDefinition.get(primaryIngredient.getId()).getName().startsWith("Grimy")) {
+					if (!getMob().getEquipment().containsOneItem(9774, 9775) && !Constants.hasMaxCape(getMob()))
+						return 5;
+				}
+			}
 			return 0;
 		case SECONDARY_INGREDIENT:
 			return secondaryIngredient.getExperience();
@@ -694,5 +791,4 @@ public class Herblore extends ProductionAction {
 	public Item getFailItem() {
 		return null;
 	}
-
 }

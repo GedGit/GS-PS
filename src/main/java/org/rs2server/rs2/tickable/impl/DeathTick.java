@@ -45,7 +45,7 @@ import org.rs2server.rs2.util.Misc;
  */
 public class DeathTick extends Tickable {
 
-	private static NPC[][] godNPCS = new NPC[4][4];
+	private static NPC[][] godNPCS = new NPC[4][4]; 
 
 	private final PlayerStatisticsService statisticsService = Server.getInjector()
 			.getInstance(PlayerStatisticsService.class);
@@ -55,7 +55,7 @@ public class DeathTick extends Tickable {
 	private final PermissionService permissionService;
 	private final PestControlService pestControlService;
 
-	/**
+	/** 
 	 * The mob who has just died.
 	 */
 	private Mob mob;
@@ -71,7 +71,7 @@ public class DeathTick extends Tickable {
 		this.mob = mob;
 		this.permissionService = Server.getInjector().getInstance(PermissionService.class);
 		this.pestControlService = Server.getInjector().getInstance(PestControlService.class);
-	}
+	} 
 
 	@SuppressWarnings("unused")
 	@Override
@@ -238,13 +238,12 @@ public class DeathTick extends Tickable {
 				if (killer.isPlayer()) {
 					final Player player = (Player) killer;
 					if (player.getSlayer().getSlayerTask() != null) {
-						String task = player.getSlayer().getSlayerTask().getName().toLowerCase();
 						String npcName = npc.getDefinition().getName().toLowerCase();
 
-						if (task.equalsIgnoreCase(npcName) || task.contains(npcName) || task.endsWith(npcName)
-								|| task.startsWith(npcName) || task.regionMatches(0, npcName, 0, 4)
-								|| task.regionMatches(5, npcName, 5, 4))
-							slayerService.onTaskKill((Player) killer, npc);
+						for (String taskName : player.getSlayer().getSlayerTask().getName()) {
+							if (npc.getDefinition().getName().contains(taskName))
+								slayerService.onTaskKill((Player) killer, npc);
+						}
 					}
 				}
 				if (killer.isPlayer()) {
@@ -356,7 +355,7 @@ public class DeathTick extends Tickable {
 					player.increaseBarrowsKillcount();
 					player.getActionSender().sendString(24, 9, "Kill Count: " + player.getBarrowsKillCount());
 					player.removeAttribute("currentlyFightingBrother");
-					if (Barrows.BarrowsBrother
+					if (Barrows.BarrowsBrother 
 							.forId(npc.getId()) == (BarrowsBrother) killer.getAttribute("barrows_tunnel"))
 						player.setAttribute("canLoot", true);
 					player.getKilledBrothers().put(npc.getId(), true);

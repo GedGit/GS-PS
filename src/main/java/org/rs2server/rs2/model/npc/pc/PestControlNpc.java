@@ -32,5 +32,5 @@ public class PestControlNpc extends NPC {
 		return instance;
 	}
 
-	public final PestControlPortal getPortal() { return portal;}
+	public final PestControlPortal getPortal() { return portal;} 
 }

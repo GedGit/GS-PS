@@ -47,7 +47,7 @@ import java.util.logging.Logger;
  */
 public class ActionButtonPacketHandler implements PacketHandler {
 
-	public static final HashMap<Integer, Integer> menuIdxs = new HashMap<Integer, Integer>();
+	public static final HashMap<Integer, Integer> menuIdxs = new HashMap<Integer, Integer>(); 
 
 	static {
 		menuIdxs.put(255, 0);
@@ -282,7 +282,8 @@ public class ActionButtonPacketHandler implements PacketHandler {
 		case SlayerServiceImpl.TASK_WIDGET_ID:// Rewards interface
 			if (button == 8) {
 				if (Constants.DEBUG)
-					System.out.println("Unhandled action button : " + interfaceId + " - " + button + " - " + childButton);
+					System.out
+							.println("Unhandled action button : " + interfaceId + " - " + button + " - " + childButton);
 				if (childButton == 5) { // Unlock slayer helm
 					if (player.getDatabaseEntity().getStatistics().getSlayerRewardPoints() >= 400) {
 						player.getDatabaseEntity().getSlayerSkill().setUnlockedSlayerHelm(true);
@@ -798,7 +799,7 @@ public class ActionButtonPacketHandler implements PacketHandler {
 			player.getActionSender().sendConfig(1227, player.getDropdown().hashCode());
 			break;
 
-		case Smithing.INTERFACE:
+		case Smithing.INTERFACE: 
 			if (menuIndex == 9) {
 				// TODO smithing interface examine item option
 				return;
@@ -2107,6 +2108,28 @@ public class ActionButtonPacketHandler implements PacketHandler {
 
 					if (cape != null) {
 						switch (cape.getId()) {
+						
+						case 9750:
+						case 9751:
+							player.teleport(Location.create(2866, 3544, 0), 6, 6, false); 
+							break;
+						
+						case 9948:
+						case 9949:
+							DialogueManager.openDialogue(player, 9948);
+							break;
+							
+						case 9753:
+						case 9754:
+							player.getDatabaseEntity().toggleDefenceCape(); 
+							player.sendMessage("Your defence cape will "
+									+ (player.getDatabaseEntity().hasDefenceCape() ? "now" : "no longer")
+									+ " act as a ring of life.");
+							break;
+						case 9798:
+						case 9799:
+							player.teleport(Location.create(2604, 3401, 0), 1, 1, false);
+							break;
 						case 13121:
 						case 13122:
 						case 13123:
@@ -2258,7 +2281,7 @@ public class ActionButtonPacketHandler implements PacketHandler {
 					// Slayer rings
 					if (ring.getId() >= 11866 && ring.getId() <= 11873)
 						SlayerKillLog.handleSlayerLog(player);
-					
+
 					itemName = ring.getDefinition2().getName().toLowerCase();
 					if (itemName != null && itemName.contains("ring of wealth")) {
 						DialogueManager.openDialogue(player, 13);
@@ -2277,7 +2300,7 @@ public class ActionButtonPacketHandler implements PacketHandler {
 					// Slayer rings
 					if (ring.getId() >= 11866 && ring.getId() <= 11873)
 						SlayerKillLog.handleSlayerLog(player);
-					
+
 					String itemName = ring.getDefinition2().getName().toLowerCase();
 					if (itemName != null && itemName.contains("ring of wealth")) {
 						DialogueManager.openDialogue(player, 12);
@@ -2321,10 +2344,10 @@ public class ActionButtonPacketHandler implements PacketHandler {
 					break;
 				}
 				break;
-				default:
-					if (Constants.DEBUG)
-						System.out.println("Unsupported menu index, "+menuIndex);
-					break;
+			default:
+				if (Constants.DEBUG)
+					System.out.println("Unsupported menu index, " + menuIndex);
+				break;
 			}
 			break;
 		case 218:

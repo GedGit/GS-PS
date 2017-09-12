@@ -23,7 +23,7 @@ public class WalkingPacketHandler implements PacketHandler {
 
 		boolean starter = player.getAttribute("starter");
 		if (starter) {
-			DialogueManager.openDialogue(player, 19000);
+			DialogueManager.openDialogue(player, 19000); 
 			return;
 		}
 		

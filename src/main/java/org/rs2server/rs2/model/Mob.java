@@ -36,6 +36,7 @@ import org.rs2server.rs2.model.npc.NPC;
 import org.rs2server.rs2.model.npc.Pet;
 import org.rs2server.rs2.model.npc.impl.cerberus.Cerberus;
 import org.rs2server.rs2.model.npc.impl.cerberus.ghosts.CerberusGhost;
+import org.rs2server.rs2.model.npc.impl.other.KalphiteQueen;
 import org.rs2server.rs2.model.npc.impl.zulrah.Zulrah;
 import org.rs2server.rs2.model.npc.pc.PestControlNpc;
 import org.rs2server.rs2.model.npc.pc.PestControlPortal;
@@ -74,7 +75,7 @@ public abstract class Mob extends Entity {
 	}
 
 	public Mob getFrozenBy() {
-		return frozenBy; 
+		return frozenBy;
 	}
 
 	/**
@@ -375,6 +376,7 @@ public abstract class Mob extends Entity {
 			player.getDatabaseEntity().getPlayerSettings().setTeleBlockTimer(0);
 			player.getDatabaseEntity().getPlayerSettings().setTeleBlocked(false);
 		}
+		this.setDefaultAnimations();
 	}
 
 	public void setTempInteractingEntity(InteractionMode talk, Mob mob) {
@@ -1259,9 +1261,8 @@ public abstract class Mob extends Entity {
 	 */
 	public void inflictDamage(Hit hit, Mob attacker) {
 
-		if (!canDamaged) {
+		if (!canDamaged)
 			return;
-		}
 
 		if (getActionSender() != null) {
 			if (this.isPlayer()) {
@@ -1270,13 +1271,11 @@ public abstract class Mob extends Entity {
 				player.getActionSender().removeAllInterfaces();
 				player.getActionSender().removeChatboxInterface();
 
-				if (getInterfaceState().isInterfaceOpen(PriceChecker.PRICE_INVENTORY_INTERFACE)) {
+				if (getInterfaceState().isInterfaceOpen(PriceChecker.PRICE_INVENTORY_INTERFACE))
 					PriceChecker.returnItems(player);
-				}
 
-				if (player.getInterfaceState().isEnterAmountInterfaceOpen()) {
+				if (player.getInterfaceState().isEnterAmountInterfaceOpen())
 					player.getActionSender().removeEnterAmountInterface();
-				}
 
 				if (player.getAttribute("bank_searching") != null) {
 					player.getActionSender().removeEnterAmountInterface();
@@ -1288,11 +1287,6 @@ public abstract class Mob extends Entity {
 						|| player.getInterfaceState().isInterfaceOpen(Trade.TRADE_INVENTORY_INTERFACE)
 						|| player.getInterfaceState().isInterfaceOpen(Shop.SHOP_INVENTORY_INTERFACE)
 						|| player.getInterfaceState().isInterfaceOpen(PriceChecker.PRICE_INVENTORY_INTERFACE)) {
-					// int tab = (int) player.getAttribute("tabmode") == 164 ?
-					// 56 : (int)player.getAttribute("tabmode") == 161 ? 58 :
-					// 60;
-					// player.getActionSender().removeInterfaces(player.getAttribute("tabmode"),
-					// tab);
 					player.getActionSender().removeInventoryInterface();
 					player.resetInteractingEntity();
 				}
@@ -1300,24 +1294,17 @@ public abstract class Mob extends Entity {
 			}
 		}
 		if (attacker != null) {
-			if (attacker.getLocation().distance(this.getLocation()) > 32) {
+			if (attacker.getLocation().distance(this.getLocation()) > 32)
 				return;
-			}
 		}
-		if (hit.getDamage() > getSkills().getLevel(Skills.HITPOINTS)) {
+		if (hit.getDamage() > getSkills().getLevel(Skills.HITPOINTS))
 			hit = new Hit(getSkills().getLevel(Skills.HITPOINTS));
-		}
 
-		if (getSkills().getLevel(Skills.HITPOINTS) < 1 && hit.getDamage() > 0) {
+		if (getSkills().getLevel(Skills.HITPOINTS) < 1 && hit.getDamage() > 0)
 			return;
-		}
 
-		if (combatState.isDead() && hit.getDamage() > 0) { // If its a double
-															// hitting spec, we
-															// still want to see
-															// their 0 damage
+		if (combatState.isDead() && hit.getDamage() > 0)
 			return;
-		}
 		if (attacker != null && (this instanceof PestControlNpc || this instanceof PestControlPortal)) {
 			int hitsDealt = (int) (attacker.getAttribute("hits_dealt") == null ? 0
 					: attacker.getAttribute("hits_dealt"));
@@ -1336,41 +1323,8 @@ public abstract class Mob extends Entity {
 				playGraphics(Graphic.create(436));
 			}
 		}
-		// if(getEquipment().contains(2570) &&
-		// getSkills().getLevel(Skills.HITPOINTS) > 0) {
-		// if(combatState.canTeleport() &&
-		// getSkills().getLevel(Skills.HITPOINTS) <=
-		// (getSkills().getLevelForExperience(Skills.HITPOINTS) * 0.10)) {
-		// initiateTeleport(TeleportType.NORMAL_TELEPORT, Location.create(3225 +
-		// random.nextInt(1), 3218 + random.nextInt(1), 0));
-		// getEquipment().remove(new Item(2570, 1));
-		// if(getActionSender() != null) {
-		// getActionSender().sendMessage("Your Ring of Life saves you and is
-		// destroyed in the process.");
-		// }
-		// }
-		// }
-		if (getHitQueue().size() >= 4) {
-			hit = new Hit(hit.getDamage(), HitPriority.LOW_PRIORITY);// if
-																		// multiple
-																		// people
-																		// are
-																		// hitting
-																		// on an
-																		// opponent,
-																		// this
-																		// prevents
-																		// hits
-																		// from
-																		// stacking
-																		// up
-																		// for a
-																		// long
-																		// time
-																		// and
-																		// looking
-																		// off-beat
-		}
+		if (getHitQueue().size() >= 4)
+			hit = new Hit(hit.getDamage(), HitPriority.LOW_PRIORITY);
 		getHitQueue().add(hit);
 		if (attacker != null) {
 			if (attacker.isPlayer() && isPlayer()) {
@@ -1389,9 +1343,8 @@ public abstract class Mob extends Entity {
 			boolean immune = false;
 			if (isNPC()) {
 				NPC n = (NPC) this;
-				if (n.getId() == Zulrah.ID || (n.getId() >= 5867 && n.getId() <= 5869) || n instanceof Cerberus) {
+				if (n.getId() == Zulrah.ID || (n.getId() >= 5867 && n.getId() <= 5869) || n instanceof Cerberus)
 					immune = true;
-				}
 			}
 			if (hasAttribute("antiVenom+")) {
 				immune = System.currentTimeMillis() - (long) getAttribute("antiVenom+", 0L) < 300000;
@@ -1400,31 +1353,25 @@ public abstract class Mob extends Entity {
 				boolean attackerVenomItems = false;
 				boolean venomItems = false;
 				for (Item equip : attacker.getEquipment().toArray()) {
-					if (equip == null) {
+					if (equip == null)
 						continue;
-					}
 					VenomWeapons venomWeapons = VenomWeapons.of(equip.getId());
-					if (venomWeapons != null) {
+					if (venomWeapons != null)
 						attackerVenomItems = true;
-					}
 				}
 				for (Item equip : getEquipment().toArray()) {
-					if (equip == null) {
+					if (equip == null)
 						continue;
-					}
 					VenomWeapons venomWeapons = VenomWeapons.of(equip.getId());
-					if (venomWeapons != null) {
+					if (venomWeapons != null)
 						venomItems = true;
-					}
 				}
 				if (attackerVenomItems && !venomItems) {
-					if (Misc.random(5) == 0 && !hasAttribute("venom")) {
+					if (Misc.random(5) == 0 && !hasAttribute("venom"))
 						inflictVenom();
-					}
 				} else if (!attackerVenomItems && venomItems) {
-					if (Misc.random(5) == 0 && !attacker.hasAttribute("venom")) {
+					if (Misc.random(5) == 0 && !attacker.hasAttribute("venom"))
 						attacker.inflictVenom();
-					}
 				}
 			}
 		}
@@ -1442,20 +1389,12 @@ public abstract class Mob extends Entity {
 					public void execute() {
 						for (Mob mob : getRegion().getMobs()) {
 							if (!mob.getCombatState().isDead() && mob.isInWilderness()) {
-								if (combatState.getLastHitTimer() > (System.currentTimeMillis() + 4000)) { // 10
-																											// cycles
-																											// for
-																											// tagging
-																											// timer
+								if (combatState.getLastHitTimer() > (System.currentTimeMillis() + 4000)) {
 									if (combatState.getLastHitBy() != null && mob != combatState.getLastHitBy()) {
 										continue;
 									}
 								}
-								if (mob.getCombatState().getLastHitTimer() > (System.currentTimeMillis() + 4000)) { // 10
-																													// cycles
-																													// for
-																													// tagging
-																													// timer
+								if (mob.getCombatState().getLastHitTimer() > (System.currentTimeMillis() + 4000)) {
 									if (mob.getCombatState().getLastHitBy() != null
 											&& getMob() != mob.getCombatState().getLastHitBy()) {
 										continue;
@@ -1466,10 +1405,7 @@ public abstract class Mob extends Entity {
 										&& !(mob instanceof CerberusGhost)) {
 									locationsUsed.add(mob.getLocation());
 									int dmg = random
-											.nextInt((int) (getSkills().getLevelForExperience(Skills.PRAYER) * 0.25)); // +1
-																														// as
-																														// its
-																														// exclusive
+											.nextInt((int) (getSkills().getLevelForExperience(Skills.PRAYER) * 0.25));
 									mob.inflictDamage(new Hit(dmg), thisMob);
 								}
 							}
@@ -1483,21 +1419,29 @@ public abstract class Mob extends Entity {
 					attacker.getCombatState().setLastHitBy(null);
 					attacker.getCombatState().setLastHitTimer(0);
 				}
+				// Kalphite exception, since it transforms on death
+				if (this instanceof KalphiteQueen) {
+					KalphiteQueen kq = (KalphiteQueen) this;
+					if (!kq.isSecondPhase()) {
+						kq.transform();
+						return;
+					}
+				}
 			}
-			World.getWorld().submit(new Tickable(2) {
+			World.getWorld().submit(new Tickable(1) {
 				public void execute() {
 					playAnimation(getDeathAnimation());
 					this.stop();
 				}
 			});
-			World.getWorld().submit(new Tickable(5) {
+			World.getWorld().submit(new Tickable(4) {
 				public void execute() {
 					playAnimation(Animation.create(-1));
 					getCombatState().setCanMove(true);
 					this.stop();
 				}
 			});
-			World.getWorld().submit(new DeathTick(this, 5));
+			World.getWorld().submit(new DeathTick(this, 4));
 		}
 	}
 
@@ -1908,13 +1852,12 @@ public abstract class Mob extends Entity {
 	}
 
 	/**
-	 * This method IS used, don't remove it lmao
-	 * Processes a mob every tick
+	 * This method IS used, don't remove it lmao Processes a mob every tick
 	 */
 	public void processTicks() {
 		if (ticks.isEmpty())
 			return;
-		
+
 		Map<String, Tickable> ticks = new HashMap<String, Tickable>(this.ticks);
 
 		for (Iterator<Map.Entry<String, Tickable>> itr = ticks.entrySet().iterator(); itr.hasNext();) {

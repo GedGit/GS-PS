@@ -30,7 +30,7 @@ public final class PestControlInstance implements Streamable<Player> {
 	private final Set<Player> players;
 
 	private final PestControlPortal bluePortal;
-	private final PestControlPortal redPortal;
+	private final PestControlPortal redPortal; 
 	private final PestControlPortal purplePortal;
 	private final PestControlPortal yellowPortal;
 

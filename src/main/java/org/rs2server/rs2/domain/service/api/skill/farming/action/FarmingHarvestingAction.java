@@ -1,6 +1,7 @@
 package org.rs2server.rs2.domain.service.api.skill.farming.action;
 
 import org.rs2server.Server;
+import org.rs2server.rs2.Constants;
 import org.rs2server.rs2.action.impl.InfiniteHarvestingAction;
 import org.rs2server.rs2.domain.service.api.skill.farming.FarmingPatchState;
 import org.rs2server.rs2.domain.service.api.skill.farming.FarmingPatchType;
@@ -33,23 +34,34 @@ public class FarmingHarvestingAction extends InfiniteHarvestingAction {
 
 	@Override
 	public void onSuccessfulHarvest(Item item) {
+		final Player player = (Player) getMob();
+		if (Misc.random(100) < 5) {
+			// 5% yield increase while wearing a farming/max - capes
+			if (player.getEquipment().containsOneItem(9810, 9811) || Constants.hasMaxCape(player))
+				return;
+		}
+		if (Misc.random(100) > 94) {
+			// 5% yield increase while wearing magic secateurs
+			if (player.getEquipment().contains(7409))
+				return;
+		}
 		patch.setYield(patch.getYield() - 1);
 	}
 
 	@Override
 	public int getCycleCount() {
-		 return 1;
+		return 1;
 	}
 
 	@Override
 	public Item getReward() {
 		final Player player = (Player) getMob();
-		
+
 		// TODO correct message and chopping part
-		
+
 		if (patch.getPatch().getType() == FarmingPatchType.TREE_PATCH) {
 			getMob().getSkills().addExperience(Skills.FARMING, patch.getPlanted().getExperience());
-			
+
 			farmingService.clearPatch(player, patch);
 			player.sendMessage("Your tree was healthy; you've gained some Farming experience.");
 			handlePet(player);
@@ -116,7 +128,7 @@ public class FarmingHarvestingAction extends InfiniteHarvestingAction {
 		}
 		return true;
 	}
-	
+
 	/**
 	 * Handles the rare chance of obtaining a skilling pet
 	 * 

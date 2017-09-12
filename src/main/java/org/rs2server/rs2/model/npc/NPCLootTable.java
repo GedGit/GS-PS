@@ -142,7 +142,7 @@ public class NPCLootTable {
 	 */
 	public ArrayList<NPCLoot> getGeneratedLoot(final double chanceOffset) {
 		final ArrayList<NPCLoot> generatedLoot = new ArrayList<>(staticDrops);
-		generatedLoot.addAll(getRolledLoot(chanceOffset));
+		generatedLoot.addAll(getRolledLoot(chanceOffset)); 
 
 		return generatedLoot;
 	}

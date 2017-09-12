@@ -179,7 +179,7 @@ public class Cerberus extends CombatNpc<Cerberus> {
 	}
 
 	@Override
-	public void dropLoot(Mob killer) {
+	public void dropLoot(Mob killer) { 
 		final double chance = ItemServiceImpl.handleRingOfWealth(challenger);
 		for (final NPCLoot loot : NPCLootTable.forID(this).getGeneratedLoot(chance)) {
 

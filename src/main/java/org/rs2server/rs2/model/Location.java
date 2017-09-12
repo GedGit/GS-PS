@@ -218,7 +218,7 @@ public class Location {
 	 * @return <code>true</code> if the location is in range, <code>false</code>
 	 *         if not.
 	 */
-	public boolean isWithinDistance(Entity attacker, Entity victim, int distance) {
+	public boolean isWithinDistance(Entity attacker, Entity victim, int distance) { 
 		if (attacker.getWidth() == 1 && attacker.getHeight() == 1 && victim.getWidth() == 1 && victim.getHeight() == 1
 				&& distance == 1) {
 			return distanceToPoint(victim.getLocation()) <= distance;

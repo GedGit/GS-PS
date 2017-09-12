@@ -31,7 +31,7 @@ public class MonkOfZamorak extends AbstractCombatAction {
 	/**
 	 * Gets the singleton instance.
 	 * @return The singleton instance.
-	 */
+	 */ 
 	public static CombatAction getAction() {
 		return INSTANCE;
 	}

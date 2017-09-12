@@ -1,5 +1,6 @@
 package org.rs2server.rs2.model.skills.thieving;
 
+import org.rs2server.rs2.Constants;
 import org.rs2server.rs2.action.impl.SkillAction;
 import org.rs2server.rs2.model.Animation;
 import org.rs2server.rs2.model.Hit;
@@ -120,8 +121,9 @@ public class NPCPickpocketAction extends SkillAction {
 		int chance = 0;
 		if (player.getEquipment().getSlot(Equipment.SLOT_GLOVES) == 10075)
 			chance += 12;
-		// Ardougne cloaks
-		if (player.getEquipment().containsOneItem(13122, 13123, 13124, 20760))
+		// Ardougne cloaks, thieving skillcape, max capes
+		if (player.getEquipment().containsOneItem(13122, 13123, 13124, 20760, 9777, 9778)
+				|| Constants.hasMaxCape(player))
 			chance += 10;
 		return chance;
 	}

@@ -35633,8 +35633,9 @@
                 <int>0</int>
                 <int>1</int>
             </bonuses>
-            <weaponStyles>
+             <weaponStyles>
                 <weaponStyle>RANGE</weaponStyle>
+                <weaponStyle>SPECIAL</weaponStyle>
             </weaponStyles>
             <type>WEAPON</type>
             <animations>
@@ -49239,6 +49240,9 @@
                 <int>0</int>
                 <int>0</int>
             </bonuses>
+			 <weaponStyles>
+                <weaponStyle>RANGE</weaponStyle>
+            </weaponStyles>
             <type>WEAPON</type>
             <specialConsumption>0</specialConsumption>
             <specialHits>0</specialHits>
@@ -52879,7 +52883,7 @@
                 <int>0</int>
                 <int>0</int>
             </bonuses>
-            <type>HAT</type>
+            <type>FULL_MASK</type>
         </equipmentDef>
     </entry>
     <entry>
@@ -52900,7 +52904,7 @@
                 <int>0</int>
                 <int>0</int>
             </bonuses>
-            <type>HAT</type>
+            <type>FULL_MASK</type>
         </equipmentDef>
     </entry>
     <entry>
@@ -52921,7 +52925,7 @@
                 <int>0</int>
                 <int>0</int>
             </bonuses>
-            <type>HAT</type>
+            <type>FULL_MASK</type>
         </equipmentDef>
     </entry>
     <entry>

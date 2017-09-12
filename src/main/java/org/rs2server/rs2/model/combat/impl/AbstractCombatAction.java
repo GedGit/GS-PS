@@ -46,7 +46,7 @@ public abstract class AbstractCombatAction implements CombatAction {
 
 	/**
 	 * The random number generator.
-	 */
+	 */ 
 	protected final Random random = new Random();
 
 	private final ItemService itemService;
@@ -370,20 +370,20 @@ public abstract class AbstractCombatAction implements CombatAction {
 	}
 
 	@Override
-	public void special(final Mob attacker, final Mob victim, int damage) {
+	public void special(final Mob attacker, final Mob victim, int damage, boolean boltSpecial) {
 		Item weapon = attacker.getEquipment().get(Equipment.SLOT_WEAPON);
 		BowType bow = weapon.getEquipmentDefinition().getBowType();
 		if (bow == BowType.BRONZE_CBOW || bow == BowType.IRON_CBOW || bow == BowType.STEEL_CBOW
 				|| bow == BowType.MITH_CBOW || bow == BowType.ADAMANT_CBOW || bow == BowType.RUNE_CBOW
-				|| bow == BowType.DRAGON_CBOW) {
+				|| bow == BowType.DRAGON_CBOW|| bow == BowType.DRAGON_CBOW) {
 			weapon = attacker.getEquipment().get(Equipment.SLOT_ARROWS);
 		}
 		attacker.getCombatState().inverseSpecial();
 		switch (weapon.getId()) {
 		case 4587:
-			attacker.playGraphics(Graphic.create(347, (100 << 16)));
+			attacker.playGraphics(Graphic.create(347, (100 << 16))); 
 			attacker.playAnimation(Animation.create(1872));
-			if (damage > 0 && victim.isPlayer()) {
+			if (damage > 0 && victim.isPlayer()) { 
 				Player vic = (Player) victim;
 				vic.getCombatState().setPrayer(Prayers.PROTECT_FROM_MAGIC, false);
 				vic.getCombatState().setPrayer(Prayers.PROTECT_FROM_MISSILES, false);
@@ -391,7 +391,7 @@ public abstract class AbstractCombatAction implements CombatAction {
 				vic.getCombatState().setPrayerHeadIcon(-1);
 				Prayers.refresh(vic);
 				vic.setAttribute("noProtectionPrayer", true);
-				World.getWorld().submit(new StoppingTick(8) {
+				World.getWorld().submit(new StoppingTick(8) { 
 
 					@Override
 					public void executeAndStop() {
@@ -686,14 +686,14 @@ public abstract class AbstractCombatAction implements CombatAction {
 			victim.playGraphics(Graphic.create(753));
 			break;
 		}
+		if (!boltSpecial)
 		attacker.getCombatState().decreaseSpecial(weapon.getEquipmentDefinition().getSpecialConsumption());
 	}
 
 	@Override
 	public void special(Mob attacker, final Item item) {
-		if (attacker.getInteractingEntity() == null || attacker.getInteractionMode() != InteractionMode.ATTACK) {
+		if (attacker.getInteractingEntity() == null || attacker.getInteractionMode() != InteractionMode.ATTACK)
 			return;
-		}
 		switch (item.getId()) {
 		case 4153:
 		case 12848:
@@ -706,7 +706,7 @@ public abstract class AbstractCombatAction implements CombatAction {
 				hit = new Hit(hit.getDamage());
 			}
 			attacker.getInteractingEntity().inflictDamage(hit, attacker);
-			special(attacker, attacker.getInteractingEntity(), hit.getDamage());
+			special(attacker, attacker.getInteractingEntity(), hit.getDamage(), false);
 			break;
 		}
 	}

@@ -1,6 +1,7 @@
 package org.rs2server.rs2.model.minigame.impl;
 
 import org.rs2server.cache.format.CacheItemDefinition;
+import org.rs2server.rs2.Constants;
 import org.rs2server.rs2.action.Action;
 import org.rs2server.rs2.event.Event;
 import org.rs2server.rs2.model.Animation;
@@ -190,9 +191,10 @@ public class WarriorsGuild {
 				IN_GAME.remove(player);
 			} else {
 				// Make sure we have at least 100 tokens..
-				if (player.getInventory().getCount(8851) < 100)
+				if (player.getInventory().getCount(8851) < 100 && !player.getEquipment().containsOneItem(9747, 9748)
+						&& !Constants.hasMaxCape(player))
 					player.getActionSender().sendItemDialogue(8851,
-							"You need at least 100 Warrior Guild tokens to enter.");
+							"You need at least 100 Warrior Guild tokens, an Attack cape or a Max cape in order to enter!");
 				else {
 					player.setTeleportTarget(ENTER_LOC);
 					IN_GAME.add(player);
@@ -212,7 +214,7 @@ public class WarriorsGuild {
 	private Item getCurrentDefender() {
 		Item defender = null; // The best defender so far.
 		Item shield = player.getEquipment().get(Equipment.SLOT_SHIELD);
-		
+
 		// First check if we have one equipped
 		if (shield != null && shield.getDefinition2().getName().contains("defender"))
 			defender = shield;

@@ -335,7 +335,7 @@ public class Shop {
 	/**
 	 * Int array containing recipe for disaster glove ID's.
 	 */
-	public static final int[] RFD_GLOVES = { 7458, 7459, 7460, 7461, 7462 };
+	public static final int[] RFD_GLOVES = { 7458, 7459, 7460, 7461, 7462 }; 
 
 	/**
 	 * Opens the shop for the specified player.
@@ -605,10 +605,6 @@ public class Shop {
 
 		if (shopId == 13) { // rfd item chest
 			int minigameStage = player.getSettings().getRFDState();
-			if (minigameStage < 1 && (item.getId() == 7455 || item.getId() == 7456)) {
-				player.sendMessage("You must complete the first wave in Recipe for disaster to buy these gloves!");
-				return;
-			}
 			if (minigameStage < 2 && (item.getId() == 7457 || item.getId() == 7458)) {
 				player.sendMessage("You must complete the second wave in Recipe for disaster to buy these gloves!");
 				return;

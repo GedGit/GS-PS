@@ -2,6 +2,7 @@ package org.rs2server.rs2.model.skills;
 
 import org.rs2server.Server;
 import org.rs2server.cache.format.CacheItemDefinition;
+import org.rs2server.rs2.Constants;
 import org.rs2server.rs2.action.impl.HarvestingAction;
 import org.rs2server.rs2.domain.service.api.content.ItemService;
 import org.rs2server.rs2.model.*;
@@ -503,6 +504,16 @@ public class Woodcutting extends HarvestingAction {
 	public String getSuccessfulHarvestMessage() {
 		if (object.getDefinition().getName().contains("Vine"))
 			return null;
+		int birdsNest = 1;
+		if (getMob().getEquipment().containsOneItem(9808, 9808) || Constants.hasMaxCape(getMob()))
+			birdsNest = 3;
+		Item birdNest = new Item(Misc.random(10) == 0 ? 5070
+				: Misc.random(10) == 0 ? 5071 : Misc.random(10) == 0 ? 5072 : Misc.random(8) == 0 ? 5073 : 5074);
+		if (Misc.random(266) <= birdsNest) {
+			World.getWorld().register(new GroundItem(((Player) getMob()).getName(), birdNest, getMob().getLocation()),
+					getMob());
+			getMob().getActionSender().sendMessage("<col=ff0000>A bird's nest falls out of the tree.");
+		}
 		return "You get some " + CacheItemDefinition.get(tree.getLogId()).getName().toLowerCase() + ".";
 	}
 

@@ -22,7 +22,7 @@ public class PestControlManager extends EventListener {
 			{ 3740, 3741, 3760, 3761, 3750, 3751, 3745, 3746, 3770, 3771, 3776, 3731 } };
 
 	public static PestControlManager getPestControlManager() {
-		return INSTANCE;
+		return INSTANCE; 
 	}
 
 	public enum Boat {

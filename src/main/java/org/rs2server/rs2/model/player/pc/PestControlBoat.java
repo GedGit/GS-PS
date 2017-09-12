@@ -1,5 +1,6 @@
 package org.rs2server.rs2.model.player.pc;
 
+import org.rs2server.rs2.Constants;
 import org.rs2server.rs2.model.Location;
 import org.rs2server.rs2.model.player.Player;
 import org.rs2server.util.functional.Streamable;
@@ -15,16 +16,16 @@ import static java.util.stream.Collectors.toSet;
  * @author twelve
  */
 public final class PestControlBoat implements Streamable<Player> {
-	private static final int MAX_TIME_REMAINING = 50;
+	private static final int MAX_TIME_REMAINING = Constants.DEBUG ? 1 : 50;
 	private static final int MAX_GAME_TIME_REMAINING = 2000;
-	private static final int MINIMUM_PLAYERS_REQUIRED = 3;
+	private static final int MINIMUM_PLAYERS_REQUIRED = Constants.DEBUG ? 1 : 3;
 
-	private final Set<Player> players = new HashSet<>();
+	private final Set<Player> players = new HashSet<>(); 
 	private final Location entrance;
 	private final Location exit;
 
 	private PestControlInstance instance;
-	private int boatTimeRemaining;//TODO: Convert to joda in future
+	private int boatTimeRemaining;//TODO: Convert to joda in future 
 	private int gameTimeRemaining;
 
 	public PestControlBoat(Location entrance, Location exit) {

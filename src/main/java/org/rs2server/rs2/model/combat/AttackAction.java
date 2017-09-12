@@ -149,7 +149,7 @@ public class AttackAction extends Action {
 		// mob.getWalkingQueue().reset();
 		// }
 		final CombatAction action = mob.getActiveCombatAction();
-		if ((!(target instanceof Zulrah) && !(target instanceof Whirlpool))
+		if ((!(target instanceof Zulrah) && !(target instanceof Whirlpool)&& !(target instanceof PestControlPortal)) 
 				&& (action == MagicCombatAction.getAction() || action == RangeCombatAction.getAction())
 				&& !ProjectilePathFinder.clippedProjectile(mob, target)) {
 

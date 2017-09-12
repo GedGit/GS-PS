@@ -22,7 +22,7 @@ public class Smithing {
 
 	/**
 	 * The smithing interface ID.
-	 */
+	 */ 
 	public static final int INTERFACE = 312;
 
 	/**

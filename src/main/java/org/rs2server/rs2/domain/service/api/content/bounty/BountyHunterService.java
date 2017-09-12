@@ -67,7 +67,7 @@ public interface BountyHunterService {
 		}
 	}
 	enum Emblems {
-		TIER_ONE(12746, 50000),
+		TIER_ONE(12746, 50000), 
 		TIER_THREE(12748, 100000),
 		TIER_FOUR(12749, 200000),
 		TIER_FIVE(12750, 400000),

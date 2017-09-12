@@ -21,8 +21,8 @@ public class PestControlPortal extends NPC {
 	private final int attackPortalId;
 	private final PortalCardinality cardinality;
 	private final List<PestControlNpc> npcs;
-	private final PestControlInstance instance;
-	private static final int HEALTH = 200;
+	private final PestControlInstance instance; 
+	private static final int HEALTH = 250;
 	public long lastSpawn;
 	private final List<Integer> npcList;
 

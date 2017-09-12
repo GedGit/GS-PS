@@ -1,5 +1,6 @@
 package org.rs2server.rs2.model.minigame.impl;
 
+import org.rs2server.rs2.Constants;
 import org.rs2server.rs2.model.CombatNPCDefinition;
 import org.rs2server.rs2.model.Location;
 import org.rs2server.rs2.model.Mob;
@@ -35,16 +36,13 @@ public class PestControl extends AbstractMinigame {
 	public List<Player> players = new ArrayList<Player>();
 	public NPC voidKnight;
 	private List<NPC> npcs = new ArrayList<NPC>();
-	private Tickable gameTick;
+	private Tickable gameTick; 
 	private int height = 0;
 	public long[] lastSpawn = new long[4];
 
 	public PestControl(Boat level, int height) {
 		this.level = level;
-		PestControlManager.getPestControlManager().heights[height / 4] = true; // set
-																				// it
-																				// to
-																				// used
+		PestControlManager.getPestControlManager().heights[height / 4] = true;
 		init();
 	}
 
@@ -59,9 +57,8 @@ public class PestControl extends AbstractMinigame {
 		return new Tickable(1) {
 			@Override
 			public void execute() {
-				if (players.size() >= 25 || (waitTicks == 0)) {
+				if (players.size() >= 25 || waitTicks == 0 || Constants.DEBUG) {
 					start();
-					//this.endGame();
 				} else if (waitTicks == 0 && players.size() < 5) {
 					waitTicks = 500;
 				} else if (players.size() > 0) {
@@ -256,9 +253,8 @@ public class PestControl extends AbstractMinigame {
 
 	public void end(boolean won) {
 		//gameTick.endGame();
-		for (Player player : players) {
+		for (Player player : players)
 			player.setTeleportTarget(level.startLoc.transform(0, 0, height));
-		}
 	}
 
 	@Override

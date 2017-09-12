@@ -18,7 +18,7 @@ public class PestControlEvent extends Event {
 
 	public PestControlEvent() {
 		super(600);
-		this.service = Server.getInjector().getInstance(PestControlService.class);
+		this.service = Server.getInjector().getInstance(PestControlService.class); 
 	}
 
 	@Override

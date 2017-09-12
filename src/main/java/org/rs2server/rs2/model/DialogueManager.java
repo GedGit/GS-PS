@@ -426,32 +426,27 @@ public class DialogueManager {
 			break;
 		case 56:
 			player.getActionSender().sendDialogue("Select an Option", DialogueType.OPTION, -1, FacialAnimation.DEFAULT,
-					"Trade in my emblems|Restore my Special Energy|Give me a skull|Change my switching mode|Nothing");
+					"Trade in my emblems|Restore my Special Energy|Give me a skull");
 			player.getInterfaceState().setNextDialogueId(0, 10000);
 			player.getInterfaceState().setNextDialogueId(1, 57);
 			player.getInterfaceState().setNextDialogueId(2, 58);
-			player.getInterfaceState().setNextDialogueId(3, 59);
-			player.getInterfaceState().setNextDialogueId(4, 69);
 			break;
 		case 57:
 			if (player.getCombatState().getSpecialEnergy() != 100) {
-				player.getActionSender().sendMessage("The Emblem Trader restores your special energy.");
+				player.getActionSender().sendDialogue("Emblem Trader", DialogueType.NPC, 315, FacialAnimation.DEFAULT,
+						"I've restored your special attack energy.");
 				player.getCombatState().setSpecialEnergy(100);
 				player.getActionSender().sendConfig(300, 1000);
-			} else {
-				player.getActionSender().sendMessage("You already have the maximum amount of Special Energy.");
-			}
-			player.getActionSender().removeChatboxInterface();
+			} else
+				player.getActionSender().sendDialogue("Emblem Trader", DialogueType.NPC, 315, FacialAnimation.DEFAULT,
+						"It seems you're already at full special attack energy.");
+			player.getInterfaceState().setNextDialogueId(0, -1);
 			break;
 		case 58:
 			player.getCombatState().setSkullTicks(1000);
-			player.getActionSender().sendMessage("The Emblem Trader marks you with a skull.");
-			player.getActionSender().removeChatboxInterface();
-			break;
-		case 59:
-			player.setQueuedSwitching(!player.hasQueuedSwitching());
-			player.getActionSender().sendMessage("Switching type toggled. 07 mode: " + player.hasQueuedSwitching());
-			player.getActionSender().removeChatboxInterface();
+			player.getActionSender().sendDialogue("Emblem Trader", DialogueType.NPC, 315, FacialAnimation.DEFAULT,
+					"Be careful now, you will loose all of your items if you die.");
+			player.getInterfaceState().setNextDialogueId(0, -1);
 			break;
 		case 60:
 			player.getActionSender().sendDialogue("Select an Option", DialogueType.OPTION, -1, FacialAnimation.DEFAULT,
@@ -897,7 +892,7 @@ public class DialogueManager {
 						CacheNPCDefinition.get(player.getAttribute("talkingNpc")).getName(), DialogueType.NPC,
 						player.getAttribute("talkingNpc"), FacialAnimation.DEFAULT,
 						"Great, you're doing great. Your new task is to kill<br>" + newTask.getTaskAmount() + " "
-								+ newTask.getName() + "s");
+								+ player.getSlayer().getSlayerTask().getName()[0] + "s");
 				player.getInterfaceState().setNextDialogueId(0, 506);
 			}
 			break;
@@ -909,7 +904,7 @@ public class DialogueManager {
 						CacheNPCDefinition.get(player.getAttribute("talkingNpc")).getName(), DialogueType.NPC,
 						player.getAttribute("talkingNpc"), FacialAnimation.DEFAULT,
 						"Great, you're doing great. Your new task is to kill<br>" + newTask.getTaskAmount() + " "
-								+ newTask.getName() + "s");
+								+ player.getSlayer().getSlayerTask().getName()[0] + "s");
 				player.getInterfaceState().setNextDialogueId(0, 506);
 			}
 			break;
@@ -921,7 +916,7 @@ public class DialogueManager {
 						CacheNPCDefinition.get(player.getAttribute("talkingNpc")).getName(), DialogueType.NPC,
 						player.getAttribute("talkingNpc"), FacialAnimation.DEFAULT,
 						"Great, you're doing great. Your new task is to kill<br>" + newTask.getTaskAmount() + " "
-								+ newTask.getName() + "s");
+								+ player.getSlayer().getSlayerTask().getName()[0] + "s");
 				player.getInterfaceState().setNextDialogueId(0, 506);
 			}
 			break;
@@ -933,7 +928,7 @@ public class DialogueManager {
 						CacheNPCDefinition.get(player.getAttribute("talkingNpc")).getName(), DialogueType.NPC,
 						player.getAttribute("talkingNpc"), FacialAnimation.DEFAULT,
 						"Great, you're doing great. Your new task is to kill<br>" + newTask.getTaskAmount() + " "
-								+ newTask.getName() + "s");
+								+ player.getSlayer().getSlayerTask().getName()[0] + "s");
 				player.getInterfaceState().setNextDialogueId(0, 506);
 			}
 			break;
@@ -953,7 +948,7 @@ public class DialogueManager {
 						CacheNPCDefinition.get(player.getAttribute("talkingNpc")).getName(), DialogueType.NPC,
 						player.getAttribute("talkingNpc"), FacialAnimation.DEFAULT,
 						"Great, you're doing great. Your new task is to kill<br>" + newTask.getTaskAmount() + " "
-								+ newTask.getName() + "s");
+								+ player.getSlayer().getSlayerTask().getName()[0] + "s");
 				player.getInterfaceState().setNextDialogueId(0, 506);
 			}
 			break;
@@ -999,10 +994,11 @@ public class DialogueManager {
 			break;
 		case 520:
 			if (player.getSlayer().getSlayerTask() != null) {
-				player.getActionSender().sendDialogue("Vannaka", DialogueType.NPC, 403, FacialAnimation.HAPPY,
-						"You're current assigned to kill " + player.getSlayer().getSlayerTask().getName().toLowerCase()
-								+ "; only " + player.getSlayer().getSlayerTask().getTaskAmount() + " more",
-						"to go.");
+				player.getActionSender()
+						.sendDialogue("Vannaka", DialogueType.NPC, 403, FacialAnimation.HAPPY,
+								"You're current assigned to kill " + player.getSlayer().getSlayerTask().getName()[0]
+										+ "; only " + player.getSlayer().getSlayerTask().getTaskAmount() + " more",
+								"to go.");
 				player.getInterfaceState().setNextDialogueId(0, 514);
 			} else {
 				player.getActionSender().sendDialogue("Vannaka", DialogueType.NPC, 403, FacialAnimation.HAPPY,
@@ -2055,6 +2051,21 @@ public class DialogueManager {
 			}
 			break;
 
+		case 9948:
+			player.getActionSender().sendDialogue("Select a Destination", DialogueType.OPTION, -1,
+					FacialAnimation.DEFAULT, "Feldip Hunter area|Wilderness Hunter area");
+			player.getInterfaceState().setNextDialogueId(0, 9949);
+			player.getInterfaceState().setNextDialogueId(1, 9950);
+			break;
+		case 9949:
+			player.getActionSender().removeChatboxInterface();
+			player.teleport(Location.create(2525, 2913, 0), 1, 1, false);
+			break;
+		case 9950:
+			player.getActionSender().removeChatboxInterface();
+			player.teleport(Location.create(3143, 3770, 0), 1, 1, false);
+			break;
+
 		case 12954:
 			int interfaceId1 = 193;
 
@@ -2988,12 +2999,10 @@ public class DialogueManager {
 		 * Emblem trader bullshit
 		 */
 		case 10000:
-			player.getActionSender().removeChatboxInterface();
 			int pointsPrior = player.getDatabaseEntity().getBountyHunter().getBountyShopPoints();
 			for (Item inv : player.getInventory().toArray()) {
-				if (inv == null) {
+				if (inv == null)
 					continue;
-				}
 				BountyHunterService.Emblems.of(inv.getId()).ifPresent(e -> {
 					player.getInventory().remove(inv);
 					int points = player.getDatabaseEntity().getBountyHunter().getBountyShopPoints();
@@ -3001,8 +3010,11 @@ public class DialogueManager {
 				});
 			}
 			int addedPoints = player.getDatabaseEntity().getBountyHunter().getBountyShopPoints() - pointsPrior;
-			player.getActionSender().sendMessage("You sell all your emblems for "
+			player.getActionSender().sendMessage("You've sold all your emblems for "
 					+ NumberFormat.getNumberInstance(Locale.ENGLISH).format(addedPoints) + " Bounties.");
+			player.getActionSender().sendDialogue("Emblem Trader", DialogueType.NPC, 315, FacialAnimation.DEFAULT,
+					"I've bought all your emblems for "
+							+ NumberFormat.getNumberInstance(Locale.ENGLISH).format(addedPoints) + " bounties.");
 			break;
 
 		case 11864:

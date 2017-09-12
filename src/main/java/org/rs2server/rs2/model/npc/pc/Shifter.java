@@ -1,6 +1,7 @@
 package org.rs2server.rs2.model.npc.pc;
 
 import org.rs2server.rs2.model.Location;
+import org.rs2server.rs2.model.Mob;
 import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.model.player.pc.PestControlInstance;
 import java.util.Optional;
@@ -30,5 +31,10 @@ public class Shifter extends PestControlNpc {
 				getCombatState().startAttacking(player.get(), player.get().isAutoRetaliating());
 			}
 		}
+	}
+
+	@Override
+	public void dropLoot(Mob killer) {
+		// Override it to do nothing since pest control mobs don't drop items.
 	}
 }

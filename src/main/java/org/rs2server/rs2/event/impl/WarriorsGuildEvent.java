@@ -1,5 +1,6 @@
 package org.rs2server.rs2.event.impl;
 
+import org.rs2server.rs2.Constants;
 import org.rs2server.rs2.event.Event;
 import org.rs2server.rs2.model.Item;
 import org.rs2server.rs2.model.minigame.impl.WarriorsGuild;
@@ -19,6 +20,8 @@ public class WarriorsGuildEvent extends Event{
 	@Override
 	public void execute() {
 		for (Player p : WarriorsGuild.IN_GAME) {
+			if (p.getEquipment().containsOneItem(9747, 9748) || Constants.hasMaxCape(p))
+				continue;
 			if (p.getInventory().getCount(tokens.getId()) < 10) {
 				p.getWarriorsGuild().outOfTokens();
 				continue;

@@ -1,6 +1,7 @@
 package org.rs2server.rs2.model.skills;
 
 import org.rs2server.Server;
+import org.rs2server.rs2.Constants;
 import org.rs2server.rs2.action.impl.HarvestingAction;
 import org.rs2server.rs2.domain.service.api.skill.MiningService;
 import org.rs2server.rs2.model.*;
@@ -443,6 +444,13 @@ public class Mining extends HarvestingAction {
 			if (player.getEquipment().contains(13106) && rock.getRequiredLevel() <= 70)
 				amount = 2;
 			if (player.getEquipment().contains(13107))
+				amount = 2;
+		}
+		if (getMob().isPlayer() && Misc.random(100) < 5) {
+			// 5% chance of mining two ore at once wearing a mining cape or a max cape.
+			Player player = (Player) getMob();
+			if ((Constants.hasMaxCape(player) || player.getEquipment().containsOneItem(9792, 9793))
+					&& rock.getRequiredLevel() <= 70)
 				amount = 2;
 		}
 		if (pickaxe == PickAxe.INFERNAL && Misc.random(8) == 0) {

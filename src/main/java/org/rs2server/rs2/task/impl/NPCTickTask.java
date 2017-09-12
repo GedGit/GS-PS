@@ -37,7 +37,7 @@ public class NPCTickTask implements Task {
 	/**
 	 * The random number generator.
 	 */
-	private static final Random random = new Random();
+	private static final Random random = new Random(); 
 
 	/**
 	 * Creates the tick task.

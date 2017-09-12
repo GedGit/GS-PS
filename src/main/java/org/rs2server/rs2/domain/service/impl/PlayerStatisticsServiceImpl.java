@@ -21,7 +21,7 @@ public class PlayerStatisticsServiceImpl implements PlayerStatisticsService {
 	@Override
 	public void increaseBossKillCount(@Nonnull Player player, int npcId, int amount) {
 		final PlayerStatisticsEntity statistics = player.getDatabaseEntity().getStatistics();
-		statistics.getBossKillCount().put(npcId,
+		statistics.getBossKillCount().put(npcId, 
 				Helpers.fallback(statistics.getBossKillCount().get(npcId), 0) + amount);
 
 		if (Constants.DEBUG)

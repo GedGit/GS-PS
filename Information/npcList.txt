@@ -6037,8 +6037,8 @@
 6497 - Dagannoth Prime
 6498 - Dagannoth Rex
 6499 - Giant Mole
-6500 - King Black Dragon
-6501 - King Black Dragon
+6500 - Kalphite Queen
+6501 - Kalphite Queen
 6502 - King Black Dragon
 6503 - Callisto
 6504 - Venenatis

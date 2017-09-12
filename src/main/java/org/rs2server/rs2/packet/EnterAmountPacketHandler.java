@@ -3,8 +3,7 @@ package org.rs2server.rs2.packet;
 import org.rs2server.Server;
 import org.rs2server.cache.format.CacheItemDefinition;
 import org.rs2server.rs2.content.api.bank.BankPinEvent;
-import org.rs2server.rs2.domain.service.api.BankPinService;
-import org.rs2server.rs2.domain.service.api.HookService;
+import org.rs2server.rs2.domain.service.api.*;
 import org.rs2server.rs2.domain.service.api.content.ItemService;
 import org.rs2server.rs2.domain.service.api.content.magic.OrbChargingService;
 import org.rs2server.rs2.domain.service.impl.BankPinServiceImpl;
@@ -13,28 +12,18 @@ import org.rs2server.rs2.model.Item;
 import org.rs2server.rs2.model.Skills;
 import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.model.skills.Cooking;
-import org.rs2server.rs2.model.skills.Cooking.CookingItem;
-import org.rs2server.rs2.model.skills.Cooking.CookingMethod;
+import org.rs2server.rs2.model.skills.Cooking.*;
 import org.rs2server.rs2.model.skills.FletchingAction;
 import org.rs2server.rs2.model.skills.FletchingAction.FletchingItem;
 import org.rs2server.rs2.model.skills.herblore.Herblore;
-import org.rs2server.rs2.model.skills.herblore.Herblore.HerbloreType;
-import org.rs2server.rs2.model.skills.herblore.Herblore.PrimaryIngredient;
-import org.rs2server.rs2.model.skills.herblore.Herblore.SecondaryIngredient;
+import org.rs2server.rs2.model.skills.herblore.Herblore.*;
 import org.rs2server.rs2.model.skills.PestleAndMortar;
-import org.rs2server.rs2.model.skills.crafting.BoltCrafting;
-import org.rs2server.rs2.model.skills.crafting.GemCutting;
-import org.rs2server.rs2.model.skills.crafting.GlassBlowing;
-import org.rs2server.rs2.model.skills.crafting.SpinningWheel;
+import org.rs2server.rs2.model.skills.crafting.*;
 import org.rs2server.rs2.model.skills.crafting.SpinningWheel.SpinItem;
 import org.rs2server.rs2.model.skills.crafting.GlassBlowing.GlassItem;
-import org.rs2server.rs2.model.skills.crafting.LeatherCrafting.LeatherProduction;
-import org.rs2server.rs2.model.skills.crafting.LeatherCrafting.LeatherProductionAction;
-import org.rs2server.rs2.model.skills.smithing.Forging;
-import org.rs2server.rs2.model.skills.smithing.Smelting;
-import org.rs2server.rs2.model.skills.smithing.SmithingUtils;
-import org.rs2server.rs2.model.skills.smithing.SmithingUtils.ForgingBar;
-import org.rs2server.rs2.model.skills.smithing.SmithingUtils.SmeltingBar;
+import org.rs2server.rs2.model.skills.crafting.LeatherCrafting.*;
+import org.rs2server.rs2.model.skills.smithing.*;
+import org.rs2server.rs2.model.skills.smithing.SmithingUtils.*;
 import org.rs2server.rs2.net.ActionSender.DialogueType;
 import org.rs2server.rs2.net.Packet;
 import org.rs2server.rs2.util.Misc;
@@ -44,7 +33,7 @@ import org.rs2server.rs2.util.Misc;
  *
  * @author Graham Edgecombe
  */
-public class EnterAmountPacketHandler implements PacketHandler {
+public class EnterAmountPacketHandler implements PacketHandler { 
 
 	private final HookService hookService;
 	private final BankPinService bankPinService;

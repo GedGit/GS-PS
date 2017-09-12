@@ -96,7 +96,7 @@ public class Inventory {
 		if (id == 453 && mob.isPlayer()) {
 			Player player = (Player) mob;
 			if (player.getInventory().getCount(453) <= 0)
-				return player.getDatabaseEntity().getCoalBagAmount();
+				return player.getDatabaseEntity().getCoalBagAmount(); 
 		}
 		return service.getCount((Player) mob, new Item(id));
 	}

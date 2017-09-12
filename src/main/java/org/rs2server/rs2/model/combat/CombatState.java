@@ -837,7 +837,7 @@ public final class CombatState {
 	 * @param canMove
 	 *            the canMove to set
 	 */
-	public void setCanMove(boolean canMove) {
+	public void setCanMove(boolean canMove) { 
 		this.canMove = canMove;
 	}
 
@@ -987,11 +987,10 @@ public final class CombatState {
 	/**
 	 * Inverses the special attack flag.
 	 */
-	public void inverseSpecial() {
+	public void inverseSpecial() {  
 		this.special = !this.special;
-		if (mob.getActionSender() != null) {
+		if (mob.getActionSender() != null)
 			mob.getActionSender().sendConfig(301, isSpecialOn() ? 1 : 0);
-		}
 	}
 
 	/**

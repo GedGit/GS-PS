@@ -1,5 +1,6 @@
 package org.rs2server.rs2.model.combat;
 
+import org.rs2server.rs2.Constants;
 import org.rs2server.rs2.model.Item;
 import org.rs2server.rs2.model.Mob;
 import org.rs2server.rs2.model.Prayers;
@@ -101,10 +102,11 @@ public final class CombatFormula {
 		if (mob.isPlayer() && victim.isNPC()) {
 			final Player player = (Player) mob;
 			final NPC npc = (NPC) victim;
-			if (player.getSlayer().getSlayerTask() != null
-					&& player.getSlayer().getSlayerTask().getName().contains(npc.getDefinition().getName())
-					&& hasBlackMaskOrSlayerHelm(player)) {
-				otherBonusMultiplier = 1.15;
+			if (player.getSlayer().getSlayerTask() != null && hasBlackMaskOrSlayerHelm(player)) {
+				for (String taskName : player.getSlayer().getSlayerTask().getName()) {
+					if (npc.getDefinition().getName().contains(taskName))
+						otherBonusMultiplier = 1.15;
+				}
 			}
 		}
 		if (fullDharok(mob)) {
@@ -187,10 +189,11 @@ public final class CombatFormula {
 		if (mob.isPlayer() && victim.isNPC()) {
 			final Player player = (Player) mob;
 			final NPC npc = (NPC) victim;
-			if (player.getSlayer().getSlayerTask() != null
-					&& player.getSlayer().getSlayerTask().getName().contains(npc.getDefinition().getName())
-					&& hasImbuedSlayerHelm(player)) {
-				otherBonusMultiplier = 1.15;
+			if (player.getSlayer().getSlayerTask() != null && hasImbuedSlayerHelm(player)) {
+				for (String taskName : player.getSlayer().getSlayerTask().getName()) {
+					if (npc.getDefinition().getName().contains(taskName))
+						otherBonusMultiplier = 1.15;
+				}
 			}
 		}
 
@@ -443,11 +446,7 @@ public final class CombatFormula {
 	}
 
 	public static boolean hasAccumulator(Mob attacker) {
-		return attacker.getEquipment().get(Equipment.SLOT_CAPE) != null
-				&& (attacker.getEquipment().get(Equipment.SLOT_CAPE).getId() == 10499
-						|| attacker.getEquipment().get(Equipment.SLOT_CAPE).getId() == 13337
-						|| attacker.getEquipment().get(Equipment.SLOT_CAPE).getId() == 9757
-						|| attacker.getEquipment().get(Equipment.SLOT_CAPE).getId() == 9756
-						|| attacker.getEquipment().get(Equipment.SLOT_CAPE).getId() == 10498);
+		return attacker.getEquipment().containsOneItem(10498, 10499, 9757, 9756, 13337)
+				|| Constants.hasMaxCape(attacker);
 	}
 }

@@ -17,10 +17,8 @@ public class DeathTask implements Task {
 		this.engineService = Server.getInjector().getInstance(EngineService.class);
 	}
 	@Override
-	public void execute() {
-		if (engineService.isRunning()) {
+	public void execute() { 
+		if (engineService.isRunning())
 			engineService.stop();
-		}
 	}
-
 }

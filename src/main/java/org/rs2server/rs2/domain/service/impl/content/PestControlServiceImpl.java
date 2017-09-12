@@ -44,7 +44,7 @@ public final class PestControlServiceImpl implements PestControlService {
 
 	public static final Location BOAT_ONE_ENTER = Location.create(2661, 2639);
 	public static final Location BOAT_ONE_EXIT = Location.create(2657, 2639);
-
+ 
 	private static final int BOAT_WIDGET_ID = 407;
 
 	private static final int SHOP_INTERFACE_ID = 267;
@@ -118,16 +118,22 @@ public final class PestControlServiceImpl implements PestControlService {
 		if (event.getButton() == 146 && player.getSelectedItem() != -1 && item != null) {
 			int cost = item.getCost();
 			int points = player.getDatabaseEntity().getStatistics().getPestControlPoints();
-			if (cost > points) {
+			if (cost > points && !(item.getItemId() >= 0 && item.getItemId() <= 6)) {
 				player.getActionSender().sendMessage("You don't have enough points to purchase this reward");
+				System.out.println("1 "+cost);
+				return;
+			}
+			int child = player.getAttribute("pc_button");
+			int ppoints = child >= 86 && child <= 92 ? 1 : child >= 101 && child <= 107 ? 10 : 100;
+			if (ppoints > points && item.getItemId() >= 0 && item.getItemId() <= 6) {
+				player.getActionSender().sendMessage("You don't have enough points to purchase this reward");
+				System.out.println("2 "+cost);
 				return;
 			}
 			// Exception for experience rewards
 			if (item.getItemId() >= 0 && item.getItemId() <= 6) {
 				if (player.getAttribute("pc_button") == null)
 					return;
-				int child = player.getAttribute("pc_button");
-				int ppoints = child >= 86 && child <= 92 ? 1 : child >= 101 && child <= 107 ? 10 : 100;
 				int baseXP = (item.getItemId() == 4 || item.getItemId() == 6) ? 8 : item.getItemId() == 5 ? 1 : 35;
 				double exp = ppoints * baseXP * player.getSkills().getLevelForExperience(item.getItemId());
 
@@ -136,13 +142,13 @@ public final class PestControlServiceImpl implements PestControlService {
 					exp = exp / 5;
 				player.getSkills().addExperience(item.getItemId(), exp);
 				player.getDatabaseEntity().getStatistics().setPestControlPoints(points - ppoints);
-				player.setSelectedItem(-1);
 				player.getActionSender().sendString(SHOP_INTERFACE_ID, POINT_CHILD_ID,
 						"Points: " + player.getDatabaseEntity().getStatistics().getPestControlPoints());
 				return;
 			}
 			player.getDatabaseEntity().getStatistics().setPestControlPoints(points - cost);
 			player.setSelectedItem(-1);
+			player.getActionSender().sendString(SHOP_INTERFACE_ID, 149, "");
 			player.getActionSender().sendString(SHOP_INTERFACE_ID, POINT_CHILD_ID,
 					"Points: " + player.getDatabaseEntity().getStatistics().getPestControlPoints());
 			Item reward = new Item(item.getItemId());
@@ -160,6 +166,8 @@ public final class PestControlServiceImpl implements PestControlService {
 		if (clickedButton != null) {
 			player.setSelectedItem(clickedButton.getItemId());
 			player.setAttribute("pc_button", clickedButton.getButtonId());
+			String name = clickedButton.toString().replace("_", " ").toLowerCase();
+			player.getActionSender().sendString(SHOP_INTERFACE_ID, 149, Misc.upperFirst(name));
 		}
 	}
 

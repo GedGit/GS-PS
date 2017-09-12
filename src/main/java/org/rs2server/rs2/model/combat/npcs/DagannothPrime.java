@@ -23,7 +23,7 @@ public class DagannothPrime extends AbstractCombatAction {
 	
 	/**
 	 * The singleton instance.
-	 */
+	 */ 
 	private static final DagannothPrime INSTANCE = new DagannothPrime();
 	
 	/**
@@ -119,6 +119,6 @@ public class DagannothPrime extends AbstractCombatAction {
 	
 	@Override
 	public int distance(Mob attacker) {
-		return 5;
+		return 8;
 	}
 }

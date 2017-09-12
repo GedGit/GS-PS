@@ -45,7 +45,7 @@ public class NPCOptionPacketHandler implements PacketHandler {
 			return;
 		if (player.getAttribute("teleporting") != null)
 			return;
-
+ 
 		boolean starter = player.getAttribute("starter");
 		if (starter) {
 			DialogueManager.openDialogue(player, 19000);
@@ -185,6 +185,7 @@ public class NPCOptionPacketHandler implements PacketHandler {
 					case 403:
 						if (item.getId() == 11864 || item.getId() == 19647) {
 							DialogueManager.openDialogue(player, (item.getId() == 19647 ? 11866 : 11864));
+							this.stop();
 							return;
 						}
 						player.sendMessage("Nothing interesting happens.");

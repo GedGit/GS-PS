@@ -146,22 +146,11 @@
 5919 3050 4962 1 SOUTH_EAST false //Emerald Benedict
 3193 3046 4970 1 SOUTH_EAST true //Martin Thwait
 
-//puro puro imp spawns
-1635 2592 4315 0 WEST true // imps
-1636 2592 4316 0 WEST true // imps
-1637 2592 4317 0 WEST true // imps
-1638 2592 4318 0 WEST true // imps
-1639 2592 4319 0 WEST true // imps
-1640 2592 4314 0 WEST true // imps
-1641 2592 4313 0 WEST true // imps
-1642 2588 4316 0 WEST true // imps
-1643 2588 4317 0 WEST true // imps
-1644 2592 4318 0 WEST true // imps
-
 //Edgeville NPC spawns
 535 3091 3506 0 WEST false //Melee Shop
-7493 3092 3506 0 WEST false //Range Shop
+7492 3092 3506 0 WEST false //ranged shop
 7608 3093 3506 0 WEST false //Magic Shop
+1152 3095 3506 0 WEST false //nurse sarah
 508 3078 3509 0 SOUTH false // General store
 2581 3106 3558 0 WEST false //Mage of Zamorak(Abyss)
 4474 3082 3509 0 SOUTH false //blood money exchange
@@ -2714,3 +2703,5 @@
 2805 2933 3273 0 SOUTH true
 // Perry, 0, added by: Salve
 7240 1652 3499 0 SOUTH true
+// Kalphite Queen, 333, added by: Salve
+6500 3483 9490 0 SOUTH true

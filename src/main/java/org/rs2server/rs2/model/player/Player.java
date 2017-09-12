@@ -1129,10 +1129,8 @@ public class Player extends Mob implements Persistable {
 
 	@Override
 	public Animation getDefendAnimation() {
-		if (!canBeDamaged()) {
-			System.out.println("hawt");
+		if (!canBeDamaged())
 			return Animation.create(-1);
-		}
 		return (getEquipment().get(Equipment.SLOT_SHIELD) != null || getEquipment().get(Equipment.SLOT_WEAPON) != null)
 				? Animation.create(404)
 				: Animation.create(424);
@@ -2776,4 +2774,9 @@ public class Player extends Mob implements Persistable {
 	public long getImbuedHeart() {
 		return imbuedHeart;
 	}
+	
+	/**
+	 * Used to send exp drops past 200m exp
+	 */
+	public double[] exps = new double[Skills.SKILL_COUNT];
 }

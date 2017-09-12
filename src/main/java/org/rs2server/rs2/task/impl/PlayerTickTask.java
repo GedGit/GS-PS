@@ -1,5 +1,6 @@
 package org.rs2server.rs2.task.impl;
 
+import org.rs2server.rs2.Constants;
 import org.rs2server.rs2.action.impl.WieldItemAction;
 import org.rs2server.rs2.content.Following;
 import org.rs2server.rs2.domain.service.impl.content.bounty.BountyHunterServiceImpl;
@@ -7,13 +8,19 @@ import org.rs2server.rs2.model.*;
 import org.rs2server.rs2.model.Hit.HitPriority;
 import org.rs2server.rs2.model.Mob.InteractionMode;
 import org.rs2server.rs2.model.UpdateFlags.UpdateFlag;
+import org.rs2server.rs2.model.boundary.BoundaryManager;
+import org.rs2server.rs2.model.cm.Content;
 import org.rs2server.rs2.model.container.Equipment;
 import org.rs2server.rs2.model.map.path.DefaultPathFinder;
 import org.rs2server.rs2.model.map.path.ProjectilePathFinder;
+import org.rs2server.rs2.model.minigame.impl.WarriorsGuild;
+import org.rs2server.rs2.model.minigame.impl.fightcave.FightCave;
+import org.rs2server.rs2.model.npc.NPC;
 import org.rs2server.rs2.model.npc.impl.kraken.Whirlpool;
 import org.rs2server.rs2.model.npc.impl.zulrah.Zulrah;
 import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.task.Task;
+import org.rs2server.rs2.tickable.Tickable;
 import org.rs2server.util.functional.Optionals;
 
 import java.util.Iterator;
@@ -199,5 +206,106 @@ public class PlayerTickTask implements Task {
 				World.getWorld().doPath(new DefaultPathFinder(), player, last.getX(), last.getY());
 			}
 		}
+		
+		if (!player.getCombatState().isDead()
+				&& player.getSkills()
+						.getLevel(Skills.HITPOINTS) <= player.getSkills().getLevelForExperience(Skills.HITPOINTS) / 9
+				&& player.getCombatState().getLastHitTimer() > System.currentTimeMillis()) {
+
+			// Defence cape perk / Max cape - IF feature toggled to true
+			if ((player.getEquipment().containsOneItem(9753, 9754) || Constants.hasMaxCape(player))
+					&& player.getDatabaseEntity().hasDefenceCape()) {
+				if (teleport(player, true))
+					return;
+			}
+
+			// Regular ring of life
+			else if (player.getEquipment().contains(2570)) {
+				if (teleport(player, false))
+					return;
+			}
+		}
+	}
+
+	/**
+	 * Handles ring of life teleport
+	 * 
+	 * @param player
+	 * @return
+	 */
+	private boolean teleport(Player player, boolean cape) {
+		if (player.getAttribute("busy") != null)
+			return false;
+		if (player.hasAttribute("teleporting"))
+			return false;
+		if (BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "PestControl")
+				|| BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "PestControlBoat"))
+			return false;
+		if (player.getAttribute("stunned") != null)
+			return false;
+		if (player.getDatabaseEntity().getPlayerSettings().isTeleBlocked() || player.getMonkeyTime() > 0)
+			return false;
+		if (BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "ClanWarsFFAFull"))
+			return false;
+		if (player.getRFD().isStarted() || FightCave.IN_CAVES.contains(player))
+			return false;
+		if (player.isInWilderness() && !player.isAdministrator()) {
+			if (Location.getWildernessLevel(player, player.getLocation()) > 30)
+				return false;
+		}
+		if (BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "Cerberus")) {
+			Content cerberusContent = player.getContentManager().getActiveContent(Content.CERBERUS);
+			if (cerberusContent != null)
+				cerberusContent.stop();
+		}
+		if (WarriorsGuild.IN_GAME.contains(player))
+			WarriorsGuild.IN_GAME.remove(player);
+
+		player.setCanBeDamaged(false);
+		player.resetBarrows();
+		player.getActionQueue().clearAllActions();
+		player.getActionManager().stopAction();
+		player.setAttribute("teleporting", true);
+		player.getWalkingQueue().reset();
+		if (player.hasAttribute("ownedNPC")) {
+			NPC n = (NPC) player.getAttribute("ownedNPC");
+			if (n != null)
+				World.getWorld().unregister(n);
+			player.removeAttribute("ownedNPC");
+		}
+
+		player.playAnimation(Animation.create(714));
+		player.playGraphics(Graphic.create(308, 40, 100));
+
+		World.getWorld().submit(new Tickable(4) {
+			public void execute() {
+				player.resetInteractingEntity();
+				Location teleLoc = Entity.DEFAULT_LOCATION;
+				player.setTeleportTarget(teleLoc);
+				player.playAnimation(Animation.create(-1));
+
+				// Delay by 4 more ticks incase a projectile or something
+				World.getWorld().submit(new Tickable(4) {
+					public void execute() {
+						player.setCanBeDamaged(true);
+						player.removeAttribute("teleporting");
+						this.stop();
+					}
+				});
+				player.getCombatState().setLastHitTimer(0);
+
+				if (player.getPet() != null) {
+					player.getPet().setTeleportTarget(teleLoc);
+					player.getPet().setInteractingEntity(InteractionMode.FOLLOW, player.getPet().getInstancedPlayer());
+				}
+
+				this.stop();
+			}
+		});
+		if (!cape) {
+			player.sendMessage("Your ring of life teleports you to safety and is destroyed in the process.");
+			player.getEquipment().removeItems(2570);
+		}
+		return true;
 	}
 }

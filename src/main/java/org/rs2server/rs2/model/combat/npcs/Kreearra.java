@@ -115,7 +115,7 @@ public class Kreearra extends AbstractCombatAction {
 			if (damage > victim.getSkills().getLevel(Skills.HITPOINTS)) {
 				damage = victim.getSkills().getLevel(Skills.HITPOINTS);
 			}
-			hit = damage;
+			hit = damage; 
 			break;
 		case MAGIC:
 			for (final Player near : World.getWorld().getPlayers()) {
@@ -186,11 +186,6 @@ public class Kreearra extends AbstractCombatAction {
 			victim.playGraphics(Graphic.create(1196, gfxDelay, 100));
 
 			blockAnimation = false;
-			/*
-			 * maxHit = (npc.getSkills().getCombatLevel() / 15) + 2;
-			 * if(victim.getCombatState().getPrayer(Prayers.PROTECT_FROM_MAGIC))
-			 * { maxHit = (npc.getSkills().getCombatLevel() / 20) + 2; }
-			 */
 			damage = damage(maxHit, attacker, victim, AttackType.MAGIC, Skills.MAGIC, Prayers.PROTECT_FROM_MAGIC, false,
 					false); // these ignore prayers
 			damage = random.nextInt(damage < 1 ? 1 : damage + 1);
@@ -225,7 +220,6 @@ public class Kreearra extends AbstractCombatAction {
 					attacker.playAnimation(Animation.create(6978));
 					attacker.playProjectile(Projectile.create(attacker.getCentreLocation(), near.getCentreLocation(),
 							1199, 45, 50, rClientSpeed, 43, 35, near.getProjectileLockonIndex(), 10, 48));
-					// near.playGraphics(Graphic.create(1196, rGfxDelay, 100));
 
 					blockAnimation = false;
 					if (near.getCombatState().getPrayer(Prayers.PROTECT_FROM_MISSILES)) {
@@ -274,25 +268,13 @@ public class Kreearra extends AbstractCombatAction {
 			// victim.playGraphics(Graphic.create(1196, rGfxDelay, 100));
 
 			blockAnimation = false;
-			/*
-			 * maxHit = (npc.getSkills().getCombatLevel() / 10) + 2;
-			 * if(victim.getCombatState().getPrayer(Prayers.
-			 * PROTECT_FROM_MISSILES)) { maxHit =
-			 * (npc.getSkills().getCombatLevel() / 12) + 2; }
-			 */
-			// damage = damage(maxHit, attacker, victim, AttackType.RANGE,
-			// Skills.RANGE , Prayers.PROTECT_FROM_MISSILES, false, true);
-			// //these ignore prayers
-			if (victim.getCombatState().getPrayer(Prayers.PROTECT_FROM_MISSILES)) {
+			if (victim.getCombatState().getPrayer(Prayers.PROTECT_FROM_MISSILES))
 				maxHit = 0;
-			}
-			// randomHit = random.nextInt(damage < 1 ? 1 : damage + 1);
 			randomHit = damage(maxHit, attacker, victim, AttackType.RANGE, Skills.RANGE, Prayers.PROTECT_FROM_MISSILES,
 					false, false); // these ignore prayers
 			randomHit = random.nextInt(randomHit < 1 ? 1 : randomHit + 1);
-			if (randomHit > victim.getSkills().getLevel(Skills.HITPOINTS)) {
+			if (randomHit > victim.getSkills().getLevel(Skills.HITPOINTS))
 				randomHit = victim.getSkills().getLevel(Skills.HITPOINTS);
-			}
 			hit = randomHit;
 			break;
 		}
@@ -347,6 +329,6 @@ public class Kreearra extends AbstractCombatAction {
 
 	@Override
 	public int distance(Mob attacker) {
-		return 5;
+		return 8; 
 	}
 }

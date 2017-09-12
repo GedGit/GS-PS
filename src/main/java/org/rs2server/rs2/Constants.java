@@ -456,7 +456,8 @@ public class Constants {
 			11175, 11185, 11186, 11187, 11188, 11189, 11196, 11197, 11198, 11199, 11202, 11203, 11204, 11210, 11211,
 			11238, 11240, 11242, 11244, 11246, 11248, 11250, 11252, 11254, 11256, 11258, 11259, 11273, 11279, 8839,
 			8840, 8842, 11663, 11664, 11665, 11866, 11864, 11865, 12019, 12020, 12810, 12811, 12812, 12813, 12814,
-			12815, 20792, 20794, 20796, 13116, 13226, 12853 };
+			12815, 20792, 20794, 20796, 13116, 13226, 12853, 12746, 12748, 12749, 12750, 12751, 12752, 12753, 12754,
+			12755, 12756 };
 
 	public static int getModification(int level) {
 		if (level >= 20 && level <= 24) {
@@ -503,9 +504,7 @@ public class Constants {
 	 * @return if has max cape
 	 */
 	public static boolean hasMaxCape(Mob mob) {
-		return mob.getEquipment() != null && (mob.getEquipment().contains(13280) || mob.getEquipment().contains(13329)
-				|| mob.getEquipment().contains(13331) || mob.getEquipment().contains(13333)
-				|| mob.getEquipment().contains(13335) || mob.getEquipment().contains(13337));
+		return mob.getEquipment().containsOneItem(13280, 13329, 13331, 13333, 13335, 13337);
 	}
 
 	/**
@@ -525,18 +524,6 @@ public class Constants {
 			return true;
 		}
 		return false;
-	}
-
-	/**
-	 * Checks if the given mob has a cooking cape in their equipment container.
-	 * 
-	 * @param mob
-	 *            the mob to check
-	 * @return
-	 */
-	public static boolean hasCookingCape(Mob mob) {
-		return mob.getEquipment() != null
-				&& (mob.getEquipment().contains(9801) || mob.getEquipment().contains(9802) || hasMaxCape(mob));
 	}
 
 	/**

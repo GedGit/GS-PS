@@ -3,8 +3,9 @@
  
 	- Miscellaneous changes: --
 
-		-  
-		
+		-  Bird nests will now fall out of trees while Woodcutting at a 1/256 chance;
+		-  All skillcapes now have their OSRS perks/effects; read about them here: [url=http://oldschoolrunescape.wikia.com/wiki/Skillcape]OSRS Wikia[/url];
+        -  Rings of life will now teleport you home when below 10% hitpoints and destroy themselves in the process;
 		
 	-- Minor fixes/changes/additions: --
 
@@ -13,6 +14,14 @@
         -  Added Perry's Chop Chop Shop at the Woodcutting guild;
         -  Ardougne cloaks will now provide correct equipment bonuses;
         -  Added onyx bolt tips to Tzhaar drop-tables;
+        -  Regen bracelet will now double your hitpoints restoration;
+        -  Fixed missing models on unicorn masks & incorrect head models on kandarin headgear;
+        -  The Armadyl crossbow will no longer use its special attack when bolts (e) trigger their own special effect;
+        -  Heavily nerfed toxic blowpipe's special attack damage modifier;
+        -  Pest Control monsters will no longer drop items; also increased portal hitpoints from 200 to 250;
+        -  Pest Control rewards interface will now display the selected item;
+        -  Fixed Pest Control experience rewards not allowing to buy any;
+        -  Coin rewards from caskets have been increased;
         
 
 --------------------------------------------------------------------------------------
@@ -24,7 +33,7 @@
 	- Miscellaneous changes: --
 
 		-  Completely reworked how vote rewards were handled:
-			* One website point will equal one in-game vote point which you will be able to redeem at 'Savle-PS Advisor' at home.
+			* One website point will equal one in-game vote point which you will be able to redeem at 'Salve-PS Advisor' at home.
 			* On top of that you will also get 15 minutes of double experience per point redeemed (ie. 45 minutes of double experience just for voting on RuneLocus).
 			* You will be able to use those vote points in the brand new vote point store containing various of goodies for you to grab your hands on!
 		-  Ironmen players (any kind) will now be able to permanently remove their status as an ironman at the Ironman advisor;

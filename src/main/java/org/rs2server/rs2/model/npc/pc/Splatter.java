@@ -54,4 +54,9 @@ public class Splatter extends PestControlNpc {
 		World.getWorld().unregister(this);
 	}
 
+	@Override
+	public void dropLoot(Mob killer) {
+		// Override it to do nothing since pest control mobs don't drop items.
+	}
+
 }

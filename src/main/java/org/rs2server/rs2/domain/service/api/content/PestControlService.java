@@ -16,54 +16,56 @@ public interface PestControlService {
 
 	enum PestControlItem {
 
-		ATTACK_1(86, 0, 1),
-		ATTACK_10(101, 0, 10),
-		ATTACK_100(108, 0, 100),
+		ATTACK_X1(86, 0, 1, 1),
+		ATTACK_X10(101, 0, 10, 2),
+		ATTACK_X100(108, 0, 100, 3),
 
-		STRENGTH_1(87, 2, 1),
-		STRENGTH_10(102, 2, 10),
-		STRENGTH_100(109, 2, 100),
+		STRENGTH_X1(87, 2, 1, 4),
+		STRENGTH_X10(102, 2, 10, 5),
+		STRENGTH_X100(109, 2, 100, 6),
 
-		DEFENCE_1(88, 1, 1),
-		DEFENCE_10(103, 1, 10),
-		DEFENCE_100(110, 1, 100),
+		DEFENCE_X1(88, 1, 1, 7),
+		DEFENCE_X10(103, 1, 10, 8),
+		DEFENCE_X100(110, 1, 100, 9),
 
-		RANGED_1(89, 4, 1),
-		RANGED_10(104, 4, 10),
-		RANGED_100(111, 4, 100),
+		RANGED_X1(89, 4, 1, 10),
+		RANGED_X10(104, 4, 10, 11),
+		RANGED_X100(111, 4, 100, 12),
 
-		MAGIC_1(90, 6, 1),
-		MAGIC_10(105, 6, 10),
-		MAGIC_100(112, 6, 100),
+		MAGIC_X1(90, 6, 1, 13),
+		MAGIC_X10(105, 6, 10, 14),
+		MAGIC_X100(112, 6, 100, 15),
 
-		HITPOINTS_1(91, 3, 1),
-		HITPOINTS_10(106, 3, 10),
-		HITPOINTS_100(113, 3, 100),
+		HITPOINTS_X1(91, 3, 1, 16),
+		HITPOINTS_X10(106, 3, 10, 17),
+		HITPOINTS_X100(113, 3, 100, 18),
 
-		PRAYER_1(92, 5, 1),
-		PRAYERS_10(107, 5, 10),
-		PRAYER_100(114, 5, 100),
+		PRAYER_X1(92, 5, 1, 19),
+		PRAYER_X10(107, 5, 10, 20),
+		PRAYER_X100(114, 5, 100, 21),
 		
-		VOID_TOP(94, 8839, 250),
-		VOID_BOTTOM(95, 8840, 250),
-		VOID_GLOVES(96, 8842, 150),
-		VOID_MAGE_HELM(119, 11663, 200),
-		VOID_RANGE_HELM(120, 11664, 200),
-		VOID_MELEE_HELM(121, 11665, 200),
-		HERB_PACK(97, 11738, 30),
-		MINERAL_PACK(98, 453, 15),
-		SEED_PACK(100, 5320, 15),
-		VOID_KNIGHT_MACE(93, 8841, 250),
-		VOID_KNIGHT_SEAL(122, 11666, 10);
+		VOID_TOP(94, 8839, 250, 0),
+		VOID_BOTTOM(95, 8840, 250, 0),
+		VOID_GLOVES(96, 8842, 150, 0),
+		VOID_MAGE_HELM(119, 11663, 200, 0),
+		VOID_RANGE_HELM(120, 11664, 200, 0),
+		VOID_MELEE_HELM(121, 11665, 200, 0),
+		HERB_PACK(97, 11738, 30, 0),
+		MINERAL_PACK(98, 453, 15, 0),
+		SEED_PACK(100, 5320, 15, 0),
+		VOID_KNIGHT_MACE(93, 8841, 250, 0),
+		VOID_KNIGHT_SEAL(122, 11666, 10, 0);
 
 		private final int buttonId;
 		private final int itemId;
 		private final int cost;
+		private final int configId;
 
-		PestControlItem(int buttonId, int itemId, int cost) {
+		PestControlItem(int buttonId, int itemId, int cost, int configId) {
 			this.buttonId = buttonId;
 			this.itemId = itemId;
 			this.cost = cost;
+			this.configId = configId;
 		}
 
 		private static Map<Integer, PestControlItem> shopButtons = new HashMap<>();
@@ -89,13 +91,17 @@ public interface PestControlService {
 		public int getButtonId() {
 			return buttonId;
 		}
-
+ 
 		public int getItemId() {
 			return itemId;
 		}
 
-		public int getCost() {
-			return cost;
+		public int getCost() { 
+			return cost; 
+		}
+
+		public int getConfigId() { 
+			return configId;
 		}
 	}
 

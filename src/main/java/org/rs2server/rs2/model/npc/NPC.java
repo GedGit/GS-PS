@@ -51,12 +51,12 @@ public class NPC extends Mob {
 
 	/**
 	 * The definition.
-	 */
+	 */ 
 	// private NPCDefinition definition;
 
 	private CacheNPCDefinition definition;
 
-	/**
+	/** 
 	 * The combat definition.
 	 */
 	private CombatNPCDefinition combatDefinition = null;
@@ -218,7 +218,7 @@ public class NPC extends Mob {
 		return spawnDirection;
 	}
 
-	@Override
+	@Override 
 	public void addToRegion(Region region) {
 		region.addNpc(this);
 		region.addMob(this);
@@ -695,12 +695,14 @@ public class NPC extends Mob {
 
 		SKOTIZO(7286),
 
-		ABYSSAL_SIRE(5890);
+		ABYSSAL_SIRE(5890),
+
+		KALPHITE_QUEEN(6500);
 
 		private int npcId;
 
 		Bosses(int _npcId) {
-			this.npcId = _npcId;
+			this.npcId = _npcId; 
 		}
 
 		private static Map<Integer, Bosses> bosses = new HashMap<>();

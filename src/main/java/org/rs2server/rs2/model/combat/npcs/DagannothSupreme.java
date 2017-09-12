@@ -119,6 +119,6 @@ public class DagannothSupreme extends AbstractCombatAction {
 
 	@Override
 	public int distance(Mob attacker) {
-		return 5;
+		return 8; 
 	}
 }

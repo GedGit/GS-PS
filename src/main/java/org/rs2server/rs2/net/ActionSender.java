@@ -699,10 +699,10 @@ public class ActionSender {
 			player.getActionSender().removeInventoryInterface();
 			player.resetInteractingEntity();
 		}
-		player.getActionSender().removeChatboxInterface();
+		player.getActionSender().removeChatboxInterface(); 
 
 		player.getInterfaceState().setOpenShop(-1);
-		player.getActionSender().removeAllInterfaces().removeInterface();
+		player.getActionSender().removeAllInterfaces().removeInterface(); 
 		return this;
 	}
 
@@ -2914,20 +2914,23 @@ public class ActionSender {
 	}
 
 	public void sendSkillLevels() {
-		for (int i = 0; i < Skills.SKILL_COUNT; i++) {
+		for (int i = 0; i < Skills.SKILL_COUNT; i++)
 			sendSkillLevel(i);
-		}
 	}
 
 	public void sendSkillLevel(int skill) {
-		byte level;
-		if (skill == Skills.PRAYER) {
+		byte level; 
+		if (skill == Skills.PRAYER)
 			level = (byte) (Math.ceil(player.getSkills().getPrayerPoints()));
-		} else {
+		else
 			level = (byte) player.getSkills().getLevel(skill);
-		}
 		player.getSession().write(new PacketBuilder(14).put(level).putByteA(skill)
 				.putLEInt((int) player.getSkills().getExperience(skill)).toPacket());
+	}
+
+	public void sendSkillLevelFake(int skill) {
+		player.getSession().write(new PacketBuilder(14).put((byte) 99).putByteA(skill)
+				.putLEInt((int) player.exps[skill]).toPacket());
 	}
 
 	public void sendEnergy() {

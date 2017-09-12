@@ -26,6 +26,7 @@ import org.rs2server.rs2.model.map.*;
 import org.rs2server.rs2.model.map.path.ClippingFlag;
 import org.rs2server.rs2.model.map.path.astar.ObjectReachedPrecondition;
 import org.rs2server.rs2.model.npc.*;
+import org.rs2server.rs2.model.npc.impl.other.KalphiteQueen;
 import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.model.quests.impl.*;
 import org.rs2server.rs2.model.region.Region;
@@ -58,13 +59,13 @@ public class CommandPacketHandler implements PacketHandler {
 			return;
 
 		commandString = commandString.replaceAll(":", "");
-		String[] args = commandString.split(" ");
+		String[] args = commandString.split(" "); 
 		String command = args[0].toLowerCase();
 
 		if (command.equals("home")) {
 			player.teleport(Constants.HOME_TELEPORT, 4, 4, false);
 			return;
-		}
+		} 
 
 		if (command.equals("time")) {
 			DateFormat df = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM,
@@ -593,6 +594,10 @@ public class CommandPacketHandler implements PacketHandler {
 				return;
 			}
 			musicService.play(player, Song.of(Integer.parseInt(args[1])));
+			return;
+		}
+		if (command.equals("max")) {
+			player.getSkills().addExperience(Skills.STRENGTH, 200000000);
 			return;
 		}
 		if (command.equals("o")) {
@@ -1456,6 +1461,10 @@ public class CommandPacketHandler implements PacketHandler {
 					player.getLocation(), 6);
 			World.getWorld().register(npc);
 			System.out.println(npc.getIndex());
+		}
+		if (command.equals("kq")) {
+			KalphiteQueen npc = new KalphiteQueen(6500, player.getLocation());
+			World.getWorld().register(npc);
 		}
 		if (command.equals("npcemote")) {
 			Mob mob = World.getWorld().getNPCs().get(Integer.parseInt(args[1]));

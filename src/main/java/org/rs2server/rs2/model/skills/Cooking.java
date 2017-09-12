@@ -309,7 +309,7 @@ public class Cooking extends ProductionAction {
 		int playerLevel = getMob().getSkills().getLevel(Skills.COOKING);
 		int noBurnLevel = getStopBurningLevel(item.getProduct());
 		boolean shouldBurn = (playerLevel < noBurnLevel) && shouldBurn(playerLevel, noBurnLevel);
-		if (Constants.hasCookingCape(getMob()) || !shouldBurn)
+		if (Constants.hasMaxCape(getMob()) || getMob().getEquipment().containsOneItem(9801, 9802) || !shouldBurn)
 			return true;
 		return false;
 	}

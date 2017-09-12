@@ -225,14 +225,16 @@ public class ConsumeItemAction extends Action {
 							if (getMob().isPlayer()) {
 								Player player = (Player) getMob();
 								// Holy wrench increases by 2%
-								if (player.getInventory().containsOneItem(6714))
+								if (player.getInventory().containsOneItem(6714) || Constants.hasMaxCape(player)
+										|| player.getEquipment().containsOneItem(9759, 9760))
 									modification *= 1.02;
 							}
 							/**
 							 * Holy wrench increases prayer restoration.
 							 */
 							if (skill == Skills.PRAYER) {
-								if (getMob().getInventory().contains(6714)) {
+								if (getMob().getInventory().contains(6714) || Constants.hasMaxCape(getMob())
+										|| getMob().getEquipment().containsOneItem(9759, 9760)) {
 									modification++;
 									if (getMob().getSkills().getLevelForExperience(Skills.PRAYER) >= 40) {
 										modification++;
@@ -257,14 +259,16 @@ public class ConsumeItemAction extends Action {
 							if (getMob().isPlayer() && skill == Skills.PRAYER) {
 								Player player = (Player) getMob();
 								// Holy wrench increases by 2%
-								if (player.getInventory().containsOneItem(6714))
+								if (player.getInventory().containsOneItem(6714) || Constants.hasMaxCape(getMob())
+										|| getMob().getEquipment().containsOneItem(9759, 9760))
 									modification *= 1.02;
 							}
 							/**
 							 * Holy wrench increases prayer restoration.
 							 */
 							if (skill == Skills.PRAYER) {
-								if (getMob().getInventory().contains(6714)) {
+								if (getMob().getInventory().contains(6714) || Constants.hasMaxCape(getMob())
+										|| getMob().getEquipment().containsOneItem(9759, 9760)) {
 									modification++;
 									if (getMob().getSkills().getLevelForExperience(Skills.PRAYER) >= 40)
 										modification++;
@@ -285,10 +289,11 @@ public class ConsumeItemAction extends Action {
 							if (getMob().isPlayer() && skill == Skills.PRAYER) {
 								Player player = (Player) getMob();
 								// Holy wrench increases by 2%
-								if (player.getInventory().containsOneItem(6714))
+								if (player.getInventory().containsOneItem(6714) || Constants.hasMaxCape(getMob())
+										|| getMob().getEquipment().containsOneItem(9759, 9760))
 									modification *= 1.02;
 							}
-							
+
 							if (skill == Skills.PRAYER) {
 								modification++;
 								if (getMob().getSkills().getLevelForExperience(Skills.PRAYER) >= 40)

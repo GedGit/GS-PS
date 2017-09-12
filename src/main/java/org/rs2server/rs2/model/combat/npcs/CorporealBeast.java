@@ -32,8 +32,8 @@ public class CorporealBeast extends AbstractCombatAction {
 	private static final CorporealBeast INSTANCE = new CorporealBeast();
 
 	/**
-	 * Gets the singleton instance.
-	 * 
+	 * Gets the singleton instance. 
+	 *  
 	 * @return The singleton instance.
 	 */
 	public static CombatAction getAction() {
