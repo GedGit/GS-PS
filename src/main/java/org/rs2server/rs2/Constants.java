@@ -27,10 +27,8 @@ public class Constants {
 	/**
 	 * Players with special rights
 	 */
-	public static final String DEVELOPERS[] = { "salve", "pure" };
-	public static final String ADMINISTRATORS[] = { "salve", "alpha", "cloud" };
-	public static final String MODERATORS[] = { "thor" };
-	public static final String HELPERS[] = { "N / A" };
+	public static final String DEVELOPERS[] = { "salve", "pure" }, ADMINISTRATORS[] = { "salve", "alpha", "cloud" },
+			MODERATORS[] = { "thor" }, HELPERS[] = { "charlie" };
 
 	/**
 	 * Defines the path were we will be loading the cache from
@@ -405,7 +403,8 @@ public class Constants {
 			12810, 12811, 12812, 12813, 12814, 12815, 20792, 20794, 20796, 13137, 13104, 13112, 13121, 13129, 11136,
 			13141, 13125, 13138, 13105, 13113, 13122, 13130, 11138, 13142, 13126, 13139, 13106, 13114, 13123, 13131,
 			11140, 13143, 13127, 13140, 13107, 13115, 13124, 13132, 13103, 13144, 13128, 13116, 13226, 6714, 4081,
-			10588, 775, 776, 777, 12179, 12180, 12029, 12030, 12542, 12543, 12073, 12084, 19835, 19836, 20760, 20764 };
+			10588, 775, 776, 777, 12179, 12180, 12029, 12030, 12542, 12543, 12073, 12084, 19835, 19836, 20760, 20764,
+			11849 };
 
 	/**
 	 * Checks if a specific ground item is player bound.

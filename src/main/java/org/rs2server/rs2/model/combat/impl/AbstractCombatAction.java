@@ -503,18 +503,13 @@ public abstract class AbstractCombatAction implements CombatAction {
 			victim.playGraphics(Graphic.create(369, 0, 0));
 			int freezeTimer = 33;
 			if (victim.getCombatState().canMove() && victim.getCombatState().canBeFrozen()) {
-				/*
-				 * If the enemy has protect from magic, freeze time is halved.
-				 */
-				if (victim.getCombatState().getPrayer(Prayers.PROTECT_FROM_MAGIC)) {
+				if (victim.getCombatState().getPrayer(Prayers.PROTECT_FROM_MAGIC))
 					freezeTimer = freezeTimer / 2;
-				}
 				victim.getCombatState().setCanMove(false);
 				victim.getCombatState().setCanBeFrozen(false);
 				victim.getWalkingQueue().reset();
-				if (victim.getActionSender() != null) {
+				if (victim.getActionSender() != null)
 					victim.getActionSender().sendMessage("You have been frozen!");
-				}
 				World.getWorld().submit(new Tickable(freezeTimer) {
 					public void execute() {
 						victim.getCombatState().setCanMove(true);

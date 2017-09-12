@@ -1,4 +1,4 @@
- - Patch Notes #17 - 2017.09.10 - 2017.09.12 -
+ - Patch Notes #17 - 2017.09.10 - 2017.09.13 -
 
  
 	- Miscellaneous changes: --
@@ -6,6 +6,7 @@
 		-  Bird nests will now fall out of trees while Woodcutting at a 1/256 chance;
 		-  All skillcapes now have their OSRS perks/effects; read about them here: [url=http://oldschoolrunescape.wikia.com/wiki/Skillcape]OSRS Wikia[/url];
         -  Rings of life will now teleport you home when below 10% hitpoints and destroy themselves in the process;
+		
 		
 	-- Minor fixes/changes/additions: --
 
@@ -22,6 +23,13 @@
         -  Pest Control rewards interface will now display the selected item;
         -  Fixed Pest Control experience rewards not allowing to buy any;
         -  Coin rewards from caskets have been increased;
+        -  Added and corrected all Varrocks shops;
+        -  Ironmen can now access Nardok's shop in Lumbridges basement;
+        -  Nerfed Abyssal sires max hit from 70 to 30;
+        -  Abyssal Sire will now ignore objects between him and you allowing him to attack you from anywhere in the room (this is to prevent safe-spotting);
+        -  Marks of Grace are no longer tradable;
+        -  Entangle spell will now freeze the opponent for full 15 seconds (halved if prayed against magic);
+        -  Nerfed Dragon halberds special attack modifier;
         
 
 --------------------------------------------------------------------------------------

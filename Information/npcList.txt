@@ -2129,7 +2129,7 @@
 2259 - Dagannoth
 2260 - Askeladden
 2261 - Giant Rock Crab
-2262 - Bardur
+2262 - Boulder
 2263 - Bardur
 2264 - Dagannoth fledgeling
 2265 - Dagannoth Supreme

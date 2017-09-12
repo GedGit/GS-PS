@@ -231,7 +231,7 @@ public class Pet extends NPC {
 			return;
 		
 		// For extra pet rarity
-		if (Misc.random(5) != 1)
+		if (Misc.random(1) != 1)
 			return;
 
 		// Check if we own the pet already

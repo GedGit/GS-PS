@@ -283,7 +283,7 @@ function entangle(attacker, victim, spell, autocast, clientSpeed, magicCombatAct
 	attacker.playAnimation(Animation.create(710));
 	attacker.playGraphics(Graphic.create(177, 0, 100));
 	attacker.playProjectile(Projectile.create(attacker.getCentreLocation(), victim.getCentreLocation(), 178, 80, 50, clientSpeed + 20, 43, 35, victim.getProjectileLockonIndex(), 15, 48));
-	magicCombatAction.hitEnemy(attacker, victim, spell, Graphic.create(179, gfxDelay + 20, 100), PoisonType.NONE, false, 5, delay, 25);
+	magicCombatAction.hitEnemy(attacker, victim, spell, Graphic.create(179, gfxDelay + 20, 100), PoisonType.NONE, false, 5, delay, 35);
 	attacker.getSkills().addExperience(Skills.MAGIC, 1 * 91);
 	attacker.getCombatState().setSpellDelay(5);
 	attacker.getCombatState().setAttackDelay(4);
@@ -493,7 +493,7 @@ function iceBarrage(attacker, victim, spell, autocast, clientSpeed, magicCombatA
 	if(victim.getSprites().getPrimarySprite() != -1 || victim.getSprites().getSecondarySprite() != -1) {
 		attacker.playProjectile(Projectile.create(victim.getCentreLocation(), victim.getCentreLocation(), 368, 70, 50, 90, 0, 0, victim.getProjectileLockonIndex(), 0, 48));
 	}
-	magicCombatAction.hitEnemy(attacker, victim, spell, (victim.getCombatState().canBeFrozen()) ? Graphic.create(369, 80, 0) : Graphic.create(369, 80, 0), PoisonType.NONE, true, 30, 4, 33);
+	magicCombatAction.hitEnemy(attacker, victim, spell, (victim.getCombatState().canBeFrozen()) ? Graphic.create(369, 80, 0) : Graphic.create(369, 80, 0), PoisonType.NONE, true, 30, 4, 35);
 	attacker.getSkills().addExperience(Skills.MAGIC, 1 * 52);
 	attacker.getCombatState().setSpellDelay(5);
 	attacker.getCombatState().setAttackDelay(4);

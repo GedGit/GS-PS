@@ -26,11 +26,6 @@ import org.rs2server.util.NPCUtils;
 public final class CombatFormula {
 
 	/**
-	 * Used in defence formulae.
-	 */
-	public static final double DEFENCE_MODIFIER = 0.895;
-
-	/**
 	 * Default private constructor.
 	 */
 	private CombatFormula() {
@@ -119,6 +114,7 @@ public final class CombatFormula {
 		double baseDamage = 1.3 + (effectiveStrengthDamage / 10) + (mob.getCombatState().getBonus(10) / 80)
 				+ ((effectiveStrengthDamage * mob.getCombatState().getBonus(10)) / 640);
 
+		// Exceptions for boosting damage on special attack
 		if (special) {
 			if (mob.getEquipment().get(Equipment.SLOT_WEAPON) != null) {
 				switch (mob.getEquipment().get(Equipment.SLOT_WEAPON).getId()) {
@@ -133,15 +129,14 @@ public final class CombatFormula {
 					break;
 				case 11806:
 				case 11808:
-					specialMultiplier = 1.075;
+					specialMultiplier = 1.175;
 					break;
 				case 3101:
-				case 3204:
 				case 1215:
 				case 1231:
 				case 5680:
 				case 5698:
-					specialMultiplier = 1.25;
+					specialMultiplier = 1.15;
 					break;
 				case 21009:
 					specialMultiplier = 1.20;
@@ -154,6 +149,9 @@ public final class CombatFormula {
 					break;
 				case 13652:
 					specialMultiplier = 0.75;
+					break;
+				case 3204:
+					specialMultiplier = 0.8;
 					break;
 				}
 			}

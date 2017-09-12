@@ -286,7 +286,6 @@
 3343 3364 3275 0 WEST true // Surgeon General Tafani(Hitpoints cape)
 4733 2998 3149 0 WEST true // Thurgo(Smithing cape)
 3226 3233 3233 0 WEST true // Woodsman Tutor(Woodcutting cape)
-405 2884 9795 0 WEST true // Duradel(Slayer cape)
 3363 3018 3338 0 WEST true // Dwarf(Mining cape)
 5832 3083 3248 0 WEST true // Martin(Farming cape)
 
@@ -389,7 +388,7 @@
 2465 2843 3552 2 WEST true //Cyclops (lvl 56)
 
 //LUMBRIDGE
-996 3217 9616 0 NORTH true // nardok - cellar
+996 3217 9616 0 NORTH false // nardok - cellar
 1512 3239 3244 0 WEST false //fishing spot
 1512 3238 3253 0 WEST false //fishing spot
 2692 3233 3297 0 WEST true //Chicken
@@ -1453,8 +1452,8 @@
 2005 1709 10068 0 SOUTH true //Lesser Demon	
 2005 1719 10071 0 SOUTH true //Lesser Demon
 2005 1722 10064 0 SOUTH true //Lesser Demon
-2052 1723 10085 0 SOUTH true //Black Demon
-2052 1719 10091 0 SOUTH true //Black Demon
+2048 1723 10085 0 SOUTH true //Black Demon
+2048 1719 10091 0 SOUTH true //Black Demon
 2075 1629 10020 0 SOUTH true //Fire Giant
 891 1637 10011 0 SOUTH true //Moss Giant
 2463 1629 10031 0 SOUTH true //Cyclop
@@ -1863,10 +1862,6 @@
 787 2069 3879 0 SOUTH true
 // Suqah, 111, added by: Salve
 787 2062 3891 0 SOUTH true
-// Lowe, 0, added by: Salve
-536 3232 3421 0 SOUTH false
-// Horvik, 0, added by: Salve
-535 3228 3439 0 SOUTH false
 // Hill Giant, 28, added by: Salve
 2098 3117 9850 0 SOUTH true
 // Hill Giant, 28, added by: Salve
@@ -1916,11 +1911,11 @@
 // Chaos druid, 13, added by: Salve
 2878 3111 9938 0 SOUTH true
 // Black demon, 172, added by: Salve
-240 3094 9957 0 SOUTH true
+2048 3094 9957 0 SOUTH true
 // Black demon, 172, added by: Salve
-240 3084 9954 0 SOUTH true
+2048 3084 9954 0 SOUTH true
 // Black demon, 172, added by: Salve
-240 3087 9960 0 SOUTH true
+2048 3087 9960 0 SOUTH true
 // Aberrant spectre, 96, added by: Salve
 2 3435 3549 1 SOUTH true
 // Aberrant spectre, 96, added by: Salve
@@ -2016,13 +2011,13 @@
 // Kent, 0, added by: Salve
 5074 2716 3299 0 SOUTH true
 // Bartender, 0, added by: Salve
-687 2956 3371 0 SOUTH true
+687 2956 3371 0 SOUTH false
 // Bartender, 0, added by: Salve
-687 3226 3401 0 SOUTH true
+687 3226 3401 0 SOUTH false
 // Bartender, 0, added by: Salve
-687 2574 3321 0 SOUTH true
+687 2574 3321 0 SOUTH false
 // Bartender, 0, added by: Salve
-687 2694 3496 0 SOUTH true
+687 2694 3496 0 SOUTH false
 // Matthias, 0, added by: Salve
 1340 2365 3619 0 SOUTH true
 // Giant rat, 26, added by: Salve
@@ -2703,5 +2698,21 @@
 2805 2933 3273 0 SOUTH true
 // Perry, 0, added by: Salve
 7240 1652 3499 0 SOUTH true
-// Kalphite Queen, 333, added by: Salve
-6500 3483 9490 0 SOUTH true
+// Shop keeper, 0, added by: Salve
+518 3229 3438 0 SOUTH false
+// Lowe, 0, added by: Salve
+536 3233 3421 0 SOUTH false
+// Shop keeper, 0, added by: Salve
+537 3206 3397 0 SOUTH false
+// Demonic gorilla, 275, added by: Salve
+7147 2077 5645 0 SOUTH true
+// Demonic gorilla, 275, added by: Salve
+7147 2075 5651 0 SOUTH true
+// Demonic gorilla, 275, added by: Salve
+7147 2072 5649 0 SOUTH true
+// Demonic gorilla, 275, added by: Salve
+7147 2074 5671 0 SOUTH true
+// Demonic gorilla, 275, added by: Salve
+7147 2079 5676 0 SOUTH true
+// Demonic gorilla, 275, added by: Salve
+7147 2074 5680 0 SOUTH true

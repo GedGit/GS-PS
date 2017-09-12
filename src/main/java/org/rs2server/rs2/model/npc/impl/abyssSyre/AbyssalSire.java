@@ -65,9 +65,8 @@ public class AbyssalSire extends CombatNpc<AbyssalSire> {
 	public void hit(final Mob attacker, final Mob victim) {
 		super.hit(attacker, victim);
 
-		if (!attacker.isNPC()) {
+		if (!attacker.isNPC())
 			return; // this should be an NPC!
-		}
 
 		attacker.playAnimation(Animation.create(5366));
 
@@ -102,16 +101,17 @@ public class AbyssalSire extends CombatNpc<AbyssalSire> {
 
 	@Override
 	public void tick() {
-		if (getCombatState().isDead()) {
+		if (getCombatState().isDead())
 			return;
-		}
+		System.out.println("hello? 0");
 		if (!canAttackPlayer && this.getCombatState().getDamageMap().getTotalDamages().containsKey(challenger)) {
 			canAttackPlayer = true;
+			System.out.println("hello? 1");
 		}
 		if (canAttackPlayer) {
-			double distance = getLocation().distance(challenger.getLocation());
-			if (distance >= 13) {
+			if (getLocation().getDistance(challenger.getLocation()) > 1) {
 				Following.combatFollow(this, challenger);
+				System.out.println("following challenger, distance: "+getLocation().getDistance(challenger.getLocation()));
 				return;
 			}
 			if (performedAttacks == 2) {
@@ -151,11 +151,6 @@ public class AbyssalSire extends CombatNpc<AbyssalSire> {
 
 	public boolean canAttackPlayer() {
 		return canAttackPlayer;
-	}
-
-	public void destroySelf() {
-		// TODO Auto-generated method stub
-
 	}
 
 	public boolean isCanSpawnPoisonPool() {

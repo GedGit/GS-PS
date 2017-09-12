@@ -2393,7 +2393,8 @@ public class ItemOptionPacketHandler implements PacketHandler {
 		packet.get();
 		int y = packet.getShort();
 		if (player.getCombatState().isDead()) {
-			logger.info("Dead player {} cannot pickup ground item.", player.getName());
+			if (Constants.DEBUG)
+				logger.info("Dead player {} cannot pickup ground item.", player.getName());
 			return;
 		}
 		player.getActionQueue().clearAllActions();

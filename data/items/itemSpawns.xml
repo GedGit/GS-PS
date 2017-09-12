@@ -1,6 +1,17 @@
 <list>
     <itemSpawn>
         <item>
+            <id>1059</id>
+            <count>1</count>
+        </item>
+        <location>
+            <x>3095</x>
+            <y>3485</y>
+            <z>0</z>
+        </location>
+    </itemSpawn>
+    <itemSpawn>
+        <item>
             <id>1265</id>
             <count>1</count>
         </item>

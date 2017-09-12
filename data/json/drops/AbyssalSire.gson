@@ -187,16 +187,16 @@
       "minAmount": 25
     },
     {
-      "itemID": 7054,
+      "itemID": 7055,
       "hitRollCeil": 95.0,
-      "maxAmount": 10,
+      "maxAmount": 30,
       "minAmount": 10
     },
     {
-      "itemID": 3024,
+      "itemID": 3025,
       "hitRollCeil": 38.0,
       "maxAmount": 4,
-      "minAmount": 4
+      "minAmount": 8
     },
     {
       "itemID": 6687,
@@ -319,15 +319,9 @@
       "minAmount": 30
     },
     {
-      "itemID": 5522,
-      "hitRollCeil": 49.0,
-      "maxAmount": 25,
-      "minAmount": 25
-    },
-    {
       "itemID": 995,
       "hitRollCeil": 52.0,
-      "maxAmount": 52000,
+      "maxAmount": 100000,
       "minAmount": 9000
     }
   ]

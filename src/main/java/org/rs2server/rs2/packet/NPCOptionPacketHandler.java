@@ -271,6 +271,22 @@ public class NPCOptionPacketHandler implements PacketHandler {
 				}
 				switch (npc.getId()) {
 
+				case 537: // swordshop varrock
+					Shop.open(player, 70, 0);
+					break;
+
+				case 536: // lowe varrock
+					Shop.open(player, 69, 0);
+					break;
+
+				case 518: // horvik varrock
+					Shop.open(player, 68, 0);
+					break;
+
+				case 532: // zaff varrock
+					Shop.open(player, 67, 0);
+					break;
+
 				case 3248:
 					npc.playAnimation(Animation.create(722));
 					npc.playGraphics(Graphic.create(343, 0, 0));
@@ -608,9 +624,6 @@ public class NPCOptionPacketHandler implements PacketHandler {
 					break;
 				case 516:
 					DialogueManager.openDialogue(player, 40);
-					break;
-				case 518:
-					DialogueManager.openDialogue(player, 44);
 					break;
 				case 519:
 					DialogueManager.openDialogue(player, 51);
@@ -1189,9 +1202,6 @@ public class NPCOptionPacketHandler implements PacketHandler {
 					case 7502:
 						Shop.open(player, 10, 0);
 						break;
-					case 536:
-						Shop.open(player, 5, 0);
-						break;
 					case 3248:
 						DialogueManager.openDialogue(player, 74);
 						break;
@@ -1201,9 +1211,6 @@ public class NPCOptionPacketHandler implements PacketHandler {
 					case 509:
 					case 516:
 						Shop.open(player, 1, 1);
-						break;
-					case 518:
-						Shop.open(player, 2, 1);
 						break;
 					case 519:
 						Shop.open(player, 3, 1);

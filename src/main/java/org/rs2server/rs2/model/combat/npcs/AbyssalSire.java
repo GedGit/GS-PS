@@ -52,9 +52,8 @@ public class AbyssalSire extends AbstractCombatAction {
 	public void hit(final Mob attacker, final Mob victim) {
 		super.hit(attacker, victim);
 
-		if (!attacker.isNPC()) {
+		if (!attacker.isNPC())
 			return; // this should be an NPC!
-		}
 
 		final int maxHit;
 		int randomHit;
@@ -69,22 +68,20 @@ public class AbyssalSire extends AbstractCombatAction {
 
 			hitDelay = 1;
 			blockAnimation = true;
-			maxHit = 72;
+			maxHit = 30;
 
 			randomHit = super.damage(maxHit, attacker, victim, AttackType.CRUSH, Skills.ATTACK,
 					Prayers.PROTECT_FROM_MELEE, false, true);
 			randomHit = random.nextInt(randomHit < 1 ? 1 : randomHit + 1);
-			if (randomHit > victim.getSkills().getLevel(Skills.HITPOINTS)) {
+			if (randomHit > victim.getSkills().getLevel(Skills.HITPOINTS))
 				randomHit = victim.getSkills().getLevel(Skills.HITPOINTS);
-			}
 			hit = randomHit;
 			break;
 		case MAGIC:
-			// attacker.playAnimation(Animation.create(7021));
 			attacker.playGraphics(Graphic.create(1275, 0, 0));
 			hitDelay = 2;
 			blockAnimation = false;
-			maxHit = 25;
+			maxHit = 30;
 			final Collection<Player> localPlayers = World.getWorld().getRegionManager().getLocalPlayers(attacker);
 			for (final Player near : localPlayers) {
 				if (near != null && near != attacker && near.getSkills().getLevel(Skills.HITPOINTS) > 0) {
@@ -112,13 +109,12 @@ public class AbyssalSire extends AbstractCombatAction {
 					for (final Player near : localPlayers) {
 						if (near != null && near != attacker && near != victim
 								&& near.getSkills().getLevel(Skills.HITPOINTS) > 0) {
-							if (attacker.getCentreLocation().isWithinDistance(attacker, near, 10)) {
+							if (attacker.getCentreLocation().isWithinDistance(attacker, near, 12)) {
 								int hitz = MagicCombatAction.getAction().damage(maxHit, attacker, near,
 										AttackType.MAGIC, Skills.MAGIC, Prayers.PROTECT_FROM_MISSILES, false, false);
 								hitz = random.nextInt(hitz < 1 ? 1 : hitz + 1);
-								if (hitz > near.getSkills().getLevel(Skills.HITPOINTS)) {
+								if (hitz > near.getSkills().getLevel(Skills.HITPOINTS))
 									hitz = near.getSkills().getLevel(Skills.HITPOINTS);
-								}
 								near.inflictDamage(new Hit(hitz), near);
 							}
 						}
@@ -167,7 +163,7 @@ public class AbyssalSire extends AbstractCombatAction {
 			if (!ProjectilePathFinder.clearPath(attacker.getLocation(), victim.getLocation())) {
 				System.out.println("Error with projectile pathfinding.");
 				Following.combatFollow(attacker, victim);
-				return false;
+				//return false;
 			}
 		}
 		return (attacker.getCentreLocation().isWithinDistance(attacker, victim, distance(attacker) + extraDistance));
@@ -176,6 +172,6 @@ public class AbyssalSire extends AbstractCombatAction {
 
 	@Override
 	public int distance(Mob attacker) {
-		return 3;
+		return 12;
 	}
 }
