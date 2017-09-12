@@ -1,4 +1,4 @@
-package org.rs2server.rs2.model.minigame.barrows;
+package org.rs2server.rs2.model.minigame.impl;
 
 import org.rs2server.rs2.Constants;
 import org.rs2server.rs2.model.Location;

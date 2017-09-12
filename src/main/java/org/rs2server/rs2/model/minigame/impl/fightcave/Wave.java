@@ -1,4 +1,4 @@
-package org.rs2server.rs2.model.minigame.fightcave;
+package org.rs2server.rs2.model.minigame.impl.fightcave;
 
 /**
  * 

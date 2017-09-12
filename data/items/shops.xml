@@ -4375,4 +4375,44 @@
         <playerItems>
         </playerItems>
     </shop>
+	<shop>
+        <!-- Shop 66 -->
+        <mainStockId>727</mainStockId>
+        <name>Perry's Chop-chop Shop</name>
+        <shopType>SPECIALIST_STORE_BUY</shopType>
+        <currency>995</currency>
+    	<canIronmanBuy>true</canIronmanBuy>
+        <mainItems>
+            <item>
+                <id>1351</id>
+                <count>10</count>
+            </item>
+            <item>
+                <id>1349</id>
+                <count>10</count>
+            </item>
+            <item>
+                <id>1353</id>
+                <count>10</count>
+            </item>
+            <item>
+                <id>1355</id>
+                <count>10</count>
+            </item>
+            <item>
+                <id>1357</id>
+                <count>10</count>
+            </item>
+            <item>
+                <id>1359</id>
+                <count>10</count>
+            </item>
+            <item>
+                <id>590</id>
+                <count>10</count>
+            </item>
+        </mainItems>
+        <playerItems>
+        </playerItems>
+    </shop>
 </list>

@@ -1,3 +1,23 @@
+ - Patch Notes #17 - 2017.09.10 - 2017.09.12 -
+
+ 
+	- Miscellaneous changes: --
+
+		-  
+		
+		
+	-- Minor fixes/changes/additions: --
+
+        -  Woodcutting guild teleport has been added to the Woodcutting locations;
+        -  Fixed redwood tree ladders and added the actual redwood tree cutting;
+        -  Added Perry's Chop Chop Shop at the Woodcutting guild;
+        -  Ardougne cloaks will now provide correct equipment bonuses;
+        -  Added onyx bolt tips to Tzhaar drop-tables;
+        
+
+--------------------------------------------------------------------------------------
+
+
  - Patch Notes #16 - 2017.09.07 - 2017.09.09 -
 
  

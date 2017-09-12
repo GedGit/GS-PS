@@ -237,7 +237,7 @@ public class Woodcutting extends HarvestingAction {
 		/**
 		 * Redwood tree
 		 */
-		REDWOOD(19669, 90, 380, 380, 10, new int[] { 28859 }, 6000),
+		REDWOOD(19669, 90, 380, 300, 50, new int[] { 28859 }, 6000),
 
 		/**
 		 * Bruma root
@@ -463,6 +463,9 @@ public class Woodcutting extends HarvestingAction {
 			}
 			return null;
 		}
+		// Redwood exception
+		if (object.getId() == 28859)
+			return new GameObject(getGameObject().getLocation(), 28860, 10, object.getDirection(), false);
 		return new GameObject(getGameObject().getLocation(), 1342, 10, 0, false);
 	}
 

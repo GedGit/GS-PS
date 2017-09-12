@@ -25,8 +25,8 @@ import org.rs2server.rs2.model.gameobject.GameObjectCardinality;
 import org.rs2server.rs2.model.map.RegionClipping;
 import org.rs2server.rs2.model.map.path.ObjectPathFinder;
 import org.rs2server.rs2.model.map.path.ObjectPathFinder.Orientation;
-import org.rs2server.rs2.model.minigame.barrows.Barrows;
-import org.rs2server.rs2.model.minigame.warriorsguild.WarriorsGuild;
+import org.rs2server.rs2.model.minigame.impl.Barrows;
+import org.rs2server.rs2.model.minigame.impl.WarriorsGuild;
 import org.rs2server.rs2.model.npc.NPC;
 import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.model.region.Region;
@@ -615,12 +615,35 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 								}
 							});
 							break;
-						case 28857:
-							player.setTeleportTarget(Location.create(1574, 3482, 2));
+
+						case 28857: // Zeah redwood ladders up
+							Location upstairs = null;
+							if (obj.getLocation().equals(Location.create(1566, 3482, 0)))
+								upstairs = Location.create(1567, 3482, 2);
+							if (obj.getLocation().equals(Location.create(1566, 3493, 0)))
+								upstairs = Location.create(1567, 3493, 2);
+							if (obj.getLocation().equals(Location.create(1575, 3493, 0)))
+								upstairs = Location.create(1574, 3493, 2);
+							if (obj.getLocation().equals(Location.create(1575, 3482, 0)))
+								upstairs = Location.create(1574, 3482, 2);
+							if (upstairs != null)
+								player.climbStairsUp(upstairs);
 							break;
-						case 28858:
-							player.setTeleportTarget(Location.create(1576, 3482, 0));
+
+						case 28858: // Zeah redwood ladders down
+							Location downstairs = null;
+							if (obj.getLocation().equals(Location.create(1566, 3482, 2)))
+								downstairs = Location.create(1566, 3482, 0);
+							if (obj.getLocation().equals(Location.create(1566, 3493, 2)))
+								downstairs = Location.create(1566, 3493, 0);
+							if (obj.getLocation().equals(Location.create(1575, 3493, 2)))
+								downstairs = Location.create(1575, 3493, 0);
+							if (obj.getLocation().equals(Location.create(1575, 3482, 2)))
+								downstairs = Location.create(1575, 3482, 0);
+							if (downstairs != null)
+								player.climbStairsDown(downstairs);
 							break;
+
 						case 29317:
 							player.getInventory().add(new Item(946, 1));
 							break;

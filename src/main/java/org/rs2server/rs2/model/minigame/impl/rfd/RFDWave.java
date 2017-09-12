@@ -1,4 +1,4 @@
-package org.rs2server.rs2.model.minigame.rfd;
+package org.rs2server.rs2.model.minigame.impl.rfd;
 
 /**
  * Stores each waves information.

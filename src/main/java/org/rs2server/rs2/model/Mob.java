@@ -31,7 +31,7 @@ import org.rs2server.rs2.model.container.Container;
 import org.rs2server.rs2.model.container.Equipment;
 import org.rs2server.rs2.model.container.PriceChecker;
 import org.rs2server.rs2.model.container.Trade;
-import org.rs2server.rs2.model.minigame.warriorsguild.WarriorsGuild;
+import org.rs2server.rs2.model.minigame.impl.WarriorsGuild;
 import org.rs2server.rs2.model.npc.NPC;
 import org.rs2server.rs2.model.npc.Pet;
 import org.rs2server.rs2.model.npc.impl.cerberus.Cerberus;

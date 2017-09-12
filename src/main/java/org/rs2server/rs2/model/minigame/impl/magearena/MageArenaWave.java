@@ -1,4 +1,4 @@
-package org.rs2server.rs2.model.minigame.magearena;
+package org.rs2server.rs2.model.minigame.impl.magearena;
 
 public class MageArenaWave {
 	

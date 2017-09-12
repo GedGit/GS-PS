@@ -6,7 +6,7 @@ import org.rs2server.rs2.model.GameObject;
 import org.rs2server.rs2.model.Graphic;
 import org.rs2server.rs2.model.Location;
 import org.rs2server.rs2.model.World;
-import org.rs2server.rs2.model.minigame.magearena.MageArena;
+import org.rs2server.rs2.model.minigame.impl.magearena.MageArena;
 import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.tickable.Tickable;
 

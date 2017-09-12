@@ -9,7 +9,7 @@ import org.rs2server.rs2.model.Location;
 import org.rs2server.rs2.model.World;
 import org.rs2server.rs2.model.event.ClickEventManager;
 import org.rs2server.rs2.model.event.EventListener;
-import org.rs2server.rs2.model.minigame.barrows.Barrows.BarrowsBrother;
+import org.rs2server.rs2.model.minigame.impl.Barrows.BarrowsBrother;
 import org.rs2server.rs2.model.npc.NPC;
 import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.mysql.impl.NewsManager;

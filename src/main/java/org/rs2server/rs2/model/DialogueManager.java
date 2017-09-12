@@ -509,11 +509,11 @@ public class DialogueManager {
 					"'Ello and what are you after then?");
 			player.getInterfaceState().setNextDialogueId(0, 6991);
 			break;
-			
-			// selecting another assignment 
-            case 6991:
-	        player.getActionSender().sendDialogue("Select an Option", DialogueType.OPTION, -1, FacialAnimation.DEFAULT,
-		    "I need another assignment.|Do you have anything for trade?|About the task system...|Er...nothing...");
+
+		// selecting another assignment
+		case 6991:
+			player.getActionSender().sendDialogue("Select an Option", DialogueType.OPTION, -1, FacialAnimation.DEFAULT,
+					"I need another assignment.|Do you have anything for trade?|About the task system...|Er...nothing...");
 			player.getInterfaceState().setNextDialogueId(0, 6992);
 			player.getInterfaceState().setNextDialogueId(1, 6993);
 			player.getInterfaceState().setNextDialogueId(2, 6994);
@@ -760,14 +760,14 @@ public class DialogueManager {
 					"A wise choice, " + player.getName() + "!");
 			player.getInterfaceState().setNextDialogueId(0, -1);
 			break;
-//Slayer master
+		// Slayer master
 		case 500:
 			player.getActionSender().sendDialogue(CacheNPCDefinition.get(player.getAttribute("talkingNpc")).getName(),
 					DialogueType.NPC, player.getAttribute("talkingNpc"), FacialAnimation.DEFAULT,
 					"'Ello and what are you after then?");
 			player.getInterfaceState().setNextDialogueId(0, 501);
 			break;
-			//Slayer master options 
+		// Slayer master options
 		case 501:
 			player.getActionSender().sendDialogue("Select an Option", DialogueType.OPTION, -1, FacialAnimation.DEFAULT,
 					"I need another assignment.|Do you have anything for trade?|Could you teleport me to my task?|Er...nothing...");
@@ -815,8 +815,8 @@ public class DialogueManager {
 					"Certainly, though it will cost you 25k gold coins!");
 			player.getInterfaceState().setNextDialogueId(0, 524);
 			break;
-			
-			//case 524 is slayer master 
+
+		// case 524 is slayer master
 		case 524:
 			player.getActionSender().sendDialogue("Teleport to task for 25k?", DialogueType.OPTION, -1,
 					FacialAnimation.DEFAULT, "Yes.|No.");
@@ -3553,11 +3553,12 @@ public class DialogueManager {
 
 		case 100030:
 			player.getActionSender().sendDialogue("Woodcutting Teleports", DialogueType.OPTION, -1,
-					FacialAnimation.DEFAULT,
-					"Lumbridge (Level 1)|Seer's Village (Levels 1 - 45)|Sorcerer's Tower (Levels 1 - 75)");
+					FacialAnimation.DEFAULT, "Lumbridge (Level 1)|Seer's Village (Levels 1 - 45)|"
+							+ "Sorcerer's Tower (Levels 1 - 75)|Woodcutting Guild (Levels 1 - 90)");
 			player.getInterfaceState().setNextDialogueId(0, 100031);
 			player.getInterfaceState().setNextDialogueId(1, 100032);
 			player.getInterfaceState().setNextDialogueId(2, 100033);
+			player.getInterfaceState().setNextDialogueId(3, 100034);
 			break;
 		case 100031:
 			handleTeleport(player, Location.create(3188, 3223, 0), false);
@@ -3569,6 +3570,10 @@ public class DialogueManager {
 			break;
 		case 100033:
 			handleTeleport(player, Location.create(2691, 3421, 0), false);
+			player.getActionSender().closeAll();
+			break;
+		case 100034:
+			handleTeleport(player, Location.create(1647, 3504, 0), false);
 			player.getActionSender().closeAll();
 			break;
 		}

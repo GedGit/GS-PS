@@ -1,4 +1,4 @@
-package org.rs2server.rs2.model.minigame.bh;
+package org.rs2server.rs2.model.minigame.impl.bh;
 
 import org.rs2server.rs2.model.Item;
 import org.rs2server.rs2.model.Location;

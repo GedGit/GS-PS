@@ -1,6 +1,6 @@
 package org.rs2server.rs2.tickable.impl;
 
-import org.rs2server.rs2.model.minigame.bh.BountyHunter;
+import org.rs2server.rs2.model.minigame.impl.bh.BountyHunter;
 import org.rs2server.rs2.tickable.Tickable;
 
 public class ScoreboardSaveTick extends Tickable {

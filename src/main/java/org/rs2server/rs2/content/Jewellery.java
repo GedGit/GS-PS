@@ -9,8 +9,8 @@ import org.rs2server.rs2.model.World;
 import org.rs2server.rs2.model.boundary.BoundaryManager;
 import org.rs2server.rs2.model.container.Container;
 import org.rs2server.rs2.model.container.Equipment;
-import org.rs2server.rs2.model.minigame.fightcave.FightCave;
-import org.rs2server.rs2.model.minigame.warriorsguild.WarriorsGuild;
+import org.rs2server.rs2.model.minigame.impl.WarriorsGuild;
+import org.rs2server.rs2.model.minigame.impl.fightcave.FightCave;
 import org.rs2server.rs2.model.player.Player;
 
 public class Jewellery {

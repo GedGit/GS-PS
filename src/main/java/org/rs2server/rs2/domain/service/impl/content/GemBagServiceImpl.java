@@ -11,7 +11,7 @@ import org.rs2server.rs2.model.DialogueManager;
 import org.rs2server.rs2.model.Item;
 import org.rs2server.rs2.model.Mob;
 import org.rs2server.rs2.model.boundary.BoundaryManager;
-import org.rs2server.rs2.model.minigame.fightcave.FightCave;
+import org.rs2server.rs2.model.minigame.impl.fightcave.FightCave;
 import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.net.ActionSender;
 

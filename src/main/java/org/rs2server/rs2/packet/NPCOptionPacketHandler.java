@@ -289,6 +289,10 @@ public class NPCOptionPacketHandler implements PacketHandler {
 							FacialAnimation.BOWS_HEAD_WHILE_SAD, "I do not speak to strangers.");
 					break;
 
+				case 7240: // perrys axe shop wc guild
+					Shop.open(player, 66, 0);
+					break;
+
 				case 1602: // chamber guardian mage bank pool
 					Shop.open(player, 62, 0);
 					break;

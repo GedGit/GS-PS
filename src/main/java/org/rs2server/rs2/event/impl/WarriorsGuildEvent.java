@@ -2,7 +2,7 @@ package org.rs2server.rs2.event.impl;
 
 import org.rs2server.rs2.event.Event;
 import org.rs2server.rs2.model.Item;
-import org.rs2server.rs2.model.minigame.warriorsguild.WarriorsGuild;
+import org.rs2server.rs2.model.minigame.impl.WarriorsGuild;
 import org.rs2server.rs2.model.player.Player;
 
 public class WarriorsGuildEvent extends Event{

@@ -14,7 +14,7 @@ import org.rs2server.rs2.model.boundary.BoundaryManager;
 import org.rs2server.rs2.model.container.Bank;
 import org.rs2server.rs2.model.container.Inventory;
 import org.rs2server.rs2.model.container.impl.InterfaceContainerListener;
-import org.rs2server.rs2.model.minigame.fightcave.FightCave;
+import org.rs2server.rs2.model.minigame.impl.fightcave.FightCave;
 import org.rs2server.rs2.model.npc.NPC;
 import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.net.ActionSender;

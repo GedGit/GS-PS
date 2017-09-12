@@ -23,7 +23,7 @@ import org.rs2server.rs2.model.container.*;
 import org.rs2server.rs2.model.event.ClickEventManager;
 import org.rs2server.rs2.model.event.EventListener.ClickOption;
 import org.rs2server.rs2.model.map.path.ProjectilePathFinder;
-import org.rs2server.rs2.model.minigame.warriorsguild.WarriorsGuild;
+import org.rs2server.rs2.model.minigame.impl.WarriorsGuild;
 import org.rs2server.rs2.model.npc.Pet;
 import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.model.skills.*;

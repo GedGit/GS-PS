@@ -1,4 +1,4 @@
-package org.rs2server.rs2.model.minigame.warriorsguild;
+package org.rs2server.rs2.model.minigame.impl;
 
 import org.rs2server.cache.format.CacheItemDefinition;
 import org.rs2server.rs2.action.Action;

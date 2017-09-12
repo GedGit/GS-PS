@@ -28,7 +28,7 @@ import org.rs2server.rs2.model.boundary.Boundary;
 import org.rs2server.rs2.model.combat.CombatAction;
 import org.rs2server.rs2.model.combat.impl.MagicCombatAction.Spell;
 import org.rs2server.rs2.model.container.Container;
-import org.rs2server.rs2.model.minigame.warriorsguild.WarriorsGuild;
+import org.rs2server.rs2.model.minigame.impl.WarriorsGuild;
 import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.model.player.PrivateChat;
 import org.rs2server.rs2.model.region.Region;
