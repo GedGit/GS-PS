@@ -245,17 +245,18 @@ public class Magic {
 						player.getActionSender().switchTab(4);
 						staffService.removeRune(player, new Item(555));
 						staffService.removeRune(player, new Item(564));
-					}
-					if (item.getId() == 11072) { // sapphire bracelet
-						player.playAnimation(Animation.create(712)); // SET CORRECT ONE
-						player.playGraphics(Graphic.create(114, (100 << 16)));
-						player.getSkills().addExperience(Skills.MAGIC, 3 * 150);
+					}player.getInventory().remove(slot, new Item(item.getId()));
+					
+						if (item.getId() == 11071) { // Sapphire braclet
+							player.playAnimation(Animation.create(712)); // SET CORRECT ONE
+							player.playGraphics(Graphic.create(114, (100 << 16)));
+							player.getSkills().addExperience(Skills.MAGIC, 3 * 150);
 
-						player.getInventory().remove(slot, new Item(item.getId()));
-						player.getInventory().add(new Item(11074));
-						player.getActionSender().switchTab(4);
-						staffService.removeRune(player, new Item(555, 1));
-						staffService.removeRune(player, new Item(564, 1));
+							player.getInventory().remove(slot, new Item(item.getId()));
+							player.getInventory().add(new Item(11074));
+							player.getActionSender().switchTab(4);
+							staffService.removeRune(player, new Item(555, 1));
+							staffService.removeRune(player, new Item(564, 1));
 					}
 					if (item.getId() == 1656) { // Sapphire necklace
 						player.playAnimation(Animation.create(712)); // SET CORRECT ONE
@@ -315,7 +316,7 @@ public class Magic {
 						staffService.removeRune(player, new Item(556, 3));
 						staffService.removeRune(player, new Item(564));
 					}
-					if (item.getId() == 11076) { // emerald bracelet
+					if (item.getId() == 11078) { // emerald bracelet
 						player.playAnimation(Animation.create(712)); // SET CORRECT ONE
 						player.playGraphics(Graphic.create(114, (100 << 16)));
 						player.getSkills().addExperience(Skills.MAGIC, 3 * 177);
@@ -362,7 +363,7 @@ public class Magic {
 						staffService.removeRune(player, new Item(554, 5));
 						staffService.removeRune(player, new Item(564));
 					}
-					if (item.getId() == 11085) { // Ruby bracelet
+					if (item.getId() == 11087) { // Ruby bracelet
 						player.playAnimation(Animation.create(712)); // SET CORRECT ONE
 						player.playGraphics(Graphic.create(238, (100 << 16)));
 						player.getSkills().addExperience(Skills.MAGIC, 3 * 177);
@@ -420,7 +421,7 @@ public class Magic {
 						staffService.removeRune(player, new Item(557, 10));
 						staffService.removeRune(player, new Item(564));
 					}
-					if (item.getId() == 11092) { // diamond bracelet
+					if (item.getId() == 11094) { // diamond bracelet
 						player.playAnimation(Animation.create(712)); // SET CORRECT ONE
 						player.playGraphics(Graphic.create(114, (100 << 16)));
 						player.getSkills().addExperience(Skills.MAGIC, 3 * 177);
@@ -480,7 +481,7 @@ public class Magic {
 						staffService.removeRune(player, new Item(557, 15));
 						staffService.removeRune(player, new Item(564));
 					}
-					if (item.getId() == 11115) { // dragonstone braclet
+					if (item.getId() == 11117) { // dragonstone braclet
 						player.playAnimation(Animation.create(712)); // SET CORRECT ONE
 						player.playGraphics(Graphic.create(114, (100 << 16)));
 						player.getSkills().addExperience(Skills.MAGIC, 3 * 177);
@@ -553,7 +554,7 @@ public class Magic {
 						player.getInventory().add(new Item(11128));
 						player.getActionSender().switchTab(4);
 					}
-					if (item.getId() == 11130) { // onyx braclet
+					if (item.getId() == 11132) { // onyx braclet
 						player.playAnimation(Animation.create(712)); // SET CORRECT ONE
 						player.playGraphics(Graphic.create(114, 0, 100));
 						player.getSkills().addExperience(Skills.MAGIC, 97);

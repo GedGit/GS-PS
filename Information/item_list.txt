@@ -11066,33 +11066,42 @@
 11065 true false Bracelet mould
 11066 false true Bracelet mould
 11067 false false null
-11068 false false Gold bracelet
+
+11068 true false Gold bracelet
 11069 true false Gold bracelet
 11070 false true Gold bracelet
-11071 false false Sapphire bracelet
+
+11071 true false Sapphire bracelet
 11072 true false Sapphire bracelet
 11073 false true Sapphire bracelet
+
 11074 true false Bracelet of clay
 11075 false true Bracelet of clay
+
 11076 true false Emerald bracelet
 11077 false true Emerald bracelet
 11078 false false Emerald bracelet
+
 11079 true false Castle wars bracelet(3)
 11080 false true Castle wars bracelet(3)
 11081 true false Castle wars bracelet(2)
 11082 false true Castle wars bracelet(2)
 11083 true false Castle wars bracelet(1)
 11084 false true Castle wars bracelet(1)
+
 11085 true false Ruby bracelet
 11086 false true Ruby bracelet
-11087 false false Ruby bracelet
+11087 true false Ruby bracelet
+
 11088 true false Inoculation bracelet
 11089 false true Inoculation bracelet
 11090 true false Phoenix necklace
 11091 false true Phoenix necklace
+
 11092 true false Diamond bracelet
 11093 false true Diamond bracelet
-11094 false false Diamond bracelet
+11094 true false Diamond bracelet
+
 11095 true false Abyssal bracelet(5)
 11096 false true Abyssal bracelet(5)
 11097 true false Abyssal bracelet(4)
@@ -11113,9 +11122,11 @@
 11112 false true Skills necklace(1)
 11113 true false Skills necklace
 11114 false true Skills necklace
+
 11115 true false Dragonstone bracelet
 11116 false true Dragonstone bracelet
-11117 false false Dragon bracelet
+11117 true false Dragonstone bracelet
+
 11118 true false Combat bracelet(4)
 11119 false true Combat bracelet(4)
 11120 true false Combat bracelet(3)
@@ -11128,9 +11139,11 @@
 11127 false true Combat bracelet
 11128 true false Berserker necklace
 11129 false true Berserker necklace
+
 11130 true false Onyx bracelet
 11131 false true Onyx bracelet
-11132 false false Onyx bracelet
+11132 true false Onyx bracelet
+
 11133 true false Regen bracelet
 11134 false true Regen bracelet
 11135 false false Bomber jacket
