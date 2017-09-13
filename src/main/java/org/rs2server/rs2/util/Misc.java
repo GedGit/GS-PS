@@ -22,7 +22,7 @@ public class Misc {
 	 */
 	private static Random r = new Random();
 
-	public static int random(int i) {
+	public static int random(int i) { 
 		return r.nextInt(i + 1);
 	}
 
@@ -157,6 +157,7 @@ public class Misc {
 						player.setAttribute("busy", true);
 						amt++;
 						request = Vote.validate(Constants.EVERYTHINGRS_KEY, player.getName(), 1);
+						World.getWorld().increaseVotes(1);
 						continue outer;
 					}
 					// 1 vote point = 15 minutes
@@ -170,7 +171,6 @@ public class Misc {
 									+ " minutes of double experience; you now have a total of: "
 									+ Misc.formatNumber(player.getDatabaseEntity().getVotePoints())
 									+ " vote points; thank you for voting!");
-					World.getWorld().increaseVotes(amt);
 					player.removeAttribute("busy");
 
 				} catch (Exception e) {
