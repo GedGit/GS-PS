@@ -238,12 +238,9 @@ public class DeathTick extends Tickable {
 				if (killer.isPlayer()) {
 					final Player player = (Player) killer;
 					if (player.getSlayer().getSlayerTask() != null) {
-						String npcName = npc.getDefinition().getName().toLowerCase();
-
-						for (String taskName : player.getSlayer().getSlayerTask().getName()) {
-							if (npc.getDefinition().getName().contains(taskName))
-								slayerService.onTaskKill((Player) killer, npc);
-						}
+						String taskName = player.getSlayer().getSlayerTask().getName().toLowerCase();
+						if (npc.getDefinition().getName().toLowerCase().contains(taskName))
+							slayerService.onTaskKill((Player) killer, npc);
 					}
 				}
 				if (killer.isPlayer()) {
@@ -325,7 +322,7 @@ public class DeathTick extends Tickable {
 					}
 				} else if (npc instanceof Cerberus) {
 					Cerberus cerberus = (Cerberus) npc;
-					cerberus.destroySelf(true);
+					cerberus.destroySelf(false);
 					teleportTo = null;
 				} else if (npc instanceof Kraken) {
 					Kraken kraken = (Kraken) npc;

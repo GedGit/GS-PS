@@ -350,20 +350,6 @@ public class ActionSender {
 		player.getActionSender().loadClientSettingss();
 		player.getActionSender().updateClickPriority();
 		
-		if (!player.getDatabaseEntity().hasResetRocky()) {
-			Item rocky = new Item(20663);
-			if (player.getBank().contains(rocky.getId()))
-				player.getBank().remove(new Item(rocky.getId(), Integer.MAX_VALUE));
-			if (player.getInventory().contains(rocky.getId()))
-				player.getInventory().remove(rocky);
-			if (player.getPet() != null && player.getPet().getId() == 7336) {
-				World.getWorld().unregister(player.getPet());
-				settings.setPetSpawned(false);
-				player.setPet(null);
-			}
-			player.getDatabaseEntity().resetRocky();
-		}
-		
 		sendGameObjectsInArea();
 
 		// For players BEFORE the quick-prayer update ;)

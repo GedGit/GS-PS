@@ -98,10 +98,9 @@ public final class CombatFormula {
 			final Player player = (Player) mob;
 			final NPC npc = (NPC) victim;
 			if (player.getSlayer().getSlayerTask() != null && hasBlackMaskOrSlayerHelm(player)) {
-				for (String taskName : player.getSlayer().getSlayerTask().getName()) {
-					if (npc.getDefinition().getName().contains(taskName))
-						otherBonusMultiplier = 1.15;
-				}
+				String taskName = player.getSlayer().getSlayerTask().getName().toLowerCase();
+				if (npc.getDefinition().getName().toLowerCase().contains(taskName))
+					otherBonusMultiplier = 1.15;
 			}
 		}
 		if (fullDharok(mob)) {
@@ -188,10 +187,9 @@ public final class CombatFormula {
 			final Player player = (Player) mob;
 			final NPC npc = (NPC) victim;
 			if (player.getSlayer().getSlayerTask() != null && hasImbuedSlayerHelm(player)) {
-				for (String taskName : player.getSlayer().getSlayerTask().getName()) {
-					if (npc.getDefinition().getName().contains(taskName))
+				String taskName = player.getSlayer().getSlayerTask().getName().toLowerCase();
+				if (npc.getDefinition().getName().toLowerCase().contains(taskName))
 						otherBonusMultiplier = 1.15;
-				}
 			}
 		}
 

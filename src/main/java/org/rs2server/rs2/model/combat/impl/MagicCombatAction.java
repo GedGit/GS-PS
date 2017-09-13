@@ -158,11 +158,11 @@ public class MagicCombatAction extends AbstractCombatAction {
 			final Player player = (Player) attacker;
 			final NPC npc = (NPC) victim;
 			if (player.getSlayer().getSlayerTask() != null && CombatFormula.hasImbuedSlayerHelm(player)) {
-				for (String taskName : player.getSlayer().getSlayerTask().getName()) {
-					if (npc.getDefinition().getName().contains(taskName)) {
-						EA *= 1.15;
-						maxHit *= 1.15;
-					}
+
+				String taskName = player.getSlayer().getSlayerTask().getName().toLowerCase();
+				if (npc.getDefinition().getName().toLowerCase().contains(taskName)) {
+					EA *= 1.15;
+					maxHit *= 1.15;
 				}
 			}
 		}

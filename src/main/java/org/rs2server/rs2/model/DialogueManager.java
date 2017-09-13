@@ -707,7 +707,7 @@ public class DialogueManager {
 			break;
 
 		case 311:
-			if (!player.isIronMan() && !player.isHardcoreIronMan() && !player.isUltimateIronMan()) {
+			if (!player.getPermissionService().isAny(player, PlayerPermissions.IRON_MAN, PlayerPermissions.ULTIMATE_IRON_MAN, PlayerPermissions.HARDCORE_IRON_MAN)) {
 				player.getActionSender().sendDialogue("Ironman Advisor", DialogueType.NPC, 311, FacialAnimation.ANNOYED,
 						"I don't speak to your kind.");
 				player.getInterfaceState().setNextDialogueId(0, -1);
@@ -892,7 +892,7 @@ public class DialogueManager {
 						CacheNPCDefinition.get(player.getAttribute("talkingNpc")).getName(), DialogueType.NPC,
 						player.getAttribute("talkingNpc"), FacialAnimation.DEFAULT,
 						"Great, you're doing great. Your new task is to kill<br>" + newTask.getTaskAmount() + " "
-								+ player.getSlayer().getSlayerTask().getName()[0] + "s");
+								+ player.getSlayer().getSlayerTask().getName() + "s");
 				player.getInterfaceState().setNextDialogueId(0, 506);
 			}
 			break;
@@ -904,7 +904,7 @@ public class DialogueManager {
 						CacheNPCDefinition.get(player.getAttribute("talkingNpc")).getName(), DialogueType.NPC,
 						player.getAttribute("talkingNpc"), FacialAnimation.DEFAULT,
 						"Great, you're doing great. Your new task is to kill<br>" + newTask.getTaskAmount() + " "
-								+ player.getSlayer().getSlayerTask().getName()[0] + "s");
+								+ player.getSlayer().getSlayerTask().getName() + "s");
 				player.getInterfaceState().setNextDialogueId(0, 506);
 			}
 			break;
@@ -916,7 +916,7 @@ public class DialogueManager {
 						CacheNPCDefinition.get(player.getAttribute("talkingNpc")).getName(), DialogueType.NPC,
 						player.getAttribute("talkingNpc"), FacialAnimation.DEFAULT,
 						"Great, you're doing great. Your new task is to kill<br>" + newTask.getTaskAmount() + " "
-								+ player.getSlayer().getSlayerTask().getName()[0] + "s");
+								+ player.getSlayer().getSlayerTask().getName() + "s");
 				player.getInterfaceState().setNextDialogueId(0, 506);
 			}
 			break;
@@ -928,7 +928,7 @@ public class DialogueManager {
 						CacheNPCDefinition.get(player.getAttribute("talkingNpc")).getName(), DialogueType.NPC,
 						player.getAttribute("talkingNpc"), FacialAnimation.DEFAULT,
 						"Great, you're doing great. Your new task is to kill<br>" + newTask.getTaskAmount() + " "
-								+ player.getSlayer().getSlayerTask().getName()[0] + "s");
+								+ player.getSlayer().getSlayerTask().getName() + "s");
 				player.getInterfaceState().setNextDialogueId(0, 506);
 			}
 			break;
@@ -948,7 +948,7 @@ public class DialogueManager {
 						CacheNPCDefinition.get(player.getAttribute("talkingNpc")).getName(), DialogueType.NPC,
 						player.getAttribute("talkingNpc"), FacialAnimation.DEFAULT,
 						"Great, you're doing great. Your new task is to kill<br>" + newTask.getTaskAmount() + " "
-								+ player.getSlayer().getSlayerTask().getName()[0] + "s");
+								+ player.getSlayer().getSlayerTask().getName() + "s");
 				player.getInterfaceState().setNextDialogueId(0, 506);
 			}
 			break;
@@ -996,7 +996,7 @@ public class DialogueManager {
 			if (player.getSlayer().getSlayerTask() != null) {
 				player.getActionSender()
 						.sendDialogue("Vannaka", DialogueType.NPC, 403, FacialAnimation.HAPPY,
-								"You're current assigned to kill " + player.getSlayer().getSlayerTask().getName()[0]
+								"You're current assigned to kill " + player.getSlayer().getSlayerTask().getName()
 										+ "; only " + player.getSlayer().getSlayerTask().getTaskAmount() + " more",
 								"to go.");
 				player.getInterfaceState().setNextDialogueId(0, 514);

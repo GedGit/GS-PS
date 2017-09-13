@@ -174,8 +174,10 @@ public class Cerberus extends CombatNpc<Cerberus> {
 		challenger.getInstancedNPCs().remove(this);
 		if (stop) {
 			ghosts.forEach(g -> {
-				g.unregister();
-				challenger.getInstancedNPCs().remove(g);
+				if (g != null) {
+					g.unregister();
+					challenger.getInstancedNPCs().remove(g);
+				}
 			});
 			ghosts = null;
 			challenger.getInstancedNPCs().forEach(World.getWorld()::unregister);

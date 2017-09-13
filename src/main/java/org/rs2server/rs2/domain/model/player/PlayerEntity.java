@@ -85,6 +85,7 @@ public final @Setter @Getter class PlayerEntity extends MongoEntity {
 	private int doubleExp;
 	private boolean rockyReset;
 	private boolean defenceCape;
+	private boolean hasSlayerTaskReset;
 
 	public PlayerSettingsEntity getPlayerSettings() {
 		return playerSettings;
@@ -332,5 +333,13 @@ public final @Setter @Getter class PlayerEntity extends MongoEntity {
 	
 	public void toggleDefenceCape() {
 		this.defenceCape = !this.defenceCape;
+	}
+	
+	public boolean hasResetSlayTask() {
+		return this.hasSlayerTaskReset;
+	}
+	
+	public void resetSlayerTaskTrue() {
+		this.hasSlayerTaskReset = true;
 	}
 }

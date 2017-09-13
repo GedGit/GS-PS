@@ -548,7 +548,7 @@
 989:A mysterious key, for a mysterious chest.
 991:It looks like the key to a chest.
 993:You get a sense of dread from this key.
-995:X Lovely money!
+995:Lovely money!
 1005:A mostly clean apron.
 1007:A bright red cape.
 1009:I'd prefer a gold one.
@@ -1325,7 +1325,7 @@
 2566:An enchanted ring.
 2568:An enchanted ring.
 2570:An enchanted ring.
-2572:It can be charged at the Fountain of Rune, Increases your drop-rate by 10%.
+2572:It can be charged at the Fountain of Rune. Increases your drop-rate by 10%.
 2574:Used by navigators to find their position in <i><a href="/wiki/RuneScape" title="RuneScape" class="mw-redirect">RuneScape</a></i>.
 2575:A fine looking time piece.
 2576:A navigator's chart of RuneScape.
@@ -6051,11 +6051,11 @@
 11974:<b>&#8226;</b>You will need to recharge the bracelet at the Legends Guild.(uncharged)
 11976:<b>Uncharged:</b> A very powerful dragonstone amulet.<br />
 11978:<b>Uncharged:</b> A very powerful dragonstone amulet.<br />
-11980:It can be charged at the Fountain of Rune.
-11982:It can be charged at the Fountain of Rune.
-11984:It can be charged at the Fountain of Rune.
-11986:It can be charged at the Fountain of Rune.
-11988:It can be charged at the Fountain of Rune.
+11980:It can be charged at the Fountain of Rune. 
+11982:It can be charged at the Fountain of Rune. 
+11984:It can be charged at the Fountain of Rune. 
+11986:It can be charged at the Fountain of Rune. 
+11988:It can be charged at the Fountain of Rune. 
 11990:Makes you look fedorable.
 11992:A scale from the hide of a lava dragon.
 11994:Ground-up lava dragon scale.

@@ -177,12 +177,11 @@ public class SlayerServiceImpl implements SlayerService {
 			for (final CacheNPCDefinition npcDefinition : CacheNPCDefinition.npcs) {
 				if (npcDefinition != null && npcDefinition.getName() != null) {
 
-					for (String taskName : player.getSlayer().getSlayerTask().getName()) {
-						if (npc.getDefinition().getName().contains(taskName)) {
-							final int npcId = npcDefinition.getId();
-							statisticsService.increaseSlayerMonsterKillCount(player, npcId, task.getInitialAmount());
-							break;
-						}
+					String taskName = player.getSlayer().getSlayerTask().getName().toLowerCase();
+					if (npc.getDefinition().getName().toLowerCase().contains(taskName)) {
+						final int npcId = npcDefinition.getId();
+						statisticsService.increaseSlayerMonsterKillCount(player, npcId, task.getInitialAmount());
+						break;
 					}
 				}
 			}
@@ -227,7 +226,7 @@ public class SlayerServiceImpl implements SlayerService {
 	public void sendCheckTaskMessage(@Nonnull Player player) {
 		if (player.getSlayer().getSlayerTask() != null) {
 			player.getActionSender()
-					.sendMessage("Your current assignment is: " + player.getSlayer().getSlayerTask().getName()[0]
+					.sendMessage("Your current assignment is: " + player.getSlayer().getSlayerTask().getName()
 							+ "; only " + player.getSlayer().getSlayerTask().getTaskAmount() + " more to go.");
 		} else
 			player.getActionSender().sendMessage("You currently have no task.");
