@@ -31,15 +31,11 @@ import java.util.List;
  * @author Twelve
  */
 public final class CerberusServiceImpl implements CerberusService {
-	
-    private static final ImmutableList<Location> GHOST_SPAWN_LOCATIONS = ImmutableList.of(
-            Location.create(1239, 1266),
-            Location.create(1240, 1266),
-            Location.create(1241, 1266));
+	private static final ImmutableList<Location> GHOST_SPAWN_LOCATIONS = ImmutableList.of(Location.create(1239, 1266),
+			Location.create(1240, 1266), Location.create(1241, 1266));
 
 	private static final Location SPAWN_LOCATION = Location.create(1240, 1226, 0);
 	private static final Location TUNNEL_LOCATION_EXIT = Location.create(2873, 9847, 0);
-
 
 	@Inject
 	CerberusServiceImpl(HookService service) {
@@ -52,37 +48,37 @@ public final class CerberusServiceImpl implements CerberusService {
 			final Player player = clickEvent.getPlayer();
 			final GameObject object = clickEvent.getGameObject();
 			switch (object.getId()) {
-				case 26567:
-				case 26568:
-				case 26569:
-					//enterCave(player);
-					player.sendMessage("Cerberus is currently disabled; stay tuned!");
-					break;
-				case 21772:
-					exitCave(player);
-					break;
+			case 26567:
+			case 26568:
+			case 26569:
+				enterCave(player);
+				//player.sendMessage("Currently disabled.");
+				break;
+			case 21772:
+				exitCave(player);
+				break;
 			}
 		}
 	}
 
-    @Override
-    public ImmutableList<CerberusGhost> getRandomGhostOrder() {
-        List<Integer> locationOrder = Arrays.asList(0, 1, 2);
-        Collections.shuffle(locationOrder);
+	@Override
+	public ImmutableList<CerberusGhost> getRandomGhostOrder() {
+		List<Integer> locationOrder = Arrays.asList(0, 1, 2);
+		Collections.shuffle(locationOrder);
 
-        CerberusGhost meleeCerberusGhost = new MeleeCerberusGhost(GHOST_SPAWN_LOCATIONS.get(locationOrder.get(0)));
-        CerberusGhost rangedCerberusGhost = new RangedCerberusGhost(GHOST_SPAWN_LOCATIONS.get(locationOrder.get(1)));
-        CerberusGhost magicCerberusGhost = new MagicCerberusGhost(GHOST_SPAWN_LOCATIONS.get(locationOrder.get(2)));
+		CerberusGhost meleeCerberusGhost = new MeleeCerberusGhost(GHOST_SPAWN_LOCATIONS.get(locationOrder.get(0)));
+		CerberusGhost rangedCerberusGhost = new RangedCerberusGhost(GHOST_SPAWN_LOCATIONS.get(locationOrder.get(1)));
+		CerberusGhost magicCerberusGhost = new MagicCerberusGhost(GHOST_SPAWN_LOCATIONS.get(locationOrder.get(2)));
 
-        List<CerberusGhost> ghosts = Arrays.asList(meleeCerberusGhost, rangedCerberusGhost, magicCerberusGhost);
+		List<CerberusGhost> ghosts = Arrays.asList(meleeCerberusGhost, rangedCerberusGhost, magicCerberusGhost);
 
-        Collections.sort(ghosts, (o1, o2) -> {
-            int firstX = o1.getLocation().getX();
-            int secondX = o2.getLocation().getX();
-            return firstX > secondX ? 1 : firstX == secondX ? 0 : -1;
-        });
-        return ImmutableList.copyOf(ghosts);
-    }
+		Collections.sort(ghosts, (o1, o2) -> {
+			int firstX = o1.getLocation().getX();
+			int secondX = o2.getLocation().getX();
+			return firstX > secondX ? 1 : firstX == secondX ? 0 : -1;
+		});
+		return ImmutableList.copyOf(ghosts);
+	}
 
 	@Override
 	public void enterCave(@Nonnull Player player) {
@@ -117,16 +113,19 @@ public final class CerberusServiceImpl implements CerberusService {
 		final Player player = event.getPlayer();
 		if (BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "Cerberus")) {
 			Content cerberusContent = player.getContentManager().getActiveContent(Content.CERBERUS);
-			if (cerberusContent != null)
+			if (cerberusContent != null) {
 				cerberusContent.stop();
+			}
 		}
 	}
 
 	@Override
-    public void addCerberus(Player player, Cerberus cerberus) {
-		World.getWorld().createNPC(cerberus);
-		cerberus.setLocation(CerberusContent.SPAWN_LOCATION);
+	public void addCerberus(Player player, Cerberus cerberus) {
 		cerberus.setGhosts(getRandomGhostOrder());
-		System.out.println("Spawning cerberus! :)");
-    }
+		player.addInstancedNpc(cerberus);
+		World.getWorld().getNPCs().add(cerberus);
+		cerberus.setTeleporting(false);
+		cerberus.setLocation(CerberusContent.SPAWN_LOCATION);
+		player.resetFace();
+	}
 }

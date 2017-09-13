@@ -4,9 +4,9 @@ import com.google.common.collect.ImmutableList;
 import org.rs2server.cache.format.CacheItemDefinition;
 import org.rs2server.rs2.content.Following;
 import org.rs2server.rs2.domain.model.player.treasuretrail.clue.ClueScrollType;
-import org.rs2server.rs2.domain.service.impl.content.ItemServiceImpl;
 import org.rs2server.rs2.model.*;
 import org.rs2server.rs2.model.boundary.BoundaryManager;
+import org.rs2server.rs2.model.container.Equipment;
 import org.rs2server.rs2.model.map.Directions;
 import org.rs2server.rs2.model.npc.NPCLoot;
 import org.rs2server.rs2.model.npc.NPCLootTable;
@@ -91,7 +91,7 @@ public class Cerberus extends CombatNpc<Cerberus> {
 			canAttackPlayer = true;
 		if (canAttackPlayer) {
 			double distance = getLocation().distance(challenger.getLocation());
-			if (distance >= 10) {
+			if (distance >= 13) {
 				Following.combatFollow(this, challenger);
 				return;
 			}
@@ -170,17 +170,25 @@ public class Cerberus extends CombatNpc<Cerberus> {
 		return getCombatState().getAttackDelay() == 0;
 	}
 
-	public void destroySelf() { 
-		challenger.getInstancedNPCs().forEach(World.getWorld()::unregister);
-		challenger.getInstancedNPCs().clear();
-		ghosts = null;
-		this.unregister();
-		System.out.println("destroying cerberus o.o");
+	public void destroySelf(boolean stop) {
+		challenger.getInstancedNPCs().remove(this);
+		if (stop) {
+			ghosts.forEach(g -> {
+				g.unregister();
+				challenger.getInstancedNPCs().remove(g);
+			});
+			ghosts = null;
+			challenger.getInstancedNPCs().forEach(World.getWorld()::unregister);
+			challenger.getInstancedNPCs().clear();
+		}
 	}
 
+	// 2874, 9846, 0
+
 	@Override
-	public void dropLoot(Mob killer) { 
-		final double chance = ItemServiceImpl.handleRingOfWealth(challenger);
+	public void dropLoot(Mob killer) {
+		final double chance = challenger.getEquipment().get(Equipment.SLOT_RING) != null
+				&& challenger.getEquipment().get(Equipment.SLOT_RING).getId() == 2572 ? 1.1 : 1.0;
 		for (final NPCLoot loot : NPCLootTable.forID(this).getGeneratedLoot(chance)) {
 
 			if (challenger.getInventory().contains(13116)) {

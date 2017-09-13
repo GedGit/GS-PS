@@ -161,7 +161,7 @@
 317:I should try cooking this.
 319:Some nicely cooked anchovies.
 321:I should try cooking this.
-323:
+323:Oops!
 325:Some nicely cooked Sardines.
 327:I should try cooking this.
 329:Some nicely cooked salmon.
@@ -172,25 +172,25 @@
 338:I should try cooking this.
 339:Some nicely cooked fish.
 341:I should try cooking this.
-343:
+343:Oops!
 345:I should try cooking this.
 347:Some nicely cooked herring.
 349:I should try cooking this.
 351:Some nicely cooked pike.
 353:I should try cooking this.
 355:Some nicely cooked fish.
-357:
+357:Oops!
 359:
 361:Wow, this is a big fish.
 363:Wow, this is a big fish.
 365:Wow, this is a big fish.
-367:
-369:
+367:Oops!
+369:Oops!
 371:I should try cooking this.
 373:I'd better be careful eating this!
 377:I should try cooking this.
 379:This looks tricky to eat.
-381:
+381:Oops!
 383:I should try cooking this.
 385:I'd better be careful eating this.
 389:Tastier when cooked.
@@ -268,7 +268,7 @@
 536:These would feed a dog for months!
 538:Keeps a druid's knees nice and warm.
 540:I feel closer to the gods when I am wearing this.
-544:
+544:I feel closer to the gods when I am wearing this.
 546:I feel closer to the gods when I wear this.
 548:If a shade had knees, this would keep them nice and warm.
 550:Issued by RuneScape Council to all new citizens.
@@ -432,16 +432,16 @@
 751:A common gnomeball, obtained by playing gnomeball.
 753:Poisonous berries.
 756:This potion will almost certainly almost kill you.
-757:
+757:The Shield of Arrav by A R Wright.
 759:Phoenix Gang weapon store key.
-762:
+762:A shield from Falador.
 763:Half of the Shield of Arrav.
 764:You can carry coal in here.
 765:Half of the Shield of Arrav.
 766:You can carry uncut gems in here.
 767:Former property of the Phoenix Gang.
 769:Entrance certificate to the Imperial Guard.
-770:
+770:A shadowy Ardougne cloak.
 771:A limb of the fabled Dramen tree.
 772:Crafted from a Dramen tree branch.
 773:A perfect ruby ring.
@@ -533,10 +533,10 @@
 958:This would make warm clothing.
 960:A plank of wood!
 962:I need to pull this.
-964:
-965:
+964:Ooooh spooky!
+965:Ooooh spooky!
 966:A fraction of a roof.
-968:
+968:A silly pointed hat.
 970:Used for making notes.
 972:Used for making notes.
 973:A lump of charcoal.
@@ -548,14 +548,14 @@
 989:A mysterious key, for a mysterious chest.
 991:It looks like the key to a chest.
 993:You get a sense of dread from this key.
-995:
+995:Lovely money!
 1005:A mostly clean apron.
 1007:A bright red cape.
 1009:I'd prefer a gold one.
 1011:Leg covering favoured by women and wizards.
 1013:A ladies skirt.
 1015:Clothing favoured by women and dark wizards.
-1017:
+1017:A silly pointed hat.
 1019:A warm black cape.
 1021:A thick blue cape.
 1023:A thick yellow cape.
@@ -563,8 +563,8 @@
 1027:A thick green cape.
 1029:A thick purple cape.
 1031:A thick orange cape.
-1033:
-1035:
+1033:A robe worn by the worshippers of Zamorak.
+1035:A robe worn by the worshippers of Zamorak.
 1037:A rabbit-like adornment.
 1038:A nice hat from a cracker.
 1040:A nice hat from a cracker.
@@ -657,7 +657,7 @@
 1213:A powerful dagger.
 1215:A powerful dagger.
 1217:A vicious black dagger.
-1223:
+1223:Short but pointy.
 1233:A vicious black dagger.
 1237:A bronze tipped spear.
 1239:An iron tipped spear.
@@ -740,7 +740,7 @@
 1407:It's a slightly magical stick.
 1409:An ancient staff, formerly the property of Iban.
 1410:An ancient staff, formerly the property of Iban.
-1413:
+1413:An iron halberd.
 1415:
 1417:
 1419:It's a Scythe.
@@ -869,7 +869,7 @@
 1605:This looks valuable.
 1607:This looks valuable.
 1609:A semi precious stone.
-1611:
+1611:A semi precious stone.
 1613:A semi precious stone.
 1615:This looks valuable.
 1617:This would be worth more cut.
@@ -909,7 +909,7 @@
 1679:It needs a string so I can wear it.
 1681:It needs a string so I can wear it.
 1683:It needs a string so I can wear it.
-1686:
+1686:A pair of pale green Karamja gloves
 1687:I wonder if I can get this enchanted.
 1688:I wonder if I can get this enchanted.
 1689:I wonder if I can get this enchanted.
@@ -964,7 +964,7 @@
 1781:One of the ingredients for making glass.
 1783:One of the ingredients for making glass.
 1785:Used to form molten glass into useful items.
-1791:
+1791:I need to put this in a pottery oven.
 1793:A slightly bluish leaf.
 1794:Useful for crafting items.
 1796:<b>&#8226;</b> Anna's shiny silver coated necklace.<br /><b>&#8226;</b> Anna's shiny silver coated necklace coated with a thin layer of flour.
@@ -1124,8 +1124,8 @@
 2138:I need to cook this first.
 2140:Mmm this looks tasty.
 2142:Mmm this looks tasty.
-2144:
-2146:
+2144:Oh dear, it's totally burnt!
+2146:Oh dear, it's totally burnt!
 2148:A very strange eel.
 2149:Strange, it looks cooler now it's been cooked.
 2150:A slippery little blighter.
@@ -1197,7 +1197,7 @@
 2301:A pizza with bits of pineapple on it. (Whole)<br />Half of this pineapple pizza has been eaten. (Half)
 2307:Some uncooked dough.
 2309:Nice crispy bread.
-2311:
+2311:Nice crispy bread. Possibly too crispy.
 2313:Deceptively pie shaped.
 2315:I need to find a filling for this pie.
 2317:This would be much tastier cooked.
@@ -1206,7 +1206,7 @@
 2323:Mmm Apple pie. (Whole)<br />Mmm half an apple pie. (Half)
 2325:Looks tasty.
 2327:Not for vegetarians.
-2329:
+2329:I think I left it on the stove too long.
 2331:Not for vegetarians.
 2333:Looks tasty.
 2335:Mmm Apple pie. (Whole)<br />Mmm half an apple pie. (Half)
@@ -1254,9 +1254,9 @@
 2396:A spell is written on this parchment.
 2397:A tattered old robe.
 2398:Deadly.
-2399:
-2400:
-2401:
+2399:The Wizard Traiborn gave me this key to Silverlight's case.
+2400:Captain Rovin gave me this key to Silverlight's case.
+2401:Sir Prysin dropped this key down the drain.
 2402:<b>&#8226;</b> The magical sword 'Silverlight'.<br /><b>&#8226;</b> The magical sword 'Silverlight', stained black with mushroom ink.
 2403:Scroll containing a powerful enchantment of restoration.
 2404:
@@ -1325,7 +1325,7 @@
 2566:An enchanted ring.
 2568:An enchanted ring.
 2570:An enchanted ring.
-2572:It can be charged at the Fountain of Rune.
+2572:Increases your drop rate by 10%. It can be charged at the Fountain of Rune. 
 2574:Used by navigators to find their position in <i><a href="/wiki/RuneScape" title="RuneScape" class="mw-redirect">RuneScape</a></i>.
 2575:A fine looking time piece.
 2576:A navigator's chart of RuneScape.
@@ -1661,7 +1661,7 @@
 3131:<i>See article</i>
 3132:<i>See article</i>
 3133:<i>See article</i>
-3135:
+3135:The key to the troll prison (Used in the Troll Stronghold quest).
 3136:The key to Godric's cell in troll prison.
 3137:The key to Mad Eadgar's cell in the troll prison.
 3138:How am I supposed to eat that?!
@@ -2084,8 +2084,8 @@
 3898:The king should be able to use this.
 3899:Not as good as a pet frog.
 3901:<i>Managing Thine Kingdom for Noobes</i> by A. Ghrim.
-3981:
-3983:
+3981:A razor sharp sword.
+3983:A mysterious crystal banner.
 4001:
 4002:It looks like some kind of control panel.
 4004:It's the official Gnome Royal Seal, signed by King Narode Shareen.
@@ -2122,8 +2122,8 @@
 4055:It's a manual for Castle Wars
 4067:I can exchange these for further items.
 4068:A very decorative sword.
-4069:
-4070:
+4069:A platebody with simple and basic decoration.
+4070:Some platelegs with simple and basic decoration.
 4071:A very decorative helm.
 4072:A very decorative shield.
 4073:Not so useful for lighting a fire.
@@ -2797,7 +2797,7 @@
 5984:A slice of watermelon.
 5986:Raw sweetcorn.
 5988:Delicious cooked sweetcorn.
-5990:
+5990:This sweetcorn has been cooked for too long.
 5992:A bucket of apple mush.
 5994:A handful of Hammerstone Hops.
 5996:A handful of Asgarnian Hops.
@@ -2869,8 +2869,8 @@
 6104:This key is newly cut.
 6105:Unknown <small><a  class="text" href="http://2007.runescape.wikia.com/wiki/Elf?action=edit">edit</a></small>
 6106:They seem to be not quite of this world...
-6107:
-6108:
+6107:A particularly spooky robe top.
+6108:An unearthly set of robe bottoms.
 6109:A ghostly hood, fit for a ghostly head.
 6110:They seem to fade in and out of existence...
 6111:Made of a strange, ghostly material...
@@ -3005,7 +3005,7 @@
 6436:Used for basic level missile spells.
 6438:Used for curse spells.
 6448:A spadeful of refined coal.
-6450:
+6450:A helm with a jewelled eye upon it.
 6453:A white rosebush seed.
 6454:A red rosebush seed.
 6455:A pink rosebush seed.
@@ -3067,7 +3067,7 @@
 6605:A razor sharp sword.
 6607:A razor sharp longsword.
 6609:A two handed sword
-6611:
+6611:A vicious, curved sword.
 6613:I don't think it's intended for joinery.
 6615:A series of connected metal rings.
 6617:Provides excellent protection.
@@ -3971,7 +3971,7 @@
 8019:A tablet containing a magic spell.
 8020:A tablet containing a magic spell.
 8021:A tablet containing a magic spell.
-8022:
+8022:A tablet containing a magic spell.
 8023:A place to train unarmed combat with your friends.
 8024:A place to train weapon skills with your friends.
 8025:Anything-goes combat in here!
@@ -5998,9 +5998,9 @@
 11889:An evil one-handed spear.
 11891:The Saradomin Team Standard.
 11892:The Zamorak Team Standard.
-11893:
-11894:
-11895:
+11893:Very decorative armour.
+11894:Very decorative armour.
+11895:Very decorative armour.
 11896:
 11897:
 11898:
@@ -6420,7 +6420,7 @@
 12500:Blessed dragonhide body armour.
 12502:Blessed dragonhide chaps.
 12504:Bandos blessed dragonhide coif.
-12506:
+12506:Armadyl blessed dragonhide vambraces.
 12508:Armadyl blessed dragonhide body armour.
 12510:Blessed dragonhide chaps.
 12512:Armadyl blessed dragonhide coif.
@@ -6495,11 +6495,11 @@
 12601:An ancient ring said to bring you closer to the Gods.
 12603:An incredibly heavy ring.
 12605:A razor sharp ring.
-12607:
+12607:An incomplete book of Bandos.
 12608:The holy book of the Big High War God.
-12609:
+12609:An incomplete book of Armadyl.
 12610:The book of Armadyl's Law.
-12611:
+12611:An incomplete ancient book.
 12612:The dark book of a forgotten god.
 12613:This seems to have been torn from a book.
 12614:This seems to have been torn from a book.
@@ -6541,7 +6541,7 @@
 12658:An ancient staff, formerly owned by Iban, now upgraded to hold more charges.
 12691:An incredibly heavy ring.
 12692:A razor sharp ring.
-12693:
+12693:Graceful avatar of Armadyl.
 12694:
 12695:X doses of super combat potion.
 12697:X doses of super combat potion.
@@ -6612,14 +6612,14 @@
 12781:A tablet containing a magic spell.
 12782:A tablet containing a magic spell.
 12783:Use on a Ring of wealth to imbue the ring.
-12785:A mysteriously imbued lucky ring.
+12785:A mysteriously imbued lucky ring what Increases your drop rate by 11%.
 12786:Use on a Magic shortbow to imbue the bow.
 12788:Short and magical, but still effective.
 12789:Protects your clue scroll if you die.
 12791:You can store runes in here.
-12792:
-12793:
-12794:
+12792:A box of empty nests.
+12793:A box of nests containing seeds.
+12794:A box of nests containing rings.
 12795:It's a slightly magical stick.
 12796:It's a slightly magical stick.
 12797:If rocks could feel fear, they'd fear this.
@@ -6777,8 +6777,23 @@
 13058:A set containing a full helm, platebody, skirt and kiteshield.
 13060:A set containing a full helm, platebody, legs and kiteshield.
 13062:A set containing a full helm, platebody, skirt and kiteshield.
+13235:A pair of upgraded infinity boots.
+13237:A pair of upgraded ranger boots.
+13239:A pair of upgraded dragon boots.
 13273:Doesn't seem to have survived the death of its Sire.
+13280:Get a life, bruh. Seriously, just go outside.
+13281:The hood worn by only the most experienced Salve players.
 13307:These can be taken to Emblem Trader in Edgeville.
+13329:The cape worn by only the most experienced Salve players.
+13330:The hood worn by only the most experienced Salve players.
+13331:The cape worn by only the most experienced Salve players.
+13332:The hood worn by only the most experienced Salve players.
+13333:The cape worn by only the most experienced Salve players.
+13334:The hood worn by only the most experienced Salve players.
+13335:The cape worn by only the most experienced Salve players.
+13336:The hood worn by only the most experienced Salve players.
+13337:The cape worn by only the most experienced Salve players.
+13338:The hood worn by only the most experienced Salve players.
 19493:This looks valuable.
 19496:This would be worth more cut.
 19532:A fiery glow emanates from this bracelet.

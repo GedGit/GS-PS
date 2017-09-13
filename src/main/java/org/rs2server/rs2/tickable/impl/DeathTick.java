@@ -325,7 +325,7 @@ public class DeathTick extends Tickable {
 					}
 				} else if (npc instanceof Cerberus) {
 					Cerberus cerberus = (Cerberus) npc;
-					cerberus.destroySelf();
+					cerberus.destroySelf(true);
 					teleportTo = null;
 				} else if (npc instanceof Kraken) {
 					Kraken kraken = (Kraken) npc;

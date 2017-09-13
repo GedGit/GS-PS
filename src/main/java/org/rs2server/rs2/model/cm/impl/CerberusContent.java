@@ -1,5 +1,7 @@
 package org.rs2server.rs2.model.cm.impl;
 
+import org.rs2server.Server;
+import org.rs2server.rs2.domain.service.api.content.cerberus.CerberusService;
 import org.rs2server.rs2.model.Location;
 import org.rs2server.rs2.model.Skills;
 import org.rs2server.rs2.model.World;
@@ -13,8 +15,8 @@ import org.rs2server.rs2.tickable.Tickable;
  * Created by shawn on 6/8/2016.
  */
 public class CerberusContent extends Content {
-	
 	public static final Location SPAWN_LOCATION = Location.create(1237, 1251);
+	private final CerberusService cerberusService;
 	private Cerberus cerberus;
 
 	private int respawnTimer = -1;
@@ -22,11 +24,12 @@ public class CerberusContent extends Content {
 
 	public CerberusContent(Player player) {
 		super(player);
+		this.cerberusService = Server.getInjector().getInstance(CerberusService.class);
 	}
 
 	public void spawnCerberus() {
 		cerberus = new Cerberus(player, SPAWN_LOCATION);
-		World.getWorld().createNPC(cerberus);
+		cerberusService.addCerberus(player, cerberus);
 	}
 
 	@Override
@@ -62,10 +65,8 @@ public class CerberusContent extends Content {
 				&& World.getWorld().getNPCs().contains(cerberus) && !cerberus.getCombatState().isDead()
 				&& BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "Cerberus")) {
 			cerberus.doCombat();
-			System.out.println("processing combat, we're at "+cerberus.getLocation().toString());
 		} else {
-			// Only spawn if in cerberus lair
-			if (respawnTimer == 0 && BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "Cerberus"))
+			if (respawnTimer == 0)
 				spawnCerberus();
 			if (respawnTimer == -1)
 				respawnTimer = 30;
@@ -75,16 +76,17 @@ public class CerberusContent extends Content {
 	@Override
 	public void stop() {
 		if (cerberus != null) {
-			cerberus.destroySelf();
+			cerberus.destroySelf(true);
 			cerberus = null;
 		}
-		if (player.isMultiplayerDisabled())
+		if (player.isMultiplayerDisabled()) {
 			player.setMultiplayerDisabled(false);
+		}
 	}
 
 	@Override
 	public boolean canStart() {
-		return true;
+		return !player.getInstancedNPCs().contains(cerberus);
 	}
 
 	@Override

@@ -182,7 +182,7 @@
     },
 	{
       "itemID": 12073,
-      "hitRollCeil": 5.0,
+      "hitRollCeil": 5.5,
       "maxAmount": 1,
       "minAmount": 1
     },
@@ -194,31 +194,31 @@
     },
 	{
       "itemID": 13231,
-      "hitRollCeil": 3.0,
+      "hitRollCeil": 6.0,
       "maxAmount": 1,
       "minAmount": 1
     },
 	{
       "itemID": 13229,
-      "hitRollCeil": 3.0,
+      "hitRollCeil": 6.0,
       "maxAmount": 1,
       "minAmount": 1
     },
 	{
       "itemID": 13227,
-      "hitRollCeil": 3.0,
+      "hitRollCeil": 6.0,
       "maxAmount": 1,
       "minAmount": 1
     },
 	{
       "itemID": 13233,
-      "hitRollCeil": 3.0,
+      "hitRollCeil": 5.0,
       "maxAmount": 1,
       "minAmount": 1
     },
 	{
       "itemID": 13247,
-      "hitRollCeil": 0.02,
+      "hitRollCeil": 0.650,
       "maxAmount": 1,
       "minAmount": 1
     },

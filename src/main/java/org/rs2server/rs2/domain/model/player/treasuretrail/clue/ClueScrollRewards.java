@@ -91,7 +91,43 @@ public class ClueScrollRewards {
 			Loot.of(9185, 20), // Crossbow
 
 			// Magic shortbow
-			Loot.of(861, 20));
+			Loot.of(861, 20),
+	
+			// Saradomin pages
+			Loot.of(3827, 5),
+			Loot.of(3828, 5),
+			Loot.of(3829, 5),
+			Loot.of(3830, 5),
+			
+			// Zamorak pages
+			Loot.of(3831, 5),
+			Loot.of(3832, 5),
+			Loot.of(3833, 5),
+			Loot.of(3834, 5),
+			
+			// Guthix pages
+			Loot.of(3835, 5),
+			Loot.of(3836, 5),
+			Loot.of(3837, 5),
+			Loot.of(3838, 5),
+			
+			// Bandos pages
+			Loot.of(12613, 5),
+			Loot.of(12614, 5),
+			Loot.of(12615, 5),
+			Loot.of(12616, 5),
+			
+			// Armadyl pages
+			Loot.of(12617, 5),
+			Loot.of(12618, 5),
+			Loot.of(12619, 5),
+			Loot.of(12620, 5),
+			
+			// Ancient pages
+			Loot.of(12621, 5),
+			Loot.of(12622, 5),
+			Loot.of(12623, 5),
+			Loot.of(12624, 5));
 
 	public static final LootTable EASY_REWARDS_TABLE = JUNK_REWARDS_TABLE.merge(BASIC_REWARDS_TABLE).merge(LootTable.of(
 			// Bronze (t)

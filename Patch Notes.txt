@@ -6,6 +6,11 @@
 		-  Bird nests will now fall out of trees while Woodcutting at a 1/256 chance;
 		-  All skillcapes now have their OSRS perks/effects; read about them here: [url=http://oldschoolrunescape.wikia.com/wiki/Skillcape]OSRS Wikia[/url];
         -  Rings of life will now teleport you home when below 10% hitpoints and destroy themselves in the process;
+        -  Added missing treasure trail rewards: blessings, new team capes, steel (g), steel (t), new gilded weapons/armour, all God book pages;
+        -  Dark Fishing bait (in stacks of 5) will now spawn around the Wilderness resource area;
+        -  You'll now be able to exchange your Fremennik equipment, obtained from yaks, at 'Bardur' for cooked sharks;
+        -  Abyssal Sire will now ignore objects between him and you, allowing him to attack you from anywhere in the room (this is to prevent safe-spotting);
+		-  I've applied multiple fixes on Cerberus and tested him with 4 accounts simultaneously - he should be a good doggy now;
 		
 		
 	-- Minor fixes/changes/additions: --
@@ -26,16 +31,14 @@
         -  Added missing and corrected the rest - Varrocks shops;
         -  Ironmen can now access Nardok's shop in Lumbridges basement;
         -  Nerfed Abyssal sires max hit from 70 to 30;
-        -  Abyssal Sire will now ignore objects between him and you allowing him to attack you from anywhere in the room (this is to prevent safe-spotting);
         -  Marks of Grace are no longer tradable;
         -  Entangle spell will now freeze the opponent for full 15 seconds (halved if prayed against magic);
         -  Nerfed Dragon halberds special attack modifier;
-        -  You'll now be able to exchange your fremennik equipment obtained from yaks at 'Bardur' for cooked sharks;
         -  Added some missing Taverley dungeon spawns and corrected existing ones;
         -  Added some missing Edgeville dungeon spawns and corrected existing ones;
         -  Fixed Edgeville dungeon's trapdoor;
-        -  Added missing treasure trail rewards: blessings, new team capes, steel (g), steel (t), new gilded weapons/armour;
-        -  Dark Fishing bait (in stacks of 5) will now spawn around the Wilderness resource area;
+        -  Increased the amount Gem Trader at Al'Kharid sells gems;
+        -  Increased Cerberus's crystal item (primordial, eternal, pegasian) drop-rate by 3%;
         
 
 --------------------------------------------------------------------------------------
