@@ -20,7 +20,7 @@ public class Constants {
 	/**
 	 * The latest server update.
 	 */
-	public static final int LATEST_PATCH_NOTES_INT = 16;
+	public static final int LATEST_PATCH_NOTES_INT = 17;
 	public static final String LATEST_UPDATE = "Patch Notes #" + LATEST_PATCH_NOTES_INT
 			+ " have been released; check our forums for info!";
 

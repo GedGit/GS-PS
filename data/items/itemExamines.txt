@@ -548,7 +548,7 @@
 989:A mysterious key, for a mysterious chest.
 991:It looks like the key to a chest.
 993:You get a sense of dread from this key.
-995:Lovely money!
+995:X Lovely money!
 1005:A mostly clean apron.
 1007:A bright red cape.
 1009:I'd prefer a gold one.
@@ -6808,4 +6808,5 @@
 19553:A deep sense of torture burns within this powerful amulet.
 20718:It's still warm to the touch.
 13116:Crushes dropped bones for Prayer experience; charge with coins.
+20834:You too can look like Santa.
 21009:A very powerful sword.

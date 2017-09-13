@@ -191,7 +191,7 @@ public final class ItemDefinition {
 		return noted;
 	}
 
-	public String getExamine() {
+	public String getExamine() { 
 		return examine;
 	}
 
