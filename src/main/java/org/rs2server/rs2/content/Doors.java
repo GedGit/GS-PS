@@ -146,7 +146,7 @@ public class Doors {
 			return false;
 		// Temporary, find a better way of handling these
 		if (door.getId() == 14880 || door.getId() == 7257 || door.getId() == 24318 || door.getId() == 24306
-				|| door.getId() == 24309 || door.getId() == 1732 || door.getId() == 1733)
+				|| door.getId() == 24309 || door.getId() == 1732 || door.getId() == 1733 || door.getId() == 1579)
 			return false;
 		Doors d = getDoor(door);
 		if (d == null)

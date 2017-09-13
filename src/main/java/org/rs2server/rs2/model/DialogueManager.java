@@ -1075,6 +1075,68 @@ public class DialogueManager {
 			break;
 
 		/**
+		 * Bardur - Yaks food trader
+		 */
+		case 2263:
+			player.getActionSender().sendDialogue("Bardur", DialogueType.NPC, 2263, FacialAnimation.DEFAULT,
+					"Hey there, adventurer, have you managed to get any equipment from those yaks over there?");
+			player.getInterfaceState().setNextDialogueId(0, 2264);
+			break;
+		case 2264:
+			if (player.getInventory().containsOneItem(3757, 3748, 3758)) {
+				player.getActionSender().sendDialogue("Trade fremennik equipment for food?", DialogueType.OPTION, -1,
+						FacialAnimation.DEFAULT, "Yeah, sure|No thank you");
+				player.getInterfaceState().setNextDialogueId(0, 2269);
+				player.getInterfaceState().setNextDialogueId(1, 2268);
+				return;
+			}
+			player.getActionSender().sendDialogue(player.getName(), DialogueType.PLAYER, -1, FacialAnimation.SAD,
+					"No I haven't, what's in it for me if I do find some?");
+			player.getInterfaceState().setNextDialogueId(0, 2266);
+			break;
+		case 2266:
+			player.getActionSender().sendDialogue("Bardur", DialogueType.NPC, 2263, FacialAnimation.DEFAULT,
+					"I'll give you up to 15 cooked sharks for each item you bring me!");
+			player.getInterfaceState().setNextDialogueId(0, 2267);
+			break;
+		case 2267:
+			player.getActionSender().sendDialogue(player.getName(), DialogueType.PLAYER, -1, FacialAnimation.DEFAULT,
+					"That's a generoues deal, I'll make sure to bring you any items I find.");
+			player.getInterfaceState().setNextDialogueId(0, -1);
+			break;
+		case 2268:
+			player.getActionSender().sendDialogue(player.getName(), DialogueType.PLAYER, -1, FacialAnimation.DEFAULT,
+					"No thank you, I'll keep MY gear.");
+			player.getInterfaceState().setNextDialogueId(0, -1);
+			break;
+		case 2269:
+			int blades = player.getInventory().getCount(3757);
+			int helms = player.getInventory().getCount(3748);
+			int shields = player.getInventory().getCount(3758);
+			int total = blades + helms + shields;
+			if (total > 0) {
+				player.getActionSender().sendDialogue("Bardur", DialogueType.NPC, 2263, FacialAnimation.HAPPY,
+						"Thanks mate, here are your sharks as promised!");
+				player.getInterfaceState().setNextDialogueId(0, 2270);
+				return;
+			}
+			player.getActionSender().sendDialogue("Bardur", DialogueType.NPC, 2263, FacialAnimation.ANGER_1,
+					"You don't seem to have any items I want..");
+			player.getInterfaceState().setNextDialogueId(0, -1);
+			break;
+		case 2270:
+			blades = player.getInventory().getCount(3757);
+			helms = player.getInventory().getCount(3748);
+			shields = player.getInventory().getCount(3758);
+			total = blades + helms + shields;
+			player.getInventory().remove(new Item(3757, blades));
+			player.getInventory().remove(new Item(3748, helms));
+			player.getInventory().remove(new Item(3758, shields));
+			Inventory.addDroppable(player, new Item(386, total * 10));
+			player.getActionSender().sendItemDialogue(385,
+					"Bardur gave you " + total * 10 + " x Cooked Shark for your Fremennik equipment.");
+			break;
+		/**
 		 * Warriors guild kamfreena
 		 */
 		case 2461:

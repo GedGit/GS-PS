@@ -517,7 +517,6 @@
 241 2914 9802 0 WEST true // Baby blue dragon
 265 2900 9801 0 EAST true // Blue dragon
 265 2895 9797 0 SOUTH true // Blue dragon
-265 2900 9801 0 WEST true // Blue dragon
 2048 2862 9769 0 WEST true // Black demon
 2048 2859 9781 0 SOUTH true // Black demon
 2048 2870 9776 0 EAST true // Black demon
@@ -2716,3 +2715,35 @@
 7147 2079 5676 0 SOUTH true
 // Demonic gorilla, 275, added by: Salve
 7147 2074 5680 0 SOUTH true
+// Bardur, 94, added by: Salve
+2263 2316 3807 0 SOUTH false
+// Blue dragon, 111, added by: Salve
+265 2905 9799 0 NORTH true
+// Baby dragon, 48, added by: Salve
+241 2915 9798 0 SOUTH true
+// Baby dragon, 48, added by: Salve
+241 2923 9791 0 EAST true
+// Baby dragon, 48, added by: Salve
+241 2924 9786 0 WEST true
+// Baby dragon, 48, added by: Salve
+241 2917 9787 0 NORTH true
+// Blue dragon, 111, added by: Salve
+265 2912 9787 0 SOUTH true
+// Blue dragon, 111, added by: Salve
+265 2912 9780 0 EAST true
+// Blue dragon, 111, added by: Salve
+265 2906 9775 0 NORTH true
+// Blue dragon, 111, added by: Salve
+265 2903 9782 0 WEST true
+// Blue dragon, 111, added by: Salve
+265 2907 9788 0 SOUTH true
+// Skeleton, 68, added by: Salve
+2520 3127 9956 0 SOUTH true
+// Skeleton, 68, added by: Salve
+2520 3126 9949 0 SOUTH true
+// Skeleton, 68, added by: Salve
+2520 3118 9951 0 SOUTH true
+// Skeleton, 68, added by: Salve
+2520 3116 9958 0 SOUTH true
+// Skeleton, 68, added by: Salve
+2520 3107 9953 0 SOUTH true

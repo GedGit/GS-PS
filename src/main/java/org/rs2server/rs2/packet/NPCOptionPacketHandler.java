@@ -45,7 +45,7 @@ public class NPCOptionPacketHandler implements PacketHandler {
 			return;
 		if (player.getAttribute("teleporting") != null)
 			return;
- 
+
 		boolean starter = player.getAttribute("starter");
 		if (starter) {
 			DialogueManager.openDialogue(player, 19000);
@@ -271,6 +271,10 @@ public class NPCOptionPacketHandler implements PacketHandler {
 				}
 				switch (npc.getId()) {
 
+				case 2263:
+					DialogueManager.openDialogue(player, 2263);
+					break;
+
 				case 537: // swordshop varrock
 					Shop.open(player, 70, 0);
 					break;
@@ -396,7 +400,7 @@ public class NPCOptionPacketHandler implements PacketHandler {
 					}
 					DialogueManager.openDialogue(player, 110000);
 					break;
-					
+
 				case 311:
 					DialogueManager.openDialogue(player, 311);
 					break;
@@ -917,7 +921,7 @@ public class NPCOptionPacketHandler implements PacketHandler {
 					case 2108:
 						DialogueManager.openDialogue(player, 6481);
 						break;
-					
+
 					}
 					if (npc.getId() == 315) {// emblem trader skulling
 						player.getCombatState().setSkullTicks(1000);
@@ -1309,7 +1313,7 @@ public class NPCOptionPacketHandler implements PacketHandler {
 		int spellId = (childButton) + (spellOffset);
 		player.getActionSender().sendDebugPacket(packet.getOpcode(), "NpcSpell",
 				new Object[] { "ID: " + npc.getDefinition().getId(), "Index: " + id, "Spell Id: " + spellId });
-		
+
 		Spell spell = Spell.forId(spellId, SpellBook.forId(player.getCombatState().getSpellBook()));
 		if (spell != null) {
 			if (spell.getSpellType() == SpellType.NON_COMBAT) {

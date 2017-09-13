@@ -15,4 +15,3 @@
  - can't chop oak at seers village with bronze axe appearently? Might be related to wintertodt!
  - check out localnpcupdate things, might be able to change pet options for other players (change npc id to one with no opts)
  - can't add pages to unfinished god books
- - re-check the whole edgeville dungeon wilderness part

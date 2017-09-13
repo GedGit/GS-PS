@@ -45,7 +45,7 @@ import org.rs2server.rs2.util.Misc;
  */
 public class DeathTick extends Tickable {
 
-	private static NPC[][] godNPCS = new NPC[4][4]; 
+	private static NPC[][] godNPCS = new NPC[4][4];
 
 	private final PlayerStatisticsService statisticsService = Server.getInjector()
 			.getInstance(PlayerStatisticsService.class);
@@ -55,7 +55,7 @@ public class DeathTick extends Tickable {
 	private final PermissionService permissionService;
 	private final PestControlService pestControlService;
 
-	/** 
+	/**
 	 * The mob who has just died.
 	 */
 	private Mob mob;
@@ -71,7 +71,7 @@ public class DeathTick extends Tickable {
 		this.mob = mob;
 		this.permissionService = Server.getInjector().getInstance(PermissionService.class);
 		this.pestControlService = Server.getInjector().getInstance(PestControlService.class);
-	} 
+	}
 
 	@SuppressWarnings("unused")
 	@Override
@@ -188,13 +188,13 @@ public class DeathTick extends Tickable {
 								killerName = "fighting against: "
 										+ CacheNPCDefinition.get(((NPC) killer).getId()).getName();
 
-							if (killer != null && killer.isPlayer())
-								killerName = "in a PVP battle with " + ((Player) killer).getName();
+							Player pKiller = (Player) killer;
+							if (pKiller != null && pKiller != mob)
+								killerName = "in a PVP battle with " + pKiller.getName();
 
-							World.getWorld()
-									.sendWorldMessage("<img=10><col=FF0000><shad=000000>" + player.getName()
-											+ " just died in Hardcore Ironman mode with a skill total of "
-											+ Misc.formatNumber(player.getSkills().getTotalLevel()) + ".");
+							World.getWorld().sendWorldMessage("<img=10><col=FF0000><shad=000000>" + player.getName()
+									+ " just died in Hardcore Ironman mode with a skill total of "
+									+ Misc.formatNumber(player.getSkills().getTotalLevel()) + " " + killerName + ".");
 
 							new Thread(new NewsManager(player, "<img src='../resources/news/hc_ironman.png' width=13> "
 									+ "died on hardcore ironman; total level: "
@@ -355,7 +355,7 @@ public class DeathTick extends Tickable {
 					player.increaseBarrowsKillcount();
 					player.getActionSender().sendString(24, 9, "Kill Count: " + player.getBarrowsKillCount());
 					player.removeAttribute("currentlyFightingBrother");
-					if (Barrows.BarrowsBrother 
+					if (Barrows.BarrowsBrother
 							.forId(npc.getId()) == (BarrowsBrother) killer.getAttribute("barrows_tunnel"))
 						player.setAttribute("canLoot", true);
 					player.getKilledBrothers().put(npc.getId(), true);

@@ -387,6 +387,10 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 									player.getY() + (player.getY() == 4526 ? -2 : 2), 0, 1, true);
 							break;
 
+						case 1579:
+							player.climbStairsDown(Location.create(3096, 9867, 0));
+							break;
+
 						case 7236:
 							WallSafeCracking wallsafe = new WallSafeCracking(player, obj);
 							wallsafe.execute();
@@ -1300,7 +1304,6 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 
 							if (obj.getLocation().equals(Location.create(3209, 9616, 0))) {
 								player.playAnimation(Animation.create(828));
-								player.getActionSender().sendMessage("You climb the ladder.");
 								World.getWorld().submit(new Tickable(2) {
 									@Override
 									public void execute() {

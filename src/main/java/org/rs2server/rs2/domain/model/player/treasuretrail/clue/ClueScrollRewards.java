@@ -213,6 +213,28 @@ public class ClueScrollRewards {
 			// monk bot g
 			Loot.of(20202, 10),
 
+			// team cape zero
+			Loot.of(20211, 5),
+
+			// team cape x
+			Loot.of(20214, 5),
+
+			// team cape i
+			Loot.of(20217, 5),
+
+			// holy blessing
+			Loot.of(20220, 4),
+			// unholy blessing
+			Loot.of(20223, 4),
+			// peaceful blessing
+			Loot.of(20226, 4),
+			// honourable blessing
+			Loot.of(20229, 4),
+			// war blessing
+			Loot.of(20232, 4),
+			// ancient blessing
+			Loot.of(20235, 4),
+
 			// Goblin mask
 			Loot.of(12251, 10)));
 
@@ -239,6 +261,23 @@ public class ClueScrollRewards {
 					Loot.of(2609, 10), // legs
 					Loot.of(2611, 10), // kite
 					Loot.of(2613, 10), // helm
+
+					// steel (g)
+					Loot.of(20169, 10), // body
+					Loot.of(20172, 10), // legs
+					Loot.of(20175, 10), // skirt
+					Loot.of(20178, 10), // helm
+					Loot.of(20181, 10), // shield
+
+					// steel (t)
+					Loot.of(20184, 10), // body
+					Loot.of(20187, 10), // legs
+					Loot.of(20190, 10), // skirt
+					Loot.of(20193, 10), // helm
+					Loot.of(20196, 10), // shield
+					
+					// wooden shield (g)
+					Loot.of(20166, 10),
 
 					// Ranger boots
 					Loot.of(2577, 10),
@@ -334,6 +373,19 @@ public class ClueScrollRewards {
 					// black uni mask
 					Loot.of(20266, 10),
 
+					// holy blessing
+					Loot.of(20220, 4),
+					// unholy blessing
+					Loot.of(20223, 4),
+					// peaceful blessing
+					Loot.of(20226, 4),
+					// honourable blessing
+					Loot.of(20229, 4),
+					// war blessing
+					Loot.of(20232, 4),
+					// ancient blessing
+					Loot.of(20235, 4),
+
 					// white uni mask
 					Loot.of(20269, 10),
 
@@ -388,6 +440,9 @@ public class ClueScrollRewards {
 			Loot.of(3485, 3), // skirt
 			Loot.of(3486, 3), // full helm
 			Loot.of(3488, 3), // kite
+			Loot.of(20146, 3), // med helm
+			Loot.of(20149, 3), // chainbody
+			Loot.of(20152, 3), // sq shield
 
 			// Blue d'hide (t)
 			Loot.of(7376, 10), // body
@@ -517,6 +572,19 @@ public class ClueScrollRewards {
 			// Explorer backpack
 			Loot.of(12514, 10),
 
+			// holy blessing
+			Loot.of(20220, 4),
+			// unholy blessing
+			Loot.of(20223, 4),
+			// peaceful blessing
+			Loot.of(20226, 4),
+			// honourable blessing
+			Loot.of(20229, 4),
+			// war blessing
+			Loot.of(20232, 4),
+			// ancient blessing
+			Loot.of(20235, 4),
+
 			// Rune cane
 			Loot.of(12379, 10)));
 
@@ -590,6 +658,11 @@ public class ClueScrollRewards {
 					Loot.of(3488, 3), // kite
 					Loot.of(12389, 3), // scimitar
 					Loot.of(12391, 3), // boots
+					Loot.of(20158, 3), // spear
+					Loot.of(20161, 3), // hasta
+					
+					// Large spade
+					Loot.of(20164, 6), // large spade
 
 					// Third-age (range)
 					Loot.of(10330, 1), // top
@@ -614,6 +687,19 @@ public class ClueScrollRewards {
 					Loot.of(12424, 1), // bow
 					Loot.of(12422, 1), // wand
 					Loot.of(12437, 1), // cloak
+
+					// holy blessing
+					Loot.of(20220, 4),
+					// unholy blessing
+					Loot.of(20223, 4),
+					// peaceful blessing
+					Loot.of(20226, 4),
+					// honourable blessing
+					Loot.of(20229, 4),
+					// war blessing
+					Loot.of(20232, 4),
+					// ancient blessing
+					Loot.of(20235, 4),
 
 					Loot.of(19991, 10), // bucket helm
 					Loot.of(19994, 10), // ranger gloves
@@ -820,6 +906,19 @@ public class ClueScrollRewards {
 					Loot.of(12437, 1), // cloak
 					Loot.of(20011, 1), // axe
 					Loot.of(20014, 1), // pickaxe
+
+					// holy blessing
+					Loot.of(20220, 4),
+					// unholy blessing
+					Loot.of(20223, 4),
+					// peaceful blessing
+					Loot.of(20226, 4),
+					// honourable blessing
+					Loot.of(20229, 4),
+					// war blessing
+					Loot.of(20232, 4),
+					// ancient blessing
+					Loot.of(20235, 4),
 
 					// Bloodhound
 					Loot.of(19730, 1))); // Bloodhound
