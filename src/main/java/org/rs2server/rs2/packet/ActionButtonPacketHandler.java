@@ -47,7 +47,7 @@ import java.util.logging.Logger;
  */
 public class ActionButtonPacketHandler implements PacketHandler {
 
-	public static final HashMap<Integer, Integer> menuIdxs = new HashMap<Integer, Integer>(); 
+	public static final HashMap<Integer, Integer> menuIdxs = new HashMap<Integer, Integer>();
 
 	static {
 		menuIdxs.put(255, 0);
@@ -799,7 +799,7 @@ public class ActionButtonPacketHandler implements PacketHandler {
 			player.getActionSender().sendConfig(1227, player.getDropdown().hashCode());
 			break;
 
-		case Smithing.INTERFACE: 
+		case Smithing.INTERFACE:
 			if (menuIndex == 9) {
 				// TODO smithing interface examine item option
 				return;
@@ -1845,19 +1845,27 @@ public class ActionButtonPacketHandler implements PacketHandler {
 					PriceChecker.open(player);
 					break;
 				case 21:
-					// player.getActionSender().sendInterface(226, false);
-
 					itemsKeptOnDeath = itemService.getItemsKeptOnDeath(player);
 					int count = 3;
-					if (player.getCombatState().getPrayer(Prayers.PROTECT_ITEM)) { // protect
-						// item
+					if (player.getCombatState().getPrayer(Prayers.PROTECT_ITEM))
 						count++;
-					}
-					if (player.getCombatState().getSkullTicks() > 0) {
-						count -= 3;
-					}
+					if (player.isBronzeMember())
+						count++;
+					if (player.isSilverMember())
+						count++;
+					if (player.isGoldMember())
+						count++;
+					if (player.isPlatinumMember())
+						count++;
+					if (player.isDiamondMember())
+						count++;
+					if (player.getCombatState().getSkullTicks() > 0)
+						count = player.getCombatState().getPrayer(Prayers.PROTECT_ITEM) ? 1 : 0;
 
-					Object[] keptItems = new Object[] { -1, -1, "0 gp", 0, 0,
+					Object[] keptItems = new Object[] { -1, -1, "Unknown", 0, 0,
+							
+							// Adding >= 6 and above makes it say you're in a safe area
+							// Adding >= 5 makes it say tutorial island
 							(itemsKeptOnDeath[0].size() >= 4 && itemsKeptOnDeath[0].get(3) != null)
 									? itemsKeptOnDeath[0].get(3).getId()
 									: -1,
@@ -2108,20 +2116,20 @@ public class ActionButtonPacketHandler implements PacketHandler {
 
 					if (cape != null) {
 						switch (cape.getId()) {
-						
+
 						case 9750:
 						case 9751:
-							player.teleport(Location.create(2866, 3544, 0), 6, 6, false); 
+							player.teleport(Location.create(2866, 3544, 0), 6, 6, false);
 							break;
-						
+
 						case 9948:
 						case 9949:
 							DialogueManager.openDialogue(player, 9948);
 							break;
-							
+
 						case 9753:
 						case 9754:
-							player.getDatabaseEntity().toggleDefenceCape(); 
+							player.getDatabaseEntity().toggleDefenceCape();
 							player.sendMessage("Your defence cape will "
 									+ (player.getDatabaseEntity().hasDefenceCape() ? "now" : "no longer")
 									+ " act as a ring of life.");

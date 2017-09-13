@@ -14,23 +14,23 @@ public class SystemUpdateTick extends Tickable {
 
 	@Override
 	public void execute() {
-		if (World.systemUpdate) {
-			if (World.updateTimer < 5 && World.updateTimer > -1)
-				Server.sendDiscordMessage("[SERVER] System Update in: " + World.updateTimer + "..");
-			World.updateTimer -= 1;
+		if (World.SYSTEM_UPDATE) {
+			if (World.UPDATE_TIMER < 5 && World.UPDATE_TIMER > -1)
+				Server.sendDiscordMessage("[SERVER] System Update in: " + World.UPDATE_TIMER + "..");
+			World.UPDATE_TIMER -= 1;
 			for (Player player : World.getWorld().getPlayers()) {
 				if (player == null)
 					continue;
 				if (!player.isActive())
 					continue;
-				player.getActionSender().sendSystemUpdate(World.updateTimer * 2);
-				if (World.updateTimer == -1) {
+				player.getActionSender().sendSystemUpdate(World.UPDATE_TIMER * 2);
+				if (World.UPDATE_TIMER == -1) {
 					player.getActionSender().sendLogout();
 					new Thread(new PlayersOnlineManager(player, true)).start();
 				}
 			}
 		}
-		if (World.updateTimer == -1 && World.systemUpdate) {
+		if (World.UPDATE_TIMER == -1 && World.SYSTEM_UPDATE) {
 			Server.sendDiscordMessage("[SERVER] Our servers are restarting now.. we will be back in ~5 minutes!");
 			System.exit(1);
 		}

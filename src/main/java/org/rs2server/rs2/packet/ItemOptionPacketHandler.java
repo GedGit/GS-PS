@@ -58,8 +58,8 @@ public class ItemOptionPacketHandler implements PacketHandler {
 	 * @param packet
 	 *            The packet.
 	 */
-	private void handleItemOption1(Player player, Packet packet) { 
-		int interfaceValue = packet.getInt(); 
+	private void handleItemOption1(Player player, Packet packet) {
+		int interfaceValue = packet.getInt();
 		int slot = packet.getShort() & 0xFFFF;
 		int id = packet.getShort() & 0xFFFF;
 		int interfaceId = interfaceValue >> 16;
@@ -169,20 +169,20 @@ public class ItemOptionPacketHandler implements PacketHandler {
 					}
 
 					switch (item.getId()) {
-					
+
 					case 9750:
 					case 9751:
-						player.teleport(Location.create(2866, 3544, 0), 6, 6, false); 
+						player.teleport(Location.create(2866, 3544, 0), 6, 6, false);
 						break;
-					
+
 					case 9948:
 					case 9949:
 						DialogueManager.openDialogue(player, 9948);
 						break;
-					
+
 					case 9798:
 					case 9799:
-						player.teleport(Location.create(2604, 3401, 0), 1, 1, false); 
+						player.teleport(Location.create(2604, 3401, 0), 1, 1, false);
 						break;
 
 					case 9753:
@@ -622,12 +622,9 @@ public class ItemOptionPacketHandler implements PacketHandler {
 								}
 							}
 						}
-						
-						
-						
-						
-						break;					
-					}									
+
+						break;
+					}
 				}
 			}
 			break;
@@ -1452,7 +1449,7 @@ public class ItemOptionPacketHandler implements PacketHandler {
 					}
 					player.getInventory().remove(usedItem);
 					player.getInventory().remove(withItem);
-					player.getInventory().add(new Item(19607));
+					player.getInventory().add(new Item(19481));
 					player.sendMessage("You attach the monkey tail and create a heavy ballista.");
 					return;
 				}
@@ -1689,9 +1686,8 @@ public class ItemOptionPacketHandler implements PacketHandler {
 					player.getInventory().add(new Item(12773));
 				}
 				return;
-			}		
+			}
 
-			
 			if ((usedItem.getId() == 12954 && withItem.getId() == 20143)
 					|| (withItem.getId() == 12954 && usedItem.getId() == 20143)) {
 				DialogueManager.openDialogue(player, 12954);
@@ -1784,30 +1780,34 @@ public class ItemOptionPacketHandler implements PacketHandler {
 					player.setInterfaceAttribute("pestle_type", pestle);
 				}
 			}
-			
-			///////////////////////////////////////////////// CODE FOR GOD BOOKS BELOW ////////////////////////////////////////////////////////////
-			
-			//Holy Book
-			//int[] holybook (item ids damaged book, and holy pags)
-			int[] holyBook = {3839, 3827, 3828, 3829, 3830 };
 
-            for (int i : holyBook) {
-                //if used item (get id of item (damaged book) used with item (getid)
-                if (usedItem.getId() == i || withItem.getId() == i) {
-                	//and if the item had the id from int[] holy book.
-                    if (player.getInventory().containsItems(holyBook)) {
-                    	//get player inventory, remove items equal to (holy book variable)
-                        player.getInventory().removeItems(holyBook);
-                        //then get player inventory and add new item (3840, holy book)
-                        player.getInventory().add(new Item(3840));
-                        player.sendMessage("You've made an Holy Book.");
-                    } else
-                        player.sendMessage("You need all 4 pages in order to do this.");
-                }
-            }
-            
-            //Book Of Balance
-            // ID = book of balance , page 1, page 2, page 3, page 4
+			///////////////////////////////////////////////// CODE FOR GOD BOOKS BELOW
+			///////////////////////////////////////////////// ////////////////////////////////////////////////////////////
+
+			// Holy Book
+			// int[] holybook (item ids damaged book, and holy pags)
+			int[] holyBook = { 3839, 3827, 3828, 3829, 3830 };
+
+			for (int i : holyBook) {
+				// if used item (get id of item (damaged book) used with item (getid)
+				if (usedItem.getId() == i || withItem.getId() == i) {
+					// and if the item had the id from int[] holy book.
+					if (player.getInventory().containsItems(holyBook)) {
+						// get player inventory, remove items equal to (holy book variable)
+						player.getInventory().removeItems(holyBook);
+						// then get player inventory and add new item (3840, holy book)
+						player.getInventory().add(new Item(3840));
+						player.sendMessage("You've made an Holy Book.");
+						break;
+					} else {
+						player.sendMessage("You need all 4 Saradomin pages in order to do this.");
+						break;
+					}
+				}
+			}
+
+			// Book Of Balance
+			// ID = book of balance , page 1, page 2, page 3, page 4
 			int[] BOB = { 3843, 3835, 3836, 3837, 3838 };
 
 			for (int i : BOB) {
@@ -1816,428 +1816,443 @@ public class ItemOptionPacketHandler implements PacketHandler {
 						player.getInventory().removeItems(BOB);
 						player.getInventory().add(new Item(3844));
 						player.sendMessage("You've made an Book Of Balance.");
-					} else
-						player.sendMessage("You need all 4 pages in order to do this.");
-                }
-            }           
-            
-			//UNHOLY BOOK - ID 3841
+						break;
+					} else {
+						player.sendMessage("You need all 4 Guthix pages in order to do this.");
+						break;
+					}
+				}
+			}
+
+			// UNHOLY BOOK - ID 3841
 			// ID = unholy book, page 1, page 2, page 3, page 4
-			int[] unholyBook = {3841, 3831, 3832, 3833, 3834};
+			int[] unholyBook = { 3841, 3831, 3832, 3833, 3834 };
 
-            for (int i : unholyBook) {
-                if (usedItem.getId() == i || withItem.getId() == i) {
-                    if (player.getInventory().containsItems(unholyBook)) {
-                        player.getInventory().removeItems(unholyBook);
-                        player.getInventory().add(new Item(3842));
-                        player.sendMessage("You've made an unholy book.");
-                    } else
-                        player.sendMessage("You need all 4 pages in order to do this.");
-                }
-            }
-            
-            ///////////////////////////////////////////////////////////////////////////////////////////////////////
-            
-			//Book of war - ID 3841
+			for (int i : unholyBook) {
+				if (usedItem.getId() == i || withItem.getId() == i) {
+					if (player.getInventory().containsItems(unholyBook)) {
+						player.getInventory().removeItems(unholyBook);
+						player.getInventory().add(new Item(3842));
+						player.sendMessage("You've made an unholy book.");
+						break;
+					} else {
+						player.sendMessage("You need all 4 Zamorak pages in order to do this.");
+						break;
+					}
+				}
+			}
+
+			///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+			// Book of war - ID 3841
 			// ID = Book Of War, page 1, page 2, page 3, page 4
-			int[] BookOfWar = {12607, 12613, 12614, 12615, 12616};
+			int[] BookOfWar = { 12607, 12613, 12614, 12615, 12616 };
 
-            for (int i : BookOfWar) {
-                if (usedItem.getId() == i || withItem.getId() == i) {
-                    if (player.getInventory().containsItems(BookOfWar)) {
-                        player.getInventory().removeItems(BookOfWar);
-                        player.getInventory().add(new Item(12608));
-                        player.sendMessage("You've made an Book of war.");
-                    } else
-                        player.sendMessage("You need all 4 pages in order to do this.");
-                }
-            }
-            
-			//Book of law - ID 3841
+			for (int i : BookOfWar) {
+				if (usedItem.getId() == i || withItem.getId() == i) {
+					if (player.getInventory().containsItems(BookOfWar)) {
+						player.getInventory().removeItems(BookOfWar);
+						player.getInventory().add(new Item(12608));
+						player.sendMessage("You've made an Book of war.");
+						break;
+					} else {
+						player.sendMessage("You need all 4 Bandos pages in order to do this.");
+						break;
+					}
+				}
+			}
+
+			// Book of law - ID 3841
 			// ID = Book of Law, page 1, page 2, page 3, page 4
-			int[] BookOfLaw = {12609, 12617, 12618, 12619, 12620};
+			int[] BookOfLaw = { 12609, 12617, 12618, 12619, 12620 };
 
-            for (int i : BookOfLaw) {
-                if (usedItem.getId() == i || withItem.getId() == i) {
-                    if (player.getInventory().containsItems(BookOfLaw)) {
-                        player.getInventory().removeItems(BookOfLaw);
-                        player.getInventory().add(new Item(12610));
-                        player.sendMessage("You've made an Book of law.");
-                    } else
-                        player.sendMessage("You need all 4 pages in order to do this.");
-                }
-            }
-            
-			//Book of darkness - ID 3841
+			for (int i : BookOfLaw) {
+				if (usedItem.getId() == i || withItem.getId() == i) {
+					if (player.getInventory().containsItems(BookOfLaw)) {
+						player.getInventory().removeItems(BookOfLaw);
+						player.getInventory().add(new Item(12610));
+						player.sendMessage("You've made an Book of law.");
+						break;
+					} else {
+						player.sendMessage("You need all 4 Armadyl pages in order to do this.");
+						break;
+					}
+				}
+			}
+
+			// Book of darkness - ID 3841
 			// ID = Book of darkness, page 1, page 2, page 3, page 4
-			int[] BookOfDarkness = {12611, 12621, 12622, 12623, 12624};
+			int[] BookOfDarkness = { 12611, 12621, 12622, 12623, 12624 };
 
-            for (int i : BookOfDarkness) {
-                if (usedItem.getId() == i || withItem.getId() == i) {
-                    if (player.getInventory().containsItems(BookOfDarkness)) {
-                        player.getInventory().removeItems(BookOfDarkness);
-                        player.getInventory().add(new Item(12610));
-                        player.sendMessage("You've made an Book of darkness.");
-                    } else
-                        player.sendMessage("You need all 4 pages in order to do this.");
-                }
-            }            
+			for (int i : BookOfDarkness) {
+				if (usedItem.getId() == i || withItem.getId() == i) {
+					if (player.getInventory().containsItems(BookOfDarkness)) {
+						player.getInventory().removeItems(BookOfDarkness);
+						player.getInventory().add(new Item(12610));
+						player.sendMessage("You've made an Book of darkness.");
+						break;
+					} else {
+						player.sendMessage("You need all 4 Ancient pages in order to do this.");
+						break;
+					}
+				}
+			}
 		}
-		
-		//////////////////////////////////// CODE FOR GOD BOOK ABOVE ////////////////////////////////////////////
-			
-			if (usedItem.getId() == 11818 && withItem.getId() == 11820
-					|| usedItem.getId() == 11818 && withItem.getId() == 11822
-					|| usedItem.getId() == 11820 && withItem.getId() == 11818
-					|| usedItem.getId() == 11820 && withItem.getId() == 11822
-					|| usedItem.getId() == 11822 && withItem.getId() == 11818
-					|| usedItem.getId() == 11822 && withItem.getId() == 11820) {
-				if (player.getInventory().contains(11818) && player.getInventory().contains(11820)
-						&& player.getInventory().contains(11822)) {
-					if (player.getSkills().getLevel(Skills.SMITHING) < 80) {
-						player.getActionSender().sendMessage("You need a Smithing level of 80 to combine these.");
-						return;
-					}
-					player.getInventory().remove(new Item(11818, 1));
-					player.getInventory().remove(new Item(11820, 1));
-					player.getInventory().remove(new Item(11822, 1));
-					player.getInventory().add(new Item(11798, 1));
-					player.getActionSender().sendMessage("You combine the shards into a Godsword Blade.");
-					player.getSkills().addExperience(Skills.SMITHING, 200);
-					return;
-				} else {
-					player.getActionSender().sendMessage("You need all 3 shard pieces in order to do this.");
+
+		//////////////////////////////////// CODE FOR GOD BOOK ABOVE
+		//////////////////////////////////// ////////////////////////////////////////////
+
+		if (usedItem.getId() == 11818 && withItem.getId() == 11820
+				|| usedItem.getId() == 11818 && withItem.getId() == 11822
+				|| usedItem.getId() == 11820 && withItem.getId() == 11818
+				|| usedItem.getId() == 11820 && withItem.getId() == 11822
+				|| usedItem.getId() == 11822 && withItem.getId() == 11818
+				|| usedItem.getId() == 11822 && withItem.getId() == 11820) {
+			if (player.getInventory().contains(11818) && player.getInventory().contains(11820)
+					&& player.getInventory().contains(11822)) {
+				if (player.getSkills().getLevel(Skills.SMITHING) < 80) {
+					player.getActionSender().sendMessage("You need a Smithing level of 80 to combine these.");
 					return;
 				}
-			}
-			if (SlayerHelmAction.handleItemOnItem(player, usedItem, withItem))
+				player.getInventory().remove(new Item(11818, 1));
+				player.getInventory().remove(new Item(11820, 1));
+				player.getInventory().remove(new Item(11822, 1));
+				player.getInventory().add(new Item(11798, 1));
+				player.getActionSender().sendMessage("You combine the shards into a Godsword Blade.");
+				player.getSkills().addExperience(Skills.SMITHING, 200);
 				return;
-			if (usedItem.getId() == 590 || withItem.getId() == 590 && !player.isLighting()) {
-				Item logItem = null;
-				if (usedItem.getId() == 590) {
-					logItem = withItem;
-				} else {
-					logItem = usedItem;
+			} else {
+				player.getActionSender().sendMessage("You need all 3 shard pieces in order to do this.");
+				return;
+			}
+		}
+		if (SlayerHelmAction.handleItemOnItem(player, usedItem, withItem))
+			return;
+		if (usedItem.getId() == 590 || withItem.getId() == 590 && !player.isLighting()) {
+			Item logItem = null;
+			if (usedItem.getId() == 590) {
+				logItem = withItem;
+			} else {
+				logItem = usedItem;
+			}
+			Firemaking firemaking = new Firemaking(player);
+			firemaking.light(firemaking.findLog(logItem));
+			return;
+		}
+		FletchingItem item = FletchingAction.getItemForId(usedItem.getId(), withItem.getId(), true);
+		if (item != null) {
+			Item[] materials = item.getMaterials();
+			// System.out.println(item.getType());
+			if (item.getType() == FletchingType.CUTTING) {
+				FletchingGroup group = FletchingAction.groups.get(materials[0].getId());
+				int iId = 305;
+				if (group != FletchingGroup.LOGS) {
+					iId = 304;
 				}
-				Firemaking firemaking = new Firemaking(player);
-				firemaking.light(firemaking.findLog(logItem));
-				return;
-			}
-			FletchingItem item = FletchingAction.getItemForId(usedItem.getId(), withItem.getId(), true);
-			if (item != null) {
-				Item[] materials = item.getMaterials();
-				// System.out.println(item.getType());
-				if (item.getType() == FletchingType.CUTTING) {
-					FletchingGroup group = FletchingAction.groups.get(materials[0].getId());
-					int iId = 305;
-					if (group != FletchingGroup.LOGS) {
-						iId = 304;
-					}
-					player.setInterfaceAttribute("fletch_group", group);
-					for (int i = 0; i < group.getPossibleCreations().length; i++) {
-						if (group == FletchingGroup.MAGIC_LOGS) {
-							iId = 303;
-							player.getActionSender().sendItemOnInterface(iId, 2 + i,
-									group.getPossibleCreations()[i].getId(), 160);
-							player.getActionSender().sendString(iId, (iId - 296) + (i * 4),
-									"<br><br><br><br>" + group.getPossibleCreations()[i].getDefinition2().getName());
-						} else {
-							player.getActionSender().sendItemOnInterface(iId, 2 + i,
-									group.getPossibleCreations()[i].getId(), 160);
-							player.getActionSender().sendString(iId, (iId - 296) + (i * 4),
-									"<br><br><br><br>" + group.getPossibleCreations()[i].getDefinition2().getName());
-						}
-					}
-					player.getActionSender().sendChatboxInterface(iId);
-				} else {
-					int iId = item.getType() == FletchingType.STRINGING ? 309 : 582;
-					player.setInterfaceAttribute("fletch_item", item);
-					player.getActionSender().sendItemOnInterface(iId, 2, item.getProducedItem()[0].getId(), 150);
-					player.getActionSender().sendString(iId, iId == 309 ? 6 : 5,
-							"<br><br><br><br>" + CacheItemDefinition.get(item.getProducedItem()[0].getId()).getName());
-					player.getActionSender().sendChatboxInterface(iId);
-				}
-			}
-			if (usedItem.getId() == 11798 && withItem.getId() == 11810
-					|| usedItem.getId() == 11810 && withItem.getId() == 11798) {// Armadyl
-																				// Godsword
-				player.getInventory().remove(usedItem);
-				player.getInventory().remove(withItem);
-				player.getInventory().add(new Item(11802));
-				player.getActionSender().sendDialogue("", ActionSender.DialogueType.MESSAGE_MODEL_LEFT, 11802, null,
-						"You attach the hilt to the blade and make a Armadyl godsword.");
-				// player.sendMessage("You attach the hilt to the blade and make
-				// a Armadyl godsword.");
-				return;
-			}
-			if (usedItem.getId() == 11798 && withItem.getId() == 11812
-					|| usedItem.getId() == 11812 && withItem.getId() == 11798) {// Bandos
-																				// Godsword
-				player.getInventory().remove(usedItem);
-				player.getInventory().remove(withItem);
-				player.getInventory().add(new Item(11804));
-				player.getActionSender().sendDialogue("", ActionSender.DialogueType.MESSAGE_MODEL_LEFT, 11804, null,
-						"You attach the hilt to the blade and make a Bandos godsword.");
-				// player.sendMessage("You attach the hilt to the blade and make
-				// a Bandos godsword.");
-				return;
-			}
-			if (usedItem.getId() == 11798 && withItem.getId() == 11814
-					|| usedItem.getId() == 11814 && withItem.getId() == 11798) {// Sara
-																				// Godsword
-				player.getInventory().remove(usedItem);
-				player.getInventory().remove(withItem);
-				player.getInventory().add(new Item(11806));
-				player.getActionSender().sendDialogue("", ActionSender.DialogueType.MESSAGE_MODEL_LEFT, 11806, null,
-						"You attach the hilt to the blade and make a Saradomin godsword.");
-				// player.sendMessage("You attach the hilt to the blade and make
-				// a Saradomin godsword.");
-				return;
-			}
-			if (usedItem.getId() == 11798 && withItem.getId() == 11816
-					|| usedItem.getId() == 11816 && withItem.getId() == 11798) {// Zamorak
-																				// Godsword
-				player.getInventory().remove(usedItem);
-				player.getInventory().remove(withItem);
-				player.getInventory().add(new Item(11808));
-				player.getActionSender().sendDialogue("", ActionSender.DialogueType.MESSAGE_MODEL_LEFT, 11808, null,
-						"You attach the hilt to the blade and make a Zamorak godsword.");
-				// player.sendMessage("You attach the hilt to the blade and make
-				// a Zamorak godsword.");
-				return;
-			}
-			if (usedItem.getId() == 11818 && withItem.getId() == 11820
-					|| usedItem.getId() == 11820 && withItem.getId() == 11818) {
-				player.getInventory().remove(usedItem);
-				player.getInventory().remove(withItem);
-				player.getInventory().add(new Item(11794));
-				player.sendMessage("You attach the shards together to make a shard 1 & 2");
-				return;
-			}
-			if (usedItem.getId() == 13571 && withItem.getId() == 1931
-					|| usedItem.getId() == 1931 && withItem.getId() == 13571) {
-				player.getInventory().remove(usedItem);
-				player.getInventory().remove(withItem);
-				player.getInventory().removeItems(13421, 1931);
-				player.getInventory().add(new Item(13572));
-				player.sendMessage("You mix the items together to create a Dynamite Pot.");
-				return;
-			}
-			if (usedItem.getId() == 1759 && withItem.getId() == 13572
-					|| usedItem.getId() == 13572 && withItem.getId() == 1759) {
-				player.getInventory().remove(usedItem);
-				player.getInventory().remove(withItem);
-				player.getInventory().add(new Item(13573));
-				return;
-			}
-			if (usedItem.getId() == 11818 && withItem.getId() == 11822
-					|| usedItem.getId() == 11822 && withItem.getId() == 11818) {
-				player.getInventory().remove(usedItem);
-				player.getInventory().remove(withItem);
-				player.getInventory().add(new Item(11796));
-				player.sendMessage("You attach the shards together to make a shard 1 & 3");
-				return;
-			}
-			if (usedItem.getId() == 11820 && withItem.getId() == 11822
-					|| usedItem.getId() == 11822 && withItem.getId() == 11820) {
-				player.getInventory().remove(usedItem);
-				player.getInventory().remove(withItem);
-				player.getInventory().add(new Item(11800));
-				player.sendMessage("You attach the shards together to make a shard 2 & 3");
-				return;
-			}
-			if (usedItem.getId() == 11794 && withItem.getId() == 11822
-					|| usedItem.getId() == 11822 && withItem.getId() == 11794) {
-				player.getInventory().remove(usedItem);
-				player.getInventory().remove(withItem);
-				player.getInventory().add(new Item(11798));
-				player.sendMessage("You attach the shards together to make a Godsword blade.");
-				return;
-			}
-			if (usedItem.getId() == 21043 && withItem.getId() == 6914) {
-				player.getInventory().remove(usedItem);
-				player.getInventory().remove(withItem);
-				player.getInventory().add(new Item(21006));
-				player.sendMessage("You attach the insignia to the wand..");
-				return;
-			}
-			if (usedItem.getId() == 11796 && withItem.getId() == 11820
-					|| usedItem.getId() == 11820 && withItem.getId() == 11796) {
-				player.getInventory().remove(usedItem);
-				player.getInventory().remove(withItem);
-				player.getInventory().add(new Item(11798));
-				player.sendMessage("You attach the shards together to make a Godsword blade.");
-				return;
-			}
-			if (usedItem.getId() == 11800 && withItem.getId() == 11818
-					|| usedItem.getId() == 11818 && withItem.getId() == 11800) {
-				player.getInventory().remove(usedItem);
-				player.getInventory().remove(withItem);
-				player.getInventory().add(new Item(11798));
-				player.sendMessage("You attach the shards together to make a Godsword blade.");
-				return;
-			}
-			if (usedItem.getId() == 1755 || withItem.getId() == 1755) {
-				Item uncut = null;
-				Item chisel = null;
-				if (usedItem.getId() == 1755) {
-					uncut = withItem;
-					chisel = usedItem;
-				} else {
-					uncut = usedItem;
-					chisel = withItem;
-				}
-				Gem gem = Gem.forId(uncut.getId());
-				BoltTip tip = BoltTip.forId(uncut.getId());
-				ZulrahCrafting.ZulrahItems zulrahItems = ZulrahCrafting.ZulrahItems.of(uncut.getId());
-				if (gem != null) {
-					if (player.getInventory().getCount(uncut.getId()) > 1) {
-						player.getActionSender().sendItemOnInterface(309, 2, gem.getReward(), 130);
-						String itemName = CacheItemDefinition.get(gem.getReward()).getName();
-						player.getActionSender().sendString(309, 6, "<br><br><br><br>" + itemName);
-						player.getActionSender().sendInterface(162, 546, 309, false);
-						player.setInterfaceAttribute("gem_index", gem.getReward());
-						player.setInterfaceAttribute("gem_type", gem);
-					} else
-						player.getActionQueue().addAction(new GemCutting(player, gem, 1));
-				} else if (tip != null) {
-					if (player.getInventory().getCount(uncut.getId()) > 1) {
-						player.getActionSender().sendItemOnInterface(309, 2, tip.getReward().getId(), 130);
-						String itemName = CacheItemDefinition.get(tip.getReward().getId()).getName();
-						player.getActionSender().sendString(309, 6, "<br><br><br><br>" + itemName);
-						player.getActionSender().sendInterface(162, 546, 309, false);
-						player.setInterfaceAttribute("tip_index", tip.getReward().getId());
-						player.setInterfaceAttribute("tip_type", tip);
-					} else
-						player.getActionQueue().addAction(new BoltCrafting(player, tip, 1));
-				} else if (zulrahItems != null && zulrahItems.getRequiredItem() == chisel.getId())
-					player.getActionQueue().addAction(new ZulrahCrafting(player, zulrahItems));
-			}
-			if (SuperCombatPotion.handleItemOnItem(player, usedItem, withItem))
-				return;
-			if (usedItem.getId() == 1391 || withItem.getId() == 1391) {
-				Item other;
-				if (usedItem.getId() == 1391) {
-					other = withItem;
-				} else {
-					other = usedItem;
-				}
-				Optional<OrbChargingService.StaffType> typeOptional = OrbChargingService.StaffType.of(other.getId());
-				if (typeOptional.isPresent()) {
-					OrbChargingService.StaffType type = typeOptional.get();
-					if (player.getInventory().getCount(1391) > 1
-							&& player.getInventory().getCount(type.getOrbId()) > 1) {
-						player.getActionSender().sendItemOnInterface(309, 2, type.getStaffId(), 130);
-						String itemName = CacheItemDefinition.get(type.getStaffId()).getName();
-						player.getActionSender().sendString(309, 6, "<br><br><br><br>" + itemName);
-						player.getActionSender().sendInterface(162, 546, 309, false);
-						player.setInterfaceAttribute("staff_type", type);
+				player.setInterfaceAttribute("fletch_group", group);
+				for (int i = 0; i < group.getPossibleCreations().length; i++) {
+					if (group == FletchingGroup.MAGIC_LOGS) {
+						iId = 303;
+						player.getActionSender().sendItemOnInterface(iId, 2 + i,
+								group.getPossibleCreations()[i].getId(), 160);
+						player.getActionSender().sendString(iId, (iId - 296) + (i * 4),
+								"<br><br><br><br>" + group.getPossibleCreations()[i].getDefinition2().getName());
 					} else {
-						player.getActionQueue().addAction(new OrbChargingService.BattleStaffAction(player, type, 1));
+						player.getActionSender().sendItemOnInterface(iId, 2 + i,
+								group.getPossibleCreations()[i].getId(), 160);
+						player.getActionSender().sendString(iId, (iId - 296) + (i * 4),
+								"<br><br><br><br>" + group.getPossibleCreations()[i].getDefinition2().getName());
 					}
 				}
+				player.getActionSender().sendChatboxInterface(iId);
+			} else {
+				int iId = item.getType() == FletchingType.STRINGING ? 309 : 582;
+				player.setInterfaceAttribute("fletch_item", item);
+				player.getActionSender().sendItemOnInterface(iId, 2, item.getProducedItem()[0].getId(), 150);
+				player.getActionSender().sendString(iId, iId == 309 ? 6 : 5,
+						"<br><br><br><br>" + CacheItemDefinition.get(item.getProducedItem()[0].getId()).getName());
+				player.getActionSender().sendChatboxInterface(iId);
 			}
-			if ((usedItem.getId() == 227 || usedItem.getId() == 5935)
-					|| (withItem.getId() == 227 || withItem.getId() == 5935)) {
-				Item primaryIngredient;
-				Item vial;
-				if (usedItem.getId() == 227 || usedItem.getId() == 5935) {
-					primaryIngredient = withItem;
-					vial = usedItem;
-				} else {
-					primaryIngredient = usedItem;
-					vial = withItem;
-				}
-				PrimaryIngredient ingredient = PrimaryIngredient.forId(primaryIngredient.getId(), vial.getId());
-				if (ingredient != null) {
-					if (player.getInventory().getCount(ingredient.getVial().getId()) > 1
-							&& player.getInventory().getCount(primaryIngredient.getId()) > 1) {
-						player.getActionSender().sendItemOnInterface(309, 2, ingredient.getReward(), 130);
-						String itemName = CacheItemDefinition.get(ingredient.getReward()).getName();
-						if (vial.getId() == 227) {
-							String leafName = CacheItemDefinition.get(ingredient.getId()).getName()
-									.replaceAll(" leaf", "").replaceAll(" clean", "");
-							itemName = leafName + " potion (unf)";
-						}
-						player.getActionSender().sendString(309, 6, "<br><br><br><br>" + itemName);
-						player.getActionSender().sendInterface(162, 546, 309, false);
-						player.setInterfaceAttribute("herblore_type", HerbloreType.PRIMARY_INGREDIENT);
-						player.setInterfaceAttribute("herblore_index", ingredient.getId());
-						player.setInterfaceAttribute("vial_index", vial.getId());
-					} else {
-						player.getActionQueue()
-								.addAction(new Herblore(player, 1, ingredient, null, HerbloreType.PRIMARY_INGREDIENT));
-					}
-					return;
-				}
+		}
+		if (usedItem.getId() == 11798 && withItem.getId() == 11810
+				|| usedItem.getId() == 11810 && withItem.getId() == 11798) {// Armadyl
+																			// Godsword
+			player.getInventory().remove(usedItem);
+			player.getInventory().remove(withItem);
+			player.getInventory().add(new Item(11802));
+			player.getActionSender().sendDialogue("", ActionSender.DialogueType.MESSAGE_MODEL_LEFT, 11802, null,
+					"You attach the hilt to the blade and make a Armadyl godsword.");
+			// player.sendMessage("You attach the hilt to the blade and make
+			// a Armadyl godsword.");
+			return;
+		}
+		if (usedItem.getId() == 11798 && withItem.getId() == 11812
+				|| usedItem.getId() == 11812 && withItem.getId() == 11798) {// Bandos
+																			// Godsword
+			player.getInventory().remove(usedItem);
+			player.getInventory().remove(withItem);
+			player.getInventory().add(new Item(11804));
+			player.getActionSender().sendDialogue("", ActionSender.DialogueType.MESSAGE_MODEL_LEFT, 11804, null,
+					"You attach the hilt to the blade and make a Bandos godsword.");
+			// player.sendMessage("You attach the hilt to the blade and make
+			// a Bandos godsword.");
+			return;
+		}
+		if (usedItem.getId() == 11798 && withItem.getId() == 11814
+				|| usedItem.getId() == 11814 && withItem.getId() == 11798) {// Sara
+																			// Godsword
+			player.getInventory().remove(usedItem);
+			player.getInventory().remove(withItem);
+			player.getInventory().add(new Item(11806));
+			player.getActionSender().sendDialogue("", ActionSender.DialogueType.MESSAGE_MODEL_LEFT, 11806, null,
+					"You attach the hilt to the blade and make a Saradomin godsword.");
+			// player.sendMessage("You attach the hilt to the blade and make
+			// a Saradomin godsword.");
+			return;
+		}
+		if (usedItem.getId() == 11798 && withItem.getId() == 11816
+				|| usedItem.getId() == 11816 && withItem.getId() == 11798) {// Zamorak
+																			// Godsword
+			player.getInventory().remove(usedItem);
+			player.getInventory().remove(withItem);
+			player.getInventory().add(new Item(11808));
+			player.getActionSender().sendDialogue("", ActionSender.DialogueType.MESSAGE_MODEL_LEFT, 11808, null,
+					"You attach the hilt to the blade and make a Zamorak godsword.");
+			// player.sendMessage("You attach the hilt to the blade and make
+			// a Zamorak godsword.");
+			return;
+		}
+		if (usedItem.getId() == 11818 && withItem.getId() == 11820
+				|| usedItem.getId() == 11820 && withItem.getId() == 11818) {
+			player.getInventory().remove(usedItem);
+			player.getInventory().remove(withItem);
+			player.getInventory().add(new Item(11794));
+			player.sendMessage("You attach the shards together to make a shard 1 & 2");
+			return;
+		}
+		if (usedItem.getId() == 13571 && withItem.getId() == 1931
+				|| usedItem.getId() == 1931 && withItem.getId() == 13571) {
+			player.getInventory().remove(usedItem);
+			player.getInventory().remove(withItem);
+			player.getInventory().removeItems(13421, 1931);
+			player.getInventory().add(new Item(13572));
+			player.sendMessage("You mix the items together to create a Dynamite Pot.");
+			return;
+		}
+		if (usedItem.getId() == 1759 && withItem.getId() == 13572
+				|| usedItem.getId() == 13572 && withItem.getId() == 1759) {
+			player.getInventory().remove(usedItem);
+			player.getInventory().remove(withItem);
+			player.getInventory().add(new Item(13573));
+			return;
+		}
+		if (usedItem.getId() == 11818 && withItem.getId() == 11822
+				|| usedItem.getId() == 11822 && withItem.getId() == 11818) {
+			player.getInventory().remove(usedItem);
+			player.getInventory().remove(withItem);
+			player.getInventory().add(new Item(11796));
+			player.sendMessage("You attach the shards together to make a shard 1 & 3");
+			return;
+		}
+		if (usedItem.getId() == 11820 && withItem.getId() == 11822
+				|| usedItem.getId() == 11822 && withItem.getId() == 11820) {
+			player.getInventory().remove(usedItem);
+			player.getInventory().remove(withItem);
+			player.getInventory().add(new Item(11800));
+			player.sendMessage("You attach the shards together to make a shard 2 & 3");
+			return;
+		}
+		if (usedItem.getId() == 11794 && withItem.getId() == 11822
+				|| usedItem.getId() == 11822 && withItem.getId() == 11794) {
+			player.getInventory().remove(usedItem);
+			player.getInventory().remove(withItem);
+			player.getInventory().add(new Item(11798));
+			player.sendMessage("You attach the shards together to make a Godsword blade.");
+			return;
+		}
+		if (usedItem.getId() == 21043 && withItem.getId() == 6914) {
+			player.getInventory().remove(usedItem);
+			player.getInventory().remove(withItem);
+			player.getInventory().add(new Item(21006));
+			player.sendMessage("You attach the insignia to the wand..");
+			return;
+		}
+		if (usedItem.getId() == 11796 && withItem.getId() == 11820
+				|| usedItem.getId() == 11820 && withItem.getId() == 11796) {
+			player.getInventory().remove(usedItem);
+			player.getInventory().remove(withItem);
+			player.getInventory().add(new Item(11798));
+			player.sendMessage("You attach the shards together to make a Godsword blade.");
+			return;
+		}
+		if (usedItem.getId() == 11800 && withItem.getId() == 11818
+				|| usedItem.getId() == 11818 && withItem.getId() == 11800) {
+			player.getInventory().remove(usedItem);
+			player.getInventory().remove(withItem);
+			player.getInventory().add(new Item(11798));
+			player.sendMessage("You attach the shards together to make a Godsword blade.");
+			return;
+		}
+		if (usedItem.getId() == 1755 || withItem.getId() == 1755) {
+			Item uncut = null;
+			Item chisel = null;
+			if (usedItem.getId() == 1755) {
+				uncut = withItem;
+				chisel = usedItem;
+			} else {
+				uncut = usedItem;
+				chisel = withItem;
 			}
-			SecondaryIngredient ingredient = null;
-			for (SecondaryIngredient sIngredient : SecondaryIngredient.values()) {
-				if (sIngredient.getId() == withItem.getId() && sIngredient.getRequiredItem().getId() == usedItem.getId()
-						|| sIngredient.getId() == usedItem.getId()
-								&& sIngredient.getRequiredItem().getId() == withItem.getId()) {
-					ingredient = sIngredient;
-				}
-			}
-			if (ingredient != null) {
-				if (player.getInventory().getCount(ingredient.getId()) > 1
-						&& player.getInventory().getCount(ingredient.getRequiredItem().getId()) > 1) {
-					player.getActionSender().sendItemOnInterface(309, 2, ingredient.getReward(), 130);
-					player.getActionSender().sendString(309, 6,
-							"<br><br><br><br>" + CacheItemDefinition.get(ingredient.getReward()).getName());
+			Gem gem = Gem.forId(uncut.getId());
+			BoltTip tip = BoltTip.forId(uncut.getId());
+			ZulrahCrafting.ZulrahItems zulrahItems = ZulrahCrafting.ZulrahItems.of(uncut.getId());
+			if (gem != null) {
+				if (player.getInventory().getCount(uncut.getId()) > 1) {
+					player.getActionSender().sendItemOnInterface(309, 2, gem.getReward(), 130);
+					String itemName = CacheItemDefinition.get(gem.getReward()).getName();
+					player.getActionSender().sendString(309, 6, "<br><br><br><br>" + itemName);
 					player.getActionSender().sendInterface(162, 546, 309, false);
-					player.setInterfaceAttribute("herblore_type", HerbloreType.SECONDARY_INGREDIENT);
-					player.setInterfaceAttribute("herblore_index", ingredient.getIndex());
+					player.setInterfaceAttribute("gem_index", gem.getReward());
+					player.setInterfaceAttribute("gem_type", gem);
+				} else
+					player.getActionQueue().addAction(new GemCutting(player, gem, 1));
+			} else if (tip != null) {
+				if (player.getInventory().getCount(uncut.getId()) > 1) {
+					player.getActionSender().sendItemOnInterface(309, 2, tip.getReward().getId(), 130);
+					String itemName = CacheItemDefinition.get(tip.getReward().getId()).getName();
+					player.getActionSender().sendString(309, 6, "<br><br><br><br>" + itemName);
+					player.getActionSender().sendInterface(162, 546, 309, false);
+					player.setInterfaceAttribute("tip_index", tip.getReward().getId());
+					player.setInterfaceAttribute("tip_type", tip);
+				} else
+					player.getActionQueue().addAction(new BoltCrafting(player, tip, 1));
+			} else if (zulrahItems != null && zulrahItems.getRequiredItem() == chisel.getId())
+				player.getActionQueue().addAction(new ZulrahCrafting(player, zulrahItems));
+		}
+		if (SuperCombatPotion.handleItemOnItem(player, usedItem, withItem))
+			return;
+		if (usedItem.getId() == 1391 || withItem.getId() == 1391) {
+			Item other;
+			if (usedItem.getId() == 1391) {
+				other = withItem;
+			} else {
+				other = usedItem;
+			}
+			Optional<OrbChargingService.StaffType> typeOptional = OrbChargingService.StaffType.of(other.getId());
+			if (typeOptional.isPresent()) {
+				OrbChargingService.StaffType type = typeOptional.get();
+				if (player.getInventory().getCount(1391) > 1 && player.getInventory().getCount(type.getOrbId()) > 1) {
+					player.getActionSender().sendItemOnInterface(309, 2, type.getStaffId(), 130);
+					String itemName = CacheItemDefinition.get(type.getStaffId()).getName();
+					player.getActionSender().sendString(309, 6, "<br><br><br><br>" + itemName);
+					player.getActionSender().sendInterface(162, 546, 309, false);
+					player.setInterfaceAttribute("staff_type", type);
+				} else {
+					player.getActionQueue().addAction(new OrbChargingService.BattleStaffAction(player, type, 1));
+				}
+			}
+		}
+		if ((usedItem.getId() == 227 || usedItem.getId() == 5935)
+				|| (withItem.getId() == 227 || withItem.getId() == 5935)) {
+			Item primaryIngredient;
+			Item vial;
+			if (usedItem.getId() == 227 || usedItem.getId() == 5935) {
+				primaryIngredient = withItem;
+				vial = usedItem;
+			} else {
+				primaryIngredient = usedItem;
+				vial = withItem;
+			}
+			PrimaryIngredient ingredient = PrimaryIngredient.forId(primaryIngredient.getId(), vial.getId());
+			if (ingredient != null) {
+				if (player.getInventory().getCount(ingredient.getVial().getId()) > 1
+						&& player.getInventory().getCount(primaryIngredient.getId()) > 1) {
+					player.getActionSender().sendItemOnInterface(309, 2, ingredient.getReward(), 130);
+					String itemName = CacheItemDefinition.get(ingredient.getReward()).getName();
+					if (vial.getId() == 227) {
+						String leafName = CacheItemDefinition.get(ingredient.getId()).getName().replaceAll(" leaf", "")
+								.replaceAll(" clean", "");
+						itemName = leafName + " potion (unf)";
+					}
+					player.getActionSender().sendString(309, 6, "<br><br><br><br>" + itemName);
+					player.getActionSender().sendInterface(162, 546, 309, false);
+					player.setInterfaceAttribute("herblore_type", HerbloreType.PRIMARY_INGREDIENT);
+					player.setInterfaceAttribute("herblore_index", ingredient.getId());
+					player.setInterfaceAttribute("vial_index", vial.getId());
 				} else {
 					player.getActionQueue()
-							.addAction(new Herblore(player, 1, null, ingredient, HerbloreType.SECONDARY_INGREDIENT));
+							.addAction(new Herblore(player, 1, ingredient, null, HerbloreType.PRIMARY_INGREDIENT));
 				}
-				return;
-			}
-
-			Drink drink1 = Drink.forId(usedItem.getId());
-			Drink drink2 = Drink.forId(withItem.getId());
-			if (drink1 != null && drink2 != null) {
-				if (drink1 != drink2) {
-					player.getActionSender().sendMessage("You can't combine these two potions.");
-					return;
-				}
-				int index1 = -1;
-				int index2 = -1;
-				for (int i = 0; i < drink1.getIds().length; i++) {
-					if (drink1.getId(i) == usedItem.getId()) {
-						index1 = i + 1;
-						break;
-					}
-				}
-				for (int i = 0; i < drink2.getIds().length; i++) {
-					if (drink2.getId(i) == withItem.getId()) {
-						index2 = i + 1;
-						break;
-					}
-				}
-				int doses = index1 + index2;
-				int amount = 0;
-				Item endPotion1 = null;
-				Item endPotion2 = null;
-				if (doses < 5) {
-					endPotion1 = new Item(drink1.getId(doses - 1), 1);
-					endPotion2 = new Item(229, 1);
-					amount = doses;
-				} else {
-					endPotion1 = new Item(drink1.getId(3), 1);
-					amount = 4;
-					doses -= 4;
-					endPotion2 = new Item(drink1.getId(doses - 1), 1);
-				}
-				player.getInventory().remove(usedItem);
-				player.getInventory().remove(withItem);
-				player.getInventory().add(endPotion1, usedWithSlot);
-				player.getInventory().add(endPotion2, slot);
-				player.getActionSender().sendMessage("You have combined the liquid into " + amount + " doses.");
 				return;
 			}
 		}
+		SecondaryIngredient ingredient = null;
+		for (SecondaryIngredient sIngredient : SecondaryIngredient.values()) {
+			if (sIngredient.getId() == withItem.getId() && sIngredient.getRequiredItem().getId() == usedItem.getId()
+					|| sIngredient.getId() == usedItem.getId()
+							&& sIngredient.getRequiredItem().getId() == withItem.getId()) {
+				ingredient = sIngredient;
+			}
+		}
+		if (ingredient != null) {
+			if (player.getInventory().getCount(ingredient.getId()) > 1
+					&& player.getInventory().getCount(ingredient.getRequiredItem().getId()) > 1) {
+				player.getActionSender().sendItemOnInterface(309, 2, ingredient.getReward(), 130);
+				player.getActionSender().sendString(309, 6,
+						"<br><br><br><br>" + CacheItemDefinition.get(ingredient.getReward()).getName());
+				player.getActionSender().sendInterface(162, 546, 309, false);
+				player.setInterfaceAttribute("herblore_type", HerbloreType.SECONDARY_INGREDIENT);
+				player.setInterfaceAttribute("herblore_index", ingredient.getIndex());
+			} else {
+				player.getActionQueue()
+						.addAction(new Herblore(player, 1, null, ingredient, HerbloreType.SECONDARY_INGREDIENT));
+			}
+			return;
+		}
+
+		Drink drink1 = Drink.forId(usedItem.getId());
+		Drink drink2 = Drink.forId(withItem.getId());
+		if (drink1 != null && drink2 != null) {
+			if (drink1 != drink2) {
+				player.getActionSender().sendMessage("You can't combine these two potions.");
+				return;
+			}
+			int index1 = -1;
+			int index2 = -1;
+			for (int i = 0; i < drink1.getIds().length; i++) {
+				if (drink1.getId(i) == usedItem.getId()) {
+					index1 = i + 1;
+					break;
+				}
+			}
+			for (int i = 0; i < drink2.getIds().length; i++) {
+				if (drink2.getId(i) == withItem.getId()) {
+					index2 = i + 1;
+					break;
+				}
+			}
+			int doses = index1 + index2;
+			int amount = 0;
+			Item endPotion1 = null;
+			Item endPotion2 = null;
+			if (doses < 5) {
+				endPotion1 = new Item(drink1.getId(doses - 1), 1);
+				endPotion2 = new Item(229, 1);
+				amount = doses;
+			} else {
+				endPotion1 = new Item(drink1.getId(3), 1);
+				amount = 4;
+				doses -= 4;
+				endPotion2 = new Item(drink1.getId(doses - 1), 1);
+			}
+			player.getInventory().remove(usedItem);
+			player.getInventory().remove(withItem);
+			player.getInventory().add(endPotion1, usedWithSlot);
+			player.getInventory().add(endPotion2, slot);
+			player.getActionSender().sendMessage("You have combined the liquid into " + amount + " doses.");
+			return;
+		}
+	}
 
 	@SuppressWarnings("unused")
 	private void handleMagicOnItem(Player player, Packet packet) {

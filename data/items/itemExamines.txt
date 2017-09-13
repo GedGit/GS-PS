@@ -1325,7 +1325,7 @@
 2566:An enchanted ring.
 2568:An enchanted ring.
 2570:An enchanted ring.
-2572:Increases your drop rate by 10%. It can be charged at the Fountain of Rune. 
+2572:It can be charged at the Fountain of Rune, Increases your drop-rate by 10%.
 2574:Used by navigators to find their position in <i><a href="/wiki/RuneScape" title="RuneScape" class="mw-redirect">RuneScape</a></i>.
 2575:A fine looking time piece.
 2576:A navigator's chart of RuneScape.
@@ -6612,7 +6612,7 @@
 12781:A tablet containing a magic spell.
 12782:A tablet containing a magic spell.
 12783:Use on a Ring of wealth to imbue the ring.
-12785:A mysteriously imbued lucky ring what Increases your drop rate by 11%.
+12785:A mysteriously imbued lucky ring what Increases your drop-rate by 11%.
 12786:Use on a Magic shortbow to imbue the bow.
 12788:Short and magical, but still effective.
 12789:Protects your clue scroll if you die.
@@ -6777,9 +6777,10 @@
 13058:A set containing a full helm, platebody, skirt and kiteshield.
 13060:A set containing a full helm, platebody, legs and kiteshield.
 13062:A set containing a full helm, platebody, skirt and kiteshield.
-13235:A pair of upgraded infinity boots.
-13237:A pair of upgraded ranger boots.
-13239:A pair of upgraded dragon boots.
+13226:A sack for storing grimy herbs.
+13235:A pair of upgraded infinity boots, Increases your drop-rate by 3%.
+13237:A pair of upgraded ranger boots, Increases your drop-rate by 3%.
+13239:A pair of upgraded dragon boots, Increases your drop-rate by 3%.
 13273:Doesn't seem to have survived the death of its Sire.
 13280:Get a life, bruh. Seriously, just go outside.
 13281:The hood worn by only the most experienced Salve players.
@@ -6794,6 +6795,7 @@
 13336:The hood worn by only the most experienced Salve players.
 13337:The cape worn by only the most experienced Salve players.
 13338:The hood worn by only the most experienced Salve players.
+19481:A heavy ass ballista.
 19493:This looks valuable.
 19496:This would be worth more cut.
 19532:A fiery glow emanates from this bracelet.

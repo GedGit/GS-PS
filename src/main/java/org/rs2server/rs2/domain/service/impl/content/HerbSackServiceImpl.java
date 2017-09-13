@@ -40,8 +40,7 @@ public class HerbSackServiceImpl implements HerbSackService {
 				transferAmount = SIZE - amount;
 
 			player.getInventory().remove(new Item(i.getHerbId(), transferAmount));
-			int toAdd = amount + transferAmount > SIZE ? SIZE : amount + transferAmount;
-			herbSack.put(i, toAdd);
+			herbSack.put(i, transferAmount);
 		});
 	}
 
@@ -74,6 +73,8 @@ public class HerbSackServiceImpl implements HerbSackService {
 			int value = (int) pair.getValue();
 			sb.append(key.getName()).append(" (").append(value).append("), ");
 		}
+		if (sb.toString().isEmpty())
+			sb.append("Your herb sack is empty.");
 		player.getActionSender().sendDialogue("", ActionSender.DialogueType.MESSAGE_MODEL_LEFT, 203, null,
 				sb.toString());
 	}

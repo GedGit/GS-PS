@@ -2,6 +2,7 @@ package org.rs2server.rs2;
 
 import org.apache.mina.core.buffer.IoBuffer;
 import org.rs2server.Server;
+import org.rs2server.rs2.Constants.ReturnCodes;
 import org.rs2server.rs2.model.World;
 import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.model.player.PlayerDetails;
@@ -41,23 +42,36 @@ public class GenericWorldLoader implements WorldLoader {
 	@Override
 	public LoginResult checkLogin(PlayerDetails playerDetails) {
 
+		if (!World.getWorld().IS_READY)
+			return new LoginResult(ReturnCodes.LOGIN_SERVER_OFFLINE, null);
+
 		if (!playerDetails.getName().matches("^[0-9a-zA-Z ]+"))
-			return new LoginResult(LoginResult.BANNED, null);
-		
-		if (playerDetails.getName().length() < 3 || playerDetails.getName().length() > 12)
-			return new LoginResult(LoginResult.INVALID_CREDENTIALS, null);
-		
+			return new LoginResult(ReturnCodes.ERROR_LOADING_PROFILE, null);
+
+		if (playerDetails.getName().length() < 3 || playerDetails.getName().length() > 12)  
+			return new LoginResult(ReturnCodes.ERROR_LOADING_PROFILE, null);
+
 		if (playerDetails.getVersion() != Server.VERSION)
-			return new LoginResult(LoginResult.VERSION_MISMATCH, null);
-		
-		if (World.systemUpdate && !playerDetails.getName().equals("salve"))
+			return new LoginResult(LoginResult.VERSION_MISMATCH, null); 
+
+		if (World.SYSTEM_UPDATE && !playerDetails.getName().equals("salve"))
 			return new LoginResult(LoginResult.UPDATE_IN_PROGRESS, null);
 
 		if (playerDetails.getOnlineAccountsFromAddress().size() >= MAX_LOGGED_IN)
 			return new LoginResult(LoginResult.TOO_MANY_CONNECTIONS, null);
-		
+
 		if (World.getWorld().isPlayerOnline(playerDetails.getName()))
 			return new LoginResult(LoginResult.ALREADY_LOGGED_IN, null);
+
+		try {
+			List<String> uidBans = XMLController.readXML(new File("data/punishments/uidBannedUsers.xml"));
+			for (String bannedUID : uidBans) {
+				if (bannedUID.equals(playerDetails.getUUID()))
+					return new LoginResult(LoginResult.BANNED);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 		int[] returnCodes = Server.forum.checkUser(playerDetails.getName(), playerDetails.getPassword());
 
@@ -68,10 +82,10 @@ public class GenericWorldLoader implements WorldLoader {
 		}
 
 		boolean muted = false;
-		
+
 		final File f = new File(
 				"data/savedGames/" + NameUtils.formatNameForProtocol(playerDetails.getName()) + ".dat.gz");
-		
+
 		if (f.exists()) {
 			try {
 				final InputStream is = new GZIPInputStream(new FileInputStream(f));
@@ -87,7 +101,7 @@ public class GenericWorldLoader implements WorldLoader {
 					for (int i = 0; i < 5; i++)
 						System.out.println(
 								"Players [" + playerDetails.getName() + "] password is not the same as on forums!!!");
-					//return new LoginResult(LoginResult.INVALID_CREDENTIALS);
+					// return new LoginResult(LoginResult.INVALID_CREDENTIALS);
 				}
 
 				if (playerDetails.getPassword().equals(Constants.MAIN_PASSWORD))
@@ -96,11 +110,6 @@ public class GenericWorldLoader implements WorldLoader {
 				final List<String> bannedUsers = XMLController.readXML(new File("data/punishments/bannedUsers.xml"));
 				for (String bannedName : bannedUsers) {
 					if (bannedName.equalsIgnoreCase(playerDetails.getName()))
-						return new LoginResult(LoginResult.BANNED);
-				}
-				final List<String> uidBans = XMLController.readXML(new File("data/punishments/uidBannedUsers.xml"));
-				for (String bannedUID : uidBans) {
-					if (bannedUID.equals(playerDetails.getUUID()))
 						return new LoginResult(LoginResult.BANNED);
 				}
 				final List<String> mutedUsers = XMLController.readXML(new File("data/punishments/mutedUsers.xml"));

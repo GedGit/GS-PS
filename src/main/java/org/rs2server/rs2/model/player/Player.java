@@ -1526,13 +1526,6 @@ public class Player extends Mob implements Persistable {
 				return;
 			}
 		}
-		if (BoundaryManager.isWithinBoundaryNoZ(getLocation(), "Cerberus")) {
-			Content cerberusContent = getContentManager().getActiveContent(Content.CERBERUS);
-			if (cerberusContent != null) {
-				//cerberusContent.stop();
-				System.out.println("stop cerberus in theory");
-			}
-		}
 
 		if (getAttribute("glorySlot") != null) {
 			Item item = getInventory().get(getAttribute("glorySlot"));

@@ -63,8 +63,20 @@ public class World {
 	 */
 	private static final Logger logger = LoggerFactory.getLogger(World.class);
 
-	public static boolean systemUpdate;
-	public static int updateTimer;
+	/**
+	 * A boolean representing if the world is ready to be logged into.
+	 */
+	public boolean IS_READY = false;
+
+	/**
+	 * A boolean representing whether there's an ongoing system update.
+	 */
+	public static boolean SYSTEM_UPDATE;
+	
+	/**
+	 * An int representing the time until world shutdown.
+	 */
+	public static int UPDATE_TIMER;
 
 	/**
 	 * Gets the world instance.

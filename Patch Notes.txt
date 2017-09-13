@@ -11,6 +11,8 @@
         -  You'll now be able to exchange your Fremennik equipment, obtained from yaks, at 'Bardur' for cooked sharks;
         -  Abyssal Sire will now ignore objects between him and you, allowing him to attack you from anywhere in the room (this is to prevent safe-spotting);
 		-  I've applied multiple fixes on Cerberus and tested him with 4 accounts simultaneously - he should be a good doggy now;
+		-  Started on semi-custom player achievements (hence the Achievements diary NPC at home) - achievements should be done before (or on) patch notes #20;
+		-  God pages (received from treasure trails) may now be added to damaged books to create full God books;
 		
 		
 	-- Minor fixes/changes/additions: --
@@ -39,6 +41,11 @@
         -  Fixed Edgeville dungeon's trapdoor;
         -  Increased the amount Gem Trader at Al'Kharid sells gems;
         -  Increased Cerberus's crystal item (primordial, eternal, pegasian) drop-rate by 3%;
+        -  Fixed herbsack duplication glitch and added interfact text when its empty to say that it's empty;
+        -  Clue scrolls no longer have the 'Check-steps' option;
+        -  Fixed incorrect ballista creation data;
+        -  Added tons of missing/incorrect item examines;
+        -  All teleport tablets may now be purchased from the Magic Shop - teleports;
         
 
 --------------------------------------------------------------------------------------

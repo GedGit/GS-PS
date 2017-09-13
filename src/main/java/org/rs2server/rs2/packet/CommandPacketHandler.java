@@ -1575,12 +1575,12 @@ public class CommandPacketHandler implements PacketHandler {
 			}
 		}
 		if (command.equals("shutdown")) {
-			World.systemUpdate = true;
+			World.SYSTEM_UPDATE = true;
 			int time = Integer.parseInt(args[1]);
-			World.updateTimer = time;
+			World.UPDATE_TIMER = time;
 			World.getWorld().submit(new SystemUpdateTick());
 			Server.sendDiscordMessage(
-					"[SERVER] System update started! Time until shutdown: " + World.updateTimer + " seconds!");
+					"[SERVER] System update started! Time until shutdown: " + World.UPDATE_TIMER + " seconds!");
 		}
 
 		if (command.equals("config")) {

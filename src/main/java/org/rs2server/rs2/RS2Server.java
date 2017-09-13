@@ -106,6 +106,9 @@ public class RS2Server {
 		engineService.start();
 
 		Server.getInjector().getInstance(HookService.class).post(new GameWorldLoadedEvent());
+		
+		// Tell the world users are allowed to login now
+		World.getWorld().IS_READY = true;
 
 		logger.info("Ready");
 	}

@@ -1,4 +1,28 @@
 <map>
+	<entry>
+        <int>20834</int>
+        <equipmentDef>
+            <speed>0</speed>
+            <bonuses>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>9</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+            </bonuses>
+            <type>CAPE</type>
+            <specialConsumption>0</specialConsumption>
+            <specialHits>0</specialHits>
+        </equipmentDef>
+    </entry>
     <entry>
         <int>6568</int>
         <equipmentDef>
