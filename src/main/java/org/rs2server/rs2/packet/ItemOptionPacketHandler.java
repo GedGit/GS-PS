@@ -622,8 +622,12 @@ public class ItemOptionPacketHandler implements PacketHandler {
 								}
 							}
 						}
-						break;
-					}
+						
+						
+						
+						
+						break;					
+					}									
 				}
 			}
 			break;
@@ -1685,7 +1689,9 @@ public class ItemOptionPacketHandler implements PacketHandler {
 					player.getInventory().add(new Item(12773));
 				}
 				return;
-			}
+			}		
+
+			
 			if ((usedItem.getId() == 12954 && withItem.getId() == 20143)
 					|| (withItem.getId() == 12954 && usedItem.getId() == 20143)) {
 				DialogueManager.openDialogue(player, 12954);
@@ -1778,6 +1784,108 @@ public class ItemOptionPacketHandler implements PacketHandler {
 					player.setInterfaceAttribute("pestle_type", pestle);
 				}
 			}
+			
+			///////////////////////////////////////////////// CODE FOR GOD BOOKS BELOW ////////////////////////////////////////////////////////////
+			
+			//Holy Book
+			//int[] holybook (item ids damaged book, and holy pags)
+			int[] holyBook = {3839, 3827, 3828, 3829, 3830 };
+
+            for (int i : holyBook) {
+                //if used item (get id of item (damaged book) used with item (getid)
+                if (usedItem.getId() == i || withItem.getId() == i) {
+                	//and if the item had the id from int[] holy book.
+                    if (player.getInventory().containsItems(holyBook)) {
+                    	//get player inventory, remove items equal to (holy book variable)
+                        player.getInventory().removeItems(holyBook);
+                        //then get player inventory and add new item (3840, holy book)
+                        player.getInventory().add(new Item(3840));
+                        player.sendMessage("You've made an Holy Book.");
+                    } else
+                        player.sendMessage("You need all 4 pages in order to do this.");
+                }
+            }
+            
+            //Book Of Balance
+            // ID = book of balance , page 1, page 2, page 3, page 4
+			int[] BOB = { 3843, 3835, 3836, 3837, 3838 };
+
+			for (int i : BOB) {
+				if (usedItem.getId() == i || withItem.getId() == i) {
+					if (player.getInventory().containsItems(BOB)) {
+						player.getInventory().removeItems(BOB);
+						player.getInventory().add(new Item(3844));
+						player.sendMessage("You've made an Book Of Balance.");
+					} else
+						player.sendMessage("You need all 4 pages in order to do this.");
+                }
+            }           
+            
+			//UNHOLY BOOK - ID 3841
+			// ID = unholy book, page 1, page 2, page 3, page 4
+			int[] unholyBook = {3841, 3831, 3832, 3833, 3834};
+
+            for (int i : unholyBook) {
+                if (usedItem.getId() == i || withItem.getId() == i) {
+                    if (player.getInventory().containsItems(unholyBook)) {
+                        player.getInventory().removeItems(unholyBook);
+                        player.getInventory().add(new Item(3842));
+                        player.sendMessage("You've made an unholy book.");
+                    } else
+                        player.sendMessage("You need all 4 pages in order to do this.");
+                }
+            }
+            
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////
+            
+			//Book of war - ID 3841
+			// ID = Book Of War, page 1, page 2, page 3, page 4
+			int[] BookOfWar = {12607, 12613, 12614, 12615, 12616};
+
+            for (int i : BookOfWar) {
+                if (usedItem.getId() == i || withItem.getId() == i) {
+                    if (player.getInventory().containsItems(BookOfWar)) {
+                        player.getInventory().removeItems(BookOfWar);
+                        player.getInventory().add(new Item(12608));
+                        player.sendMessage("You've made an Book of war.");
+                    } else
+                        player.sendMessage("You need all 4 pages in order to do this.");
+                }
+            }
+            
+			//Book of law - ID 3841
+			// ID = Book of Law, page 1, page 2, page 3, page 4
+			int[] BookOfLaw = {12609, 12617, 12618, 12619, 12620};
+
+            for (int i : BookOfLaw) {
+                if (usedItem.getId() == i || withItem.getId() == i) {
+                    if (player.getInventory().containsItems(BookOfLaw)) {
+                        player.getInventory().removeItems(BookOfLaw);
+                        player.getInventory().add(new Item(12610));
+                        player.sendMessage("You've made an Book of law.");
+                    } else
+                        player.sendMessage("You need all 4 pages in order to do this.");
+                }
+            }
+            
+			//Book of darkness - ID 3841
+			// ID = Book of darkness, page 1, page 2, page 3, page 4
+			int[] BookOfDarkness = {12611, 12621, 12622, 12623, 12624};
+
+            for (int i : BookOfDarkness) {
+                if (usedItem.getId() == i || withItem.getId() == i) {
+                    if (player.getInventory().containsItems(BookOfDarkness)) {
+                        player.getInventory().removeItems(BookOfDarkness);
+                        player.getInventory().add(new Item(12610));
+                        player.sendMessage("You've made an Book of darkness.");
+                    } else
+                        player.sendMessage("You need all 4 pages in order to do this.");
+                }
+            }            
+		}
+		
+		//////////////////////////////////// CODE FOR GOD BOOK ABOVE ////////////////////////////////////////////
+			
 			if (usedItem.getId() == 11818 && withItem.getId() == 11820
 					|| usedItem.getId() == 11818 && withItem.getId() == 11822
 					|| usedItem.getId() == 11820 && withItem.getId() == 11818
@@ -2129,9 +2237,7 @@ public class ItemOptionPacketHandler implements PacketHandler {
 				player.getActionSender().sendMessage("You have combined the liquid into " + amount + " doses.");
 				return;
 			}
-			break;
 		}
-	}
 
 	@SuppressWarnings("unused")
 	private void handleMagicOnItem(Player player, Packet packet) {
