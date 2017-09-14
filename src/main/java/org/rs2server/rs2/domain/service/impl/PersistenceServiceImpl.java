@@ -114,71 +114,56 @@ public class PersistenceServiceImpl implements PersistenceService {
 		}
 
 		// -------------- Backwards compatibility
-		if (playerEntity.getPermissions() == null) {
+		if (playerEntity.getPermissions() == null)
 			playerEntity.setPermissions(
 					EnumSet.of(PermissionService.PlayerPermissions.PLAYER, PermissionService.PlayerPermissions.PLAYER));
-		}
-		if (playerEntity.getRunePouches() == null) {
+		if (playerEntity.getRunePouches() == null)
 			playerEntity.setRunePouches(new HashMap<>());
-		}
-		if (playerEntity.getGemBag() == null) {
+		if (playerEntity.getGemBag() == null)
 			playerEntity.setGemBag(new HashMap<>());
-		}
-		if (playerEntity.getHerbSack() == null) {
+		if (playerEntity.getHerbSack() == null)
 			playerEntity.setHerbSack(new HashMap<>());
-		}
-		if (playerEntity.getCombatEntity() == null) {
+		if (playerEntity.getCombatEntity() == null)
 			playerEntity.setCombatEntity(new PlayerCombatEntity());
-		}
+		if (playerEntity.getAchievements() == null)
+			playerEntity.setAchievementEntity(new PlayerAchievementEntity());
 
-		if (player.isIronMan() && !permissionService.is(player, PermissionService.PlayerPermissions.IRON_MAN)) {
+		if (player.isIronMan() && !permissionService.is(player, PermissionService.PlayerPermissions.IRON_MAN))
 			permissionService.give(player, PermissionService.PlayerPermissions.IRON_MAN);
-		}
 		if (player.isUltimateIronMan()
-				&& !permissionService.is(player, PermissionService.PlayerPermissions.ULTIMATE_IRON_MAN)) {
+				&& !permissionService.is(player, PermissionService.PlayerPermissions.ULTIMATE_IRON_MAN))
 			permissionService.give(player, PermissionService.PlayerPermissions.ULTIMATE_IRON_MAN);
-		}
 		if (player.isHardcoreIronMan()
-				&& !permissionService.is(player, PermissionService.PlayerPermissions.HARDCORE_IRON_MAN)) {
+				&& !permissionService.is(player, PermissionService.PlayerPermissions.HARDCORE_IRON_MAN))
 			permissionService.give(player, PermissionService.PlayerPermissions.HARDCORE_IRON_MAN);
-		}
 
 		PlayerStatisticsEntity statistics = Helpers.fallback(playerEntity.getStatistics(),
 				new PlayerStatisticsEntity());
-		if (statistics.getBossKillCount() == null) {
+		if (statistics.getBossKillCount() == null)
 			statistics.setBossKillCount(new HashMap<>());
-		}
-		if (statistics.getSlayerMonsterKillCount() == null) {
+		if (statistics.getSlayerMonsterKillCount() == null)
 			statistics.setSlayerMonsterKillCount(new HashMap<>());
-		}
-		if (statistics.getBossKillTimes() == null) {
+		if (statistics.getBossKillTimes() == null)
 			statistics.setBossKillTimes(new HashMap<>());
-		}
-		if (statistics.getTreasureTrailCount() == null) {
+		if (statistics.getTreasureTrailCount() == null)
 			statistics.setTreasureTrailCount(new HashMap<>());
-		}
 		playerEntity.setStatistics(statistics);
 
 		PlayerPrivateChatEntity playerPrivateChatEntity = Helpers.fallback(playerEntity.getPrivateChat(),
 				new PlayerPrivateChatEntity());
-		if (playerPrivateChatEntity.getFriendsList() == null) {
+		if (playerPrivateChatEntity.getFriendsList() == null)
 			playerPrivateChatEntity.setFriendsList(new HashSet<>());
-		}
-		if (playerPrivateChatEntity.getIgnoreList() == null) {
+		if (playerPrivateChatEntity.getIgnoreList() == null)
 			playerPrivateChatEntity.setIgnoreList(new HashSet<>());
-		}
-		if (playerPrivateChatEntity.getStatus() == null) {
+		if (playerPrivateChatEntity.getStatus() == null)
 			playerPrivateChatEntity.setStatus(PrivateChatService.PrivateChatStatus.ON);
-		}
 		playerEntity.setPrivateChat(playerPrivateChatEntity);
 
 		PlayerSkillsEntity skills = Helpers.fallback(playerEntity.getSkills(), new PlayerSkillsEntity());
-		if (skills.getLevels() == null) {
+		if (skills.getLevels() == null)
 			skills.setLevels(new HashMap<>());
-		}
-		if (skills.getExperiences() == null) {
+		if (skills.getExperiences() == null)
 			skills.setExperiences(new HashMap<>());
-		}
 		playerEntity.setSkills(skills);
 
 		PlayerSkillSlayerEntity slayer = Helpers.fallback(playerEntity.getSlayerSkill(), new PlayerSkillSlayerEntity());
@@ -190,42 +175,34 @@ public class PersistenceServiceImpl implements PersistenceService {
 
 		PlayerDeadmanStateEntity deadman = Helpers.fallback(playerEntity.getDeadmanState(),
 				new PlayerDeadmanStateEntity());
-		if (deadman.getProtectedCombatSkills() == null) {
+		if (deadman.getProtectedCombatSkills() == null)
 			deadman.setProtectedCombatSkills(new HashSet<>());
-		}
-		if (deadman.getProtectedOtherSkills() == null) {
+		if (deadman.getProtectedOtherSkills() == null)
 			deadman.setProtectedOtherSkills(new HashSet<>());
-		}
 		playerEntity.setDeadmanState(deadman);
 
 		PlayerZulrahStateEntity zulrah = Helpers.fallback(playerEntity.getZulrahState(), new PlayerZulrahStateEntity());
-		if (zulrah.getItemsLostZulrah() == null) {
+		if (zulrah.getItemsLostZulrah() == null)
 			zulrah.setItemsLostZulrah(new ArrayList<>());
-		}
 		playerEntity.setZulrahState(zulrah);
 
 		PlayerSettingsEntity settings = Helpers.fallback(playerEntity.getPlayerSettings(), new PlayerSettingsEntity());
-		if (settings.getPlayerScreenBrightness() == 0) {
+		if (settings.getPlayerScreenBrightness() == 0)
 			settings.setPlayerScreenBrightness(2);
-		}
-		if (settings.getPlayerVariables() == null) {
+		if (settings.getPlayerVariables() == null)
 			settings.setPlayerVariables(new HashMap<>());
-		}
-		if (settings.getLockedSkills() == null) {
+		if (settings.getLockedSkills() == null)
 			settings.setLockedSkills(new ArrayList<>());
-		}
 		playerEntity.setPlayerSettings(settings);
 
 		PlayerBankEntity bank = Helpers.fallback(playerEntity.getBank(), new PlayerBankEntity());
 		playerEntity.setBank(bank);
 
 		PlayerEquipmentEntity equipment = Helpers.fallback(playerEntity.getEquipment(), new PlayerEquipmentEntity());
-		if (equipment.getItemCharges() == null) {
+		if (equipment.getItemCharges() == null)
 			equipment.setItemCharges(new HashMap<>());
-		}
-		if (equipment.getItemChargedWith() == null) {
+		if (equipment.getItemChargedWith() == null)
 			equipment.setItemChargedWith(new HashMap<>());
-		}
 		playerEntity.setEquipment(equipment);
 
 		PlayerBountyHunterEntity bountyHunter = Helpers.fallback(playerEntity.getBountyHunter(),
@@ -234,14 +211,14 @@ public class PersistenceServiceImpl implements PersistenceService {
 
 		// Workaround for a horrible bug
 		boolean originallyActive = player.isActive();
-		if (originallyActive) {
+		if (originallyActive)
 			player.setActive(false);
-		}
 		if (playerEntity.getLocationX() != 0 && playerEntity.getLocationY() != 0) {
 			player.setLocation(Location.create(playerEntity.getLocationX(), playerEntity.getLocationY(),
 					playerEntity.getLocationZ()));
 		} else {
 			player.setLocation(Entity.DEFAULT_LOCATION);
+			player.sendMessage("You have been moved home.");
 		}
 		player.setActive(originallyActive);
 		// -----------Backwards compatibility

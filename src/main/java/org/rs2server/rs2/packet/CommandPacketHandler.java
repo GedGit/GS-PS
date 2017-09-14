@@ -1,13 +1,11 @@
 package org.rs2server.rs2.packet;
 
 import org.apache.commons.lang3.StringUtils;
-import org.joda.time.DateTime;
-import org.joda.time.MutableDateTime;
 import org.rs2server.Server;
 import org.rs2server.cache.Cache;
 import org.rs2server.cache.format.*;
 import org.rs2server.rs2.*;
-import org.rs2server.rs2.content.TimedPunishment.PunishmentType;
+import org.rs2server.rs2.content.TimedPunishment;
 import org.rs2server.rs2.domain.dao.api.PlayerEntityDao;
 import org.rs2server.rs2.domain.model.player.*;
 import org.rs2server.rs2.domain.model.player.treasuretrail.clue.*;
@@ -59,13 +57,13 @@ public class CommandPacketHandler implements PacketHandler {
 			return;
 
 		commandString = commandString.replaceAll(":", "");
-		String[] args = commandString.split(" "); 
+		String[] args = commandString.split(" ");
 		String command = args[0].toLowerCase();
 
 		if (command.equals("home")) {
 			player.teleport(Constants.HOME_TELEPORT, 4, 4, false);
 			return;
-		} 
+		}
 
 		if (command.equals("time")) {
 			DateFormat df = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM,
@@ -313,7 +311,7 @@ public class CommandPacketHandler implements PacketHandler {
 		 * Staff - Server Support - commands
 		 */
 		if (permissionService.is(player, PermissionService.PlayerPermissions.HELPER)) {
-			handleHelperCommands(player, args, commandString);
+			handleHelperCommands(player, args);
 			return;
 		}
 
@@ -321,7 +319,7 @@ public class CommandPacketHandler implements PacketHandler {
 		 * Staff - Moderator - commands
 		 */
 		if (permissionService.is(player, PermissionService.PlayerPermissions.MODERATOR)) {
-			handleModeratorCommands(player, commandString, args, commandString);
+			handleModeratorCommands(player, commandString, args);
 			return;
 		}
 
@@ -329,12 +327,13 @@ public class CommandPacketHandler implements PacketHandler {
 		 * Staff - Administrator+ commands
 		 */
 		if (player.isAdministrator()) {
+			handleModeratorCommands(player, commandString, args);
 			handleAdminCommands(player, commandString, args);
 			return;
 		}
 	}
 
-	public void handleHelperCommands(Player player, String[] args, String commandString) {
+	public void handleHelperCommands(Player player, String[] args) {
 		String command = args[0].toLowerCase();
 
 		if (command.equals("kick")) {
@@ -351,7 +350,7 @@ public class CommandPacketHandler implements PacketHandler {
 		}
 
 		if (command.equals("mute")) {
-			if (args.length != 1) {
+			if (args.length > 2 || args.length < 2) {
 				player.sendMessage("You have to do ::mute player_name");
 				return;
 			}
@@ -361,37 +360,11 @@ public class CommandPacketHandler implements PacketHandler {
 				player.getActionSender().sendMessage("No player found for name '" + playerName + "'!");
 				return;
 			}
-
-			DateTime dt = new DateTime();
-
-			MutableDateTime mdt = dt.toMutableDateTime();
-			mdt.addHours(1);
-			DateTime result = mdt.toDateTime();
-
-			target.getPunishment().punish(PunishmentType.MUTE, result);
-
-			String message = target.getName() + " has been muted until ";
-			message += result.hourOfDay().getAsText() + ":" + result.getMinuteOfHour() + ", ";
-			message += result.dayOfWeek().getAsText() + ", ";
-			message += "the " + result.dayOfMonth().get() + Misc.getLastDigitSufix(result.dayOfMonth().get()) + " ";
-			message += "of " + result.monthOfYear().getAsText() + ", " + result.getYear() + ".";
-			player.sendMessage(message);
-
-			File file = new File("data/punishments/mutedUsers.xml");
-			List<String> mutedUsers = null;
-			try {
-				mutedUsers = XMLController.readXML(file);
-				XMLController.writeXML(mutedUsers, file);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			mutedUsers.add(playerName);
-
-			return;
+			TimedPunishment.handleMute(player, target, 0, 1, 0);
 		}
 	}
 
-	public void handleModeratorCommands(Player player, String playerCommand, String[] args, String commandString) {
+	public void handleModeratorCommands(Player player, String playerCommand, String[] args) {
 		try {
 			String command = args[0].toLowerCase();
 			if (command.equals("checkbank")) {
@@ -420,15 +393,7 @@ public class CommandPacketHandler implements PacketHandler {
 				return;
 			}
 			if (command.equals("mute")) {
-				if (args.length < 4) {
-					player.sendMessage("You have to do ::mute player_name days hours minutes");
-					return;
-				}
-				if (Integer.parseInt(args[3]) < 0 || Integer.parseInt(args[3]) > 23) {
-					player.sendMessage("You have to do ::mute player_name days hours minutes");
-					return;
-				}
-				if (Integer.parseInt(args[4]) < 0 || Integer.parseInt(args[4]) > 59) {
+				if (args.length < 5 || args.length > 5) {
 					player.sendMessage("You have to do ::mute player_name days hours minutes");
 					return;
 				}
@@ -440,41 +405,12 @@ public class CommandPacketHandler implements PacketHandler {
 				}
 				int days = Integer.parseInt(args[2]), hours = Integer.parseInt(args[3]),
 						minutes = Integer.parseInt(args[4]);
-
-				DateTime dt = new DateTime();
-
-				MutableDateTime mdt = dt.toMutableDateTime();
-				mdt.addMinutes(minutes);
-				mdt.addHours(hours);
-				mdt.addDays(days);
-				DateTime result = mdt.toDateTime();
-
-				target.getPunishment().punish(PunishmentType.MUTE, result);
-
-				String message = target.getName() + " has been muted until ";
-				message += result.hourOfDay().getAsText() + ":" + result.getMinuteOfHour() + ", ";
-				message += result.dayOfWeek().getAsText() + ", ";
-				message += "the " + result.dayOfMonth().get() + Misc.getLastDigitSufix(result.dayOfMonth().get()) + " ";
-				message += "of " + result.monthOfYear().getAsText() + ", " + result.getYear() + ".";
-				player.sendMessage(message);
-
-				File file = new File("data/punishments/mutedUsers.xml");
-				List<String> mutedUsers = XMLController.readXML(file);
-				mutedUsers.add(playerName);
-				XMLController.writeXML(mutedUsers, file);
+				TimedPunishment.handleMute(player, target, days, hours, minutes);
 
 				return;
 			}
 			if (command.equals("ban")) {
-				if (args.length < 4) {
-					player.sendMessage("You have to do ::ban player_name days hours minutes");
-					return;
-				}
-				if (Integer.parseInt(args[3]) < 0 || Integer.parseInt(args[3]) > 23) {
-					player.sendMessage("You have to do ::ban player_name days hours minutes");
-					return;
-				}
-				if (Integer.parseInt(args[4]) < 0 || Integer.parseInt(args[4]) > 59) {
+				if (args.length < 5 || args.length > 5) {
 					player.sendMessage("You have to do ::ban player_name days hours minutes");
 					return;
 				}
@@ -486,28 +422,7 @@ public class CommandPacketHandler implements PacketHandler {
 				}
 				int days = Integer.parseInt(args[2]), hours = Integer.parseInt(args[3]),
 						minutes = Integer.parseInt(args[4]);
-
-				DateTime dt = new DateTime();
-
-				MutableDateTime mdt = dt.toMutableDateTime();
-				mdt.addMinutes(minutes);
-				mdt.addHours(hours);
-				mdt.addDays(days);
-				DateTime result = mdt.toDateTime();
-
-				target.getPunishment().punish(PunishmentType.BAN, result);
-
-				String message = target.getName() + " has been banned until ";
-				message += result.hourOfDay().getAsText() + ":" + result.getMinuteOfHour() + ", ";
-				message += result.dayOfWeek().getAsText() + ", ";
-				message += "the " + result.dayOfMonth().get() + Misc.getLastDigitSufix(result.dayOfMonth().get()) + " ";
-				message += "of " + result.monthOfYear().getAsText() + ", " + result.getYear() + ".";
-				player.sendMessage(message);
-
-				File file = new File("data/punishments/bannedUsers.xml");
-				List<String> bannedUsers = XMLController.readXML(file);
-				bannedUsers.add(playerName);
-				XMLController.writeXML(bannedUsers, file);
+				TimedPunishment.handleBan(player, target, days, hours, minutes);
 				return;
 			}
 
@@ -1511,6 +1426,21 @@ public class CommandPacketHandler implements PacketHandler {
 			player.getActionSender().sendInterfaceConfig(24, 0, false);
 			for (int i = 1; i < 10; i++)
 				player.getActionSender().sendString(24, i, "Child: " + i);
+		}
+		if (command.equals("gwd")) {
+			player.getActionSender().sendWalkableInterface(406);
+			player.sendMessage("Sending gwd interface");
+		}
+		if (command.equals("2")) {
+			int childId = Integer.parseInt(args[1]);
+			player.getActionSender().sendConfig(1069, childId);
+			player.sendMessage("Sending gwd config 1069 child " + childId);
+		}
+		if (command.equals("1")) {
+			int childId = Integer.parseInt(args[1]);
+			player.getActionSender().sendConfig(1048, childId);
+			player.sendMessage("Sending gwd config 1048 child " + childId);
+			player.getActionSender().sendConfig(BitConfigBuilder.of(1048).build());
 		}
 		if (command.startsWith("chatinterface")) {
 			player.getActionSender().sendChatInterface(Integer.parseInt(args[1]));

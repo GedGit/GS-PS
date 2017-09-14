@@ -53,7 +53,7 @@ public class CerberusMagicAttackStyle<T extends Cerberus> extends NpcCombatState
 		if (challenger.getActionSender() != null) {
 			challenger.getActionSender().sendProjectile(npc.getCentreLocation(), challenger.getCentreLocation(), MAGIC_PROJECTILE_ID, 45, 50, clientSpeed, 43, 35, 10, 48, challenger.getProjectileLockonIndex());
 		}
-		npc.getCombatState().setAttackDelay(8);
+		npc.getCombatState().setAttackDelay(6);
 		World.getWorld().submit(new StoppingTick(delay) {
             @Override
             public void executeAndStop() {

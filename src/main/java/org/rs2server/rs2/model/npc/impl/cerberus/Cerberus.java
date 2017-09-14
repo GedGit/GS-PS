@@ -37,7 +37,7 @@ public class Cerberus extends CombatNpc<Cerberus> {
 	private static final Animation DEATH_ANIMATION = Animation.create(4495);
 	private static final Animation HOWL_ANIMATION = Animation.create(4485);
 
-	private static final int[] BONUSES = { 220, 220, 100, 220, 220, 150, 150, 150, 150, 150, 100, 20, 0 };
+	private static final int[] BONUSES = { 220, 220, 150, 220, 220, 150, 150, 150, 150, 150, 100, 20, 0 };
 
 	public static final int MAX_HEALTH = 600;
 

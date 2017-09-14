@@ -128,7 +128,7 @@ public final class CombatFormula {
 					break;
 				case 11806:
 				case 11808:
-					specialMultiplier = 1.175;
+					specialMultiplier = 1.275;
 					break;
 				case 3101:
 				case 1215:

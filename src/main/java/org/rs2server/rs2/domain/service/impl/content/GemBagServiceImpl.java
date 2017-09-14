@@ -68,13 +68,11 @@ public class GemBagServiceImpl implements GemBagService {
 				return;
 			}
 			int transferAmount = player.getInventory().getCount(i.getGemId()) + amount;
-			if (transferAmount > SIZE) {
+			if (transferAmount > SIZE)
 				transferAmount = SIZE - amount;
-			}
 
 			player.getInventory().remove(new Item(i.getGemId(), transferAmount));
-			int toAdd = amount + transferAmount > SIZE ? SIZE : amount + transferAmount;
-			gemBag.put(i, toAdd);
+			gemBag.put(i, transferAmount);
 		});
 	}
 

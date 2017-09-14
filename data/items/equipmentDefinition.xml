@@ -52597,8 +52597,8 @@
                 <int>45</int>
                 <int>45</int>
                 <int>0</int>
-                <int>0</int>
                 <int>3</int>
+                <int>0</int>
             </bonuses>
             <type>PLATEBODY</type>
             <specialConsumption>0</specialConsumption>
@@ -52643,8 +52643,8 @@
                 <int>30</int>
                 <int>30</int>
                 <int>0</int>
-                <int>0</int>
                 <int>3</int>
+                <int>0</int>
             </bonuses>
             <type>LEGS</type>
             <specialConsumption>0</specialConsumption>

@@ -29,7 +29,7 @@ public class CerberusMeleeAttackStyle<T extends Cerberus> extends NpcCombatState
         npc.playAnimation(ATTACK_ANIMATION);
         Mob challenger = npc.getChallenger();
         CombatAction activeCombatAction = challenger.getActiveCombatAction();
-        npc.getCombatState().setAttackDelay(8);
+        npc.getCombatState().setAttackDelay(6);
         World.getWorld().submit(new StoppingTick(1) {
             @Override
             public void executeAndStop() {

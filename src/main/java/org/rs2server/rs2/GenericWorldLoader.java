@@ -48,11 +48,11 @@ public class GenericWorldLoader implements WorldLoader {
 		if (!playerDetails.getName().matches("^[0-9a-zA-Z ]+"))
 			return new LoginResult(ReturnCodes.ERROR_LOADING_PROFILE, null);
 
-		if (playerDetails.getName().length() < 3 || playerDetails.getName().length() > 12)  
+		if (playerDetails.getName().length() < 3 || playerDetails.getName().length() > 12)
 			return new LoginResult(ReturnCodes.ERROR_LOADING_PROFILE, null);
 
 		if (playerDetails.getVersion() != Server.VERSION)
-			return new LoginResult(LoginResult.VERSION_MISMATCH, null); 
+			return new LoginResult(LoginResult.VERSION_MISMATCH, null);
 
 		if (World.SYSTEM_UPDATE && !playerDetails.getName().equals("salve"))
 			return new LoginResult(LoginResult.UPDATE_IN_PROGRESS, null);

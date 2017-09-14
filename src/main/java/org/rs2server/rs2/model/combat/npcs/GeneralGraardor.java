@@ -91,7 +91,7 @@ public class GeneralGraardor extends AbstractCombatAction {
 
 			hitDelay = 1;
 			blockAnimation = true;
-			maxHit = 60;
+			maxHit = 40;
 
 			randomHit = super.damage(maxHit, attacker, victim, AttackType.CRUSH, Skills.ATTACK,
 					Prayers.PROTECT_FROM_MELEE, false, false);
@@ -179,7 +179,7 @@ public class GeneralGraardor extends AbstractCombatAction {
 
 	@Override
 	public boolean canHit(Mob attacker, Mob victim, boolean b, boolean b1) {
-		if (random.nextInt(6) == 5)
+		if (random.nextInt(6) > 3)
 			style = CombatStyle.MAGIC;
 		else
 			style = CombatStyle.MELEE;
@@ -189,6 +189,6 @@ public class GeneralGraardor extends AbstractCombatAction {
 
 	@Override
 	public int distance(Mob attacker) {
-		return 1;
+		return 2;
 	}
 }

@@ -59,8 +59,8 @@
     <entry>
         <int>5862</int>
         <CombatDefinition>
-            <maxHit>61</maxHit>
-            <aggressive>false</aggressive>
+            <maxHit>51</maxHit>
+            <aggressive>true</aggressive>
             <combatCooldownDelay>5</combatCooldownDelay>
             <respawnTicks>9999999</respawnTicks>
             <attack>
@@ -81,7 +81,7 @@
             <skills>
                 <entry>
                     <skill>DEFENCE</skill>
-                    <int>60</int>
+                    <int>100</int>
                 </entry>
                 <entry>
                     <skill>HITPOINTS</skill>
@@ -89,11 +89,11 @@
                 </entry>
                 <entry>
                     <skill>ATTACK</skill>
-                    <int>1</int>
+                    <int>100</int>
                 </entry>
                 <entry>
                     <skill>MAGIC</skill>
-                    <int>1</int>
+                    <int>150</int>
                 </entry>
             </skills>
             <bonuses>
@@ -52158,7 +52158,7 @@
     <entry>
         <int>3165</int>
         <CombatDefinition>
-            <maxHit>25</maxHit>
+            <maxHit>15</maxHit>
             <combatCooldownDelay>5</combatCooldownDelay>
             <respawnTicks>25</respawnTicks>
             <aggressive>true</aggressive>
@@ -52200,20 +52200,20 @@
                 </entry>
             </skills>
             <bonuses>
-                <int>95</int>
-                <int>95</int>
-                <int>95</int>
-                <int>95</int>
-                <int>95</int>
-                <int>95</int>
-                <int>95</int>
-                <int>95</int>
-                <int>95</int>
-                <int>95</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
                 <int>14</int>
-                <int>10</int>
-                <int>10</int>
-                <int>10</int>
+                <int>5</int>
+                <int>5</int>
+                <int>5</int>
             </bonuses>
         </CombatDefinition>
     </entry>
@@ -64502,7 +64502,7 @@
     <entry>
         <int>3163</int>
         <CombatDefinition>
-            <maxHit>25</maxHit>
+            <maxHit>15</maxHit>
             <combatCooldownDelay>5</combatCooldownDelay>
             <respawnTicks>80</respawnTicks>
             <aggressive>true</aggressive>
@@ -64548,27 +64548,27 @@
                 </entry>
             </skills>
             <bonuses>
-                <int>95</int>
-                <int>95</int>
-                <int>95</int>
-                <int>95</int>
-                <int>95</int>
-                <int>75</int>
-                <int>75</int>
-                <int>75</int>
-                <int>75</int>
-                <int>75</int>
                 <int>25</int>
-                <int>10</int>
-                <int>10</int>
+                <int>25</int>
+                <int>25</int>
+                <int>25</int>
+                <int>25</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
+                <int>5</int>
+                <int>5</int>
             </bonuses>
         </CombatDefinition>
     </entry>
     <entry>
         <int>3164</int>
         <CombatDefinition>
-            <maxHit>25</maxHit>
-            <combatCooldownDelay>7</combatCooldownDelay>
+            <maxHit>15</maxHit>
+            <combatCooldownDelay>5</combatCooldownDelay>
             <respawnTicks>80</respawnTicks>
             <aggressive>true</aggressive>
             <attack>
@@ -64613,19 +64613,19 @@
                 </entry>
             </skills>
             <bonuses>
-                <int>95</int>
-                <int>95</int>
-                <int>95</int>
-                <int>95</int>
-                <int>90</int>
-                <int>95</int>
-                <int>95</int>
-                <int>95</int>
-                <int>95</int>
-                <int>95</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
                 <int>10</int>
-                <int>10</int>
-                <int>10</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
+                <int>15</int>
+                <int>5</int>
+                <int>5</int>
+                <int>5</int>
             </bonuses>
         </CombatDefinition>
     </entry>

@@ -211,6 +211,6 @@ public class CommanderZilyana extends AbstractCombatAction {
 
 	@Override
 	public int distance(Mob attacker) {
-		return 1;
+		return 2;
 	}
 }

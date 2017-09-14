@@ -86,6 +86,7 @@ public final @Setter @Getter class PlayerEntity extends MongoEntity {
 	private boolean rockyReset;
 	private boolean defenceCape;
 	private boolean hasSlayerTaskReset;
+	private PlayerAchievementEntity achievements;
 
 	public PlayerSettingsEntity getPlayerSettings() {
 		return playerSettings;
@@ -341,5 +342,13 @@ public final @Setter @Getter class PlayerEntity extends MongoEntity {
 	
 	public void resetSlayerTaskTrue() {
 		this.hasSlayerTaskReset = true;
+	}
+
+	public PlayerAchievementEntity getAchievements() {
+		return achievements;
+	}
+
+	public void setAchievementEntity(PlayerAchievementEntity playerAchievementEntity) {
+		this.achievements = playerAchievementEntity;
 	}
 }

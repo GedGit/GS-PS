@@ -72,12 +72,12 @@ public class CorporealBeast extends AbstractCombatAction {
 			if (attacker.getLocation().getDistance(victim.getLocation()) > 3) {
 				if (random.nextInt(6) < 3)
 					handleMagicAttack(attacker, victim);
-				else if (random.nextInt(6) > 4)
+				else
 					handleRangedAttack(attacker, victim);
 				break;
 			}
 			attacker.playAnimation(Animation.create(1683));
-			maxHit = 40;
+			maxHit = 20;
 
 			randomHit = super.damage(maxHit, attacker, victim, AttackType.CRUSH, Skills.ATTACK,
 					Prayers.PROTECT_FROM_MELEE, false, false);
@@ -132,10 +132,8 @@ public class CorporealBeast extends AbstractCombatAction {
 		}
 		boolean canAttack = attacker.getLocation().isWithinDistance(attacker, victim,
 				distance(attacker) + extraDistance);
-		if (!canAttack) {
+		if (!canAttack)
 			canAttack = true;
-			System.out.println("can't attack, switching to TRUE");
-		}
 		return canAttack;
 	}
 
@@ -238,7 +236,7 @@ public class CorporealBeast extends AbstractCombatAction {
 		boolean blockAnimation = false;
 		attacker.playAnimation(Animation.create(1679));
 		attacker.playGraphics(Graphic.create(319, 0, 0));
-		int maxHit = 15;
+		int maxHit = 30;
 		final Collection<Player> localPlayers = World.getWorld().getRegionManager().getLocalPlayers(attacker);
 		for (final Player near : localPlayers) {
 			if (near != null && near != attacker && near.getSkills().getLevel(Skills.HITPOINTS) > 0) {
