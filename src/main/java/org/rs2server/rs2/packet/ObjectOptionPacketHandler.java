@@ -2010,7 +2010,7 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 					return;
 				}
 				String objectName = obj.getDefinition().getName().toLowerCase();
-				if (objectName.contains("booth") || objectName.contains("bank")) {
+				if (objectName.contains("booth") || objectName.contains("bank") || obj.getId() == 7478) {
 					PermissionService permissionService = Server.getInjector().getInstance(PermissionService.class);
 					if (item.getDefinition() == null)
 						return;
@@ -2047,15 +2047,12 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 									return;
 								}
 								int newCannonBalls = item.getCount();
-								if (newCannonBalls > 30) {
+								if (newCannonBalls > 30)
 									newCannonBalls = 30;
-								}
-								if (newCannonBalls + cannonBalls > 30) {
+								if (newCannonBalls + cannonBalls > 30)
 									newCannonBalls = 30 - cannonBalls;
-								}
-								if (newCannonBalls < 1) {
+								if (newCannonBalls < 1)
 									return;
-								}
 								player.getInventory().remove(new Item(2, newCannonBalls));
 								cannon.addCannonBalls(newCannonBalls);
 								player.getActionSender().sendMessage("You load " + newCannonBalls + " cannonball"

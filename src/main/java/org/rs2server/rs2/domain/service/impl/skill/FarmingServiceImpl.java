@@ -247,15 +247,14 @@ public class FarmingServiceImpl implements FarmingService {
 	 * @return true for diseased, false if not.
 	 */
 	private boolean randomlyDisease(@Nonnull FarmingPatchState patch) {
-		if (!patch.getPatch().getType().isVulnerableToDisease()) {
+		if (!patch.getPatch().getType().isVulnerableToDisease())
 			return false;
-		}
 
 		int modifier = 0;
 		modifier += (patch.getTreatment().getYieldIncrease() * 3);
 		modifier += (patch.isWatered() ? 3 : 0);
 
-		return Misc.random(10 + modifier) == 1;
+		return Misc.random(15 + modifier) == 1;
 	}
 
 	@Subscribe
@@ -431,7 +430,7 @@ public class FarmingServiceImpl implements FarmingService {
 						patch.setDiseased(true);
 						// logger.info("Crop " + patch.getPlanted().name() + " diseased for " +
 						// player.getName());
-					} else if (patch.isDiseased()) {
+					} else if (patch.isDiseased() && Misc.random(2) == 0) {
 						patch.setDiseased(false);
 						patch.setDead(true);
 						// logger.info("Crop " + patch.getPlanted().name() + " died for " +

@@ -38,9 +38,21 @@
     },
 	{
       "itemID": 4153,
-      "hitRollCeil": 2.5,
+      "hitRollCeil": 3.5,
       "maxAmount": 1,
       "minAmount": 1
+    },
+	{
+      "itemID": 7937,
+      "hitRollCeil": 65.0,
+      "maxAmount": 150,
+      "minAmount": 150
+    },
+	{
+      "itemID": 445,
+      "hitRollCeil": 64.0,
+      "maxAmount": 20,
+      "minAmount": 10
     },
 	{
       "itemID": 4101,

@@ -1297,9 +1297,7 @@ public class World {
 							+ "<col=EDB20E>] votes have been claimed; vote to redeem yours!");
 		}
 
-		if (this.voteBazinga[2] % 300 == 0 && this.voteBazinga[2] > 0) {
-
-			Item keys = new Item((Misc.random(100) < 50 ? 986 : 988), 3); // crystal key parts
+		if (this.voteBazinga[2] % 275 == 0 && this.voteBazinga[2] > 0) {
 
 			int peopleOnline = 0;
 
@@ -1308,12 +1306,13 @@ public class World {
 						|| player.getPermissionService().isAny(player, PlayerPermissions.IRON_MAN,
 								PlayerPermissions.ULTIMATE_IRON_MAN, PlayerPermissions.HARDCORE_IRON_MAN))
 					continue;
+				Item keys = new Item((Misc.random(100) < 50 ? 986 : 988), 5); // crystal key parts
 				Inventory.addDroppable(player, keys);
 				peopleOnline++;
 			}
 
-			this.sendWorldMessage("<img=27><col=EDB20E><shad=000000>You and <col=ff0000>" + peopleOnline
-					+ "<col=EDB20E> others received <col=ff0000>3"
+			this.sendWorldMessage("<img=27><col=EDB20E><shad=000000>[Vote Party] You and <col=ff0000>" + peopleOnline
+					+ "<col=EDB20E> others received <col=ff0000>5"
 					+ "<col=EDB20E> x <col=ff0000>Crystal key parts<col=EDB20E>.");
 
 			Server.sendDiscordMessage("[SERVER] Vote Party: " + getPlayers().size() + " x players rewarded with "

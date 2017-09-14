@@ -22,7 +22,7 @@ public class Misc {
 	 */
 	private static Random r = new Random();
 
-	public static int random(int i) { 
+	public static int random(int i) {
 		return r.nextInt(i + 1);
 	}
 
@@ -167,8 +167,8 @@ public class Misc {
 					player.getActionSender().sendDialogue("Salve-PS Advisor", DialogueType.NPC, 276,
 							FacialAnimation.HAPPY,
 							"Sucess! You've received " + Misc.formatNumber(amt) + " vote points and "
-									+ secondsToMinutes(expSecs)
-									+ " minutes of double experience; you now have a total of: "
+									+ " boosted experience for " + secondsToMinutes(expSecs)
+									+ "; you now have a total of: "
 									+ Misc.formatNumber(player.getDatabaseEntity().getVotePoints())
 									+ " vote points; thank you for voting!");
 					player.removeAttribute("busy");
@@ -226,9 +226,9 @@ public class Misc {
 	}
 
 	public static String secondsToMinutes(int seconds) {
-	    int sec = seconds % 60;
+		int sec = seconds % 60;
 		int min = (seconds / 60) % 60;
 		int hours = (seconds / 60) / 60;
-		return hours+"h : "+min+"m : "+sec+"s";
+		return hours + "h : " + min + "m : " + sec + "s";
 	}
 }
