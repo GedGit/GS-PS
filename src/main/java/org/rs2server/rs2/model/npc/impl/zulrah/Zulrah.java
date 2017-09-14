@@ -57,9 +57,9 @@ public final class Zulrah extends CombatNpc<Zulrah> {
 
 	private final Player challenger;
 	// first 5 = attack bonuses
-	private static final int[] RANGE_BONUSES = { 150, 150, 150, 150, 150, 200, 200, 200, -45, 50, 0, 100, 0 };
-	private static final int[] MELEE_BONUSES = { 150, 150, 150, 150, 150, 200, 200, 200, 0, 300, 0, 100, 0 };
-	private static final int[] MAGE_BONUSES = { 150, 150, 150, 150, 150, 200, 200, 200, 300, 0, 100, 0 };
+	private static final int[] RANGE_BONUSES = { 150, 150, 150, 150, 150, 250, 250, 250, 100, 100, 0, 100, 0 };
+	private static final int[] MELEE_BONUSES = { 150, 150, 150, 150, 150, 250, 250, 250, 100, 300, 0, 100, 0 };
+	private static final int[] MAGE_BONUSES = { 150, 150, 150, 150, 150, 250, 250, 250, 300, 100, 100, 0 };
 
 	public Zulrah(Player challenger, Location location) {
 		super(ID, location);
@@ -80,12 +80,10 @@ public final class Zulrah extends CombatNpc<Zulrah> {
 
 	@SuppressWarnings("rawtypes")
 	private int[] getBonusesForTransition(NpcCombatState state) {
-		if (state.equals(mageState)) {
+		if (state.equals(mageState))
 			return MAGE_BONUSES;
-		}
-		if (state.equals(rangeState)) {
+		if (state.equals(rangeState))
 			return RANGE_BONUSES;
-		}
 		return MELEE_BONUSES;
 	}
 
@@ -361,23 +359,19 @@ public final class Zulrah extends CombatNpc<Zulrah> {
 				antiVenom = System.currentTimeMillis() - (long) challenger.getAttribute("antiVenom+", 0L) < 300000;
 			}
 			for (Item equip : challenger.getEquipment().toArray()) {
-				if (equip == null) {
+				if (equip == null)
 					continue;
-				}
 				VenomWeapons venomWeapons = VenomWeapons.of(equip.getId());
-				if (venomWeapons != null) {
+				if (venomWeapons != null)
 					antiVenom = true;
-				}
 			}
 			if (!antiVenom) {
 				activeVenomClouds.stream().map(Entity::getLocation).filter(this::inVenomZone).map(l -> {
-					if (Misc.random(6) == 0 && !challenger.hasAttribute("venom")) {
+					if (Misc.random(6) == 0 && !challenger.hasAttribute("venom"))
 						challenger.inflictVenom();
-					}
 					int damage = Misc.random(1, 4);
-					if (damage > challenger.getSkills().getLevel(Skills.HITPOINTS)) {
+					if (damage > challenger.getSkills().getLevel(Skills.HITPOINTS))
 						damage = challenger.getSkills().getLevel(Skills.HITPOINTS);
-					}
 					return new Hit(damage, Hit.HitType.VENOM_HIT);
 				}).forEach(h -> challenger.inflictDamage(h, challenger));
 			}
@@ -519,9 +513,8 @@ public final class Zulrah extends CombatNpc<Zulrah> {
 		int ly = loc.getY();
 		for (int ix = 0; ix < 3; ix++) {
 			for (int iy = 0; iy < 3; iy++) {
-				if (x == lx + ix && y == ly + iy) {
+				if (x == lx + ix && y == ly + iy)
 					return true;
-				}
 			}
 		}
 		return false;
@@ -557,5 +550,4 @@ public final class Zulrah extends CombatNpc<Zulrah> {
 	public final List<NPC> getActiveMinions() {
 		return activeMinions;
 	} 
-
 }

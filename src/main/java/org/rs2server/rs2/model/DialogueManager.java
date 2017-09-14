@@ -1132,9 +1132,9 @@ public class DialogueManager {
 			player.getInventory().remove(new Item(3757, blades));
 			player.getInventory().remove(new Item(3748, helms));
 			player.getInventory().remove(new Item(3758, shields));
-			Inventory.addDroppable(player, new Item(386, total * 10));
+			Inventory.addDroppable(player, new Item(386, total * 15));
 			player.getActionSender().sendItemDialogue(385,
-					"Bardur gave you " + total * 10 + " x Cooked Shark for your Fremennik equipment.");
+					"Bardur gave you " + total * 15 + " x Cooked Shark for your Fremennik equipment.");
 			break;
 		/**
 		 * Warriors guild kamfreena
