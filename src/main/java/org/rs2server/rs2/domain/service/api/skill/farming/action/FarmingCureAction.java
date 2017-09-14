@@ -31,7 +31,7 @@ public class FarmingCureAction extends SimpleAction {
 	@Override
 	public void execute() {
 		getMob().getInventory().remove(ITEM_PLANT_CURE);
-		getMob().getSkills().addExperience(Skill.FARMING.getId(), 26 * 2);
+		getMob().getSkills().addExperience(Skill.FARMING.getId(), 10);
 		getMob().playAnimation(ANIMATION_POURING_PLANT_CURE);
 		patch.setDiseased(false);
 		farmingService.updateAndSendPatches((Player) getMob(), patch);

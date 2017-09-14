@@ -38,9 +38,8 @@ public class FarmingRakeAction extends InfiniteHarvestingAction {
 		farmingService.updateAndSendPatches((Player) getMob(), patchState);
 
 		// There is no more weed. Call your dealer.
-		if (patchState.getWeedLevel() == 3) {
+		if (patchState.getWeedLevel() == 3)
 			stop();
-		}
 	}
 
 	@Override
@@ -65,7 +64,7 @@ public class FarmingRakeAction extends InfiniteHarvestingAction {
 
 	@Override
 	public double getExperience() {
-		return 8;
+		return 4;
 	}
 
 	@Override

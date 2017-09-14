@@ -33,11 +33,12 @@ public class FarmingTreatmentAction extends SimpleAction {
 	@Override
 	public void execute() {
 		getMob().getInventory().remove(new Item(treatment.getItemId(), 1));
-		getMob().getSkills().addExperience(Skill.FARMING.getId(), 26 * 2);
+		getMob().getSkills().addExperience(Skill.FARMING.getId(), treatment.getItemId() == 6032 ? 13 : 26);
 		getMob().playAnimation(ANIMATION_POURING_TREATMENT);
 		patch.setTreatment(treatment);
 		farmingService.updateAndSendPatches((Player) getMob(), patch);
-		getMob().getActionSender().sendMessage("You treat the " + patch.getPatch().getType().toString() + " with " + treatment.name().toLowerCase() + ".");
+		getMob().getActionSender().sendMessage("You treat the " + patch.getPatch().getType().toString() + " with "
+				+ treatment.name().toLowerCase() + ".");
 		stop();
 	}
 }

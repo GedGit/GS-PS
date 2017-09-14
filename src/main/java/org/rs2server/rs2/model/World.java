@@ -16,6 +16,7 @@ import org.rs2server.rs2.content.api.*;
 import org.rs2server.rs2.content.areas.CoordinateEvent;
 import org.rs2server.rs2.domain.model.player.PlayerEntity;
 import org.rs2server.rs2.domain.service.api.*;
+import org.rs2server.rs2.domain.service.api.PermissionService.PlayerPermissions;
 import org.rs2server.rs2.domain.service.impl.content.ResourceArenaServiceImpl;
 import org.rs2server.rs2.event.*;
 import org.rs2server.rs2.model.CombatNPCDefinition.Skill;
@@ -72,7 +73,7 @@ public class World {
 	 * A boolean representing whether there's an ongoing system update.
 	 */
 	public static boolean SYSTEM_UPDATE;
-	
+
 	/**
 	 * An int representing the time until world shutdown.
 	 */
@@ -621,10 +622,10 @@ public class World {
 			if (Constants.DEBUG)
 				System.out.println(npc.getId() + " is missing combat definitions; plzz add :L");
 		}
-		System.out.println("spawning npc at "+npc.getSpawnLocation());
+		System.out.println("spawning npc at " + npc.getSpawnLocation());
 		return npc;
 	}
-	
+
 	/**
 	 * Unregisters an old npc.
 	 *
@@ -1276,7 +1277,7 @@ public class World {
 	 * These will be used for vote parties and whatnot
 	 */
 	private int[] voteBazinga = new int[4];
-	
+
 	public int getTotalVotes() {
 		return this.voteBazinga[2];
 	}
@@ -1292,20 +1293,20 @@ public class World {
 
 		if (this.voteBazinga[2] % 50 == 0 && this.voteBazinga[2] > 0 && this.voteBazinga[2] % 300 != 0) {
 			this.sendWorldMessage(
-					"<img=21><col=EDB20E><shad=000000>Total of [<col=ff0000>"
-							+ Misc.formatNumber(this.voteBazinga[2])
+					"<img=21><col=EDB20E><shad=000000>Total of [<col=ff0000>" + Misc.formatNumber(this.voteBazinga[2])
 							+ "<col=EDB20E>] votes have been claimed; vote to redeem yours!");
 		}
 
 		if (this.voteBazinga[2] % 300 == 0 && this.voteBazinga[2] > 0) {
 
-			Item keys = new Item((Misc.random(1) == 0 ? 986 : 988), 3); // crystal key parts
+			Item keys = new Item((Misc.random(100) < 50 ? 986 : 988), 3); // crystal key parts
 
 			int peopleOnline = 0;
 
 			for (Player player : this.getPlayers()) {
-				if (player == null || player.getAfkTolerance() > 15 || player.isIronMan() || player.isHardcoreIronMan()
-						|| player.isUltimateIronMan()) // no afk'ers and no ironman
+				if (player == null || player.getAfkTolerance() > 15
+						|| player.getPermissionService().isAny(player, PlayerPermissions.IRON_MAN,
+								PlayerPermissions.ULTIMATE_IRON_MAN, PlayerPermissions.HARDCORE_IRON_MAN))
 					continue;
 				Inventory.addDroppable(player, keys);
 				peopleOnline++;

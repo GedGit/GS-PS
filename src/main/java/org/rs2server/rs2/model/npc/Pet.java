@@ -229,10 +229,6 @@ public class Pet extends NPC {
 		// Check if the pet exists
 		if (pets == null)
 			return;
-		
-		// For extra pet rarity
-		if (Misc.random(1) != 1)
-			return;
 
 		// Check if we own the pet already
 		if (!player.getItemService().playerOwnsItem(player, item.getId())) {

@@ -38,7 +38,7 @@ public class FarmingPlantingAction extends SimpleAction {
 		final Item seed = new Item(plantable.getSeedItemId(), 1);
 		double exp = plantable.getExperience();
 		if (seed.getDefinition2().getName().contains("sapling"))
-			exp = exp / 100;
+			exp = exp / 1000;
 		getMob().getSkills().addExperience(Skill.FARMING.getId(), exp);
 		getMob().playAnimation(ANIMATION_PLANTING);
 		getMob().getInventory().remove(seed);

@@ -6,10 +6,11 @@ import org.rs2server.rs2.domain.service.api.skill.farming.FarmingPatchState;
 import org.rs2server.rs2.domain.service.api.skill.farming.FarmingService;
 import org.rs2server.rs2.model.Animation;
 import org.rs2server.rs2.model.Mob;
+import org.rs2server.rs2.model.Skills;
 import org.rs2server.rs2.model.player.Player;
 
 /**
- * An action to clear a patch of dead crops. 
+ * An action to clear a patch of dead crops.
  *
  * @author tommo
  */
@@ -39,12 +40,12 @@ public class FarmingClearingAction extends AbstractStatefulAction<FarmingClearin
 			return ClearPatchState.FINISHED_CLEARING;
 		} else if (state == ClearPatchState.FINISHED_CLEARING) {
 			getMob().getActionSender().sendMessage("You have successfully cleared this patch for new crops.");
+			getMob().getSkills().addExperience(Skills.FARMING, 2);
 			farmingService.clearPatch(((Player) getMob()), patch);
 			getMob().playAnimation(Animation.create(-1));
 		}
 		return null;
 	}
-
 
 	@Override
 	public CancelPolicy getCancelPolicy() {

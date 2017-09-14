@@ -28,7 +28,7 @@ public class FarmingWateringAction extends SimpleAction {
 
 	@Override
 	public void execute() {
-		getMob().getSkills().addExperience(Skill.FARMING.getId(), 26 * 2);
+		getMob().getSkills().addExperience(Skill.FARMING.getId(), 1);
 		getMob().playAnimation(ANIMATION_WATERING);
 		patch.setWatered(true);
 		farmingService.updateAndSendPatches((Player) getMob(), patch);

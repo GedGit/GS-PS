@@ -6,7 +6,6 @@ import java.util.Arrays;
 /**
  * Defines all of the plantable crops and their types.
  *
- * For growth times, see http://pastie.org/private/8shejcuv5ne9sgftlahrfw#
  * @author tommo
  */ 
 public enum FarmingPlantable {
