@@ -1,3 +1,20 @@
+ - Patch Notes #18 - 2017.09.14 - 2017.09.15 -
+
+ 
+	- Miscellaneous changes: --
+
+		-  The Godwars dungeon now contains correct NPC spawns and their combat definitions - they're all attackable now;
+		-  You will now have to have the respective god items equipped for the NPC's to not be aggressive towards you. Beware: they can all pile on and kill you fairly easily;
+		
+		
+	-- Minor fixes/changes/additions: --
+
+        -  Added restrictions for ::openbank, such as, being deep in the wilderness, while in combat etc.;
+        
+
+--------------------------------------------------------------------------------------
+
+
  - Patch Notes #17 - 2017.09.10 - 2017.09.13 -
 
  

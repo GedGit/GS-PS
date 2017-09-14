@@ -73,7 +73,7 @@ public class GodwarsObjectListener extends EventListener {
 				player.sendMessage("You cannot go through the door from this side; use the altar to exit!");
 				break;
 			}
-			player.setTeleportTarget(Location.create(2863, 5354, 2));
+			player.setTeleportTarget(Location.create(2864, 5354, 2));
 			break;
 		case 26366:
 			if (option == ClickOption.FIRST) {
@@ -174,7 +174,7 @@ public class GodwarsObjectListener extends EventListener {
 				player.sendMessage("You cannot go through the door from this side; use the altar to exit!");
 				break;
 			}
-			player.setTeleportTarget(Location.create(2839, 5295, 2));
+			player.setTeleportTarget(Location.create(2839, 5296, 2));
 			break;
 		case 26365:
 			if (option == ClickOption.FIRST) {

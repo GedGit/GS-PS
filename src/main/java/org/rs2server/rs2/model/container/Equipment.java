@@ -12,28 +12,6 @@ import org.rs2server.rs2.model.Item;
 public class Equipment {
 
 	/**
-	 * Zamorak related items.
-	 */
-	public static int[] ZAMORAK_ITEMS = new int[] { 1033, 1035, 2414, 2653, 2655, 2657, 2659, 3478, 6764, 11700, 1724,
-			3842, 10368, 10370, 10372, 10374, 10444, 10450, 10456, 10460, 10468, 10474, 10776, 10786, 10790, 11716 };
-
-	/**
-	 * Saradomin related items.
-	 */
-	public static int[] SARADOMIN_ITEMS = new int[] { 3840, 2412, 2415, 2661, 2663, 2665, 2667, 3479, 6762, 11698,
-			10384, 10386, 10388, 10390, 10440, 10446, 10452, 10458, 10464, 10470, 10778, 10784, 10792, 11730 };
-
-	/**
-	 * Bandos related items.
-	 */
-	public static int[] BANDOS_ITEMS = new int[] { 11696, 11724, 11726, 11728 };
-
-	/**
-	 * Armadyl related items.
-	 */
-	public static int[] ARMADYL_ITEMS = new int[] { 84, 87, 11694, 11718, 11720, 11722 };
-
-	/**
 	 * The size of the equipment container.
 	 */
 	public static final int SIZE = 14;

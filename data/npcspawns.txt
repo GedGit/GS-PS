@@ -2025,238 +2025,229 @@
 317 3230 3228 0 SOUTH true
 
 // ---- START OF GODWARS DUNGEON ----
-// Aviansie, 69, added by: Salve
-3169 2870 5262 2 SOUTH true
-// Aviansie, 79, added by: Salve
-3170 2863 5259 2 SOUTH true
-// Aviansie, 84, added by: Salve
-3171 2857 5265 2 SOUTH true
-// Aviansie, 69, added by: Salve
-3169 2863 5269 2 SOUTH true
-// Aviansie, 83, added by: Salve
-3172 2852 5272 2 SOUTH true
-// Aviansie, 92, added by: Salve
-3173 2846 5261 2 SOUTH true
-// Aviansie, 97, added by: Salve
-3174 2842 5265 2 SOUTH true
-// Aviansie, 137, added by: Salve
-3175 2837 5267 2 SOUTH true
-// Aviansie, 148, added by: Salve
-3176 2840 5276 2 SOUTH true
-// Aviansie, 71, added by: Salve
-3177 2846 5280 2 SOUTH true
-// Aviansie, 73, added by: Salve
-3178 2841 5285 2 SOUTH true
-// Aviansie, 97, added by: Salve
-3174 2834 5284 2 SOUTH true
-// Aviansie, 137, added by: Salve
-3175 2835 5290 2 SOUTH true
-// Aviansie, 131, added by: Salve
-3183 2875 5284 2 SOUTH true
-// Aviansie, 97, added by: Salve
-3182 2868 5288 2 SOUTH true
-// Aviansie, 94, added by: Salve
-3181 2859 5283 2 SOUTH true
-// Aviansie, 89, added by: Salve
-3180 2850 5289 2 SOUTH true
-// Aviansie, 79, added by: Salve
-3179 2847 5298 2 SOUTH true
-// Aviansie, 73, added by: Salve
-3178 2855 5299 2 SOUTH true
-// Aviansie, 71, added by: Salve
-3177 2860 5297 2 SOUTH true
-// Aviansie, 148, added by: Salve
-3176 2861 5291 2 SOUTH true
-// Aviansie, 148, added by: Salve
-3176 2881 5294 2 SOUTH true
-// Spiritual warrior, 115, added by: Salve
-3159 2874 5288 2 SOUTH true
-// Spiritual ranger, 118, added by: Salve
-3160 2880 5283 2 SOUTH true
-// Spiritual mage, 121, added by: Salve
-3161 2886 5289 2 SOUTH true
-// Spiritual warrior, 115, added by: Salve
-3159 2870 5294 2 SOUTH true
-// Spiritual ranger, 118, added by: Salve
-3160 2861 5291 2 SOUTH true
-// Spiritual mage, 121, added by: Salve
-3161 2861 5285 2 SOUTH true
-// Spiritual warrior, 115, added by: Salve
-3159 2855 5300 2 SOUTH true
-// Spiritual ranger, 118, added by: Salve
-3160 2856 5305 2 SOUTH true
-// Spiritual mage, 121, added by: Salve
-3161 2875 5299 2 SOUTH true
-// Saradomin priest, 113, added by: Salve
-2209 2886 5282 2 SOUTH true
-// Knight of Saradomin, 103, added by: Salve
-2213 2890 5284 2 SOUTH true
-// Knight of Saradomin, 101, added by: Salve
-2214 2893 5291 2 SOUTH true
-// Saradomin priest, 113, added by: Salve
-2209 2888 5296 2 SOUTH true
-// Saradomin priest, 113, added by: Salve
-2209 2900 5294 2 SOUTH true
-// Knight of Saradomin, 103, added by: Salve
-2213 2902 5300 2 SOUTH true
-// Spiritual mage, 120, added by: Salve
-2212 2910 5299 2 SOUTH true
-// Saradomin priest, 113, added by: Salve
-2209 2898 5307 2 SOUTH true
-// Knight of Saradomin, 103, added by: Salve
-2213 2895 5310 2 SOUTH true
-// Knight of Saradomin, 101, added by: Salve
-2214 2890 5303 2 SOUTH true
-// Spiritual ranger, 122, added by: Salve
-2211 2888 5300 2 SOUTH true
-// Spiritual mage, 120, added by: Salve
-2212 2895 5300 2 SOUTH true
-// Spiritual warrior, 125, added by: Salve
-2210 2882 5300 2 SOUTH true
-// Saradomin priest, 113, added by: Salve
-2209 2919 5295 1 SOUTH true
-// Spiritual warrior, 125, added by: Salve
-2210 2916 5286 1 SOUTH true
-// Spiritual ranger, 122, added by: Salve
-2211 2922 5288 1 SOUTH true
-// Knight of Saradomin, 103, added by: Salve
-2213 2921 5282 1 SOUTH true
-// Knight of Saradomin, 101, added by: Salve
-2214 2918 5277 1 SOUTH true
-// Knight of Saradomin, 101, added by: Salve
-2214 2918 5272 0 SOUTH true
-// Spiritual warrior, 125, added by: Salve
-2210 2912 5270 0 SOUTH true
-// Saradomin priest, 113, added by: Salve
-2209 2912 5265 0 SOUTH true
-// Hellhound, 127, added by: Salve
-3133 2894 5314 2 SOUTH true
-// Imp, 7, added by: Salve
-3134 2887 5318 2 SOUTH true
-// Werewolf, 93, added by: Salve
-3135 2891 5323 2 SOUTH true
-// Werewolf, 93, added by: Salve
-3136 2896 5321 2 SOUTH true
-// Vampire, 77, added by: Salve
-3137 2891 5328 2 SOUTH true
-// Bloodveld, 81, added by: Salve
-3138 2886 5326 2 SOUTH true
-// Pyrefiend, 48, added by: Salve
-3139 2882 5319 2 SOUTH true
-// Icefiend, 18, added by: Salve
-3140 2875 5325 2 SOUTH true
-// Gorak, 149, added by: Salve
-3141 2877 5330 2 SOUTH true
-// Hellhound, 127, added by: Salve
-3133 2870 5327 2 SOUTH true
-// Imp, 7, added by: Salve
-3134 2872 5338 2 SOUTH true
-// Werewolf, 93, added by: Salve
-3135 2868 5340 2 SOUTH true
-// Werewolf, 93, added by: Salve
-3136 2874 5341 2 SOUTH true
-// Icefiend, 18, added by: Salve
-3140 2872 5346 2 SOUTH true
-// Hellhound, 127, added by: Salve
-3133 2887 5352 2 SOUTH true
-// Imp, 7, added by: Salve
-3134 2887 5360 2 SOUTH true
-// Werewolf, 93, added by: Salve
-3135 2890 5362 2 SOUTH true
-// Werewolf, 93, added by: Salve
-3136 2892 5357 2 SOUTH true
-// Vampire, 77, added by: Salve
-3137 2897 5358 2 SOUTH true
-// Bloodveld, 81, added by: Salve
-3138 2896 5352 2 SOUTH true
-// Imp, 7, added by: Salve
-3134 2903 5363 2 SOUTH true
-// Pyrefiend, 48, added by: Salve
-3139 2904 5353 2 SOUTH true
-// Icefiend, 18, added by: Salve
-3140 2905 5346 2 SOUTH true
-// Gorak, 149, added by: Salve
-3141 2913 5347 2 SOUTH true
-// Hellhound, 127, added by: Salve
-3133 2911 5355 2 SOUTH true
-// Imp, 7, added by: Salve
-3134 2914 5361 2 SOUTH true
-// Werewolf, 93, added by: Salve
-3135 2920 5354 2 SOUTH true
-// Werewolf, 93, added by: Salve
-3136 2928 5355 2 SOUTH true
-// Vampire, 77, added by: Salve
-3137 2936 5351 2 SOUTH true
-// Bloodveld, 81, added by: Salve
-3138 2930 5344 2 SOUTH true
-// Icefiend, 18, added by: Salve
-3140 2922 5346 2 SOUTH true
-// Gorak, 149, added by: Salve
-3141 2917 5340 2 SOUTH true
-// Bloodveld, 81, added by: Salve
-3138 2926 5340 2 SOUTH true
-// Spiritual warrior, 115, added by: Salve
-3159 2926 5347 2 SOUTH true
-// Spiritual warrior, 123, added by: Salve
-3166 2918 5343 2 SOUTH true
-// Vampire, 77, added by: Salve
-3137 2918 5350 2 SOUTH true
-// Spiritual ranger, 127, added by: Salve
-3167 2923 5360 2 SOUTH true
-// Spiritual mage, 122, added by: Salve
-3168 2912 5353 2 SOUTH true
-// Spiritual warrior, 123, added by: Salve
-3166 2907 5349 2 SOUTH true
-// Spiritual ranger, 127, added by: Salve
-3167 2903 5356 2 SOUTH true
-// Spiritual mage, 122, added by: Salve
-3168 2894 5360 2 SOUTH true
-// Spiritual warrior, 123, added by: Salve
-3166 2885 5354 2 SOUTH true
-// Spiritual warrior, 123, added by: Salve
-3166 2881 5323 2 SOUTH true
-// Spiritual ranger, 127, added by: Salve
-3167 2871 5322 2 SOUTH true
-// Spiritual mage, 122, added by: Salve
-3168 2867 5333 2 SOUTH true
-// Ogre, 58, added by: Salve
-2233 2857 5330 2 SOUTH true
-// Jogre, 58, added by: Salve
-2234 2861 5325 2 SOUTH true
-// Cyclops, 81, added by: Salve
-2235 2854 5325 2 SOUTH true
-// Cyclops, 81, added by: Salve
-2236 2860 5316 2 SOUTH true
-// Ork, 107, added by: Salve
-2237 2854 5311 2 SOUTH true
-// Goblin, 17, added by: Salve
-2245 2863 5310 2 SOUTH true
-// Hobgoblin, 47, added by: Salve
-2241 2868 5314 2 SOUTH true
-// Goblin, 12, added by: Salve
-2246 2871 5319 2 SOUTH true
-// Spiritual mage, 121, added by: Salve
-2244 2863 5333 2 SOUTH true
-// Spiritual warrior, 134, added by: Salve
-2243 2859 5311 2 SOUTH true
-// Spiritual mage, 121, added by: Salve
-2244 2866 5305 2 SOUTH true
-// Spiritual ranger, 115, added by: Salve
-2242 2873 5305 2 SOUTH true
-// Ogre, 58, added by: Salve
-2233 2875 5313 2 SOUTH true
-// Spiritual ranger, 115, added by: Salve
-2242 2879 5300 2 SOUTH true
-// Spiritual warrior, 134, added by: Salve
-2243 2894 5292 2 SOUTH true
-// Goblin, 17, added by: Salve
-2245 2889 5309 2 SOUTH true
-// Goblin, 17, added by: Salve
-2245 2881 5327 2 SOUTH true
-// Goblin, 13, added by: Salve
-2249 2877 5328 2 SOUTH true
-// Goblin, 15, added by: Salve
-2248 2873 5329 2 SOUTH true
+3137 2851 5322 2 WEST true
+2241 2852 5308 2 SOUTH true
+2234 2858 5328 2 NORTH true
+3137 2856 5349 2 NORTH true
+2243 2850 5352 2 NORTH true
+3138 2853 5354 2 WEST true
+2241 2852 5307 2 SOUTH true
+2244 2855 5345 2 NORTH true
+2241 2853 5308 2 SOUTH true
+2249 2860 5326 2 EAST true
+3137 2880 5322 2 NORTH true
+2242 2853 5346 2 SOUTH true
+3135 2877 5321 2 WEST true
+3137 2876 5330 2 EAST true
+2234 2853 5361 2 WEST true
+2247 2852 5332 2 EAST true
+3133 2877 5322 2 WEST true
+3141 2881 5328 2 SOUTH true
+2234 2858 5348 2 NORTH true
+2235 2858 5356 2 WEST true
+3136 2857 5315 2 NORTH true
+3138 2881 5323 2 EAST true
+2245 2865 5333 2 NORTH true
+2248 2860 5334 2 EAST true
+3137 2885 5315 2 NORTH true
+2234 2861 5314 2 SOUTH true
+3141 2860 5325 2 NORTH true
+3138 2883 5317 2 EAST true
+2242 2860 5354 2 EAST true
+3134 2885 5312 2 WEST true
+3135 2889 5324 2 NORTH true
+2244 2860 5353 2 NORTH true
+2242 2861 5355 2 EAST true
+2239 2863 5333 2 WEST true
+3140 2885 5311 2 SOUTH true
+3138 2865 5334 2 EAST true
+3141 2885 5314 2 NORTH true
+2245 2858 5313 2 NORTH true
+2237 2861 5333 2 WEST true
+3137 2890 5323 2 EAST true
+2240 2864 5330 2 WEST true
+3138 2890 5321 2 WEST true
+2249 2866 5310 2 SOUTH true
+3133 2886 5326 2 WEST true
+2246 2863 5314 2 EAST true
+2247 2867 5315 2 NORTH true
+2238 2865 5330 2 WEST true
+3135 2890 5318 2 NORTH true
+2240 2865 5337 2 EAST true
+3137 2895 5327 2 EAST true
+2237 2865 5337 2 WEST true
+3177 2852 5311 2 EAST true
+2234 2866 5340 2 WEST true
+2248 2860 5313 2 WEST true
+3135 2898 5313 2 SOUTH true
+2233 2866 5313 2 EAST true
+3180 2854 5300 2 EAST true
+2234 2867 5324 2 SOUTH true
+3140 2853 5306 2 NORTH true
+3136 2869 5326 2 WEST true
+3137 2898 5315 2 NORTH true
+3183 2855 5283 2 EAST true
+2241 2868 5346 2 WEST true
+3134 2897 5315 2 WEST true
+2240 2872 5319 2 WEST true
+2241 2867 5344 2 NORTH true
+3172 2858 5308 2 EAST true
+2241 2868 5346 2 EAST true
+3136 2864 5281 2 NORTH true
+2237 2876 5312 2 WEST true
+3177 2860 5290 2 SOUTH true
+2239 2874 5322 2 WEST true
+3172 2864 5311 2 NORTH true
+2239 2871 5323 2 NORTH true
+2240 2877 5311 2 EAST true
+2238 2870 5316 2 NORTH true
+3135 2874 5319 2 NORTH true
+3139 2863 5304 2 NORTH true
+3139 2863 5279 2 SOUTH true
+3139 2875 5312 2 EAST true
+3139 2865 5280 2 EAST true
+3136 2875 5311 2 EAST true
+3141 2862 5293 2 NORTH true
+2241 2874 5321 2 SOUTH true
+2233 2877 5312 2 NORTH true
+2246 2878 5328 2 NORTH true
+2241 2873 5320 2 SOUTH true
+3169 2866 5307 2 EAST true
+2241 2877 5319 2 WEST true
+3172 2874 5290 2 WEST true
+2247 2874 5329 2 EAST true
+2248 2879 5328 2 EAST true
+3183 2872 5312 2 NORTH true
+2233 2880 5330 2 SOUTH true
+2241 2877 5320 2 NORTH true
+3180 2873 5285 2 NORTH true
+2241 2879 5321 2 NORTH true
+3138 2870 5304 2 EAST true
+2245 2879 5329 2 NORTH true
+3172 2881 5296 2 EAST true
+2249 2879 5327 2 SOUTH true
+3140 2877 5293 2 SOUTH true
+2246 2880 5328 2 EAST true
+3183 2881 5297 2 WEST true
+3180 2878 5314 2 NORTH true
+3177 2881 5285 2 SOUTH true
+3137 2875 5288 2 WEST true
+3169 2883 5295 2 NORTH true
+2218 2869 5362 2 NORTH true
+2210 2879 5290 2 SOUTH true
+2210 2879 5306 2 WEST true
+2211 2878 5283 2 EAST true
+2210 2884 5281 2 NORTH true
+2209 2879 5281 2 NORTH true
+2212 2882 5294 2 NORTH true
+2210 2883 5295 2 NORTH true
+2211 2881 5287 2 NORTH true
+2213 2879 5285 2 NORTH true
+2211 2884 5297 2 NORTH true
+2212 2885 5308 2 NORTH true
+2209 2880 5308 2 EAST true
+2210 2878 5311 2 NORTH true
+3136 2882 5295 2 WEST true
+2210 2885 5309 2 NORTH true
+2209 2884 5286 2 WEST true
+2210 2886 5283 2 NORTH true
+2214 2885 5288 2 NORTH true
+2214 2890 5301 2 NORTH true
+2210 2886 5308 2 WEST true
+2212 2885 5310 2 NORTH true
+2210 2893 5285 2 NORTH true
+2209 2889 5291 2 EAST true
+2211 2892 5298 2 NORTH true
+2211 2891 5297 2 WEST true
+2212 2892 5284 2 NORTH true
+2209 2887 5301 2 EAST true
+3135 2892 5285 2 SOUTH true
+2211 2892 5285 2 WEST true
+2213 2895 5293 2 NORTH true
+2214 2891 5300 2 EAST true
+2211 2892 5307 2 EAST true
+3133 2893 5307 2 EAST true
+2213 2895 5297 2 WEST true
+2210 2891 5293 2 EAST true
+2211 2893 5299 2 NORTH true
+2211 2897 5303 2 EAST true
+2212 2897 5288 2 WEST true
+2210 2898 5312 2 NORTH true
+2212 2895 5307 2 WEST true
+2210 2897 5312 2 NORTH true
+2214 2896 5291 2 WEST true
+2209 2898 5295 2 NORTH true
+2213 2895 5303 2 WEST true
+2210 2899 5287 2 NORTH true
+2209 2905 5300 2 NORTH true
+2212 2905 5291 2 NORTH true
+2212 2908 5299 2 SOUTH true
+2210 2907 5291 2 EAST true
+2214 2905 5302 2 NORTH true
+2209 2908 5296 2 SOUTH true
+3136 2908 5298 2 NORTH true
+2210 2911 5297 2 NORTH true
+2211 2910 5297 2 SOUTH true
+2244 2827 5331 2 SOUTH true
+2243 2828 5334 2 NORTH true
+2234 2827 5337 2 WEST true
+2242 2829 5330 2 EAST true
+3137 2828 5330 2 NORTH true
+2244 2830 5315 2 SOUTH true
+2234 2829 5316 2 SOUTH true
+2235 2835 5321 2 NORTH true
+2244 2832 5340 2 SOUTH true
+2236 2833 5350 2 WEST true
+2236 2834 5323 2 NORTH true
+2243 2836 5347 2 NORTH true
+2242 2834 5340 2 EAST true
+2243 2835 5320 2 SOUTH true
+3135 2832 5349 2 EAST true
+2238 2836 5351 2 WEST true
+2240 2836 5351 2 NORTH true
+2234 2838 5357 2 EAST true
+3133 2833 5338 2 NORTH true
+2244 2837 5342 2 SOUTH true
+2242 2837 5343 2 EAST true
+2237 2834 5348 2 EAST true
+2239 2833 5349 2 WEST true
+2242 2836 5325 2 WEST true
+2244 2838 5329 2 SOUTH true
+2235 2836 5349 2 NORTH true
+2237 2840 5349 2 NORTH true
+2242 2839 5318 2 WEST true
+2239 2836 5335 2 WEST true
+2239 2839 5333 2 EAST true
+3134 2837 5348 2 SOUTH true
+2235 2842 5326 2 EAST true
+2240 2839 5334 2 NORTH true
+2238 2842 5332 2 NORTH true
+2243 2840 5346 2 EAST true
+2244 2843 5320 2 SOUTH true
+2236 2838 5322 2 EAST true
+2242 2838 5332 2 SOUTH true
+2234 2841 5335 2 EAST true
+2235 2843 5338 2 WEST true
+2243 2845 5338 2 WEST true
+2236 2840 5343 2 EAST true
+2235 2841 5358 2 SOUTH true
+2243 2841 5325 2 NORTH true
+2242 2843 5345 2 EAST true
+2244 2845 5352 2 WEST true
+2244 2846 5332 2 SOUTH true
+2234 2847 5335 2 SOUTH true
+2243 2846 5359 2 SOUTH true
+2242 2846 5339 2 NORTH true
+2235 2847 5348 2 SOUTH true
+3136 2844 5352 2 SOUTH true
+2244 2848 5342 2 NORTH true
+2236 2848 5344 2 SOUTH true
+2242 2853 5354 2 NORTH true
+2236 2852 5356 2 SOUTH true
+2243 2850 5343 2 NORTH true
+2244 2851 5359 2 WEST true
+2242 2851 5355 2 EAST true
+2234 2851 5321 2 EAST true
 // ---- END OF GODWARS DUNGEON ----
 
 // Experiment, 25, added by: Salve

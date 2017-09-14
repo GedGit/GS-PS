@@ -288,6 +288,24 @@ public class CommandPacketHandler implements PacketHandler {
 		 */
 		if (permissionService.is(player, PermissionService.PlayerPermissions.GOLD_MEMBER)) {
 			if (command.equals("openbank") || command.equals("o") || command.equals("b")) {
+				if (player.getCombatState().getLastHitTimer() > System.currentTimeMillis()) {
+					player.sendMessage("You cannot open the bank until 10 seconds after the end of combat.");
+					return;
+				}
+				if (player.getBountyHunter() != null && player.getBountyHunter().getLeavePenalty() > 0) {
+					player.sendMessage("You cannot bank while on penalty.");
+					return;
+				}
+				if (player.getAttribute("busy") != null) {
+					player.sendMessage("You cannot bank while you're in the middle of something.");
+					return;
+				}
+				if (player.isInWilderness()) {
+					if (Location.getWildernessLevel(player, player.getLocation()) > 5) {
+						player.sendMessage("You cannot bank in above level 5 wilderness.");
+						return;
+					}
+				}
 				Bank.open(player);
 				return;
 			}

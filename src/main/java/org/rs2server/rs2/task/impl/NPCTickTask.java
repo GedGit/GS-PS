@@ -8,7 +8,6 @@ import org.rs2server.rs2.model.Mob.InteractionMode;
 import org.rs2server.rs2.model.UpdateFlags.UpdateFlag;
 import org.rs2server.rs2.model.boundary.Boundary;
 import org.rs2server.rs2.model.boundary.BoundaryManager;
-import org.rs2server.rs2.model.container.Equipment;
 import org.rs2server.rs2.model.map.path.DefaultPathFinder;
 import org.rs2server.rs2.model.map.path.SizedPathFinder;
 import org.rs2server.rs2.model.npc.NPC;
@@ -37,7 +36,7 @@ public class NPCTickTask implements Task {
 	/**
 	 * The random number generator.
 	 */
-	private static final Random random = new Random(); 
+	private static final Random random = new Random();
 
 	/**
 	 * Creates the tick task.
@@ -155,25 +154,30 @@ public class NPCTickTask implements Task {
 						continue;
 					boolean canContinue = true;
 					if (npc.getCombatDefinition().getGodWarsTeam() != null) {
-						int[] itemsToCheck = new int[0];
+						String[] itemsToCheck = new String[0];
+						String[] saradominItems = { "saradomin", "holy symbol", "holy blessing", "monk's", "holy book",
+								"holy sandals" };
+						String[] zamorakItems = {"zamorak", "unholy", "of the dead"};
+						String[] bandosItems = {"bandos", "war blessing", "book of war"};
+						String[] armadylItems = {"armadyl", "honourable", "book of law"};
 						switch (npc.getCombatDefinition().getGodWarsTeam()) {
 						case ZAMORAK:
-							itemsToCheck = Equipment.ZAMORAK_ITEMS;
+							itemsToCheck = zamorakItems;
 							break;
 						case SARADOMIN:
-							itemsToCheck = Equipment.SARADOMIN_ITEMS;
+							itemsToCheck = saradominItems;
 							break;
 						case BANDOS:
-							itemsToCheck = Equipment.BANDOS_ITEMS;
+							itemsToCheck = bandosItems;
 							break;
 						case ARMADYL:
-							itemsToCheck = Equipment.ARMADYL_ITEMS;
+							itemsToCheck = armadylItems;
 							break;
 						}
 						for (Item item : player.getEquipment().toArray()) {
 							if (item != null) {
-								for (int i = 0; i < itemsToCheck.length; i++) {
-									if (item.getId() == itemsToCheck[i]) {
+								for (String name : itemsToCheck) {
+									if (item.getDefinition2().getName().toLowerCase().contains(name)) {
 										canContinue = false;
 										break;
 									}
