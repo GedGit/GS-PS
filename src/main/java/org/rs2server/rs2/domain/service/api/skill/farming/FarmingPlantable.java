@@ -13,33 +13,33 @@ public enum FarmingPlantable {
 	/*
 	 * Herbs
 	 */
-	HERB_GUAM(FarmingPatchType.HERB_PATCH, 9, 12, 5291, 249, 0x04, 0x08, 5, 7, Duration.standardMinutes(10)),
+	HERB_GUAM(FarmingPatchType.HERB_PATCH, 9, 12, 5291, 199, 0x04, 0x08, 5, 7, Duration.standardMinutes(10)),
 	
-	HERB_MARRENTILL(FarmingPatchType.HERB_PATCH, 14, 15, 5292, 251, 0x0b, 0x0f, 5, 7, Duration.standardMinutes(10)),
+	HERB_MARRENTILL(FarmingPatchType.HERB_PATCH, 14, 15, 5292, 201, 0x0b, 0x0f, 5, 7, Duration.standardMinutes(10)),
 	
-	HERB_TARROMIN(FarmingPatchType.HERB_PATCH, 19, 18, 5293, 253, 0x12, 0x16, 5, 7, Duration.standardMinutes(10)),
+	HERB_TARROMIN(FarmingPatchType.HERB_PATCH, 19, 18, 5293, 203, 0x12, 0x16, 5, 7, Duration.standardMinutes(10)),
 	
-	HERB_HARRALANDER(FarmingPatchType.HERB_PATCH, 26, 24, 5294, 255, 0x19, 0x1d, 5, 7, Duration.standardMinutes(10)),
+	HERB_HARRALANDER(FarmingPatchType.HERB_PATCH, 26, 24, 5294, 205, 0x19, 0x1d, 5, 7, Duration.standardMinutes(10)),
 	
-	HERB_RANARR(FarmingPatchType.HERB_PATCH, 32, 30, 5295, 257, 0x20, 0x24, 5, 7, Duration.standardMinutes(10)),
+	HERB_RANARR(FarmingPatchType.HERB_PATCH, 32, 30, 5295, 207, 0x20, 0x24, 5, 7, Duration.standardMinutes(10)),
 	
 	HERB_TOADFLAX(FarmingPatchType.HERB_PATCH, 38, 38, 5296, 2998, 0x27, 0x2b, 5, 7, Duration.standardMinutes(10)),
 	
-	HERB_IRIT(FarmingPatchType.HERB_PATCH, 44, 48, 5297, 259, 0x2e, 0x32, 5, 7, Duration.standardMinutes(10)),
+	HERB_IRIT(FarmingPatchType.HERB_PATCH, 44, 48, 5297, 209, 0x2e, 0x32, 5, 7, Duration.standardMinutes(10)),
 	
-	HERB_AVANTOE(FarmingPatchType.HERB_PATCH, 50, 61, 5298, 261, 0x35, 0x39, 5, 7, Duration.standardMinutes(10)),
+	HERB_AVANTOE(FarmingPatchType.HERB_PATCH, 50, 61, 5298, 211, 0x35, 0x39, 5, 7, Duration.standardMinutes(10)),
 	
-	HERB_KWUARM(FarmingPatchType.HERB_PATCH, 56, 78, 5299, 263, 0x44, 0x48, 5, 7, Duration.standardMinutes(10)),
+	HERB_KWUARM(FarmingPatchType.HERB_PATCH, 56, 78, 5299, 213, 0x44, 0x48, 5, 7, Duration.standardMinutes(10)),
 	
-	HERB_SNAPDRAGON(FarmingPatchType.HERB_PATCH, 62, 99, 5300, 3000, 0x4b, 0x4f, 5, 7, Duration.standardMinutes(10)),
+	HERB_SNAPDRAGON(FarmingPatchType.HERB_PATCH, 62, 99, 5300, 3051, 0x4b, 0x4f, 5, 7, Duration.standardMinutes(10)),
 	
-	HERB_CADANTINE(FarmingPatchType.HERB_PATCH, 67, 120, 5301, 265, 0x52, 0x56, 5, 7, Duration.standardMinutes(10)),
+	HERB_CADANTINE(FarmingPatchType.HERB_PATCH, 67, 120, 5301, 215, 0x52, 0x56, 5, 7, Duration.standardMinutes(10)),
 	
-	HERB_LANTADYME(FarmingPatchType.HERB_PATCH, 73, 152, 5302, 2481, 0x59, 0x5d, 5, 7, Duration.standardMinutes(10)),
+	HERB_LANTADYME(FarmingPatchType.HERB_PATCH, 73, 152, 5302, 2485, 0x59, 0x5d, 5, 7, Duration.standardMinutes(10)),
 	
-	HERB_DWARF_WEED(FarmingPatchType.HERB_PATCH, 79, 192, 5303, 267, 0x60, 0x64, 5, 7, Duration.standardMinutes(10)),
+	HERB_DWARF_WEED(FarmingPatchType.HERB_PATCH, 79, 192, 5303, 217, 0x60, 0x64, 5, 7, Duration.standardMinutes(10)),
 	
-	HERB_TORSTOL(FarmingPatchType.HERB_PATCH, 85, 225, 5304, 269, 0x67, 0x6b, 5, 7, Duration.standardMinutes(10)),
+	HERB_TORSTOL(FarmingPatchType.HERB_PATCH, 85, 225, 5304, 219, 0x67, 0x6b, 5, 7, Duration.standardMinutes(10)),
 
 	/**
 	 * FLowers
