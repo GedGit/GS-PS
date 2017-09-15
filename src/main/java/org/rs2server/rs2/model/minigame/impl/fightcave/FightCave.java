@@ -1,7 +1,6 @@
 package org.rs2server.rs2.model.minigame.impl.fightcave;
 
 import com.google.common.collect.Iterables;
-import org.rs2server.rs2.domain.model.player.PlayerSettingsEntity;
 import org.rs2server.rs2.model.DialogueManager;
 import org.rs2server.rs2.model.Item;
 import org.rs2server.rs2.model.Location;
@@ -9,8 +8,8 @@ import org.rs2server.rs2.model.World;
 import org.rs2server.rs2.model.container.Inventory;
 import org.rs2server.rs2.model.npc.NPC;
 import org.rs2server.rs2.model.npc.Pet;
+import org.rs2server.rs2.model.npc.Pet.Pets;
 import org.rs2server.rs2.model.player.Player;
-import org.rs2server.rs2.mysql.impl.NewsManager;
 import org.rs2server.rs2.tickable.Tickable;
 import org.rs2server.rs2.util.Misc;
 
@@ -18,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 
-/** 
+/**
  * @author 'Mystic Flow
  */
 public class FightCave {
@@ -64,16 +63,15 @@ public class FightCave {
 	}
 
 	public void tick() {
-		if (!started || !IN_CAVES.contains(player)) {
+		if (!started || !IN_CAVES.contains(player))
 			return;
-		}
 		if (!startedFightWave) {
 			startedFightWave = true;
 			startTime = 10;
 		}
-		if (startTime > 0) {
+		if (startTime > 0)
 			startTime--;
-		} else if (startTime == 0) {
+		else if (startTime == 0) {
 			startTime = -1;
 			if (wave == null) {
 				wave = new Wave();
@@ -105,40 +103,16 @@ public class FightCave {
 							n.getCombatState().startAttacking(player, player.isAutoRetaliating());
 					}
 				}
-				/*Checks invent, if invent is full, fire cape is banked else placed in inv 
-				 * tokkul is dropped when inv is full*/
 				if (player.getInstancedNPCs().isEmpty()) {
 					if (wave != null && wave.getStage() == 9) {
 						player.getActionSender().sendMessage("Congratulations, you have finished every wave!");
+
+						Inventory.addDroppable(player, new Item(6570, 1));
+						Inventory.addDroppable(player, new Item(6529, 8024));
+
+						if (Misc.random(100) == 1)
+							Pet.givePet(player, new Item(Pets.JAD.getItem()));
 						
-						//fire cape
-						if (!player.getInventory().add(new Item(6570, 1))) { 
-							if(!player.getInventory().add(new Item(6529, 8024))) { 
-								
-							//Tokkul 
-							player.getBank().add(new Item(6570, 1)); //adding it to bank if invent is full
-							Inventory.addDroppable(player, new Item(6529, 8024)); //dropping item to floor if inv is full
-							player.getActionSender().sendMessage("You have received a firecape, it has been banked.");
-
-						} else
-							
-							//if fire cape is put into invent, this message will appear 
-							player.getActionSender().sendMessage("You have received a firecape.");
-							
-							// Spawning Jad Pet.
-						if (Misc.random(100) == 1 && player.getPet() == null) {
-							PlayerSettingsEntity settings = player.getDatabaseEntity().getPlayerSettings();
-							Pet pet = new Pet(player, 5892);
-							player.setPet(pet);
-							settings.setPetSpawned(true);
-							settings.setPetId(5892);
-							World.getWorld().register(pet);
-							World.getWorld().sendWorldMessage("<col=ff0000><img=24>Server</col>: " + player.getName()
-									+ " has just received a TzRek-Jad pet.");
-
-							new Thread(new NewsManager(player, "<img src='../resources/news/tzrek-jad.png' "
-									+ "width=13> received a TzRek-Jad pet.")).start();
-						}
 						player.getSettings().setFightCaveState(1);
 						player.setTeleportTarget(Location.create(2438, 5168, 0));
 						player.setAttribute("defeated_caves", true);
@@ -152,7 +126,6 @@ public class FightCave {
 					}
 				}
 			}
-		}
 		}
 	}
 

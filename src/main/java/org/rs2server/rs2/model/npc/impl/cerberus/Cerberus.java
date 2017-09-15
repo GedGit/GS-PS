@@ -37,7 +37,7 @@ public class Cerberus extends CombatNpc<Cerberus> {
 	private static final Animation DEATH_ANIMATION = Animation.create(4495);
 	private static final Animation HOWL_ANIMATION = Animation.create(4485);
 
-	private static final int[] BONUSES = { 220, 220, 150, 220, 220, 150, 150, 150, 150, 150, 100, 20, 0 };
+	private static final int[] BONUSES = { 220, 220, 150, 220, 220, 120, 120, 120, 190, 350, 100, 20, 0 };
 
 	public static final int MAX_HEALTH = 600;
 
@@ -123,14 +123,14 @@ public class Cerberus extends CombatNpc<Cerberus> {
 
 				float ghostProbability = random.nextFloat();
 
-				if (canSpawnGhosts && ghostProbability >= 0.95 && currentHitpoints <= 400)
+				if (canSpawnGhosts && ghostProbability >= 0.95 && currentHitpoints <= 500 && currentHitpoints >= 250)
 					spawnGhosts();
 				else {
 					float styleProbability = random.nextFloat();
 
 					if (styleProbability <= 0.33)
 						transition(magicAttackStyle);
-					else if (styleProbability <= 0.66)
+					else if (styleProbability >= 0.70)
 						transition(rangedAttackStyle);
 					else
 						transition(meleeAttackStyle);
