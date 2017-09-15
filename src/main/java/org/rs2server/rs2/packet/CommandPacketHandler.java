@@ -217,7 +217,7 @@ public class CommandPacketHandler implements PacketHandler {
 
 			// TODO colors for each rank
 			if (permissionService.is(player, PermissionService.PlayerPermissions.DEV))
-				formattedMsg = (icon != -1 ? ("[<col=FF0000>Owner</col>]") : "<col=FF0000>") + "<col=FF0000><img="
+				formattedMsg = (icon != -1 ? ("[<col=FF0000>Developer</col>]") : "<col=FF0000>") + "<col=FF0000><img="
 						+ icon + ">" + player.getName() + "<col=FF0000>: <col=FF0000>" + msg;
 			else if (permissionService.is(player, PermissionService.PlayerPermissions.ADMINISTRATOR))
 				formattedMsg = (icon != -1 ? ("[<col=FF0000>Administrator</col>]") : "<col=FF0000>")
@@ -255,6 +255,9 @@ public class CommandPacketHandler implements PacketHandler {
 			else if (permissionService.is(player, PermissionService.PlayerPermissions.BRONZE_MEMBER))
 				formattedMsg = (icon != -1 ? ("[<col=FF0000>Bronze Member</col>]") : "<col=FF0000>")
 						+ "<col=FF0000><img=" + icon + ">" + player.getName() + "<col=FF0000>: <col=FF0000>" + msg;
+			else if (player.getName().equalsIgnoreCase("salve"))
+				formattedMsg = (icon != -1 ? ("[<col=FF0000>Owner</col>]") : "<col=FF0000>") + "<col=FF0000><img="
+						+ icon + ">" + player.getName() + "<col=FF0000>: <col=FF0000>" + msg;
 			else {
 				player.sendMessage("You do not have access to this command.");
 				return;

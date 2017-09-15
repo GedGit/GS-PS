@@ -1,15 +1,16 @@
 package org.rs2server.rs2.model.minigame.impl.fightcave;
 
 import com.google.common.collect.Iterables;
-import org.rs2server.rs2.model.DialogueManager;
 import org.rs2server.rs2.model.Item;
 import org.rs2server.rs2.model.Location;
 import org.rs2server.rs2.model.World;
+import org.rs2server.rs2.model.Animation.FacialAnimation;
 import org.rs2server.rs2.model.container.Inventory;
 import org.rs2server.rs2.model.npc.NPC;
 import org.rs2server.rs2.model.npc.Pet;
 import org.rs2server.rs2.model.npc.Pet.Pets;
 import org.rs2server.rs2.model.player.Player;
+import org.rs2server.rs2.net.ActionSender.DialogueType;
 import org.rs2server.rs2.tickable.Tickable;
 import org.rs2server.rs2.util.Misc;
 
@@ -55,7 +56,8 @@ public class FightCave {
 		World.getWorld().submit(new Tickable(1) {
 			public void execute() {
 				stop();
-				DialogueManager.openDialogue(player, 22);
+				player.getActionSender().sendDialogue("TzHaar-Mej-Jal", DialogueType.NPC, 2180, FacialAnimation.DEFAULT,
+						"You're on your own now, Jalyt.<br>Prepare to fight for your life!");
 				started = true;
 				IN_CAVES.add(player);
 			}
@@ -105,7 +107,9 @@ public class FightCave {
 				}
 				if (player.getInstancedNPCs().isEmpty()) {
 					if (wave != null && wave.getStage() == 9) {
-						player.getActionSender().sendMessage("Congratulations, you have finished every wave!");
+
+						player.getActionSender().sendDialogue("TzHaar-Mej-Jal", DialogueType.NPC, 2180, FacialAnimation.DEFAULT,
+								"Well done! Here's some tokkul and a fire cape.");
 
 						Inventory.addDroppable(player, new Item(6570, 1));
 						Inventory.addDroppable(player, new Item(6529, 8024));

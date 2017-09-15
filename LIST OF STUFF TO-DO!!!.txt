@@ -12,3 +12,5 @@
  - make resource supply crates and consumption (pots, foods) supply crates for donator store
  - can't chop oak at seers village with bronze axe appearently? Might be related to wintertodt!
  - check out localnpcupdate things, might be able to change pet options for other players (change npc id to one with no opts)
+ - fix white wolf mountain gnome village (where nulodion is) ladder and add nurmof's pickaxe shop and add scorpions :>
+ 

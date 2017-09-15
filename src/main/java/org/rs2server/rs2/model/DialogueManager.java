@@ -267,12 +267,6 @@ public class DialogueManager {
 			player.getInterfaceState().setNextDialogueId(0, 13);
 			player.getInterfaceState().setNextDialogueId(1, 14);
 			break;
-
-		case 22:
-			player.getActionSender().sendDialogue("TzHaar-Mej-Jal", DialogueType.NPC, 2180, FacialAnimation.DEFAULT,
-					"You're on your own now, Jalyt.<br>Prepare to fight for your life!");
-			player.getInterfaceState().setNextDialogueId(0, -1);
-			break;
 		case 26:
 			final Location teleportTo = player.getAttribute("teleportTo");
 			if (teleportTo != null) {
