@@ -6778,9 +6778,9 @@
 13060:A set containing a full helm, platebody, legs and kiteshield.
 13062:A set containing a full helm, platebody, skirt and kiteshield.
 13226:A sack for storing grimy herbs.
-13235:A pair of upgraded infinity boots, Increases your drop-rate by 3%.
-13237:A pair of upgraded ranger boots, Increases your drop-rate by 3%.
-13239:A pair of upgraded dragon boots, Increases your drop-rate by 3%.
+13235:A pair of upgraded infinity boots.
+13237:A pair of upgraded ranger boots.
+13239:A pair of upgraded dragon boots.
 13273:Doesn't seem to have survived the death of its Sire.
 13280:Get a life, bruh. Seriously, just go outside.
 13281:The hood worn by only the most experienced Salve players.
