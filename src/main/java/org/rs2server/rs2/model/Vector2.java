@@ -91,6 +91,7 @@ public class Vector2 {
 	}
 
 	/** @return Standard string representation of a vector: "<x, y>" */
+	@Override
 	public String toString() {
 		return "<" + x + ", " + y + ">";
 	}

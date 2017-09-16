@@ -35,6 +35,7 @@ public class MageArena {
 		player.setTeleportTarget(ARENA);
 		player.setMultiplayerDisabled(true);
 		World.getWorld().submit(new Tickable(1) {
+			@Override
 			public void execute() {
 				stop();
 				started = true;

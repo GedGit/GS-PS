@@ -34,6 +34,7 @@ public class DragonfireShield {
 		player.playAnimation(Animation.create(6700));
 		player.dfsCharges = 0;
 		World.getWorld().submit(new Tickable(1) {
+			@Override
 			public void execute() {
 				player.playGraphics(Graphic.create(1168));
 				this.stop();
@@ -83,6 +84,7 @@ public class DragonfireShield {
 		player.playAnimation(Animation.create(6696));
 		player.playGraphics(Graphic.create(1165));
 		World.getWorld().submit(new Tickable(3) {
+			@Override
 			public void execute() {
 				int hitDelay;
 				int clientSpeed;
@@ -106,11 +108,13 @@ public class DragonfireShield {
 						45, 50, clientSpeed, 43, 35, victim.getProjectileLockonIndex(), 10, 48));
 
 				World.getWorld().submit(new Tickable(hitDelay) {
+					@Override
 					public void execute() {
 						victim.playGraphics(Graphic.create(1167, 0, 100));
 						World.getWorld().submit(new Tickable(1) {
+							@Override
 							public void execute() {
-								int hit = (int) (Math.ceil((double) Math.random() * (double) 37));
+								int hit = (int) (Math.ceil(Math.random() * 37));
 								victim.inflictDamage(new Hit(hit), player);
 								this.stop();
 							}

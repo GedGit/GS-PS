@@ -58,6 +58,7 @@ public abstract class Entity {
 	public void submitTimer(int id, int ticks) {
 		attributes.setAttribute(id, true);
 		World.getWorld().submit(new Tickable(ticks) {
+			@Override
 			public void execute() {
 				attributes.setAttribute(id, false);
 				stop();

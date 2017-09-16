@@ -36,6 +36,7 @@ public class SaradominPriest extends AbstractCombatAction {
 		MAGIC
 	}
 
+	@Override
 	public void hit(final Mob attacker, final Mob victim) {
 		super.hit(attacker, victim);
 

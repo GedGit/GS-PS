@@ -1,10 +1,8 @@
 package org.rs2server.rs2.content;
 
-import org.rs2server.Server;
-import org.rs2server.rs2.domain.service.api.PermissionService;
-import org.rs2server.rs2.domain.service.api.PlayerService;
 import org.rs2server.rs2.model.DialogueManager;
 import org.rs2server.rs2.model.Item;
+import org.rs2server.rs2.model.container.Inventory;
 import org.rs2server.rs2.model.player.Player;
 
 import java.util.List;
@@ -15,12 +13,9 @@ import java.util.List;
 public final class ZulAreth {
 
 	private final Player player;
-	private final PlayerService playerService;
 
 	public ZulAreth(Player player) {
 		this.player = player;
-		this.playerService = Server.getInjector().getInstance(PlayerService.class);
-		Server.getInjector().getInstance(PermissionService.class);
 	}
 
 	public void appendDeath() {
@@ -30,16 +25,19 @@ public final class ZulAreth {
 			}
 		}
 		for (Item items : player.getInventory().getItems()) {
+			// Exclude looting bag, we'll handle it seperately
 			if (items != null && items.getId() != 11941) {
 				player.getDatabaseEntity().getZulrahState().getItemsLostZulrah().add(items);
 			}
 		}
-		for (Item items : player.getLootingBag().getItems()) {
-			if (items != null) {
-				player.getDatabaseEntity().getZulrahState().getItemsLostZulrah().add(items);
+		// If we have the looting bag then empty it
+		if (player.getInventory().contains(11941)) {
+			for (Item items : player.getLootingBag().getItems()) {
+				if (items != null)
+					player.getDatabaseEntity().getZulrahState().getItemsLostZulrah().add(items);
 			}
+			player.getLootingBag().clear();
 		}
-		player.getLootingBag().clear();
 	}
 
 	public void claimItems() {
@@ -49,8 +47,9 @@ public final class ZulAreth {
 		}
 		final List<Item> items = player.getDatabaseEntity().getZulrahState().getItemsLostZulrah();
 		if (!items.isEmpty()) {
-			items.forEach(i -> playerService.giveItem(player, i, true));
-			player.getInventory().remove(new Item(995, 100000));
+			items.forEach(i -> Inventory.addDroppable(player, i));
+			if (!player.isSilverMember())
+				player.getInventory().remove(new Item(995, 100000));
 			items.clear();
 			DialogueManager.openDialogue(player, 2046);
 		}

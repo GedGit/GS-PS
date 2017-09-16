@@ -9,6 +9,8 @@ import org.rs2server.rs2.content.*;
 import org.rs2server.rs2.content.api.*;
 import org.rs2server.rs2.content.areas.CoordinateEvent;
 import org.rs2server.rs2.content.misc.*;
+import org.rs2server.rs2.content.wintertodt.BrazierAction;
+import org.rs2server.rs2.content.wintertodt.BrazierAction.Lightables;
 import org.rs2server.rs2.domain.service.api.*;
 import org.rs2server.rs2.domain.service.api.content.*;
 import org.rs2server.rs2.domain.service.impl.content.BankDepositBoxServiceImpl;
@@ -603,6 +605,7 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 							player.setAttribute("busy", true);
 							World.getWorld().submit(new Tickable(2) {
 
+								@Override
 								public void execute() {
 									this.stop();
 									int spellbook = player.getCombatState().getSpellBook();
@@ -684,39 +687,41 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 							 * World.getWorld().sendWorldMessage( "<col=ff0000>News: " + player.getName() +
 							 * " Has just entered the raids dungeon."); break;
 							 */
-
 						case 29312:
 							if (!player.getInventory().contains(20695)) {
-								player.getActionSender().sendDialogue("", DialogueType.MESSAGE, 20695,
-										FacialAnimation.DEFAULT, "You need some roots to light the brazier.");
+								player.sendMessage("You'll need some bruma roots to light the brazier!");
 								return;
 							}
 							if (!player.getInventory().contains(590)) {
-								player.getActionSender().sendDialogue("", DialogueType.MESSAGE, 590,
-										FacialAnimation.DEFAULT, "You need a tinderbox to light the brazier.");
+								player.sendMessage("You'll need a tinderbox to light the brazier!");
 								return;
 							}
-							if (Misc.random(4) == 0) {
-								player.playAnimation(Animation.create(733));
-								World.getWorld().replaceObject(obj, new GameObject(obj.getLocation(), 29314,
-										obj.getType(), obj.getDirection(), false), 60);
-								player.getActionSender().sendMessage("You light the brazier.");
-								player.getSkills().addExperience(Skills.FIREMAKING, 90);
-							} else
-								player.sendMessage("You failed to light the brazier.");
+							player.playAnimation(Animation.create(733));
+							player.setAttribute("lighting", true);
+							player.setAttribute("busy", true);
+							World.getWorld().submit(new Tickable(3) {
+
+								@Override
+								public void execute() {
+									player.removeAttribute("lighting");
+									player.removeAttribute("busy");
+									player.playAnimation(Animation.create(-1));
+									World.getWorld().replaceObject(obj, new GameObject(obj.getLocation(), 29314,
+											obj.getType(), obj.getDirection(), false), Misc.random(60, 180));
+									player.getActionSender().sendMessage("You lighten the brazier!");
+									player.getSkills().addExperience(Skills.FIREMAKING, 45);
+									this.stop();
+								}
+							});
+
 							break;
+
 						case 29314:
-							if (!player.getInventory().contains(20695)) {
-								player.getActionSender().sendDialogue("", DialogueType.MESSAGE, 20695,
-										FacialAnimation.DEFAULT, "You need some roots to feed the brazier with.");
-								return;
-							}
-							player.getSkills().addExperience(Skills.FIREMAKING, 110);
-							player.getInventory().remove(new Item(20695, 1));
-							player.getInventory().add(new Item(20527, 18));
-							if (Misc.random(10) == 0)
-								World.getWorld().replaceObject(obj, new GameObject(obj.getLocation(), 29312,
-										obj.getType(), obj.getDirection(), false), 300000);
+							BrazierAction action = new BrazierAction(player, Lightables.BRUMA_ROOT, obj);
+							if (player.getInventory().contains(20696))
+								action = new BrazierAction(player, Lightables.BRUMA_KINDLING, obj);
+							action.execute();
+							player.submitTick("skill_action_tick", action, true);
 							break;
 
 						case 28579:// mine wall 1
@@ -990,8 +995,11 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 
 						case 10068:
 							if (player.getContentManager().getActiveContent(Content.ZULRAH) != null) {
+								player.sendMessage(
+										"[ERROR] Cannot enter boat, please report this to an administrator!");
 								return;
 							}
+							player.setAttribute("busy", true);
 							player.getContentManager().start(Content.ZULRAH);
 							break;
 						case 17384:
@@ -1598,6 +1606,7 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 						player.setAttribute("busy", true);
 						World.getWorld().submit(new Tickable(2) {
 
+							@Override
 							public void execute() {
 								this.stop();
 								int spellbook = player.getCombatState().getSpellBook();

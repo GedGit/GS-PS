@@ -96,7 +96,8 @@ public class CBZip2InputStream extends InputStream implements BZip2Constants {
         setupBlock();
     }
 
-    public int read() {
+    @Override
+	public int read() {
         if (streamEnd) {
             return -1;
         } else {
@@ -259,11 +260,11 @@ public class CBZip2InputStream extends InputStream implements BZip2Constants {
     }
 
     private int bsGetIntVS(int numBits) {
-        return (int) bsR(numBits);
+        return bsR(numBits);
     }
 
     private int bsGetInt32() {
-        return (int) bsGetint();
+        return bsGetint();
     }
 
     private void hbCreateDecodeTables(int[] limit, int[] base,
@@ -618,7 +619,7 @@ public class CBZip2InputStream extends InputStream implements BZip2Constants {
         }
 
         for (i = 0; i <= last; i++) {
-            ch = (char) ll8[i];
+            ch = ll8[i];
             tt[cftab[ch]] = i;
             cftab[ch]++;
         }
@@ -652,7 +653,7 @@ public class CBZip2InputStream extends InputStream implements BZip2Constants {
                 }
             }
             rNToGo--;
-            ch2 ^= (int) ((rNToGo == 1) ? 1 : 0);
+            ch2 ^= (rNToGo == 1) ? 1 : 0;
             i2++;
 
             currentChar = ch2;
@@ -712,7 +713,7 @@ public class CBZip2InputStream extends InputStream implements BZip2Constants {
     }
 
     private void setupRandPartC() {
-        if (j2 < (int) z) {
+        if (j2 < z) {
             currentChar = ch2;
             mCrc.updateCRC(ch2);
             j2++;
@@ -745,7 +746,7 @@ public class CBZip2InputStream extends InputStream implements BZip2Constants {
     }
 
     private void setupNoRandPartC() {
-        if (j2 < (int) z) {
+        if (j2 < z) {
             currentChar = ch2;
             mCrc.updateCRC(ch2);
             j2++;

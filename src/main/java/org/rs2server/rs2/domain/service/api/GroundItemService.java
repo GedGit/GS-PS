@@ -54,6 +54,7 @@ public interface GroundItemService {
 			item.setPvpDrop(pvpDrop);
 		}
 
+		@Override
 		public String toString() {
 			return "Item: " + item + ", " + location + ", " + owner + ", " + global;
 		}

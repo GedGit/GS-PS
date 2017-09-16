@@ -227,7 +227,8 @@ public class Venenatis extends AbstractCombatAction {
                             }
                             World.getWorld().submit(
                                     new Tickable(finalTimer) {
-                                        public void execute() {
+                                        @Override
+										public void execute() {
                                             victim.getCombatState().setCanMove(
                                                     true);
                                             this.stop();
@@ -235,7 +236,8 @@ public class Venenatis extends AbstractCombatAction {
                                     });
                             World.getWorld().submit(
                                     new Tickable(finalTimer + 8) {
-                                        public void execute() {
+                                        @Override
+										public void execute() {
                                             victim.getCombatState()
                                                     .setCanBeFrozen(true);
                                             this.stop();

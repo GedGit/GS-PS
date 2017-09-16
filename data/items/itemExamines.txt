@@ -6781,6 +6781,7 @@
 13222:The cape worn by music aficionados.
 13223:Music cape hood.
 13226:A sack for storing grimy herbs.
+13233:A smouldering stone from the depths of Hell.
 13235:A pair of upgraded infinity boots, Increases your drop-rate by 3%.
 13237:A pair of upgraded ranger boots, Increases your drop-rate by 3%.
 13239:A pair of upgraded dragon boots, Increases your drop-rate by 3%.

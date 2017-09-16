@@ -52,6 +52,7 @@ public class SessionClosedTask implements Task {
 		if(player.getCombatState().getLastHitTimer() > System.currentTimeMillis() || player.getCombatState().isDead()) {
 			logger.info("Player {} is still in combat... delaying disconnect for 15 ticks.", player.getName());
 			World.getWorld().submit(new StoppingTick(16) {
+				@Override
 				public void executeAndStop() {
 					unregisterAndRemove(player);
 				}

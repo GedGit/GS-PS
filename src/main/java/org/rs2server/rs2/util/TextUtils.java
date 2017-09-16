@@ -630,7 +630,7 @@ public class TextUtils {
 				}
 			}
 			if (valid) {
-				bldr.append((char) c);
+				bldr.append(c);
 			}
 		}
 		return bldr.toString();

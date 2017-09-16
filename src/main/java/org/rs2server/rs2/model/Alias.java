@@ -39,7 +39,8 @@ public class Alias {
         this.rank = rank;
     }
 
-    public final String toString() {
+    @Override
+	public final String toString() {
         return name;
     }
 

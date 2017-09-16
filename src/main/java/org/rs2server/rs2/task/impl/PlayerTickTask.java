@@ -278,6 +278,7 @@ public class PlayerTickTask implements Task {
 		player.playGraphics(Graphic.create(308, 40, 100));
 
 		World.getWorld().submit(new Tickable(4) {
+			@Override
 			public void execute() {
 				player.resetInteractingEntity();
 				Location teleLoc = Entity.DEFAULT_LOCATION;
@@ -286,6 +287,7 @@ public class PlayerTickTask implements Task {
 
 				// Delay by 4 more ticks incase a projectile or something
 				World.getWorld().submit(new Tickable(4) {
+					@Override
 					public void execute() {
 						player.setCanBeDamaged(true);
 						player.removeAttribute("teleporting");

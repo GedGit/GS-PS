@@ -27,7 +27,8 @@ public class DemonicGorillaMagicAttackStyle<T extends DemonicGorilla> extends Np
         super(npc);
     }
 
-    public void perform() {
+    @Override
+	public void perform() {
 		if (npc.isDestroyed() || npc.getSkills().getLevel(Skills.HITPOINTS) <= 0) {
 			return;
 		}
@@ -80,7 +81,8 @@ public class DemonicGorillaMagicAttackStyle<T extends DemonicGorilla> extends Np
 
     }
 
-    public int getId() {
+    @Override
+	public int getId() {
         return DemonicGorilla.NPC_ID;
     }
 }

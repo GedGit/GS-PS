@@ -13,7 +13,7 @@ public class CacheManager {
 
     private static FileInformationTable[] informationTables;
     private static FileStore fs255;
-    private static FileStore[] fileStores;
+    private static FileStore[] fileStores; 
     private static Object[][][] archiveFiles;
 
     private static byte[] versionTable;

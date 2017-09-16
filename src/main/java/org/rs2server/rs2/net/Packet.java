@@ -172,8 +172,8 @@ public class Packet {
 	 * @return A big type long.
 	 */
 	public long getBigLong() {
-		long l = (long) getBEInt();
-		long l_35_ = (long) getBEInt();
+		long l = getBEInt();
+		long l_35_ = getBEInt();
 		if (l_35_ < 0) {
 			l_35_ = l_35_ & 0xffffffffL;
 		}

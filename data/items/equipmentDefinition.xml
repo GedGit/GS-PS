@@ -23,7 +23,30 @@
             <specialHits>0</specialHits>
         </equipmentDef>
     </entry>
-     <entry>
+  <entry>
+        <int>1015</int>
+        <equipmentDef>
+            <speed>0</speed>
+            <bonuses>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+            </bonuses>
+            <type>LEGS</type>
+            <specialConsumption>0</specialConsumption>
+        </equipmentDef>               	
+    </entry>
+   <entry>
         <int>11079</int>
         <equipmentDef>
             <speed>0</speed>
@@ -1451,29 +1474,8 @@
                 <int>1</int>
                 <int>0</int>
             </bonuses>
-            <weaponStyles>
-                <weaponStyle>MELEE</weaponStyle>
-            </weaponStyles>
-            <type>WEAPON</type>
+            <type>SHIELD</type>
             <animations>
-                <attack>
-                    <animation>
-                        <id>422</id>
-                        <delay>0</delay>
-                    </animation>
-                    <animation>
-                        <id>423</id>
-                        <delay>0</delay>
-                    </animation>
-                    <animation>
-                        <id>422</id>
-                        <delay>0</delay>
-                    </animation>
-                    <animation>
-                        <id>422</id>
-                        <delay>0</delay>
-                    </animation>
-                </attack>
                 <defend>
                     <id>1156</id>
                     <delay>0</delay>
@@ -1481,12 +1483,6 @@
             </animations>
             <specialConsumption>0</specialConsumption>
             <specialHits>0</specialHits>
-            <skillRequirements>
-                <entry>
-                    <skillRequirement>DEFENCE</skillRequirement>
-                    <int>10</int>
-                </entry>
-            </skillRequirements>
         </equipmentDef>
     </entry>
     <entry>
@@ -7277,30 +7273,7 @@
                 <int>0</int>
                 <int>0</int>
             </bonuses>
-            <weaponStyles>
-                <weaponStyle>MELEE</weaponStyle>
-            </weaponStyles>
-            <type>WEAPON</type>
-            <animations>
-                <attack>
-                    <animation>
-                        <id>422</id>
-                        <delay>0</delay>
-                    </animation>
-                    <animation>
-                        <id>423</id>
-                        <delay>0</delay>
-                    </animation>
-                    <animation>
-                        <id>422</id>
-                        <delay>0</delay>
-                    </animation>
-                    <animation>
-                        <id>422</id>
-                        <delay>0</delay>
-                    </animation>
-                </attack>
-            </animations>
+            <type>PLATEBODY</type>
             <specialConsumption>0</specialConsumption>
             <specialHits>0</specialHits>
         </equipmentDef>

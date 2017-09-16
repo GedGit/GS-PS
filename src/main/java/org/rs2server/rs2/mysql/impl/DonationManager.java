@@ -277,6 +277,6 @@ public class DonationManager implements Runnable {
 		player.sendMessage(
 				"You've purchased: [<col=ff0000>" + item.getCount() + "</col> x <col=ff0000>" + itemName + "</col>].");
 
-		DonationRank.handleDonation(player, item, (int) donationAmount);
+		DonationRank.handleDonation(player, item, donationAmount);
 	}
 }

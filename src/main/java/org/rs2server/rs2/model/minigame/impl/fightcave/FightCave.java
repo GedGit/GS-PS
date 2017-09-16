@@ -45,7 +45,7 @@ public class FightCave {
 		return wave;
 	}
 
-	public void setWave(Wave wave) {
+	public void setWave(Wave wave) { 
 		this.wave = wave;
 	}
 
@@ -55,6 +55,7 @@ public class FightCave {
 		player.setAttribute("busy", true);
 		wave = null;
 		World.getWorld().submit(new Tickable(1) {
+			@Override
 			public void execute() {
 				stop();
 				player.sendMessage("hello");

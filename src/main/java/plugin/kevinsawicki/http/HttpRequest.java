@@ -272,15 +272,18 @@ public class HttpRequest {
     if (TRUSTED_FACTORY == null) {
       final TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
 
-        public X509Certificate[] getAcceptedIssuers() {
+        @Override
+		public X509Certificate[] getAcceptedIssuers() {
           return new X509Certificate[0];
         }
 
-        public void checkClientTrusted(X509Certificate[] chain, String authType) {
+        @Override
+		public void checkClientTrusted(X509Certificate[] chain, String authType) {
           // Intentionally left blank
         }
 
-        public void checkServerTrusted(X509Certificate[] chain, String authType) {
+        @Override
+		public void checkServerTrusted(X509Certificate[] chain, String authType) {
           // Intentionally left blank
         }
       } };
@@ -303,7 +306,8 @@ public class HttpRequest {
     if (TRUSTED_VERIFIER == null)
       TRUSTED_VERIFIER = new HostnameVerifier() {
 
-        public boolean verify(String hostname, SSLSession session) {
+        @Override
+		public boolean verify(String hostname, SSLSession session) {
           return true;
         }
       };
@@ -385,11 +389,13 @@ public class HttpRequest {
      * {@link URL#openConnection()}
      */
     ConnectionFactory DEFAULT = new ConnectionFactory() {
-      public HttpURLConnection create(URL url) throws IOException {
+      @Override
+	public HttpURLConnection create(URL url) throws IOException {
         return (HttpURLConnection) url.openConnection();
       }
 
-      public HttpURLConnection create(URL url, Proxy proxy) throws IOException {
+      @Override
+	public HttpURLConnection create(URL url, Proxy proxy) throws IOException {
         return (HttpURLConnection) url.openConnection(proxy);
       }
     };
@@ -421,7 +427,8 @@ public class HttpRequest {
     void onUpload(long uploaded, long total);
 
     UploadProgress DEFAULT = new UploadProgress() {
-      public void onUpload(long uploaded, long total) {
+      @Override
+	public void onUpload(long uploaded, long total) {
       }
     };
   }
@@ -705,7 +712,8 @@ public class HttpRequest {
      */
     protected abstract void done() throws IOException;
 
-    public V call() throws HttpRequestException {
+    @Override
+	public V call() throws HttpRequestException {
       boolean thrown = false;
       try {
         return run();
@@ -1418,14 +1426,16 @@ public class HttpRequest {
     if (value != null)
       action = new PrivilegedAction<String>() {
 
-        public String run() {
+        @Override
+		public String run() {
           return System.setProperty(name, value);
         }
       };
     else
       action = new PrivilegedAction<String>() {
 
-        public String run() {
+        @Override
+		public String run() {
           return System.clearProperty(name);
         }
       };

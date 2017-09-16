@@ -47,6 +47,7 @@ public class KrakenServiceImpl implements KrakenService {
 			final GameObject object = clickEvent.getGameObject();
 			switch (object.getId()) {
 				case 537:
+					player.setAttribute("busy", true);
 					enterCave(player);
 					break;
 				case 538:
@@ -90,9 +91,8 @@ public class KrakenServiceImpl implements KrakenService {
 	public void exitCave(@Nonnull Player player) {
 		player.setTeleportTarget(CAVE_ENTRANCE);
 		Content krakenContent = player.getContentManager().getActiveContent(Content.KRAKEN);
-		if (krakenContent != null) {
+		if (krakenContent != null)
 			krakenContent.stop();
-		}
 	}
 
 	@Override

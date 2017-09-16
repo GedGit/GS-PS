@@ -5,11 +5,13 @@
 
 		-  The Godwars dungeon now contains correct NPC spawns and their combat definitions - they're all attackable now;
 		-  You will now have to have the respective god items equipped for the NPC's to not be aggressive towards you. Beware: they can all pile on and kill you fairly easily;
+		-  Major Wintertodt improvements - feeding the brazier is now automatic, bruma trees will now respawn at a much higher rate and will no longer leave the wrong stump behind, can add bruma kindlings to feed the brazier, adjusted the experience rates, added missing NPC spawns, there's now a 1/8 chance of getting damaged by 25% of your Hitpoints level (not HCIM safe!);
 		
 		
 	-- Minor fixes/changes/additions: --
 
         -  Added restrictions for ::openbank, such as, being deep in the wilderness, while in combat etc.;
+        -  You can no longer receive the same slayer task you had when getting a new one;
         
 
 --------------------------------------------------------------------------------------

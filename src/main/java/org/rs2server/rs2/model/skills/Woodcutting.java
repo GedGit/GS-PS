@@ -174,81 +174,81 @@ public class Woodcutting extends HarvestingAction {
 				new int[] { 1276, 1277, 1278, 1279, 1280, 1282, 1283, 1284, 1285, 1286, 1289, 1290, 1291, 1315, 1316,
 						1318, 1319, 1330, 1331, 1332, 1365, 1383, 1384, 3033, 3034, 3035, 3036, 3881, 3882, 3883, 5902,
 						5903, 5904 },
-				10000),
+				1342, 10000),
 
 		/**
 		 * Willow tree.
 		 */
-		WILLOW(1519, 30, 67.5, 22, 16, new int[] { 1750, 1756, 1758, 1760 }, 8000),
+		WILLOW(1519, 30, 67.5, 22, 16, new int[] { 1750, 1756, 1758, 1760 }, 1342, 8000),
 
 		/**
 		 * Oak tree.
 		 */
-		OAK(1521, 15, 37.5, 22, 12, new int[] { 1751 }, 9000),
+		OAK(1521, 15, 37.5, 22, 12, new int[] { 1751 }, 1342, 9000),
 
 		/**
 		 * Magic tree.
 		 */
-		MAGIC(1513, 75, 250, 150, 18, new int[] { 1761 }, 4500),
+		MAGIC(1513, 75, 250, 150, 18, new int[] { 1761 }, 1342, 4500),
 
 		/**
 		 * Maple tree.
 		 */
-		MAPLE(1517, 45, 100, 60, 17, new int[] { 1759 }, 7000),
+		MAPLE(1517, 45, 100, 60, 17, new int[] { 1759 }, 1342, 7000),
 
-		HOLLOW(3239, 45, 82.5, 60, 5, new int[] { 1757, 1752 }, 8000),
+		HOLLOW(3239, 45, 82.5, 60, 5, new int[] { 1757, 1752 }, 1342, 8000),
 
-		MATURE_JUNIPER(13355, 42, 180, 60, 7, new int[] { 27499 }, 8000),
+		MATURE_JUNIPER(13355, 42, 180, 60, 7, new int[] { 27499 }, 1342, 8000),
 
-		ARCTIC_PINE(10810, 40, 310, 60, 17, new int[] { 3037 }, 8000),
+		ARCTIC_PINE(10810, 40, 310, 60, 17, new int[] { 3037 }, 1342, 8000),
 
 		/**
 		 * Mahogany tree.
 		 */
-		MAHOGANY(6332, 50, 125, 22, 12, new int[] { 9034 }, 10000),
+		MAHOGANY(6332, 50, 125, 22, 12, new int[] { 9034 }, 1342, 10000),
 
 		/**
 		 * Teak tree.
 		 */
-		TEAK(6333, 35, 85, 22, 10, new int[] { 9036 }, 10000),
+		TEAK(6333, 35, 85, 22, 10, new int[] { 9036 }, 1342, 10000),
 
 		/**
 		 * Achey tree.
 		 */
-		ACHEY(2862, 1, 25, 22, 4, new int[] { 2023 }, 10000),
+		ACHEY(2862, 1, 25, 22, 4, new int[] { 2023 }, 1342, 10000),
 
 		/**
 		 * Medium tree.
 		 */
-		LIGHT_JUNGLE(9010, 10, 35, 22, 6, new int[] { 6281 }, 100000),
+		LIGHT_JUNGLE(9010, 10, 35, 22, 6, new int[] { 6281 }, 1342, 100000),
 
-		MEDIUM_JUNGLE(9015, 20, 45, 22, 5, new int[] { 6283 }, 100000),
+		MEDIUM_JUNGLE(9015, 20, 45, 22, 5, new int[] { 6283 }, 1342, 100000),
 
-		DENSE_JUNGLE(9020, 35, 55, 22, 4, new int[] { 6285 }, 100000),
+		DENSE_JUNGLE(9020, 35, 55, 22, 4, new int[] { 6285 }, 1342, 100000),
 		/**
 		 * Yew tree.
 		 */
-		YEW(1515, 60, 175, 120, 16, new int[] { 1753, 7419 }, 6000),
+		YEW(1515, 60, 175, 120, 16, new int[] { 1753, 7419 }, 1342, 6000),
 
 		/**
 		 * Dramen tree
 		 */
-		DRAMEN(771, 36, 0, 22, 4, new int[] {}, 100000),
+		DRAMEN(771, 36, 0, 22, 4, new int[] {}, 1342, 100000),
 
 		/**
 		 * Redwood tree
 		 */
-		REDWOOD(19669, 90, 380, 300, 50, new int[] { 28859 }, 6000),
+		REDWOOD(19669, 90, 380, 300, 50, new int[] { 28859 }, 28860, 6000),
 
 		/**
 		 * Bruma root
 		 */
-		BRUMA(20695, 1, 2, 110, 110, new int[] { 29311 }, 20000),
+		BRUMA(20695, 1, 2, 30, 110, new int[] { 29311 }, -1, 20000),
 
 		/**
 		 * Brimhaven vines
 		 */
-		VINE(-1, 1, 0, 2, 1, new int[] { 21731, 21732, 21733, 21734, 21735 }, 150000);
+		VINE(-1, 1, 0, 2, 1, new int[] { 21731, 21732, 21733, 21734, 21735 }, -1, 150000);
 
 		/**
 		 * The object ids of this tree.
@@ -280,6 +280,14 @@ public class Woodcutting extends HarvestingAction {
 		 */
 		private double experience;
 
+		/**
+		 * The stump id of this tree.
+		 */
+		private int replacement;
+
+		/**
+		 * The chance of receiving a pet.
+		 */
 		private int petRate;
 
 		/**
@@ -318,13 +326,15 @@ public class Woodcutting extends HarvestingAction {
 		 * @param objects
 		 *            The object ids.
 		 */
-		Tree(int log, int level, double experience, int respawnTimer, int logCount, int[] objects, int petRate) {
+		Tree(int log, int level, double experience, int respawnTimer, int logCount, int[] objects, int replacement,
+				int petRate) {
 			this.objects = objects;
 			this.level = level;
 			this.experience = experience;
 			this.respawnTimer = respawnTimer;
 			this.logCount = logCount;
 			this.log = log;
+			this.replacement = replacement;
 			this.petRate = petRate;
 		}
 
@@ -378,8 +388,22 @@ public class Woodcutting extends HarvestingAction {
 			return logCount;
 		}
 
+		/**
+		 * Gets the pet rate.
+		 * 
+		 * @return
+		 */
 		public int getPetRate() {
 			return petRate;
+		}
+
+		/**
+		 * Gets the stump id.
+		 * 
+		 * @return
+		 */
+		public int getReplacementId() {
+			return replacement;
 		}
 	}
 
@@ -405,7 +429,7 @@ public class Woodcutting extends HarvestingAction {
 		int random = Misc.random(tree.getPetRate());
 		double exp = tree.getExperience();
 
-		if (random == 3000) {
+		if (random == 1) {
 			Pet.Pets pets = Pet.Pets.BEAVER;
 			Pet.givePet((Player) getMob(), new Item(pets.getItem()));
 			return tree.getExperience();
@@ -425,7 +449,7 @@ public class Woodcutting extends HarvestingAction {
 
 	@Override
 	public int getGameObjectMaxHealth() {
-		return Misc.random(1, tree.getLogCount());
+		return Misc.random(2, tree.getLogCount());
 	}
 
 	@Override
@@ -464,10 +488,9 @@ public class Woodcutting extends HarvestingAction {
 			}
 			return null;
 		}
-		// Redwood exception
-		if (object.getId() == 28859)
-			return new GameObject(getGameObject().getLocation(), 28860, 10, object.getDirection(), false);
-		return new GameObject(getGameObject().getLocation(), 1342, 10, 0, false);
+		if (tree.getReplacementId() == -1)
+			return null;
+		return new GameObject(getGameObject().getLocation(), 1342, tree.getReplacementId(), object.getDirection(), false);
 	}
 
 	@Override
@@ -479,7 +502,7 @@ public class Woodcutting extends HarvestingAction {
 	public Item getReward() {
 		if (object.getDefinition().getName().contains("Vine"))
 			return null;
-		if (hatchet == Hatchet.INFERNAL && Misc.random(8) == 0) {
+		if (hatchet == Hatchet.INFERNAL && Misc.random(8) == 0 && tree.getLogId() != 20695) {
 			getMob().getSkills().addExperience(Skills.FIREMAKING, tree.getExperience() / 2);
 			getMob().playGraphics(Graphic.create(86));
 			return null;
@@ -509,11 +532,13 @@ public class Woodcutting extends HarvestingAction {
 			birdsNest = 3;
 		Item birdNest = new Item(Misc.random(10) == 0 ? 5070
 				: Misc.random(10) == 0 ? 5071 : Misc.random(10) == 0 ? 5072 : Misc.random(8) == 0 ? 5073 : 5074);
-		if (Misc.random(266) <= birdsNest) {
+		if (Misc.random(266) <= birdsNest && tree.getLogId() != 20695) {
 			World.getWorld().register(new GroundItem(((Player) getMob()).getName(), birdNest, getMob().getLocation()),
 					getMob());
 			getMob().getActionSender().sendMessage("<col=ff0000>A bird's nest falls out of the tree.");
 		}
+		if (tree.getLogId() == 20695)
+			return null;
 		return "You get some " + CacheItemDefinition.get(tree.getLogId()).getName().toLowerCase() + ".";
 	}
 

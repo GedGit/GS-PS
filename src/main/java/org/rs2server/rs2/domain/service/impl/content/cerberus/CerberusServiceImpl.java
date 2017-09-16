@@ -51,8 +51,8 @@ public final class CerberusServiceImpl implements CerberusService {
 			case 26567:
 			case 26568:
 			case 26569:
+				player.setAttribute("busy", true);
 				enterCave(player);
-				//player.sendMessage("Currently disabled.");
 				break;
 			case 21772:
 				exitCave(player);

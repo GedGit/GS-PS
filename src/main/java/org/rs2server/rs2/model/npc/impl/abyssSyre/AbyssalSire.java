@@ -62,6 +62,7 @@ public class AbyssalSire extends CombatNpc<AbyssalSire> {
 		return this.setCanSpawnPoisonPool(CanSpawnPoisonPool);
 	}
 
+	@Override
 	public void hit(final Mob attacker, final Mob victim) {
 		super.hit(attacker, victim);
 

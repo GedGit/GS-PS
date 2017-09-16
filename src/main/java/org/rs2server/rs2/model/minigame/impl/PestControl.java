@@ -236,6 +236,7 @@ public class PestControl extends AbstractMinigame {
 			return 3784 + RANDOM.nextInt(2);
 	}
 
+	@Override
 	public void quit(Player player) {
 		player.getInterfaceState().interfaceClosed();
 		player.getActionSender().removeAllInterfaces();
@@ -284,6 +285,7 @@ public class PestControl extends AbstractMinigame {
 		return ItemSafety.SAFE;
 	}
 
+	@Override
 	public String getName() {
 		return "Pest Control";
 	}

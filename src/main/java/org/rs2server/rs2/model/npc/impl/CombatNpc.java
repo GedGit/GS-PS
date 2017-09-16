@@ -96,6 +96,7 @@ public abstract class CombatNpc<T extends CombatNpc<?>> extends NPC {
 		attacker.getCombatState().setWeaponSwitchTimer(2);
 		attacker.getCombatState().setCanAnimate(false);
 		World.getWorld().submit(new Tickable(1) {
+			@Override
 			public void execute() {
 				attacker.getCombatState().setCanAnimate(true);
 				this.stop();

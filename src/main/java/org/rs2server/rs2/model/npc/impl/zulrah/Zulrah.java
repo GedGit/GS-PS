@@ -299,6 +299,7 @@ public final class Zulrah extends CombatNpc<Zulrah> {
 
 			private int stage;
 
+			@Override
 			public void execute() {
 				stage++;
 				switch (stage) {
@@ -395,6 +396,7 @@ public final class Zulrah extends CombatNpc<Zulrah> {
 			startTransforming = false;
 			submitTimer(AN.BOSS_TRANSFORMING, 10);
 			World.getWorld().submit(new Tickable(2) {
+				@Override
 				public void execute() {
 					doNextTransition();
 					stop();

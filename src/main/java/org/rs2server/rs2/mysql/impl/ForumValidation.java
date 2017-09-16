@@ -61,6 +61,7 @@ public class ForumValidation implements Runnable {
 		}
 	}
 
+	@Override
 	public void run() {
 		try {
 			if (connection == null) {

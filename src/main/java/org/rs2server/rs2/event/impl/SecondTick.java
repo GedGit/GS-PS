@@ -12,6 +12,7 @@ public class SecondTick extends Event {
 		super(1000);
 	}
 
+	@Override
 	public void execute() {
 		for (Player p : World.getWorld().getPlayers())
 			if (p != null)

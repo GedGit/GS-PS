@@ -51,18 +51,22 @@ public class KrakenContent extends Content {
 			respawnTimer--;
 		if (started) {
 			Location loc = KrakenServiceImpl.SPAWN_LOCATION;
-			if (player.getLocation().distanceToPoint(loc) >= 25) {
+			if (player.getLocation().distanceToPoint(loc) >= 40) {
 				player.getContentManager().stop(this);
 				return;
 			}
+			if (player.getAttribute("busy") != null)
+				player.removeAttribute("busy");
 		}
 		if (kraken != null && World.getWorld().getNPCs().contains(kraken) && !kraken.getCombatState().isDead()) {
+			// Hello
 		} else {
 			if (respawnTimer == 0)
 				spawnKraken();
 			if (respawnTimer == -1)
 				respawnTimer = 30;
 		}
+
 	}
 
 	@Override

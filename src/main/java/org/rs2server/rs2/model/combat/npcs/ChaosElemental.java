@@ -245,6 +245,7 @@ public class ChaosElemental extends AbstractCombatAction {
 				victim.getActionSender().sendMessage("The fiend teleports you away.");
 			}
 			World.getWorld().submit(new Tickable(1) {
+				@Override
 				public void execute() {
 					this.stop();
 					victim.setTeleportTarget(generateLocation());	

@@ -24,6 +24,7 @@ public class AbyssalSireMeleeAttackStyle<T extends AbyssalSire> extends NpcComba
 		super(npc);
 	}
 
+	@Override
 	public void perform() {
 		if (npc.isDestroyed() || npc.getSkills().getLevel(Skills.HITPOINTS) <= 0)
 			return;

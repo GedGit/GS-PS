@@ -118,11 +118,13 @@ public class GroundItemDefinition extends Item {
         return regions;
     }
 
-    public boolean respawns() {
+    @Override
+	public boolean respawns() {
         return respawns;
     }
 
-    public void setRespawns(boolean respawns) {
+    @Override
+	public void setRespawns(boolean respawns) {
         this.respawns = respawns;
     }
 

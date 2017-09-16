@@ -136,6 +136,7 @@ public class SeaTrollQueen extends AbstractCombatAction {
 					victim.playGraphics(Graphic.create(hit > 0 ? 163 : 85, 0, 100));
 				}
 				World.getWorld().submit(new Tickable(1) {
+					@Override
 					public void execute() {
 						vengeance(attacker, victim, hit, 1);
 						victim.inflictDamage(new Hit(hit), attacker);

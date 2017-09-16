@@ -24,8 +24,10 @@ public abstract class Content {
 	}
 
 	public void startRecording() {
-		if (start == 0)
+		if (start == 0) {
+			player.removeAttribute("busy");
 			start = System.currentTimeMillis();
+		}
 	}
 
 	public void stopRecording() {

@@ -41,6 +41,7 @@ public class ZaklnGritch extends AbstractCombatAction {
 	public ZaklnGritch() {
 	}
 
+	@Override
 	public void hit(final Mob attacker, final Mob victim) {
 		super.hit(attacker, victim);
 

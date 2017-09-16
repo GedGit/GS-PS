@@ -131,6 +131,7 @@ public class Misc {
 		player.getActionSender().sendDialogue("Salve-PS Advisor", DialogueType.NPC, 276,
 				FacialAnimation.DISTRESSED_CONTINUED, "Please wait, checking for rewards...");
 		new Thread() {
+			@Override
 			public void run() {
 				try {
 

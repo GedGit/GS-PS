@@ -8,6 +8,7 @@ import org.rs2server.rs2.model.Location;
 import org.rs2server.rs2.model.Mob;
 import org.rs2server.rs2.model.Skills;
 import org.rs2server.rs2.model.World;
+import org.rs2server.rs2.model.Mob.InteractionMode;
 import org.rs2server.rs2.model.boundary.BoundaryManager;
 import org.rs2server.rs2.model.combat.impl.MagicCombatAction;
 import org.rs2server.rs2.model.combat.impl.MagicCombatAction.Spell;
@@ -64,11 +65,12 @@ public class Teleporting {
 					WarriorsGuild.IN_GAME.remove(player);
 				if (mob.getSkills().getLevel(Skills.MAGIC) < (Integer) teleports[j][2]) {
 					if (mob.getActionSender() != null) {
-						mob.getActionSender().sendMessage(
-								"You need a magic level of " + (Integer) teleports[j][2] + " to cast " + teleport);
+						mob.getActionSender()
+								.sendMessage("You need a magic level of " + teleports[j][2] + " to cast " + teleport);
 						return false;
 					}
-				} else if (mob.isPlayer() && Location.getWildernessLevel((Player) mob, mob.getLocation()) > 20) {
+				}
+				if (mob.isPlayer() && Location.getWildernessLevel((Player) mob, mob.getLocation()) > 20) {
 					if (mob.getActionSender() != null) {
 						mob.getActionSender().sendMessage("You cannot teleport above level 20 wilderness.");
 						return false;
@@ -130,6 +132,11 @@ public class Teleporting {
 							mob.playAnimation(Animation.create(715));
 							mob.removeAttribute("busy");
 							mob.removeAttribute("teleporting");
+							if (player.getPet() != null) {
+								player.getPet().setTeleportTarget((Location) teleports[i][1]);
+								player.getPet().setInteractingEntity(InteractionMode.FOLLOW,
+										player.getPet().getInstancedPlayer());
+							}
 							this.stop();
 						}
 					});
@@ -150,6 +157,11 @@ public class Teleporting {
 							mob.playAnimation(Animation.create(-1));
 							mob.removeAttribute("busy");
 							mob.removeAttribute("teleporting");
+							if (player.getPet() != null) {
+								player.getPet().setTeleportTarget((Location) teleports[i][1]);
+								player.getPet().setInteractingEntity(InteractionMode.FOLLOW,
+										player.getPet().getInstancedPlayer());
+							}
 							this.stop();
 						}
 
@@ -158,6 +170,11 @@ public class Teleporting {
 				} else {
 					mob.removeAttribute("busy");
 					mob.removeAttribute("teleporting");
+					if (player.getPet() != null) {
+						player.getPet().setTeleportTarget(player.getLocation());
+						player.getPet().setInteractingEntity(InteractionMode.FOLLOW,
+								player.getPet().getInstancedPlayer());
+					}
 				}
 			}
 		}
@@ -240,6 +257,11 @@ public class Teleporting {
 						player.playAnimation(Animation.create(-1));
 						player.removeAttribute("busy");
 						player.removeAttribute("teleporting");
+						if (player.getPet() != null) {
+							player.getPet().setTeleportTarget((Location) teleports[i][1]);
+							player.getPet().setInteractingEntity(InteractionMode.FOLLOW,
+									player.getPet().getInstancedPlayer());
+						}
 						this.stop();
 					}
 				});

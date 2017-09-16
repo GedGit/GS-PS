@@ -20,6 +20,7 @@ public class WorldServiceImpl implements WorldService {
 	 * Sends messages to all players in the world.
 	 * @param messages The messages to send, each message will be send individually.
 	 */
+	@Override
 	public void sendGlobalMessage(@Nonnull final String ... messages) {
 		World.getWorld().getPlayers().stream()
 				.filter(p -> p != null && p.getActionSender() != null)

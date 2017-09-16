@@ -126,6 +126,7 @@ public class BountyHunter {
 					player.playAnimation(Animation.create(7376));
 					player.setAttribute("busy", Boolean.TRUE);
 					World.getWorld().submit(new Tickable(1) {
+						@Override
 						public void execute() {
 							stop();
 							player.removeAttribute("busy");

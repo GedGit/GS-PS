@@ -1,10 +1,11 @@
 //northeast = north
 //northwest = southeast
-//WEST = northwest
+//north = northwest
 //southeast = west
 //southwest = southwest
 //south = east
 //west = south
+//east = northeast
 
 //NEW HOME AREA - ZEAH
 535 1639 3663 0 NORTH_EAST false //melee shop
@@ -2524,8 +2525,6 @@
 7371 1624 3941 0 SOUTH true
 // Wintertoad, 0, added by: Salve
 7381 1622 3933 0 SOUTH true
-// Ignisia, 0, added by: Salve
-7374 1635 3946 0 SOUTH true
 // Banker, 0, added by: Salve
 395 3208 3222 2 SOUTH true
 // Wizard Distentor, 0, added by: Salve
@@ -2738,3 +2737,46 @@
 2520 3116 9958 0 SOUTH true
 // Skeleton, 68, added by: Salve
 2520 3107 9953 0 SOUTH true
+// Wintertodt
+3369 3229 3226 0 SOUTH true
+3034 3236 3225 0 WEST true
+3079 3228 3235 0 SOUTH true
+119 3232 3230 0 NORTH true
+7379 1627 3938 0 EAST true
+7379 1621 3939 0 WEST true
+306 3230 3233 0 WEST true
+7375 1626 3942 0 EAST true
+3085 3233 3235 0 SOUTH true
+7376 1629 3939 0 EAST false
+7381 1626 3951 0 EAST false
+2854 3226 3227 0 NORTH true
+7379 1632 3948 0 WEST true
+7377 1631 3941 0 SOUTH true
+7378 1633 3939 0 WEST false
+3079 3236 3219 0 WEST true
+7374 1634 3948 0 SOUTH false
+3262 3227 3224 0 SOUTH true
+7380 1637 3943 0 NORTH false
+2854 3230 3223 0 NORTH true
+2854 3217 3216 0 NORTH true
+3077 3221 3221 0 SOUTH true
+7383 1614 4008 0 SOUTH false
+3078 3214 3220 0 NORTH true
+7383 1617 3994 0 SOUTH false
+7371 1619 3996 0 EAST false
+7371 1619 4018 0 NORTH_WEST false
+1551 3019 3185 0 SOUTH true
+7383 1625 3991 0 SOUTH false
+7383 1635 3991 0 SOUTH false
+3261 3228 3224 0 EAST true
+7383 1637 4023 0 SOUTH false
+7371 1641 3996 0 NORTH false
+3080 3225 3217 0 WEST true
+7371 1641 4018 0 SOUTH_WEST false
+7383 1642 4020 0 SOUTH false
+2854 3217 3221 0 SOUTH true
+7383 1646 4008 0 SOUTH false
+7383 1646 4015 0 SOUTH false
+311 3228 3228 0 NORTH true
+317 3228 3226 0 SOUTH true
+2854 3230 3235 0 WEST true
