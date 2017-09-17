@@ -577,57 +577,72 @@ public class Magic {
 						player.getActionSender().switchTab(4);
 					}
 					break;
-				// Level 7 enchanting
-				case 63:
-					if (item.getId() == 19532) { // zenyte braclet
-						player.playAnimation(Animation.create(712)); // SET CORRECT ONE
-						player.playGraphics(Graphic.create(114, 0, 100));
-						player.getSkills().addExperience(Skills.MAGIC, 110);
-						staffService.removeRune(player, new Item(565, 20));
-						staffService.removeRune(player, new Item(566, 20));
-						staffService.removeRune(player, new Item(564, 1));
-						player.getInventory().remove(slot, new Item(item.getId()));
-						player.getInventory().add(new Item(19544));
-						player.getActionSender().switchTab(4);
-					} else if (item.getId() == 19535) { // zenyte necklace
-						player.playAnimation(Animation.create(712));
-						player.playGraphics(Graphic.create(114, 0, 100));
-						player.getSkills().addExperience(Skills.MAGIC, 110);
-						staffService.removeRune(player, new Item(565, 20));
-						staffService.removeRune(player, new Item(566, 20));
-						staffService.removeRune(player, new Item(564, 1));
-						player.getInventory().remove(slot, new Item(item.getId()));
-						player.getInventory().add(new Item(19547));
-						player.getActionSender().switchTab(4);
-					} else if (item.getId() == 19538) { // zenyte ring
-						player.playAnimation(Animation.create(712));
-						player.playGraphics(Graphic.create(114, 0, 100));
-						player.getSkills().addExperience(Skills.MAGIC, 110);
-						staffService.removeRune(player, new Item(565, 20));
-						staffService.removeRune(player, new Item(566, 20));
-						staffService.removeRune(player, new Item(564, 1));
-						player.getInventory().remove(slot, new Item(item.getId()));
-						player.getInventory().add(new Item(19550));
-						player.getActionSender().switchTab(4);
-					} else if (item.getId() == 19541) { // zenyte amulet
-						player.playAnimation(Animation.create(712));
-						player.playGraphics(Graphic.create(114, 0, 100));
-						player.getSkills().addExperience(Skills.MAGIC, 110);
-						staffService.removeRune(player, new Item(565, 20));
-						staffService.removeRune(player, new Item(566, 20));
-						staffService.removeRune(player, new Item(564, 1));
-						player.getInventory().remove(slot, new Item(item.getId()));
-						player.getInventory().add(new Item(19553));
-						player.getActionSender().switchTab(4);
-					}
-					break;
-				default:
-					System.out.println("Unhandled magic on item spell: " + spellId + ".");
-				}
-				break;
-			}
-		}
+	                // Level 7 enchanting
+	                case 63:
+						if (player.getSkills().getLevel(Skills.MAGIC) < 90) {
+							player.getActionSender().sendMessage("You need a Magic level of 90 to cast this spell.");
+							return;
+						}
+						if (!staffService.containsRune(player, new Item(565, 20))
+								|| !staffService.containsRune(player, new Item(566, 20))
+								|| !staffService.containsRune(player, new Item(564, 1))) {
+							player.getActionSender().sendMessage("You do not have the required runes to cast this spell.");
+							return;
+						}
+							
+	                    if (item.getId() == 19492) { // zenyte bracelet
+	                        player.playAnimation(Animation.create(712)); // SET CORRECT ONE
+	                        player.playGraphics(Graphic.create(114, 0, 100));
+	                        player.getSkills().addExperience(Skills.MAGIC, 110);
+	                        staffService.removeRune(player, new Item(565, 20));
+	                        staffService.removeRune(player, new Item(566, 20));
+	                        staffService.removeRune(player, new Item(564, 1));
+	                        player.getInventory().remove(slot, new Item(item.getId()));
+	                        player.getInventory().add(new Item(19544));
+	                        player.getActionSender().switchTab(4);
+	                    } 
+	                    if (item.getId() == 19535) { // zenyte necklace
+	                        player.playAnimation(Animation.create(712));
+	                        player.playGraphics(Graphic.create(114, 0, 100));
+	                        player.getSkills().addExperience(Skills.MAGIC, 110);
+	                        staffService.removeRune(player, new Item(565, 20));
+	                        staffService.removeRune(player, new Item(566, 20));
+	                        staffService.removeRune(player, new Item(564, 1));
+	                        player.getInventory().remove(slot, new Item(item.getId()));
+	                        player.getInventory().add(new Item(19547));
+	                        player.getActionSender().switchTab(4);
+	                    } 
+	                    if (item.getId() == 19538) { // zenyte ring
+	                        player.playAnimation(Animation.create(712));
+	                        player.playGraphics(Graphic.create(114, 0, 100));
+	                        player.getSkills().addExperience(Skills.MAGIC, 110);
+	                        staffService.removeRune(player, new Item(565, 20));
+	                        staffService.removeRune(player, new Item(566, 20));
+	                        staffService.removeRune(player, new Item(564, 1));
+	                        player.getInventory().remove(slot, new Item(item.getId()));
+	                        player.getInventory().add(new Item(19550));
+	                        player.getActionSender().switchTab(4);
+	                    } 
+	                    if (item.getId() == 19541) { // zenyte amulet
+	                        player.playAnimation(Animation.create(712));
+	                        player.playGraphics(Graphic.create(114, 0, 100));
+	                        player.getSkills().addExperience(Skills.MAGIC, 110);
+	                        staffService.removeRune(player, new Item(565, 20));
+	                        staffService.removeRune(player, new Item(566, 20));
+	                        staffService.removeRune(player, new Item(564, 1));
+	                        player.getInventory().remove(slot, new Item(item.getId()));
+	                        player.getInventory().add(new Item(19553));
+	                        player.getActionSender().switchTab(4);
+	                    }
+	                    
+	                    break;
+	                default:
+	                    System.out.println("Unhandled magic on item spell: " + spellId + ".");
+	                }
+	                break;
+	            }
+	        }
+
+	    }
 
 	}
-
-}

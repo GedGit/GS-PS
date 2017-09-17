@@ -56,7 +56,7 @@ public class GemCrafting extends ProductionAction {
 
 		ZENYTE_NECKLACE(new Item(19493), 92, 165, new Item(19535)),
 
-		ZENYTE_BRACELET(new Item(19493), 95, 180, new Item(19532)),
+		ZENYTE_BRACELET(new Item(19493), 95, 180, new Item(19492)),
 
 		ZENYTE_AMULET(new Item(19493), 98, 200, new Item(19501));
 
