@@ -7,6 +7,7 @@ import org.rs2server.rs2.model.Hit;
 import org.rs2server.rs2.model.Item;
 import org.rs2server.rs2.model.Skills;
 import org.rs2server.rs2.model.World;
+import org.rs2server.rs2.model.container.Inventory;
 import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.util.Misc;
 import org.rs2server.util.CycleState;
@@ -100,6 +101,8 @@ public class BrazierAction extends SkillAction {
 		player.playAnimation(Animation.create(832));
 		player.getInventory().remove(new Item(lightables.getItem(), 1));
 		player.getSkills().addExperience(Skills.FIREMAKING, lightables.getExp());
+		Inventory.addDroppable(player,
+				new Item(20527, Misc.random((int) lightables.getExp() - 10, (int) lightables.getExp() + 10)));
 		if (Misc.random(7) == 0)
 			player.inflictDamage(new Hit((int) (player.getSkills().getLevelForExperience(Skills.HITPOINTS) * 0.25)),
 					null);

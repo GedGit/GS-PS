@@ -2018,7 +2018,7 @@
 // Bartender, 0, added by: Salve
 687 2694 3496 0 SOUTH false
 // Matthias, 0, added by: Salve
-1340 2365 3619 0 SOUTH true
+1340 2365 3619 0 SOUTH false
 // Giant rat, 26, added by: Salve
 2510 3294 3383 0 SOUTH true
 // Paul, 0, added by: Salve
