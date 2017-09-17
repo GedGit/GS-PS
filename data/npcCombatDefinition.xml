@@ -46691,10 +46691,8 @@
         <CombatDefinition>
             <maxHit>24</maxHit>
             <aggressive>true</aggressive>
-            <spell>CARRALLANGAR_TELEPORT</spell>
             <combatCooldownDelay>5</combatCooldownDelay>
-            <projectileId>0</projectileId>
-            <respawnTicks>999999999</respawnTicks>
+            <respawnTicks>-1</respawnTicks>
             <attack>
                 <id>2080</id>
                 <delay>0</delay>
@@ -46704,17 +46702,13 @@
                 <delay>0</delay>
             </defend>
             <death>
-                <id>7197</id>
+                <id>836</id>
                 <delay>0</delay>
             </death>
             <attackType>CRUSH</attackType>
             <combatStyle>AGGRESSIVE_1</combatStyle>
             <combatActionType>CUSTOM</combatActionType>
             <skills>
-                <entry>
-                    <skill>RANGE</skill>
-                    <int>1</int>
-                </entry>
                 <entry>
                     <skill>ATTACK</skill>
                     <int>100</int>
@@ -46731,10 +46725,6 @@
                     <skill>HITPOINTS</skill>
                     <int>100</int>
                 </entry>
-                <entry>
-                    <skill>MAGIC</skill>
-                    <int>1</int>
-                </entry>
             </skills>
             <bonuses>
                 <int>75</int>
@@ -46742,11 +46732,11 @@
                 <int>75</int>
                 <int>0</int>
                 <int>0</int>
-                <int>259</int>
-                <int>257</int>
-                <int>241</int>
+                <int>159</int>
+                <int>157</int>
+                <int>141</int>
                 <int>-11</int>
-                <int>250</int>
+                <int>150</int>
                 <int>75</int>
                 <int>0</int>
                 <int>0</int>
@@ -46761,10 +46751,8 @@
         <CombatDefinition>
             <maxHit>27</maxHit>
             <aggressive>true</aggressive>
-            <spell>CARRALLANGAR_TELEPORT</spell>
             <combatCooldownDelay>5</combatCooldownDelay>
-            <projectileId>0</projectileId>
-            <respawnTicks>999999999</respawnTicks>
+            <respawnTicks>-1</respawnTicks>
             <attack>
                 <id>2066</id>
                 <delay>0</delay>
@@ -46774,17 +46762,13 @@
                 <delay>0</delay>
             </defend>
             <death>
-                <id>7197</id>
+                <id>836</id>
                 <delay>0</delay>
             </death>
             <attackType>CRUSH</attackType>
             <combatStyle>AGGRESSIVE_1</combatStyle>
             <combatActionType>CUSTOM</combatActionType>
             <skills>
-                <entry>
-                    <skill>RANGE</skill>
-                    <int>1</int>
-                </entry>
                 <entry>
                     <skill>ATTACK</skill>
                     <int>100</int>
@@ -46801,10 +46785,6 @@
                     <skill>HITPOINTS</skill>
                     <int>100</int>
                 </entry>
-                <entry>
-                    <skill>MAGIC</skill>
-                    <int>1</int>
-                </entry>
             </skills>
             <bonuses>
                 <int>0</int>
@@ -46812,11 +46792,11 @@
                 <int>95</int>
                 <int>0</int>
                 <int>0</int>
-                <int>252</int>
-                <int>250</int>
-                <int>244</int>
+                <int>152</int>
+                <int>150</int>
+                <int>144</int>
                 <int>-11</int>
-                <int>249</int>
+                <int>149</int>
                 <int>105</int>
                 <int>0</int>
                 <int>0</int>
@@ -46831,10 +46811,8 @@
         <CombatDefinition>
             <maxHit>26</maxHit>
             <aggressive>true</aggressive>
-            <spell>CARRALLANGAR_TELEPORT</spell>
             <combatCooldownDelay>5</combatCooldownDelay>
-            <projectileId>0</projectileId>
-            <respawnTicks>999999999</respawnTicks>
+            <respawnTicks>-1</respawnTicks>
             <attack>
                 <id>2068</id>
                 <delay>0</delay>
@@ -46844,17 +46822,13 @@
                 <delay>0</delay>
             </defend>
             <death>
-                <id>7197</id>
+                <id>836</id>
                 <delay>0</delay>
             </death>
             <attackType>CRUSH</attackType>
             <combatStyle>AGGRESSIVE_1</combatStyle>
             <combatActionType>CUSTOM</combatActionType>
             <skills>
-                <entry>
-                    <skill>RANGE</skill>
-                    <int>1</int>
-                </entry>
                 <entry>
                     <skill>ATTACK</skill>
                     <int>100</int>
@@ -46871,10 +46845,6 @@
                     <skill>HITPOINTS</skill>
                     <int>100</int>
                 </entry>
-                <entry>
-                    <skill>MAGIC</skill>
-                    <int>1</int>
-                </entry>
             </skills>
             <bonuses>
                 <int>68</int>
@@ -46882,11 +46852,11 @@
                 <int>82</int>
                 <int>0</int>
                 <int>0</int>
-                <int>221</int>
-                <int>235</int>
-                <int>222</int>
-                <int>0</int>
-                <int>221</int>
+                <int>121</int>
+                <int>135</int>
+                <int>122</int>
+                <int>-10</int>
+                <int>121</int>
                 <int>72</int>
                 <int>0</int>
                 <int>0</int>
@@ -46997,8 +46967,7 @@
             <maxHit>25</maxHit>
             <aggressive>true</aggressive>
             <combatCooldownDelay>5</combatCooldownDelay>
-            <projectileId>0</projectileId>
-            <respawnTicks>999999999</respawnTicks>
+            <respawnTicks>-1</respawnTicks>
             <attack>
                 <id>2075</id>
                 <delay>0</delay>
@@ -47008,7 +46977,7 @@
                 <delay>0</delay>
             </defend>
             <death>
-                <id>7197</id>
+                <id>836</id>
                 <delay>0</delay>
             </death>
             <attackType>RANGE</attackType>
@@ -47020,20 +46989,12 @@
                     <int>100</int>
                 </entry>
                 <entry>
-                    <skill>ATTACK</skill>
-                    <int>1</int>
-                </entry>
-                <entry>
                     <skill>DEFENCE</skill>
                     <int>100</int>
                 </entry>
                 <entry>
                     <skill>HITPOINTS</skill>
                     <int>100</int>
-                </entry>
-                <entry>
-                    <skill>MAGIC</skill>
-                    <int>1</int>
                 </entry>
             </skills>
             <bonuses>
@@ -47215,10 +47176,8 @@
         <CombatDefinition>
             <maxHit>26</maxHit>
             <aggressive>true</aggressive>
-            <spell>CARRALLANGAR_TELEPORT</spell>
             <combatCooldownDelay>5</combatCooldownDelay>
-            <projectileId>0</projectileId>
-            <respawnTicks>999999999</respawnTicks>
+            <respawnTicks>-1</respawnTicks>
             <attack>
                 <id>2062</id>
                 <delay>0</delay>
@@ -47228,17 +47187,13 @@
                 <delay>0</delay>
             </defend>
             <death>
-                <id>7197</id>
+                <id>836</id>
                 <delay>0</delay>
             </death>
             <attackType>CRUSH</attackType>
             <combatStyle>AGGRESSIVE_1</combatStyle>
             <combatActionType>CUSTOM</combatActionType>
             <skills>
-                <entry>
-                    <skill>RANGE</skill>
-                    <int>1</int>
-                </entry>
                 <entry>
                     <skill>ATTACK</skill>
                     <int>100</int>
@@ -47255,22 +47210,18 @@
                     <skill>HITPOINTS</skill>
                     <int>100</int>
                 </entry>
-                <entry>
-                    <skill>MAGIC</skill>
-                    <int>1</int>
-                </entry>
             </skills>
             <bonuses>
-                <int>68</int>
+                <int>98</int>
+                <int>50</int>
+                <int>92</int>
                 <int>0</int>
-                <int>82</int>
                 <int>0</int>
-                <int>0</int>
-                <int>227</int>
-                <int>230</int>
-                <int>221</int>
-                <int>0</int>
-                <int>225</int>
+                <int>127</int>
+                <int>130</int>
+                <int>121</int>
+                <int>-10</int>
+                <int>125</int>
                 <int>72</int>
                 <int>0</int>
                 <int>0</int>
@@ -50064,276 +50015,6 @@
                 <int>140</int>
                 <int>140</int>
             </bonuses>
-            <constantDrops>
-                <npcdrop>
-                    <frequency>1.0</frequency>
-                    <item>
-                        <id>526</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-            </constantDrops>
-            <randomDrops>
-                <npcdrop>
-                    <frequency>0.72</frequency>
-                    <item>
-                        <id>1319</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.37</frequency>
-                    <item>
-                        <id>1373</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.35</frequency>
-                    <item>
-                        <id>1247</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.38</frequency>
-                    <item>
-                        <id>1289</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.032</frequency>
-                    <item>
-                        <id>11838</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.86</frequency>
-                    <item>
-                        <id>811</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.74</frequency>
-                    <item>
-                        <id>563</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.55</frequency>
-                    <item>
-                        <id>561</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.74</frequency>
-                    <item>
-                        <id>892</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.43</frequency>
-                    <item>
-                        <id>886</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.53</frequency>
-                    <item>
-                        <id>829</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.54</frequency>
-                    <item>
-                        <id>560</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.97</frequency>
-                    <item>
-                        <id>1201</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.75</frequency>
-                    <item>
-                        <id>1093</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.59</frequency>
-                    <item>
-                        <id>1123</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.57</frequency>
-                    <item>
-                        <id>1185</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.65</frequency>
-                    <item>
-                        <id>3042</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.64</frequency>
-                    <item>
-                        <id>2434</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.55</frequency>
-                    <item>
-                        <id>6687</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.67</frequency>
-                    <item>
-                        <id>2442</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.65</frequency>
-                    <item>
-                        <id>3024</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.68</frequency>
-                    <item>
-                        <id>207</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.55</frequency>
-                    <item>
-                        <id>5295</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.49</frequency>
-                    <item>
-                        <id>5316</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.6</frequency>
-                    <item>
-                        <id>1605</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.56</frequency>
-                    <item>
-                        <id>1607</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.7</frequency>
-                    <item>
-                        <id>1602</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.51</frequency>
-                    <item>
-                        <id>1603</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.09</frequency>
-                    <item>
-                        <id>442</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.09</frequency>
-                    <item>
-                        <id>1615</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.78</frequency>
-                    <item>
-                        <id>618</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.017</frequency>
-                    <item>
-                        <id>11814</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.047</frequency>
-                    <item>
-                        <id>11818</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.047</frequency>
-                    <item>
-                        <id>11820</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.047</frequency>
-                    <item>
-                        <id>11822</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.49</frequency>
-                    <item>
-                        <id>1452</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.0</frequency>
-                    <item>
-                        <id>0</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-            </randomDrops>
         </CombatDefinition>
     </entry>
     <entry>
@@ -50398,381 +50079,6 @@
                 <int>15</int>
                 <int>15</int>
             </bonuses>
-            <constantDrops>
-                <npcdrop>
-                    <frequency>1.0</frequency>
-                    <item>
-                        <id>526</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-            </constantDrops>
-            <randomDrops>
-                <npcdrop>
-                    <frequency>0.9</frequency>
-                    <item>
-                        <id>199</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.9</frequency>
-                    <item>
-                        <id>201</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.78</frequency>
-                    <item>
-                        <id>203</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.44</frequency>
-                    <item>
-                        <id>205</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.44</frequency>
-                    <item>
-                        <id>207</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.55</frequency>
-                    <item>
-                        <id>209</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.65</frequency>
-                    <item>
-                        <id>211</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.41</frequency>
-                    <item>
-                        <id>213</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.01</frequency>
-                    <item>
-                        <id>215</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.65</frequency>
-                    <item>
-                        <id>2485</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.05</frequency>
-                    <item>
-                        <id>217</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.65</frequency>
-                    <item>
-                        <id>1351</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.6</frequency>
-                    <item>
-                        <id>1291</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.59</frequency>
-                    <item>
-                        <id>1139</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.66</frequency>
-                    <item>
-                        <id>1189</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.56</frequency>
-                    <item>
-                        <id>1203</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.68</frequency>
-                    <item>
-                        <id>1349</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.88</frequency>
-                    <item>
-                        <id>1420</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.65</frequency>
-                    <item>
-                        <id>884</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.78</frequency>
-                    <item>
-                        <id>886</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.73</frequency>
-                    <item>
-                        <id>888</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.27</frequency>
-                    <item>
-                        <id>830</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.03</frequency>
-                    <item>
-                        <id>2366</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.66</frequency>
-                    <item>
-                        <id>19830</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.33</frequency>
-                    <item>
-                        <id>1623</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.34</frequency>
-                    <item>
-                        <id>1621</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.35</frequency>
-                    <item>
-                        <id>1619</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.07</frequency>
-                    <item>
-                        <id>1617</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.01</frequency>
-                    <item>
-                        <id>1631</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.56</frequency>
-                    <item>
-                        <id>562</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.59</frequency>
-                    <item>
-                        <id>556</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.64</frequency>
-                    <item>
-                        <id>554</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.69</frequency>
-                    <item>
-                        <id>558</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.67</frequency>
-                    <item>
-                        <id>559</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.27</frequency>
-                    <item>
-                        <id>561</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.62</frequency>
-                    <item>
-                        <id>563</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.66</frequency>
-                    <item>
-                        <id>564</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.01</frequency>
-                    <item>
-                        <id>1462</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.83</frequency>
-                    <item>
-                        <id>3420</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.97</frequency>
-                    <item>
-                        <id>6476</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.77</frequency>
-                    <item>
-                        <id>995</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.95</frequency>
-                    <item>
-                        <id>313</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.71</frequency>
-                    <item>
-                        <id>29</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.69</frequency>
-                    <item>
-                        <id>1917</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.7</frequency>
-                    <item>
-                        <id>436</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.71</frequency>
-                    <item>
-                        <id>441</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.61</frequency>
-                    <item>
-                        <id>438</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.63</frequency>
-                    <item>
-                        <id>592</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.63</frequency>
-                    <item>
-                        <id>221</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.01</frequency>
-                    <item>
-                        <id>2331</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.32</frequency>
-                    <item>
-                        <id>987</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.0</frequency>
-                    <item>
-                        <id>0</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-            </randomDrops>
         </CombatDefinition>
     </entry>
     <entry>
@@ -50837,381 +50143,6 @@
                 <int>15</int>
                 <int>15</int>
             </bonuses>
-            <constantDrops>
-                <npcdrop>
-                    <frequency>1.0</frequency>
-                    <item>
-                        <id>526</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-            </constantDrops>
-            <randomDrops>
-                <npcdrop>
-                    <frequency>0.75</frequency>
-                    <item>
-                        <id>199</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.9</frequency>
-                    <item>
-                        <id>201</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.91</frequency>
-                    <item>
-                        <id>203</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.28</frequency>
-                    <item>
-                        <id>205</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.52</frequency>
-                    <item>
-                        <id>207</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.62</frequency>
-                    <item>
-                        <id>209</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.73</frequency>
-                    <item>
-                        <id>211</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.41</frequency>
-                    <item>
-                        <id>213</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.01</frequency>
-                    <item>
-                        <id>215</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.03</frequency>
-                    <item>
-                        <id>2485</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.06</frequency>
-                    <item>
-                        <id>217</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.57</frequency>
-                    <item>
-                        <id>1351</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.58</frequency>
-                    <item>
-                        <id>1291</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.72</frequency>
-                    <item>
-                        <id>1139</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.55</frequency>
-                    <item>
-                        <id>1189</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.57</frequency>
-                    <item>
-                        <id>1203</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.72</frequency>
-                    <item>
-                        <id>1349</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.81</frequency>
-                    <item>
-                        <id>1420</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.69</frequency>
-                    <item>
-                        <id>884</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.9</frequency>
-                    <item>
-                        <id>886</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.7</frequency>
-                    <item>
-                        <id>888</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.25</frequency>
-                    <item>
-                        <id>830</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.04</frequency>
-                    <item>
-                        <id>2366</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.57</frequency>
-                    <item>
-                        <id>19830</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.39</frequency>
-                    <item>
-                        <id>1623</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.25</frequency>
-                    <item>
-                        <id>1621</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.27</frequency>
-                    <item>
-                        <id>1619</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.09</frequency>
-                    <item>
-                        <id>1617</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.02</frequency>
-                    <item>
-                        <id>1631</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.66</frequency>
-                    <item>
-                        <id>562</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.72</frequency>
-                    <item>
-                        <id>556</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.73</frequency>
-                    <item>
-                        <id>554</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.56</frequency>
-                    <item>
-                        <id>558</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.63</frequency>
-                    <item>
-                        <id>559</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.5</frequency>
-                    <item>
-                        <id>561</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.65</frequency>
-                    <item>
-                        <id>563</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.74</frequency>
-                    <item>
-                        <id>564</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.06</frequency>
-                    <item>
-                        <id>1462</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.8</frequency>
-                    <item>
-                        <id>3420</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.8</frequency>
-                    <item>
-                        <id>6476</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.9</frequency>
-                    <item>
-                        <id>995</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.99</frequency>
-                    <item>
-                        <id>313</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.71</frequency>
-                    <item>
-                        <id>29</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.62</frequency>
-                    <item>
-                        <id>1917</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.59</frequency>
-                    <item>
-                        <id>436</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.72</frequency>
-                    <item>
-                        <id>441</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.57</frequency>
-                    <item>
-                        <id>438</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.72</frequency>
-                    <item>
-                        <id>592</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.55</frequency>
-                    <item>
-                        <id>221</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.05</frequency>
-                    <item>
-                        <id>2331</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.25</frequency>
-                    <item>
-                        <id>987</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.0</frequency>
-                    <item>
-                        <id>0</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-            </randomDrops>
         </CombatDefinition>
     </entry>
     <entry>
@@ -51275,80 +50206,6 @@
                 <int>27</int>
                 <int>30</int>
             </bonuses>
-            <constantDrops>
-                <npcdrop>
-                    <frequency>1.0</frequency>
-                    <item>
-                        <id>526</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-            </constantDrops>
-            <randomDrops>
-                <npcdrop>
-                    <frequency>0.76</frequency>
-                    <item>
-                        <id>618</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.66</frequency>
-                    <item>
-                        <id>592</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.72</frequency>
-                    <item>
-                        <id>237</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.57</frequency>
-                    <item>
-                        <id>231</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.57</frequency>
-                    <item>
-                        <id>7218</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.047</frequency>
-                    <item>
-                        <id>11818</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.047</frequency>
-                    <item>
-                        <id>11820</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.047</frequency>
-                    <item>
-                        <id>11822</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.032</frequency>
-                    <item>
-                        <id>11838</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-            </randomDrops>
         </CombatDefinition>
     </entry>
     <entry>
@@ -51413,381 +50270,6 @@
                 <int>15</int>
                 <int>15</int>
             </bonuses>
-            <constantDrops>
-                <npcdrop>
-                    <frequency>1.0</frequency>
-                    <item>
-                        <id>526</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-            </constantDrops>
-            <randomDrops>
-                <npcdrop>
-                    <frequency>0.85</frequency>
-                    <item>
-                        <id>199</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.99</frequency>
-                    <item>
-                        <id>201</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.97</frequency>
-                    <item>
-                        <id>203</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.46</frequency>
-                    <item>
-                        <id>205</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.26</frequency>
-                    <item>
-                        <id>207</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.69</frequency>
-                    <item>
-                        <id>209</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.63</frequency>
-                    <item>
-                        <id>211</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.5</frequency>
-                    <item>
-                        <id>213</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.02</frequency>
-                    <item>
-                        <id>215</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.6</frequency>
-                    <item>
-                        <id>2485</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.07</frequency>
-                    <item>
-                        <id>217</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.6</frequency>
-                    <item>
-                        <id>1351</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.7</frequency>
-                    <item>
-                        <id>1291</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.69</frequency>
-                    <item>
-                        <id>1139</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.69</frequency>
-                    <item>
-                        <id>1189</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.64</frequency>
-                    <item>
-                        <id>1203</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.61</frequency>
-                    <item>
-                        <id>1349</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.92</frequency>
-                    <item>
-                        <id>1420</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.73</frequency>
-                    <item>
-                        <id>884</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.98</frequency>
-                    <item>
-                        <id>886</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.57</frequency>
-                    <item>
-                        <id>888</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.48</frequency>
-                    <item>
-                        <id>830</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.05</frequency>
-                    <item>
-                        <id>2366</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.63</frequency>
-                    <item>
-                        <id>19830</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.35</frequency>
-                    <item>
-                        <id>1623</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.53</frequency>
-                    <item>
-                        <id>1621</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.4</frequency>
-                    <item>
-                        <id>1619</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.01</frequency>
-                    <item>
-                        <id>1617</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.09</frequency>
-                    <item>
-                        <id>1631</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.73</frequency>
-                    <item>
-                        <id>562</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.66</frequency>
-                    <item>
-                        <id>556</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.57</frequency>
-                    <item>
-                        <id>554</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.56</frequency>
-                    <item>
-                        <id>558</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.58</frequency>
-                    <item>
-                        <id>559</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.41</frequency>
-                    <item>
-                        <id>561</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.66</frequency>
-                    <item>
-                        <id>563</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.64</frequency>
-                    <item>
-                        <id>564</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.03</frequency>
-                    <item>
-                        <id>1462</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.77</frequency>
-                    <item>
-                        <id>3420</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.81</frequency>
-                    <item>
-                        <id>6476</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.81</frequency>
-                    <item>
-                        <id>995</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.82</frequency>
-                    <item>
-                        <id>313</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.61</frequency>
-                    <item>
-                        <id>29</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.59</frequency>
-                    <item>
-                        <id>1917</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.67</frequency>
-                    <item>
-                        <id>436</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.72</frequency>
-                    <item>
-                        <id>441</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.63</frequency>
-                    <item>
-                        <id>438</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.59</frequency>
-                    <item>
-                        <id>592</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.56</frequency>
-                    <item>
-                        <id>221</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.05</frequency>
-                    <item>
-                        <id>2331</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.45</frequency>
-                    <item>
-                        <id>987</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.0</frequency>
-                    <item>
-                        <id>0</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-            </randomDrops>
         </CombatDefinition>
     </entry>
     <entry>
@@ -51850,8 +50332,6 @@
                 <int>150</int>
                 <int>150</int>
             </bonuses>
-            <constantDrops/>
-            <randomDrops/>
         </CombatDefinition>
     </entry>
     <entry>
@@ -51916,8 +50396,6 @@
                 <int>0</int>
                 <int>0</int>
             </bonuses>
-            <constantDrops/>
-            <randomDrops/>
         </CombatDefinition>
     </entry>
     <entry>
@@ -51981,114 +50459,6 @@
                 <int>80</int>
                 <int>86</int>
             </bonuses>
-            <constantDrops/>
-            <randomDrops>
-                <npcdrop>
-                    <frequency>0.02</frequency>
-                    <item>
-                        <id>11830</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.02</frequency>
-                    <item>
-                        <id>11828</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.02</frequency>
-                    <item>
-                        <id>11826</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.76</frequency>
-                    <item>
-                        <id>7056</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.59</frequency>
-                    <item>
-                        <id>391</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.69</frequency>
-                    <item>
-                        <id>7058</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.87</frequency>
-                    <item>
-                        <id>4697</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.81</frequency>
-                    <item>
-                        <id>808</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.91</frequency>
-                    <item>
-                        <id>886</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.75</frequency>
-                    <item>
-                        <id>618</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.047</frequency>
-                    <item>
-                        <id>11818</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.047</frequency>
-                    <item>
-                        <id>11820</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.047</frequency>
-                    <item>
-                        <id>11822</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.83</frequency>
-                    <item>
-                        <id>6693</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-                <npcdrop>
-                    <frequency>0.87</frequency>
-                    <item>
-                        <id>213</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-            </randomDrops>
         </CombatDefinition>
     </entry>
     <entry>
@@ -52180,7 +50550,7 @@
             <skills>
                 <entry>
                     <skill>RANGE</skill>
-                    <int>169</int>
+                    <int>59</int>
                 </entry>
                 <entry>
                     <skill>ATTACK</skill>
@@ -52188,7 +50558,7 @@
                 </entry>
                 <entry>
                     <skill>DEFENCE</skill>
-                    <int>175</int>
+                    <int>105</int>
                 </entry>
                 <entry>
                     <skill>HITPOINTS</skill>
@@ -52200,20 +50570,19 @@
                 </entry>
             </skills>
             <bonuses>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
                 <int>15</int>
                 <int>15</int>
                 <int>15</int>
                 <int>15</int>
                 <int>15</int>
-                <int>15</int>
-                <int>15</int>
-                <int>15</int>
-                <int>15</int>
-                <int>15</int>
-                <int>14</int>
-                <int>5</int>
-                <int>5</int>
-                <int>5</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
             </bonuses>
         </CombatDefinition>
     </entry>
@@ -54396,9 +52765,62 @@
         </CombatDefinition>
     </entry>
     <entry>
+        <int>3027</int>
+        <CombatDefinition>
+            <maxHit>6</maxHit>
+            <combatCooldownDelay>5</combatCooldownDelay>
+            <respawnTicks>30</respawnTicks>
+            <aggressive>true</aggressive>
+            <attack>
+                <id>6254</id>
+                <delay>0</delay>
+            </attack>
+            <defend>
+                <id>6255</id>
+                <delay>0</delay>
+            </defend>
+            <death>
+                <id>6256</id>
+                <delay>0</delay>
+            </death>
+            <attackType>SLASH</attackType>
+            <combatStyle>AGGRESSIVE_1</combatStyle>
+            <combatActionType>MELEE</combatActionType>
+            <skills>
+                <entry>
+                    <skill>DEFENCE</skill>
+                    <int>20</int>
+                </entry>
+                <entry>
+                    <skill>HITPOINTS</skill>
+                    <int>35</int>
+                </entry>
+                <entry>
+                    <skill>ATTACK</skill>
+                    <int>20</int>
+                </entry>
+            </skills>
+            <bonuses>
+                <int>40</int>
+                <int>40</int>
+                <int>40</int>
+                <int>40</int>
+                <int>40</int>
+                <int>25</int>
+                <int>25</int>
+                <int>25</int>
+                <int>25</int>
+                <int>25</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+            </bonuses>
+        </CombatDefinition>
+    </entry>
+    <entry>
         <int>3024</int>
         <CombatDefinition>
-            <maxHit>2</maxHit>
+            <maxHit>3</maxHit>
             <combatCooldownDelay>5</combatCooldownDelay>
             <respawnTicks>30</respawnTicks>
             <aggressive>true</aggressive>
@@ -54446,16 +52868,6 @@
                 <int>0</int>
                 <int>0</int>
             </bonuses>
-            <constantDrops>
-                <npcdrop>
-                    <frequency>1.0</frequency>
-                    <item>
-                        <id>526</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-            </constantDrops>
-            <randomDrops/>
         </CombatDefinition>
     </entry>
     <entry>
@@ -58714,7 +57126,7 @@
         <CombatDefinition>
             <maxHit>20</maxHit>
             <combatCooldownDelay>5</combatCooldownDelay>
-            <respawnTicks>999999999</respawnTicks>
+            <respawnTicks>-1</respawnTicks>
             <aggressive>true</aggressive>
             <attack>
                 <id>729</id>
@@ -58755,9 +57167,9 @@
                 <int>65</int>
                 <int>73</int>
                 <int>0</int>
-                <int>103</int>
-                <int>85</int>
-                <int>117</int>
+                <int>73</int>
+                <int>75</int>
+                <int>97</int>
                 <int>73</int>
                 <int>0</int>
                 <int>68</int>
@@ -64540,27 +62952,27 @@
                 </entry>
                 <entry>
                     <skill>RANGE</skill>
-                    <int>100</int>
+                    <int>50</int>
                 </entry>
                 <entry>
                     <skill>MAGIC</skill>
-                    <int>150</int>
+                    <int>50</int>
                 </entry>
             </skills>
             <bonuses>
-                <int>25</int>
-                <int>25</int>
-                <int>25</int>
-                <int>25</int>
-                <int>25</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
                 <int>15</int>
                 <int>15</int>
                 <int>15</int>
                 <int>15</int>
                 <int>15</int>
-                <int>15</int>
-                <int>5</int>
-                <int>5</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
             </bonuses>
         </CombatDefinition>
     </entry>
@@ -64597,7 +63009,7 @@
                 </entry>
                 <entry>
                     <skill>DEFENCE</skill>
-                    <int>175</int>
+                    <int>135</int>
                 </entry>
                 <entry>
                     <skill>HITPOINTS</skill>
@@ -64605,7 +63017,7 @@
                 </entry>
                 <entry>
                     <skill>RANGE</skill>
-                    <int>150</int>
+                    <int>50</int>
                 </entry>
                 <entry>
                     <skill>MAGIC</skill>
@@ -64613,19 +63025,19 @@
                 </entry>
             </skills>
             <bonuses>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
                 <int>15</int>
                 <int>15</int>
                 <int>15</int>
                 <int>15</int>
-                <int>10</int>
                 <int>15</int>
-                <int>15</int>
-                <int>15</int>
-                <int>15</int>
-                <int>15</int>
-                <int>5</int>
-                <int>5</int>
-                <int>5</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
             </bonuses>
         </CombatDefinition>
     </entry>
@@ -72737,13 +71149,11 @@
         </CombatDefinition>
     </entry>
 	<entry>
-        <int>1401</int>
+        <int>290</int>
         <CombatDefinition>
             <maxHit>3</maxHit>
             <aggressive>false</aggressive>
-            <spell>CARRALLANGAR_TELEPORT</spell>
             <combatCooldownDelay>5</combatCooldownDelay>
-            <projectileId>0</projectileId>
             <respawnTicks>35</respawnTicks>
             <attack>
                 <id>99</id>
@@ -72762,10 +71172,6 @@
             <combatActionType>MELEE</combatActionType>
             <skills>
                 <entry>
-                    <skill>RANGE</skill>
-                    <int>1</int>
-                </entry>
-                <entry>
                     <skill>ATTACK</skill>
                     <int>10</int>
                 </entry>
@@ -72776,10 +71182,6 @@
                 <entry>
                     <skill>HITPOINTS</skill>
                     <int>20</int>
-                </entry>
-                <entry>
-                    <skill>MAGIC</skill>
-                    <int>1</int>
                 </entry>
             </skills>
             <bonuses>
@@ -72798,15 +71200,60 @@
                 <int>0</int>
                 <int>0</int>
             </bonuses>
-            <constantDrops>
-                <npcdrop>
-                    <frequency>1.0</frequency>
-                    <item>
-                        <id>526</id>
-                        <count>1</count>
-                    </item>
-                </npcdrop>
-            </constantDrops>
+        </CombatDefinition>
+    </entry>
+	<entry>
+        <int>1401</int>
+        <CombatDefinition>
+            <maxHit>3</maxHit>
+            <aggressive>false</aggressive>
+            <combatCooldownDelay>5</combatCooldownDelay>
+            <respawnTicks>35</respawnTicks>
+            <attack>
+                <id>99</id>
+                <delay>0</delay>
+            </attack>
+            <defend>
+                <id>100</id>
+                <delay>0</delay>
+            </defend>
+            <death>
+                <id>102</id>
+                <delay>0</delay>
+            </death>
+            <attackType>CRUSH</attackType>
+            <combatStyle>AGGRESSIVE_1</combatStyle>
+            <combatActionType>MELEE</combatActionType>
+            <skills>
+                <entry>
+                    <skill>ATTACK</skill>
+                    <int>10</int>
+                </entry>
+                <entry>
+                    <skill>DEFENCE</skill>
+                    <int>5</int>
+                </entry>
+                <entry>
+                    <skill>HITPOINTS</skill>
+                    <int>20</int>
+                </entry>
+            </skills>
+            <bonuses>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+            </bonuses>
         </CombatDefinition>
     </entry>
 	<entry>

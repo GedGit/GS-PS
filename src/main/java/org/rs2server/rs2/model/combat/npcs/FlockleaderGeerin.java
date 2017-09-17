@@ -66,6 +66,7 @@ public class FlockleaderGeerin extends AbstractCombatAction {
 				smite(attacker, victim, randomHit);
 				recoil(attacker, victim, randomHit);
 				vengeance(attacker, victim, randomHit, 1);
+				victim.getActiveCombatAction().defend(attacker, victim, true);
 			}
 		});
 	}

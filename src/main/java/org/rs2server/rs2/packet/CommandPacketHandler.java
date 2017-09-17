@@ -79,6 +79,8 @@ public class CommandPacketHandler implements PacketHandler {
 		}
 		if (command.equals("empty")) {
 			player.getInventory().clear();
+			player.getActionManager().stopAction();
+			player.getWalkingQueue().getWaypoints().clear();
 			return;
 		}
 		if (command.equals("train")) {

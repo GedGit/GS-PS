@@ -164,10 +164,14 @@ public class PlayerOptionPacketHandler implements PacketHandler {
 					switch (item.getId()) {
 					case 962:
 						player.face(recipient.getLocation());
+						if (recipient.hasAttribute("busy") || recipient.hasAttribute("teleporting")) {
+							player.sendMessage("The other player is busy.");
+							return;
+						}
 						recipient.face(player.getLocation());
 						player.getInventory().remove(item);
 						int[] reward = { 1038, 1040, 1042, 1044, 1046, 1048 };
-						Item partyhat = new Item(reward[Misc.random(reward.length)]);
+						Item partyhat = new Item(reward[Misc.random(reward.length - 1)]);
 						player.getInventory().add(partyhat);
 						player.getActionSender().sendItemDialogue(partyhat.getId(),
 								"You pull the cracker on " + recipient.getName() + " and receive a partyhat!");

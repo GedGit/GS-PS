@@ -50,14 +50,14 @@ public class GeneralGraardor extends AbstractCombatAction {
 	 * The random number generator.
 	 */
 	private final Random random = new Random();
-	
-	 /**
-     * Default private constructor.
-     */
-    public GeneralGraardor() {
 
-    }
-	
+	/**
+	 * Default private constructor.
+	 */
+	public GeneralGraardor() {
+
+	}
+
 	private long lastMessage;
 	private CombatStyle style;
 
@@ -81,7 +81,6 @@ public class GeneralGraardor extends AbstractCombatAction {
 		final int maxHit;
 		int randomHit;
 		int hitDelay = 0;
-		boolean blockAnimation = false;
 		int hit = 0;
 
 		switch (style) {
@@ -90,7 +89,6 @@ public class GeneralGraardor extends AbstractCombatAction {
 			attacker.playAnimation(anim);
 
 			hitDelay = 1;
-			blockAnimation = true;
 			maxHit = 40;
 
 			randomHit = super.damage(maxHit, attacker, victim, AttackType.CRUSH, Skills.ATTACK,
@@ -105,7 +103,6 @@ public class GeneralGraardor extends AbstractCombatAction {
 			attacker.playAnimation(Animation.create(7021));
 			attacker.playGraphics(Graphic.create(1203, 0, 0));
 			hitDelay = 2;
-			blockAnimation = false;
 			maxHit = 30;
 			final Collection<Player> localPlayers = World.getWorld().getRegionManager().getLocalPlayers(attacker);
 			for (final Player near : localPlayers) {
@@ -167,13 +164,13 @@ public class GeneralGraardor extends AbstractCombatAction {
 				victim.inflictDamage(new Hit(fHit), attacker);
 				smite(attacker, victim, fHit);
 				recoil(attacker, victim, fHit);
+
+				vengeance(attacker, victim, fHit, 1);
+
+				victim.getActiveCombatAction().defend(attacker, victim, false);
 				this.stop();
 			}
 		});
-
-		vengeance(attacker, victim, hit, 1);
-
-		victim.getActiveCombatAction().defend(attacker, victim, blockAnimation);
 		style = null;
 	}
 

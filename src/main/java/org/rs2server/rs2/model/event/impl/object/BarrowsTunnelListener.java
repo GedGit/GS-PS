@@ -105,7 +105,7 @@ public class BarrowsTunnelListener extends EventListener {
 
 				int chests = player.getDatabaseEntity().getStatistics().getBarrowsChestCount();
 
-				if (chests % 500 == 0) {
+				if (chests % 250 == 0) {
 					World.getWorld().sendWorldMessage("<col=ff0000><img=23>Server</col>: " + player.getName()
 							+ " has just opened his " + Misc.formatNumber(chests) + "th Barrows chest.");
 
@@ -117,13 +117,13 @@ public class BarrowsTunnelListener extends EventListener {
 
 				final List<Item> rewards = new ArrayList<>();
 
-				if (player.getRandom().nextDouble() > 0.95) {
+				if (player.getRandom().nextDouble() > 0.90) {
 					int id = RARE_REWARDS[Misc.random(RARE_REWARDS.length - 1)];
 					rewards.add(new Item(id, (id == 4740 ? Misc.random(10, 45) : 1)));
 				}
 
 				for (int[] data : COMMON_REWARDS) {
-					if (player.getRandom().nextDouble() > 0.45) {
+					if (player.getRandom().nextDouble() > 0.35) {
 						int id = data[0];
 						int amount = Misc.random(data[1], data[2]);
 
@@ -135,10 +135,7 @@ public class BarrowsTunnelListener extends EventListener {
 					}
 				}
 
-				if (Misc.random(200) == 0)
-					rewards.add(new Item(12073));
-
-				final int chance = player.getBarrowsKillCount();
+				final int chance = ((int) (player.getBarrowsKillCount() * 1.5) + 1);
 
 				player.getKilledBrothers().clear();
 

@@ -1080,6 +1080,18 @@
 	<!-- Altar of the Occult -->
 	<gameObject>
 		<location>
+			<x>3089</x>
+			<y>3510</y> 
+			<z>0</z>
+		</location>
+		<id>29150</id>
+		<type>10</type>
+		<direction>1</direction>
+		<loadedInLandscape>false</loadedInLandscape>
+	</gameObject>
+	<!-- Altar of the Occult -->
+	<gameObject>
+		<location>
 			<x>1649</x>
 			<y>3664</y> 
 			<z>0</z>

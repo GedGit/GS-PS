@@ -20,7 +20,7 @@ public class Constants {
 	/**
 	 * The latest server update.
 	 */
-	public static final int LATEST_PATCH_NOTES_INT = 17;
+	public static final int LATEST_PATCH_NOTES_INT = 18;
 	public static final String LATEST_UPDATE = "Patch Notes #" + LATEST_PATCH_NOTES_INT
 			+ " have been released; check our forums for info!";
 
@@ -28,7 +28,7 @@ public class Constants {
 	 * Players with special rights
 	 */
 	public static final String DEVELOPERS[] = { "salve", "pure jr" }, ADMINISTRATORS[] = { "salve", "alpha", "cloud" },
-			MODERATORS[] = { "thor" }, HELPERS[] = { "charlie" };
+			MODERATORS[] = { "N / A" }, HELPERS[] = { "charlie" };
 
 	/**
 	 * Defines the path were we will be loading the cache from

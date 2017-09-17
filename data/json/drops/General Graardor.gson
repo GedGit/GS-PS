@@ -50,7 +50,7 @@
     },
 	{
       "itemID": 12650,
-      "hitRollCeil": 0.03,
+      "hitRollCeil": 0.235,
       "maxAmount": 1,
       "minAmount": 1
     },

@@ -418,7 +418,7 @@ public class Woodcutting extends HarvestingAction {
 		int level = tree.level;
 		int modifier = hatchet.level;
 		int randomAmt = Misc.random(3);
-		double cycleCount = Math.ceil((level * 50 - skill * 10) / modifier * 0.25 - randomAmt * 4);
+		double cycleCount = Math.ceil((level * 50 - skill * 10) / modifier * 0.4 - randomAmt * 4);
 		if (cycleCount < 1)
 			cycleCount = 1;
 		return (int) cycleCount + 1;

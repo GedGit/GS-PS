@@ -195,12 +195,12 @@ public class CommanderZilyana extends AbstractCombatAction {
 				attacker.getSkills().increaseLevel(Skills.HITPOINTS, Misc.random(3));
 				smite(attacker, victim, hit);
 				recoil(attacker, victim, hit);
+				vengeance(attacker, victim, hit, 1);
+
+				victim.getActiveCombatAction().defend(attacker, victim, blockAnimation);
 				this.stop();
 			}
 		});
-		vengeance(attacker, victim, hit, 1);
-
-		victim.getActiveCombatAction().defend(attacker, victim, blockAnimation);
 	}
 
 	@Override

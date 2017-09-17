@@ -35,11 +35,16 @@ public class SnakeskinCrafting {
 				sb.append(" to make a ")
 						.append(CacheItemDefinition.get(toProduce.getReward().getId()).getName().toLowerCase())
 						.append(".");
-				player.getActionSender().sendMessage(sb.toString());
+				player.sendMessage(sb.toString());
 				return false;
 			}
 			if (!player.getInventory().contains(THREAD.getId())) {
-				player.getActionSender().sendMessage("You have no threads to craft with!");
+				player.sendMessage("You have no threads to craft with!");
+				return false;
+			}
+			if (player.getInventory().getCount(SNAKESKIN) < toProduce.getSkinAmount()) {
+				amount = 0;
+				player.sendMessage("You don't have enough hides to craft this.");
 				return false;
 			}
 
@@ -53,14 +58,13 @@ public class SnakeskinCrafting {
 			if (amount > 0) {
 				if (!player.getInventory().contains(THREAD.getId())) {
 					amount = 0;
-					player.getActionSender().sendMessage("You have run out of threads!");
+					player.sendMessage("You have run out of thread.");
 				} else if (!player.getInventory().contains(NEEDLE.getId())) {
 					amount = 0;
-					player.getActionSender().sendMessage("You don't have a needle to craft with!");
+					player.sendMessage("You don't have a needle to craft with.");
 				} else if (player.getInventory().getCount(SNAKESKIN) < toProduce.getSkinAmount()) {
 					amount = 0;
-					player.getActionSender()
-							.sendMessage("You have ran out of " + CacheItemDefinition.get(SNAKESKIN).getName() + ".");
+					player.sendMessage("You have ran out of hide to work with.");
 					return false;
 				}
 				player.playAnimation(CRAFT_ANIMATION);
@@ -75,11 +79,11 @@ public class SnakeskinCrafting {
 			}
 			amount--;
 			if (player.getRandom().nextDouble() >= 0.80) {
-				player.getActionSender().sendMessage("You use up one of your reels of thread.");
+				player.sendMessage("You use up one of your reels of thread.");
 				player.getInventory().remove(THREAD);
 			}
 			if (player.getRandom().nextDouble() >= 0.97) {
-				player.getActionSender().sendMessage("Your needle broke.");
+				player.sendMessage("Your needle broke.");
 				player.getInventory().remove(NEEDLE);
 			}
 			StringBuilder createdMessage = new StringBuilder("You make a ");
@@ -90,7 +94,7 @@ public class SnakeskinCrafting {
 				createdMessage.append(name.toLowerCase());
 			}
 			createdMessage.append(".");
-			player.getActionSender().sendMessage(createdMessage.toString());
+			player.sendMessage(createdMessage.toString());
 			player.getInventory().remove(new Item(SNAKESKIN, toProduce.getSkinAmount()));
 			player.getInventory().add(toProduce.getReward());
 			player.getSkills().addExperience(Skills.CRAFTING, toProduce.getXp());

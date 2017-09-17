@@ -46,6 +46,7 @@ public class DharokTheWretched extends AbstractCombatAction {
 		smite(attacker, victim, finalDamage);
 		recoil(attacker, victim, finalDamage);
 		vengeance(attacker, victim, finalDamage, 1);
+		victim.getActiveCombatAction().defend(attacker, victim, true);
 	}
 
 	@Override

@@ -1021,7 +1021,11 @@ public class ItemOptionPacketHandler implements PacketHandler {
 					return;
 				if (LeatherCrafting.handleItemOnItem(player, usedItem, withItem))
 					return;
+				if (LeatherCrafting.handleItemOnItem(player, withItem, usedItem))
+					return;
 				if (SnakeskinCrafting.handleItemOnItem(player, usedItem, withItem))
+					return;
+				if (SnakeskinCrafting.handleItemOnItem(player, withItem, usedItem))
 					return;
 				MaxCapeService maxCapeService = Server.getInjector().getInstance(MaxCapeService.class);
 				if (maxCapeService.addToMaxCape(player, usedItem, withItem))

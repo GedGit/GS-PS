@@ -98,13 +98,13 @@ public class CorporealBeast extends AbstractCombatAction {
 					victim.inflictDamage(new Hit(fHit), attacker);
 					smite(attacker, victim, fHit);
 					recoil(attacker, victim, fHit);
+
+					vengeance(attacker, victim, hit, 1);
+
+					victim.getActiveCombatAction().defend(attacker, victim, true);
 					this.stop();
 				}
 			});
-
-			vengeance(attacker, victim, hit, 1);
-
-			victim.getActiveCombatAction().defend(attacker, victim, true);
 			style = null;
 			break;
 		case RANGE:
@@ -292,13 +292,13 @@ public class CorporealBeast extends AbstractCombatAction {
 				victim.inflictDamage(new Hit(fHit), attacker);
 				smite(attacker, victim, fHit);
 				recoil(attacker, victim, fHit);
+
+				vengeance(attacker, victim, fHit, 1);
+
+				victim.getActiveCombatAction().defend(attacker, victim, blockAnimation);
 				this.stop();
 			}
 		});
-
-		vengeance(attacker, victim, hit, 1);
-
-		victim.getActiveCombatAction().defend(attacker, victim, blockAnimation);
 		style = null;
 	}
 }

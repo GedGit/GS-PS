@@ -86,7 +86,10 @@ public class ObjectManager {
 				|| object.getId() == 26873 || object.getId() == 16270 || object.getId() == 16268
 				|| object.getId() == 16283 || object.getId() == 16269 || object.getId() == 16267
 				|| object.getId() == 29028 || object.getId() == 29047 || object.getId() == 16266
-				|| object.getId() == 29320 || object.getId() == 29060) {
+				|| object.getId() == 29320 || object.getId() == 29060
+				|| (object.getId() == 307 && object.getLocation().getX() == 3088)
+				|| (object.getId() == 1278 && object.getLocation().getX() == 3090)
+				|| (object.getId() == 1276 && object.getLocation().getX() == 3082)) {
 			World.getWorld().unregister(object, true);
 			RegionClipping.removeClipping(object);
 			return true;

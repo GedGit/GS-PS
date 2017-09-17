@@ -1022,6 +1022,18 @@ public class NPCOptionPacketHandler implements PacketHandler {
 
 					switch (npc.getId()) {
 
+					case 1051: // dwarf general shop dwarven mine
+						Shop.open(player, 1, 0);
+						break;
+
+					case 2785: // hura c'bow shop dwarven mine
+						Shop.open(player, 72, 0);
+						break;
+
+					case 1048: // drogo dwarf dwarven mine
+						Shop.open(player, 71, 0);
+						break;
+
 					case 311: // ironman advisor
 						Shop.open(player, 29, 0);
 						break;

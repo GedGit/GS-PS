@@ -68,7 +68,7 @@ public class AbyssalSire extends AbstractCombatAction {
 
 			hitDelay = 1;
 			blockAnimation = true;
-			maxHit = 30;
+			maxHit = 25;
 
 			randomHit = super.damage(maxHit, attacker, victim, AttackType.CRUSH, Skills.ATTACK,
 					Prayers.PROTECT_FROM_MELEE, false, true);
@@ -81,7 +81,7 @@ public class AbyssalSire extends AbstractCombatAction {
 			attacker.playGraphics(Graphic.create(1275, 0, 0));
 			hitDelay = 2;
 			blockAnimation = false;
-			maxHit = 30;
+			maxHit = 25;
 			final Collection<Player> localPlayers = World.getWorld().getRegionManager().getLocalPlayers(attacker);
 			for (final Player near : localPlayers) {
 				if (near != null && near != attacker && near.getSkills().getLevel(Skills.HITPOINTS) > 0) {

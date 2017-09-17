@@ -686,6 +686,7 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 							 * World.getWorld().sendWorldMessage( "<col=ff0000>News: " + player.getName() +
 							 * " Has just entered the raids dungeon."); break;
 							 */
+							break;
 
 						case 29312:
 							if (!player.getInventory().contains(20695)) {
@@ -974,10 +975,13 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 							break;
 
 						case 17387:
-							if (obj.getLocation().equals(Location.create(3578, 9927, 0))) {
+							if (obj.getLocation().equals(Location.create(3578, 9927, 0)))
 								player.setTeleportTarget(Location.create(3579, 3527, 0));
-							} else if (obj.getLocation().equals(Location.create(2892, 9907))) {
+							else if (obj.getLocation().equals(Location.create(2892, 9907))) {
 								final Location location = Location.create(2893, 3507);
+								player.getActionQueue().addAction(new ClimbLadderAction(player, location));
+							} else if (obj.getLocation().equals(Location.create(3019, 9850, 0))) {
+								final Location location = Location.create(3020, 3450, 0);
 								player.getActionQueue().addAction(new ClimbLadderAction(player, location));
 							}
 							break;

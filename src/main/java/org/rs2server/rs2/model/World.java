@@ -1297,7 +1297,7 @@ public class World {
 							+ "<col=EDB20E>] votes have been claimed; vote to redeem yours!");
 		}
 
-		if (this.voteBazinga[2] % 275 == 0 && this.voteBazinga[2] > 0) {
+		if (this.voteBazinga[2] % 250 == 0 && this.voteBazinga[2] > 0) {
 
 			int peopleOnline = 0;
 

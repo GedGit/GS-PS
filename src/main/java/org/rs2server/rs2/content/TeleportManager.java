@@ -35,7 +35,7 @@ public class TeleportManager {
 						+ "|Raids (WIP)|Cerberus"
 
 						+ "|---------------|- <col=880000><u=000000>Wilderness Teleports</u></col> -|Mage Bank"
-						+ "|Lava Dragons|PvP Castle|Wilderness Resource Dungeon|West Dragons"
+						+ "|Lava Dragons|PvP Castle|Wilderness Resource area|West Dragons"
 						+ "|East Dragons|Chaos Elemental|Venenatis|Chaos Fanatic|Crazy Archaeologist",
 				"<img=1>" + Constants.SERVER_NAME + " Teleports<img=1>", 0 }, "Iss");// Iss
 		player.sendAccess(Access.of(187, 3, NumberRange.of(0, 170), AccessBits.CLICK_CONTINUE));

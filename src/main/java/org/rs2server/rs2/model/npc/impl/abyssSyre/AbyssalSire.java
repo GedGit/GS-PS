@@ -6,7 +6,6 @@ import org.rs2server.rs2.content.Following;
 import org.rs2server.rs2.model.Animation;
 import org.rs2server.rs2.model.Location;
 import org.rs2server.rs2.model.Mob;
-import org.rs2server.rs2.model.Prayers;
 import org.rs2server.rs2.model.Skills;
 import org.rs2server.rs2.model.World;
 import org.rs2server.rs2.model.map.Directions;
@@ -16,7 +15,6 @@ import org.rs2server.rs2.model.npc.impl.NpcCombatState;
 import org.rs2server.rs2.model.npc.impl.abyssSyre.styles.AbyssalSireMeleeAttackStyle;
 import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.tickable.impl.StoppingTick;
-import org.rs2server.rs2.util.Misc;
 
 public class AbyssalSire extends CombatNpc<AbyssalSire> {
 
@@ -67,23 +65,6 @@ public class AbyssalSire extends CombatNpc<AbyssalSire> {
 
 		if (!attacker.isNPC())
 			return; // this should be an NPC!
-
-		attacker.playAnimation(Animation.create(5366));
-
-		int randomHit;
-		if (Misc.random(3) == 3) {
-			if (!victim.getCombatState().getPrayer(Prayers.PROTECT_FROM_MELEE) && Misc.random(10) > 6) {
-				randomHit = Misc.random(25);
-				if (randomHit > victim.getSkills().getLevel(Skills.HITPOINTS)) {
-					randomHit = victim.getSkills().getLevel(Skills.HITPOINTS);
-				}
-			} else if (victim.getCombatState().getPrayer(Prayers.PROTECT_FROM_MELEE) && Misc.random(10) > 3) {
-				randomHit = Misc.random(25);
-				if (randomHit > victim.getSkills().getLevel(Skills.HITPOINTS)) {
-					randomHit = victim.getSkills().getLevel(Skills.HITPOINTS);
-				}
-			}
-		}
 	}
 
 	public void destroySelf(boolean stop) {
