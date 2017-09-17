@@ -115,6 +115,10 @@
                 <id>954</id>
                 <count>10</count>
             </item>
+            <item>
+                <id>233</id>
+                <count>10</count>
+            </item>
         </mainItems>
         <playerItems>
         </playerItems>
@@ -2374,6 +2378,10 @@
             <item>
                 <id>6693</id>
                 <count>1000</count>
+            </item>
+            <item>
+                <id>233</id>
+                <count>10</count>
             </item>
         </mainItems>
         <playerItems>

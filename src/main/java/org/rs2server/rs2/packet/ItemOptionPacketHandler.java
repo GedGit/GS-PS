@@ -692,7 +692,7 @@ public class ItemOptionPacketHandler implements PacketHandler {
 	 */
 	private void handleItemOptionExamine(Player player, Packet packet) {
 		int id = packet.getLEShort() & 0xFFFF;
- 
+
 		Item item = new Item(id);
 		if (item.getDefinition() != null && item.getDefinition().getExamine() != null) {
 			player.getActionSender().sendMessage(item.getDefinition().getExamine());
@@ -2637,6 +2637,8 @@ public class ItemOptionPacketHandler implements PacketHandler {
 		for (int destroyableId : Constants.DESTROYABLE_ITEMS) {
 			if (destroyableId == id) {
 				player.getActionSender().sendDestroyItem(item);
+				if (id == 11941)
+					player.getLootingBag().clear();
 				return;
 			}
 		}

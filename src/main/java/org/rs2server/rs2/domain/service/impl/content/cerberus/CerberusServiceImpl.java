@@ -51,8 +51,8 @@ public final class CerberusServiceImpl implements CerberusService {
 			case 26567:
 			case 26568:
 			case 26569:
+				player.setAttribute("busy", true);
 				enterCave(player);
-				//player.sendMessage("Currently disabled.");
 				break;
 			case 21772:
 				exitCave(player);
@@ -94,18 +94,15 @@ public final class CerberusServiceImpl implements CerberusService {
 	public void exitCave(@Nonnull Player player) {
 		player.setTeleportTarget(TUNNEL_LOCATION_EXIT);
 		Content cerberusContent = player.getContentManager().getActiveContent(Content.CERBERUS);
-		if (cerberusContent != null) {
+		if (cerberusContent != null)
 			cerberusContent.stop();
-		}
 	}
 
 	@Subscribe
 	public void onPlayerLogin(final GamePlayerLoginEvent event) {
 		final Player player = event.getPlayer();
-		if (BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "Cerberus")) {
+		if (BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "Cerberus"))
 			player.setTeleportTarget(Location.create(2873, 9847, 0));
-		}
-
 	}
 
 	@Subscribe
@@ -113,9 +110,8 @@ public final class CerberusServiceImpl implements CerberusService {
 		final Player player = event.getPlayer();
 		if (BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "Cerberus")) {
 			Content cerberusContent = player.getContentManager().getActiveContent(Content.CERBERUS);
-			if (cerberusContent != null) {
+			if (cerberusContent != null)
 				cerberusContent.stop();
-			}
 		}
 	}
 

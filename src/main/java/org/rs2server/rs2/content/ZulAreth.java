@@ -20,15 +20,13 @@ public final class ZulAreth {
 
 	public void appendDeath() {
 		for (Item items : player.getEquipment().getItems()) {
-			if (items != null) {
+			if (items != null)
 				player.getDatabaseEntity().getZulrahState().getItemsLostZulrah().add(items);
-			}
 		}
 		for (Item items : player.getInventory().getItems()) {
 			// Exclude looting bag, we'll handle it seperately
-			if (items != null && items.getId() != 11941) {
+			if (items != null && items.getId() != 11941)
 				player.getDatabaseEntity().getZulrahState().getItemsLostZulrah().add(items);
-			}
 		}
 		// If we have the looting bag then empty it
 		if (player.getInventory().contains(11941)) {
@@ -51,6 +49,7 @@ public final class ZulAreth {
 			if (!player.isSilverMember())
 				player.getInventory().remove(new Item(995, 100000));
 			items.clear();
+			player.getDatabaseEntity().getZulrahState().getItemsLostZulrah().clear();
 			DialogueManager.openDialogue(player, 2046);
 		}
 	}

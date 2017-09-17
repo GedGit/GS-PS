@@ -14,7 +14,7 @@ public class SuperheatItemAction extends ProductionAction {
 
 	private SmeltingBar bar;
 	private static final Animation ANIMATION_ID = Animation.create(723);
-	private static final Graphic GRAPHIC_ID = Graphic.create(148);
+	private static final Graphic GRAPHIC_ID = Graphic.create(148, 0, 100);
 	private int amount;
 
 	/**
@@ -29,7 +29,8 @@ public class SuperheatItemAction extends ProductionAction {
 		this.amount = amount;
 		for (int i = 0; i < getConsumedItems().length; i++) {
 			if (Inventory.getCount(mob, getConsumedItems()[i].getId()) < getConsumedItems()[i].getCount()) {
-				mob.getActionSender().sendDialogue("", ActionSender.DialogueType.MESSAGE, -1, null, "You don't have the required ore to smelt this bar.");
+				mob.getActionSender().sendDialogue("", ActionSender.DialogueType.MESSAGE, -1, null,
+						"You don't have the required ore to smelt this bar.");
 				mob.getActionSender().sendMessage("You don't have the required ore to smelt this bar.");
 				return;
 			}
@@ -56,7 +57,7 @@ public class SuperheatItemAction extends ProductionAction {
 
 	@Override
 	public Item[] getRewards() {
-		return new Item[] {bar.getProducedBar()};
+		return new Item[] { bar.getProducedBar() };
 	}
 
 	@Override
@@ -91,7 +92,8 @@ public class SuperheatItemAction extends ProductionAction {
 
 	@Override
 	public Animation getAnimation() {
-		if (playedAnimation) return null;
+		if (playedAnimation)
+			return null;
 
 		playedAnimation = true;
 		return ANIMATION_ID;
@@ -99,7 +101,8 @@ public class SuperheatItemAction extends ProductionAction {
 
 	@Override
 	public Graphic getGraphic() {
-		if (playedGraphic) return null;
+		if (playedGraphic)
+			return null;
 
 		playedGraphic = true;
 		return GRAPHIC_ID;

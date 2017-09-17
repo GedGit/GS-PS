@@ -40831,7 +40831,7 @@
                 <int>1</int>
                 <int>0</int>
             </bonuses>
-            <type>FULL_MASK</type>
+            <type>FULL_HELM</type>
             <specialConsumption>0</specialConsumption>
 			<skillRequirements>
                 <entry>
@@ -40865,7 +40865,7 @@
                 <int>1</int>
                 <int>0</int>
             </bonuses>
-            <type>FULL_MASK</type>
+            <type>FULL_HELM</type>
             <specialConsumption>0</specialConsumption>
 			<skillRequirements>
                 <entry>
@@ -40899,7 +40899,7 @@
                 <int>1</int>
                 <int>0</int>
             </bonuses>
-            <type>FULL_MASK</type>
+            <type>FULL_HELM</type>
             <specialConsumption>0</specialConsumption>
 			<skillRequirements>
                 <entry>
@@ -40933,7 +40933,7 @@
                 <int>1</int>
                 <int>0</int>
             </bonuses>
-            <type>FULL_MASK</type>
+            <type>FULL_HELM</type>
             <specialConsumption>0</specialConsumption>
 			<skillRequirements>
                 <entry>
@@ -40967,7 +40967,7 @@
                 <int>1</int>
                 <int>0</int>
             </bonuses>
-            <type>FULL_MASK</type>
+            <type>FULL_HELM</type>
             <specialConsumption>0</specialConsumption>
 			<skillRequirements>
                 <entry>
@@ -41001,7 +41001,7 @@
                 <int>1</int>
                 <int>0</int>
             </bonuses>
-            <type>FULL_MASK</type>
+            <type>FULL_HELM</type>
             <specialConsumption>0</specialConsumption>
 			<skillRequirements>
                 <entry>
@@ -55971,6 +55971,139 @@
             </animations>
             <specialConsumption>0</specialConsumption>
             <specialHits>0</specialHits>
+        </equipmentDef>
+    </entry>
+    <entry>
+        <int>11118</int>
+        <equipmentDef>
+            <speed>4</speed>
+            <bonuses>
+                <int>7</int>
+                <int>7</int>
+                <int>7</int>
+                <int>3</int>
+                <int>7</int>
+                <int>5</int>
+                <int>5</int>
+                <int>5</int>
+                <int>3</int>
+                <int>5</int>
+                <int>6</int>
+                <int>0</int>
+                <int>0</int>
+            </bonuses>
+            <type>GLOVES</type>
+			<specialConsumption>0</specialConsumption>
+            <specialHits>0</specialHits>
+        </equipmentDef>
+    </entry>
+    <entry>
+        <int>11120</int>
+        <equipmentDef>
+            <speed>4</speed>
+            <bonuses>
+                <int>7</int>
+                <int>7</int>
+                <int>7</int>
+                <int>3</int>
+                <int>7</int>
+                <int>5</int>
+                <int>5</int>
+                <int>5</int>
+                <int>3</int>
+                <int>5</int>
+                <int>6</int>
+                <int>0</int>
+                <int>0</int>
+            </bonuses>
+            <type>GLOVES</type>
+        </equipmentDef>
+    </entry>
+    <entry>
+        <int>11122</int>
+        <equipmentDef>
+            <speed>4</speed>
+            <bonuses>
+                <int>7</int>
+                <int>7</int>
+                <int>7</int>
+                <int>3</int>
+                <int>7</int>
+                <int>5</int>
+                <int>5</int>
+                <int>5</int>
+                <int>3</int>
+                <int>5</int>
+                <int>6</int>
+                <int>0</int>
+                <int>0</int>
+            </bonuses>
+        </equipmentDef>
+    </entry>
+    <entry>
+        <int>11124</int>
+        <equipmentDef>
+            <speed>4</speed>
+            <bonuses>
+                <int>7</int>
+                <int>7</int>
+                <int>7</int>
+                <int>3</int>
+                <int>7</int>
+                <int>5</int>
+                <int>5</int>
+                <int>5</int>
+                <int>3</int>
+                <int>5</int>
+                <int>6</int>
+                <int>0</int>
+                <int>0</int>
+            </bonuses>
+            <type>GLOVES</type>
+        </equipmentDef>
+    </entry>
+    <entry>
+        <int>11126</int>
+        <equipmentDef>
+            <speed>4</speed>
+            <bonuses>
+                <int>7</int>
+                <int>7</int>
+                <int>7</int>
+                <int>3</int>
+                <int>7</int>
+                <int>5</int>
+                <int>5</int>
+                <int>5</int>
+                <int>3</int>
+                <int>5</int>
+                <int>6</int>
+                <int>0</int>
+                <int>0</int>
+            </bonuses>
+            <type>GLOVES</type>
+        </equipmentDef>
+    </entry>
+    <entry>
+        <int>11115</int>
+        <equipmentDef>
+            <speed>4</speed>
+            <bonuses>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+                <int>0</int>
+            </bonuses>
+            <type>GLOVES</type>
         </equipmentDef>
     </entry>
 </map>

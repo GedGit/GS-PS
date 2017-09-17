@@ -346,10 +346,10 @@ public class ActionSender {
 		if (BoundaryManager.isWithinBoundary(player.getLocation(), "CyclopsRoom")
 				&& !BoundaryManager.isWithinBoundary(player.getLocation(), "CyclopsRoomSafe"))
 			WarriorsGuild.IN_GAME.add(player);
-			
+
 		player.getActionSender().loadClientSettingss();
 		player.getActionSender().updateClickPriority();
-		
+
 		sendGameObjectsInArea();
 
 		// For players BEFORE the quick-prayer update ;)
@@ -685,10 +685,10 @@ public class ActionSender {
 			player.getActionSender().removeInventoryInterface();
 			player.resetInteractingEntity();
 		}
-		player.getActionSender().removeChatboxInterface(); 
+		player.getActionSender().removeChatboxInterface();
 
 		player.getInterfaceState().setOpenShop(-1);
-		player.getActionSender().removeAllInterfaces().removeInterface(); 
+		player.getActionSender().removeAllInterfaces().removeInterface();
 		return this;
 	}
 
@@ -1662,14 +1662,18 @@ public class ActionSender {
 	public ActionSender sendGameObjectsInArea() {
 		// TODO check distance!!
 		Region[] regions = World.getWorld().getRegionManager().getSurroundingRegions(player.getLocation());
-		for (Region r : regions) {
-			for (GameObject obj : r.getGameObjects()) {
-				if (obj == null)
-					continue;
-				if (obj.getLocation().distance(player.getLocation()) <= RegionManager.REGION_SIZE
-						&& !obj.isLoadedInLandscape())
-					sendObject(obj);
+		try {
+			for (Region r : regions) {
+				for (GameObject obj : r.getGameObjects()) {
+					if (obj == null)
+						continue;
+					if (obj.getLocation().distance(player.getLocation()) <= RegionManager.REGION_SIZE
+							&& !obj.isLoadedInLandscape())
+						sendObject(obj);
+				}
 			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		return this;
 	}
@@ -2905,7 +2909,7 @@ public class ActionSender {
 	}
 
 	public void sendSkillLevel(int skill) {
-		byte level; 
+		byte level;
 		if (skill == Skills.PRAYER)
 			level = (byte) (Math.ceil(player.getSkills().getPrayerPoints()));
 		else
@@ -2915,8 +2919,8 @@ public class ActionSender {
 	}
 
 	public void sendSkillLevelFake(int skill) {
-		player.getSession().write(new PacketBuilder(14).put((byte) 99).putByteA(skill)
-				.putLEInt((int) player.exps[skill]).toPacket());
+		player.getSession().write(
+				new PacketBuilder(14).put((byte) 99).putByteA(skill).putLEInt((int) player.exps[skill]).toPacket());
 	}
 
 	public void sendEnergy() {

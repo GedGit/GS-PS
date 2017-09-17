@@ -36,7 +36,7 @@ public class SupplyCrate {
 		List<Item> items = new ArrayList<>();
 		if (!player.getInventory().hasItem(SUPPLY_CRATE))
 			return Optional.empty();
-		items.addAll(getRandom() < 10 ? VERY_RARE_ITEMS : getRandom() > 12 ? REWARD_ITEMS : RARE_ITEMS);
+		items.addAll(getRandom() < 15 ? VERY_RARE_ITEMS : getRandom() > 40 ? REWARD_ITEMS : RARE_ITEMS);
 		Collections.shuffle(items);
 		return Optional.of(items.get(0));
 	}

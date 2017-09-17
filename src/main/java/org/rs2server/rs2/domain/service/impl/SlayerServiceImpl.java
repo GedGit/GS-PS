@@ -106,7 +106,11 @@ public class SlayerServiceImpl implements SlayerService {
 
 			int amount = Misc.random(minimum, maximum);
 
-			final SlayerTask task = new SlayerTask(master, random, (int) (amount * 0.75));
+			final SlayerTask task = new SlayerTask(master, random, (int) amount);
+			if (task.getName().equals(player.getSlayer().taskName)) {
+				System.out.println("we already had this task, shuffling..");
+				continue;
+			}
 			player.getSlayer().setSlayerTask(task);
 			return task;
 		}
