@@ -490,8 +490,8 @@ public class Woodcutting extends HarvestingAction {
 		}
 		if (tree.getReplacementId() == -1)
 			return null;
-		return new GameObject(getGameObject().getLocation(), 1342, tree.getReplacementId(), object.getDirection(),
-				false);
+		return new GameObject(getGameObject().getLocation(), tree.getReplacementId(), getGameObject().getType(),
+				object.getDirection(), false);
 	}
 
 	@Override

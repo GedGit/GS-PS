@@ -31,7 +31,6 @@ import org.rs2server.rs2.model.container.Container;
 import org.rs2server.rs2.model.container.Equipment;
 import org.rs2server.rs2.model.container.PriceChecker;
 import org.rs2server.rs2.model.container.Trade;
-import org.rs2server.rs2.model.minigame.impl.WarriorsGuild;
 import org.rs2server.rs2.model.npc.NPC;
 import org.rs2server.rs2.model.npc.Pet;
 import org.rs2server.rs2.model.npc.impl.cerberus.Cerberus;
@@ -439,6 +438,7 @@ public abstract class Mob extends Entity {
 	public void resetFace() {
 		this.face = null;
 		this.updateFlags.flag(UpdateFlag.FACE_COORDINATE);
+		this.resetInteractingEntity();
 	}
 
 	/**
@@ -500,18 +500,8 @@ public abstract class Mob extends Entity {
 			if (this.getInteractionMode() == InteractionMode.TALK
 					&& this.getInteractingEntity().getInteractionMode() == InteractionMode.TALK
 					&& this.getInteractingEntity().getInteractingEntity() == this) {
-				this.getInteractingEntity().setInteractingEntity(null, null); // endGame
-																				// an
-																				// infinite
-																				// for
-																				// loop
-																				// of
-																				// each
-																				// other
-																				// cancelling
+				this.getInteractingEntity().setInteractingEntity(null, null);
 				this.getInteractingEntity().resetInteractingEntity();
-				// this will be used for an NPC, as NPC's do not walk whilst in
-				// dialogue with someone.
 			}
 		}
 		this.interactionMode = null;
@@ -682,8 +672,6 @@ public abstract class Mob extends Entity {
 			setAttribute("looted_barrows", false);
 		if (isPlayer() && getInterfaceState().getBlackout())
 			getActionSender().updateMinimap(ActionSender.NO_BLACKOUT);
-		if (WarriorsGuild.IN_GAME.contains(this))
-			WarriorsGuild.IN_GAME.remove(this);
 
 		getLocalNPCs().stream()
 				.filter(n -> n.getInteractingEntity() != null && !(n.getInteractingEntity() instanceof Pet))
@@ -711,15 +699,10 @@ public abstract class Mob extends Entity {
 	}
 
 	public Object setTeleportTargetObj(Location teleportTarget) {
-		if (isPlayer() && hasAttribute("looted_barrows")) {
+		if (isPlayer() && hasAttribute("looted_barrows"))
 			setAttribute("looted_barrows", false);
-		}
-		if (isPlayer() && getInterfaceState().getBlackout()) {
+		if (isPlayer() && getInterfaceState().getBlackout())
 			getActionSender().updateMinimap(ActionSender.NO_BLACKOUT);
-		}
-		if (WarriorsGuild.IN_GAME.contains(this)) {
-			WarriorsGuild.IN_GAME.remove(this);
-		}
 		getLocalNPCs().stream()
 				.filter(n -> n.getInteractingEntity() != null && !(n.getInteractingEntity() instanceof Pet))
 				.forEach(n -> {

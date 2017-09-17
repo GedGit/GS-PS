@@ -350,6 +350,17 @@ public class ActionSender {
 		player.getActionSender().loadClientSettingss();
 		player.getActionSender().updateClickPriority();
 
+		// Testing world
+		if (Constants.PORT == 43595) {
+			player.getSkills().setPrayerPoints(99, true);
+			for (int i = 0; i < Skills.SKILL_COUNT; i++) {
+				player.getSkills().setLevel(i, 99);
+				player.getSkills().setExperience(i, player.getSkills().getExperienceForLevel(99));
+			}
+			player.getActionSender().sendSkillLevels();
+			player.getActionSender().sendString(593, 2, "Combat lvl: " + player.getSkills().getCombatLevel());
+		}
+
 		sendGameObjectsInArea();
 
 		// For players BEFORE the quick-prayer update ;)
@@ -1662,15 +1673,24 @@ public class ActionSender {
 	public ActionSender sendGameObjectsInArea() {
 		// TODO check distance!!
 		Region[] regions = World.getWorld().getRegionManager().getSurroundingRegions(player.getLocation());
+		if (regions.length < 0) {
+			System.out.println("sendGameObjectsInArea error1  !!!!!!!!!!!!!!");
+			return this;
+		}
 		try {
 			for (Region r : regions) {
-				for (GameObject obj : r.getGameObjects()) {
-					if (obj == null)
-						continue;
-					if (obj.getLocation().distance(player.getLocation()) <= RegionManager.REGION_SIZE
-							&& !obj.isLoadedInLandscape())
-						sendObject(obj);
-				}
+				if (r != null) {
+					for (GameObject obj : r.getGameObjects()) {
+						if (obj != null) {
+							if (obj.getLocation().distance(player.getLocation()) <= RegionManager.REGION_SIZE
+									&& !obj.isLoadedInLandscape())
+								sendObject(obj);
+						} else
+							System.out.println("sendGameObjectsInArea error2  !!!!!!!!!!!!!!");
+					}
+
+				} else
+					System.out.println("sendGameObjectsInArea error3  !!!!!!!!!!!!!!");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

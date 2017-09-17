@@ -110,20 +110,16 @@ public class FightCave {
 				if (player.getInstancedNPCs().isEmpty()) {
 					if (wave != null && wave.getStage() == 9) {
 
-						player.getActionSender().sendDialogue("TzHaar-Mej-Jal", DialogueType.NPC, 2180, FacialAnimation.DEFAULT,
-								"Well done! Here's some tokkul and a fire cape.");
+						player.getActionSender().sendDialogue("TzHaar-Mej-Jal", DialogueType.NPC, 2180,
+								FacialAnimation.DEFAULT, "Well done! Here's some tokkul and a fire cape.");
 
 						Inventory.addDroppable(player, new Item(6570, 1));
 						Inventory.addDroppable(player, new Item(6529, 8024));
 
 						if (Misc.random(100) == 1)
 							Pet.givePet(player, new Item(Pets.JAD.getItem()));
-						
-						player.getSettings().setFightCaveState(1);
-						player.setTeleportTarget(Location.create(2438, 5168, 0));
-						player.setAttribute("defeated_caves", true);
-						player.setMultiplayerDisabled(false);
-						IN_CAVES.remove(player);
+
+						stop();
 					} else if (wave != null && wave.getStage() != 9) {
 						player.getActionSender()
 								.sendMessage("Finished wave " + wave.getStage() + "; starting the next wave soon.");

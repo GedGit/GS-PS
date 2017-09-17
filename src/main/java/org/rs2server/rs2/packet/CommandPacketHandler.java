@@ -267,6 +267,27 @@ public class CommandPacketHandler implements PacketHandler {
 				return;
 			}
 		}
+		
+		// Testing world
+		if (Constants.PORT == 43595) {
+			if (command.equals("item")) {
+				if (args.length == 2 || args.length == 3) {
+					int id = Integer.parseInt(args[1]);
+					if (org.rs2server.cache.format.CacheItemDefinition.get(id) == null)
+						return;
+					int count = 1;
+					if (args.length == 3)
+						count = Integer.parseInt(args[2]);
+					if (!CacheItemDefinition.get(id).stackable && !CacheItemDefinition.get(id).isNoted()) {
+						if (count > player.getInventory().freeSlots())
+							count = player.getInventory().freeSlots();
+					}
+					Item item = new Item(id, count);
+					player.getInventory().add(player.checkForSkillcape(item));
+				} else
+					player.getActionSender().sendMessage("Syntax is ::item [id] [count].");
+			}
+		}
 
 		/**
 		 * Bronze Member commands

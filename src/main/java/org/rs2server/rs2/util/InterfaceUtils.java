@@ -1,5 +1,6 @@
 package org.rs2server.rs2.util;
 
+import org.rs2server.rs2.Constants;
 import org.rs2server.rs2.model.World;
 import org.rs2server.rs2.model.player.Player;
 
@@ -29,7 +30,7 @@ public class InterfaceUtils {
 		else if (player.isBronzeMember())
 			memberRank += "<img=40>Bronze<col=CC9F3D>";
 
-		if (World.isWeekend())
+		if (World.isWeekend() || Constants.DOUBLE_EXP)
 			doubleExp = "Active";
 		else
 			doubleExp = "<col=ff0000>Not active";

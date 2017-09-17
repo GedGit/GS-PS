@@ -12,7 +12,6 @@ import org.rs2server.rs2.model.container.Container;
 import org.rs2server.rs2.model.container.Equipment;
 import org.rs2server.rs2.model.minigame.impl.WarriorsGuild;
 import org.rs2server.rs2.model.minigame.impl.fightcave.FightCave;
-import org.rs2server.rs2.model.npc.NPC;
 import org.rs2server.rs2.model.player.Player;
 
 public class Jewellery {
@@ -110,6 +109,7 @@ public class Jewellery {
 				}
 			} else if (itemId >= 11866 && itemId <= 11873) {
 				itemId = 11874 - itemId;
+				System.out.println(itemId);
 				if (itemId >= 0) {
 					DialogueManager.openDialogue(player, 1353);
 					player.getJewellery().setGem(GemType.SLAYER_RING, itemId, operating);
@@ -159,41 +159,28 @@ public class Jewellery {
 	public void gemTeleport(final Player player, final Location location) {
 		if (gem == null || gemCharge == -1 || player.getCombatState().isDead())
 			return;
-		/*
-		 * Prevents mass clicking them.
-		 */
-		if (player.getSettings().getLastTeleport() < 3000)
+		if (player.getCombatState().isDead())
 			return;
 		if (player.getAttribute("busy") != null)
 			return;
 		if (player.hasAttribute("teleporting"))
 			return;
-		if (BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "PestControl")
-				|| BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "PestControlBoat"))
+		/*
+		 * Prevents mass clicking them.
+		 */
+		if (player.getSettings().getLastTeleport() < 3000)
 			return;
-		if (player.getAttribute("stunned") != null) {
-			player.sendMessage("You're stunned!");
-			return;
-		}
-		if (player.getDatabaseEntity().getPlayerSettings().isTeleBlocked() || player.getMonkeyTime() > 0) {
-			player.sendMessage("A magical force stops you from teleporting.");
-			return;
-		}
-		if (BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "ClanWarsFFAFull")) {
-			player.sendMessage("You can't teleport from here, please use the portal to leave.");
+		if (player.getRFD().isStarted() | FightCave.IN_CAVES.contains(player)
+				|| BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "PestControl")
+				|| BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "PestControlBoat")) {
+			player.getActionSender().sendMessage("You can't teleport from here!");
 			return;
 		}
 		if (WarriorsGuild.IN_GAME.contains(player))
 			WarriorsGuild.IN_GAME.remove(player);
-		if (player.getRFD().isStarted() || FightCave.IN_CAVES.contains(player)) {
-			player.sendMessage("You can't teleport from here!");
+		if (player.getDatabaseEntity().getPlayerSettings().isTeleBlocked()) {
+			player.getActionSender().sendMessage("A magical force stops you from teleporting.");
 			return;
-		}
-		if (player.isInWilderness() && !player.isAdministrator()) {
-			if (Location.getWildernessLevel(player, player.getLocation()) > 20) {
-				player.sendMessage("You cannot teleport above level 20 wilderness.");
-				return;
-			}
 		}
 		player.getInstancedNPCs().clear();
 		Container con = operate ? player.getEquipment() : player.getInventory();
@@ -216,11 +203,10 @@ public class Jewellery {
 		 * Player is using a Ring of Dueling.
 		 */
 		case RING_OF_DUELING:
-			/*
-			 * if (Location.getWildernessLevel(player, player.getLocation()) > 20) {
-			 * player.getActionSender().
-			 * sendMessage("You cannot teleport above level 20 wilderness."); return; }
-			 */
+			if (Location.getWildernessLevel(player, player.getLocation()) > 30) {
+				player.getActionSender().sendMessage("You cannot teleport above level 30 wilderness.");
+				return;
+			}
 			Object[] data2 = RING_OF_DUELING_DATA[gemCharge - 1];
 			if (!con.replace((Integer) data2[0], (Integer) data2[1])) {
 				return;
@@ -231,11 +217,10 @@ public class Jewellery {
 		 * Player is using a Games Necklace.
 		 */
 		case GAMES_NECKLACE:
-			/*
-			 * if (Location.getWildernessLevel(player, player.getLocation()) > 20) {
-			 * player.getActionSender().
-			 * sendMessage("You cannot teleport above level 20 wilderness."); return; }
-			 */
+			if (Location.getWildernessLevel(player, player.getLocation()) > 30) {
+				player.getActionSender().sendMessage("You cannot teleport above level 30 wilderness.");
+				return;
+			}
 			Object[] data3 = GAMES_NECKLACE_DATA[gemCharge - 1];
 			if (!con.replace((Integer) data3[0], (Integer) data3[1])) {
 				return;
@@ -246,11 +231,10 @@ public class Jewellery {
 		 * Player is using a Slayer ring
 		 */
 		case SLAYER_RING:
-			/*
-			 * if (Location.getWildernessLevel(player, player.getLocation()) > 20) {
-			 * player.getActionSender().
-			 * sendMessage("You cannot teleport above level 20 wilderness."); return; }
-			 */
+			if (Location.getWildernessLevel(player, player.getLocation()) > 30) {
+				player.getActionSender().sendMessage("You cannot teleport above level 30 wilderness.");
+				return;
+			}
 			Object[] data4 = SLAYER_RING_DATA[gemCharge - 1];
 			if (!con.replace((Integer) data4[0], (Integer) data4[1])) {
 				return;
@@ -262,25 +246,11 @@ public class Jewellery {
 		player.resetBarrows();
 		player.playAnimation(GEM_PRE_CAST_ANIMATION);
 		player.playGraphics(GEM_PRE_CAST_GRAPHICS);
-		
-		player.getActionQueue().clearAllActions();
-		player.getActionManager().stopAction();
-		player.setAttribute("teleporting", true);
-		player.getWalkingQueue().reset();
-		if (player.hasAttribute("ownedNPC")) {// player.setAttribute("ownedNPC", n);
-			NPC n = (NPC) player.getAttribute("ownedNPC");
-			if (n != null)
-				World.getWorld().unregister(n);
-			player.removeAttribute("ownedNPC");
-		}
-		
 		World.getWorld().submit(new Event(1800) {
-			@Override
 			public void execute() {
 				player.setTeleportTarget(location);
 				player.playAnimation(TELEPORTING_ANIMATION);
 				player.setCanBeDamaged(true);
-				player.removeAttribute("teleporting");
 				if (player.getPet() != null) {
 					player.getPet().setTeleportTarget(location);
 					player.getPet().setInteractingEntity(InteractionMode.FOLLOW, player.getPet().getInstancedPlayer());

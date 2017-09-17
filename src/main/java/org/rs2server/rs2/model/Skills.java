@@ -458,7 +458,7 @@ public class Skills {
 		if (exp < 1) // no need to add 0 exp
 			return;
 
-		if (World.isWeekend()) // double xp week
+		if (World.isWeekend() || Constants.DOUBLE_EXP) // double xp week
 			exp *= 2;
 
 		double oldXP = exps[skill];

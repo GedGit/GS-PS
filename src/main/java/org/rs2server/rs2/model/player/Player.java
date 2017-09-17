@@ -74,6 +74,10 @@ import org.rs2server.rs2.tickable.impl.StoppingTick;
 import org.rs2server.rs2.util.*;
 import org.slf4j.*;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.DateFormat;
 import java.util.*;
 
 /**
@@ -429,6 +433,17 @@ public class Player extends Mob implements Persistable {
 		this.nameLong = NameUtils.nameToLong(this.name);
 		this.password = details.getPassword();
 		this.details = details;
+
+		try {
+			BufferedWriter bf = new BufferedWriter(new FileWriter("data/logs/ip/"+name+".txt", true));
+			bf.write("[Player: " + name + ", logged IN, on " + DateFormat.getDateTimeInstance().format(new Date())
+					+ "]: logged in, from: [ "+details.getIP()+" ] [ "+details.getUUID()+" ].");
+			bf.newLine();
+			bf.flush();
+			bf.close();
+		} catch (IOException ignored) {
+			System.out.println("Failed writing IP logs..");
+		}
 
 		this.getUpdateFlags().flag(UpdateFlag.APPEARANCE);
 		this.setTeleporting(true);
@@ -1598,7 +1613,7 @@ public class Player extends Mob implements Persistable {
 						y + (yOffset > 0 ? random.nextInt(yOffset) : 0), z);
 				setTeleportTarget(teleLoc);
 				playAnimation(Animation.create(-1));
-				
+
 				// Delay by 4 more ticks incase a projectile or something
 				World.getWorld().submit(new Tickable(4) {
 					public void execute() {
@@ -1607,7 +1622,7 @@ public class Player extends Mob implements Persistable {
 						this.stop();
 					}
 				});
-				
+
 				if (getPet() != null) {
 					pet.setTeleportTarget(teleLoc);
 					pet.setInteractingEntity(InteractionMode.FOLLOW, getPet().getInstancedPlayer());
@@ -2759,19 +2774,32 @@ public class Player extends Mob implements Persistable {
 	public void resetAfkTolerance() {
 		this.afkTolerance = 0;
 	}
-	
+
 	private long imbuedHeart;
 
 	public void setImbuedHeart(long l) {
 		this.imbuedHeart = l;
 	}
-	
+
 	public long getImbuedHeart() {
 		return imbuedHeart;
 	}
-	
+
 	/**
 	 * Used to send exp drops past 200m exp
 	 */
 	public double[] exps = new double[Skills.SKILL_COUNT];
+
+	/**
+	 * Small workaround for instanced content.
+	 */
+	private long instanceTimer;
+	
+	public void setInstancedTimer(long instanceTimer) {
+		this.instanceTimer = instanceTimer;
+	}
+	
+	public long getInstancedTimer() {
+		return instanceTimer;
+	}
 }

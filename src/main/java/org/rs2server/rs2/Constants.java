@@ -16,6 +16,11 @@ public class Constants {
 	 * The server's name.
 	 */
 	public static final String SERVER_NAME = "Salve";
+	
+	/**
+	 * The Double EXP manual switch.
+	 */
+	public static boolean DOUBLE_EXP = true;
 
 	/**
 	 * The latest server update.

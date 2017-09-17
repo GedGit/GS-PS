@@ -327,6 +327,7 @@ public class DeathTick extends Tickable {
 				} else if (npc instanceof Kraken) {
 					Kraken kraken = (Kraken) npc;
 					kraken.destroySelf();
+					teleportTo = null;
 				} else if (npc instanceof Zulrah) {
 					Zulrah zulrah = (Zulrah) npc;
 					zulrah.destroySelf();

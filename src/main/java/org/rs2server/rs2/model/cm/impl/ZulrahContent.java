@@ -40,6 +40,7 @@ public class ZulrahContent extends Content {
 					}
 					player.sendMessage("You enter Zulrah's Shrine...");
 					player.setTeleportTarget(SPAWN_LOCATION.transform(-1, 0, height));
+					player.removeAttribute("busy");
 					setTickDelay(1);
 				}
 			});

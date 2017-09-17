@@ -36,7 +36,8 @@ public class HTTPServer {
 		WorldList w8 = new WorldList(8, 1029, "127.0.0.1", "PvP", 40008);
 		WorldList w9 = new WorldList(9, 536870913, "127.0.0.1", "Deadman Mode", 40009);
 		WorldList w10 = new WorldList(10, 33554433, "127.0.0.1", "Tournament", 40010);*/
-		//w2.setPlayercount(-1);
+		w1.setPlayercount(0);
+		w2.setPlayercount(0);
 		/*w3.setPlayercount(-1);
 		w4.setPlayercount(-1);
 		w5.setPlayercount(-1);

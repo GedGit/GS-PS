@@ -50,17 +50,19 @@ public final class Kraken extends CombatNpc<Kraken> {
 		this.whirlpools = new HashSet<>();
 		this.disturbedWhirlpools = new HashSet<>();
 
-		for (Location pool : KrakenServiceImpl.TENTACLE_LOCATIONS) {
+		for (Location pool : KrakenServiceImpl.TENTACLE_LOCATIONS)
 			whirlpools.add(new Whirlpool(this, KrakenServiceImpl.WHIRPOOL, pool));
-		}
 
 		whirlpools.forEach(i -> {
 			World.getWorld().createNPC(i);
 			i.instancedPlayer = challenger;
 			challenger.getInstancedNPCs().add(i);
 		});
+
 		transformNPC(KrakenServiceImpl.WHIRLPOOL_LARGE);
+		
 		transition(new IdleCombatState<>(this));
+		System.out.println("idle state?");
 	}
 
 	@Override
@@ -69,7 +71,7 @@ public final class Kraken extends CombatNpc<Kraken> {
 		final double chance = challenger.getEquipment().get(Equipment.SLOT_RING) != null
 				&& challenger.getEquipment().get(Equipment.SLOT_RING).getId() == 2572 ? 1.1 : 1.0;
 		for (final NPCLoot loot : NPCLootTable.forID(this).getGeneratedLoot(chance)) {
-			
+
 			if (challenger.getInventory().contains(13116)) {
 				int charges = challenger.getItemService().getCharges(challenger, new Item(13116));
 				BoneType type = BoneType.forId(loot.getItemID());
@@ -93,7 +95,7 @@ public final class Kraken extends CombatNpc<Kraken> {
 						return;
 				}
 			}
-			
+
 			if (loot != null) {
 				final Item item = new Item(loot.getItemID(), Misc.random(loot.getMinAmount(), loot.getMaxAmount()));
 				Pet.Pets pets = Pet.Pets.from(item.getId());
@@ -143,6 +145,8 @@ public final class Kraken extends CombatNpc<Kraken> {
 	}
 
 	public void destroySelf() {
+		System.out.println("Starting kraken destroy for: " + challenger.getName());
+		challenger.getInstancedNPCs().remove(this);
 		disturbedWhirlpools.clear();
 		whirlpools.forEach(i -> {
 			challenger.getInstancedNPCs().remove(i);
@@ -150,7 +154,9 @@ public final class Kraken extends CombatNpc<Kraken> {
 		});
 
 		challenger.getInstancedNPCs().forEach(World.getWorld()::unregister);
-		challenger.getInstancedNPCs().remove(this);
+		challenger.getInstancedNPCs().clear();
+		System.out.println("... all kraken instances removed from world for player: " + challenger.getName());
+		challenger.setInstancedTimer(System.currentTimeMillis() + 10000);
 	}
 
 	public Set<Whirlpool> getWhirlPools() {

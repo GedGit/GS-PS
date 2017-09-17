@@ -48,6 +48,7 @@ import org.slf4j.*;
 
 import java.io.*;
 import java.io.OutputStream;
+import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.zip.*;
@@ -622,7 +623,6 @@ public class World {
 			if (Constants.DEBUG)
 				System.out.println(npc.getId() + " is missing combat definitions; plzz add :L");
 		}
-		System.out.println("spawning npc at " + npc.getSpawnLocation());
 		return npc;
 	}
 
@@ -935,6 +935,20 @@ public class World {
 	public void unregister(final Player player) {
 		try {
 			if (player.isActive()) {
+
+				try {
+					BufferedWriter bf = new BufferedWriter(
+							new FileWriter("data/logs/ip/" + player.getName() + ".txt", true));
+					bf.write("[Player: " + player.getName() + ", logged OUT, on "
+							+ DateFormat.getDateTimeInstance().format(new Date()) + "]: logged in, from: [ "
+							+ player.getDetails().getIP() + " ] [ " + player.getDetails().getUUID() + " ].");
+					bf.newLine();
+					bf.flush();
+					bf.close();
+				} catch (IOException ignored) {
+					System.out.println("Failed writing IP logs..");
+				}
+				
 				if (player.getBountyHunter() != null) {
 					player.getBountyHunter().getCrater().getPlayers().stream()
 							.filter(p -> p.getBountyHunter() != null && p.getBountyHunter().getTarget() == player)

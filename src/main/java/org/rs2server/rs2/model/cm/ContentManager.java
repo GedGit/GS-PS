@@ -18,24 +18,25 @@ import java.util.Map;
  *
  */
 public class ContentManager {
-	
+
 	private Map<Integer, Class<?>> contentMap = new HashMap<Integer, Class<?>>();
 	private List<Content> activeContent = new ArrayList<Content>();
 	private Player player;
-	
+
 	public ContentManager(Player player) {
 		this.player = player;
-		
+
 		contentMap.put(Content.ZULRAH, ZulrahContent.class);
 		contentMap.put(Content.KRAKEN, KrakenContent.class);
 		contentMap.put(Content.CERBERUS, CerberusContent.class);
 	}
-	
+
 	public void start(int id) {
 		Content content = null;
 		try {
 			content = (Content) contentMap.get(id).getConstructor(Player.class).newInstance(player);
-		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException e) {
+		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
+				| NoSuchMethodException | SecurityException e) {
 			e.printStackTrace();
 		}
 		if (content == null || activeContent.contains(content))
@@ -48,11 +49,10 @@ public class ContentManager {
 		}
 	}
 
-
 	public void stopAll() {
 		activeContent.forEach(org.rs2server.rs2.model.cm.Content::stop);
 	}
-	
+
 	public void stop(Content content) {
 		if (content.isStopping())
 			return;

@@ -117,6 +117,7 @@ public class WorldMapObjectsLoader {
 			int objectId = -1;
 			int incr;
 
+			// This causes a null-pointer exception.
 			while ((incr = str1.readSmart2()) != 0) {
 				objectId += incr;
 				int location = 0;

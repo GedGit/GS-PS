@@ -38,7 +38,19 @@
         "itemId": 4153,
         "minAmount": 1,
         "maxAmount": 1,
-        "rarity": 2.5
+        "rarity": 3.5
+      },
+      {
+        "itemId": 7937,
+        "minAmount": 150,
+        "maxAmount": 150,
+        "rarity": 65.0
+      },
+      {
+        "itemId": 445,
+        "minAmount": 10,
+        "maxAmount": 20,
+        "rarity": 64.0
       },
       {
         "itemId": 4101,

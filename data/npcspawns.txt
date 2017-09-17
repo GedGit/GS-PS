@@ -1819,22 +1819,6 @@
 459 3400 3070 0 SOUTH true
 // Desert Lizard, 24, added by: Salve
 459 3388 3066 0 SOUTH true
-// Cave kraken, 127, added by: Salve
-492 2467 9808 0 SOUTH true
-// Cave kraken, 127, added by: Salve
-492 2472 9808 0 SOUTH true
-// Cave kraken, 127, added by: Salve
-492 2475 9810 0 SOUTH true
-// Cave kraken, 127, added by: Salve
-492 2481 9809 0 SOUTH true
-// Cave kraken, 127, added by: Salve
-492 2488 9806 0 SOUTH true
-// Cave kraken, 127, added by: Salve
-492 2496 9807 0 SOUTH true
-// Cave kraken, 127, added by: Salve
-492 2499 9802 0 SOUTH true
-// Cave kraken, 127, added by: Salve
-492 2507 9804 0 SOUTH true
 // Suqah, 111, added by: Salve
 787 2126 3874 0 SOUTH true
 // Suqah, 111, added by: Salve

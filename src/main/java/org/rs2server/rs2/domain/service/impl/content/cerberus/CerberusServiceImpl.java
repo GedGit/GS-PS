@@ -3,7 +3,6 @@ package org.rs2server.rs2.domain.service.impl.content.cerberus;
 import com.google.common.collect.ImmutableList;
 import com.google.common.eventbus.Subscribe;
 import com.google.inject.Inject;
-import org.rs2server.rs2.action.impl.CrawlingAction;
 import org.rs2server.rs2.content.api.GameObjectActionEvent;
 import org.rs2server.rs2.content.api.GamePlayerLoginEvent;
 import org.rs2server.rs2.content.api.GamePlayerLogoutEvent;
@@ -22,6 +21,8 @@ import org.rs2server.rs2.model.npc.impl.cerberus.ghosts.impl.MagicCerberusGhost;
 import org.rs2server.rs2.model.npc.impl.cerberus.ghosts.impl.MeleeCerberusGhost;
 import org.rs2server.rs2.model.npc.impl.cerberus.ghosts.impl.RangedCerberusGhost;
 import org.rs2server.rs2.model.player.Player;
+import org.rs2server.rs2.tickable.Tickable;
+
 import javax.annotation.Nonnull;
 import java.util.Arrays;
 import java.util.Collections;
@@ -31,10 +32,11 @@ import java.util.List;
  * @author Twelve
  */
 public final class CerberusServiceImpl implements CerberusService {
+
 	private static final ImmutableList<Location> GHOST_SPAWN_LOCATIONS = ImmutableList.of(Location.create(1239, 1266),
 			Location.create(1240, 1266), Location.create(1241, 1266));
 
-	private static final Location SPAWN_LOCATION = Location.create(1240, 1226, 0);
+	public static final Location SPAWN_LOCATION = Location.create(1240, 1226, 0);
 	private static final Location TUNNEL_LOCATION_EXIT = Location.create(2873, 9847, 0);
 
 	@Inject
@@ -51,7 +53,6 @@ public final class CerberusServiceImpl implements CerberusService {
 			case 26567:
 			case 26568:
 			case 26569:
-				player.setAttribute("busy", true);
 				enterCave(player);
 				break;
 			case 21772:
@@ -86,8 +87,19 @@ public final class CerberusServiceImpl implements CerberusService {
 			player.getActionSender().sendMessage("You need a Slayer level of 91 to enter this cave.");
 			return;
 		}
-		player.getActionQueue().addAction(new CrawlingAction(player, SPAWN_LOCATION));
-		player.getContentManager().start(Content.CERBERUS);
+		player.setAttribute("busy", true);
+		player.setTeleportTarget(SPAWN_LOCATION);
+
+		World.getWorld().submit(new Tickable(3) {
+
+			@Override
+			public void execute() {
+				player.removeAttribute("busy");
+				player.getActionQueue().clearAllActions();
+				player.getContentManager().start(Content.CERBERUS);
+				this.stop();
+			}
+		});
 	}
 
 	@Override
@@ -117,11 +129,10 @@ public final class CerberusServiceImpl implements CerberusService {
 
 	@Override
 	public void addCerberus(Player player, Cerberus cerberus) {
-		cerberus.setGhosts(getRandomGhostOrder());
 		player.addInstancedNpc(cerberus);
 		World.getWorld().getNPCs().add(cerberus);
+		cerberus.setGhosts(getRandomGhostOrder());
 		cerberus.setTeleporting(false);
 		cerberus.setLocation(CerberusContent.SPAWN_LOCATION);
-		player.resetFace();
 	}
 }

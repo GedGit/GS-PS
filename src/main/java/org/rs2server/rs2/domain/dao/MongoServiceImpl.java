@@ -22,9 +22,9 @@ public class MongoServiceImpl implements MongoService {
 	public MongoServiceImpl() {
 		mongoClient = new MongoClient(ImmutableList.of(new ServerAddress("127.0.0.1", 27017)));
 		mongoClient.setWriteConcern(WriteConcern.ACKNOWLEDGED);
-		database = mongoClient.getDB(Constants.DEBUG ? Constants.SERVER_NAME + "-debug" : "lostisle");
-		if (Constants.DEBUG)
-			System.out.println("[MongoServiceImpl] Starting on database: '" + database.getName() + "'!");
+		database = mongoClient.getDB(Constants.DEBUG ? Constants.SERVER_NAME + "-debug"
+				: Constants.PORT == 43594 ? "lostisle" : "port_43595");
+		System.out.println("[MongoServiceImpl] Starting on database: '" + database.getName() + "'!");
 	}
 
 	@Override

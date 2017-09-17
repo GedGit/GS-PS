@@ -5,10 +5,10 @@ import org.rs2server.rs2.domain.service.api.content.KrakenService;
 import org.rs2server.rs2.domain.service.impl.content.KrakenServiceImpl;
 import org.rs2server.rs2.model.Location;
 import org.rs2server.rs2.model.World;
+import org.rs2server.rs2.model.boundary.BoundaryManager;
 import org.rs2server.rs2.model.cm.Content;
 import org.rs2server.rs2.model.npc.impl.kraken.Kraken;
 import org.rs2server.rs2.model.player.Player;
-import org.rs2server.rs2.tickable.Tickable;
 
 /**
  * @author Clank1337
@@ -29,21 +29,12 @@ public class KrakenContent extends Content {
 	@Override
 	public void start() {
 		player.setMultiplayerDisabled(true);
-		if (!player.getLocation().isWithinDistance(KrakenServiceImpl.SPAWN_LOCATION)) {
-			World.getWorld().submit(new Tickable(2) {
-				@Override
-				public void execute() {
-					if (getTickDelay() == 1) {
-						started = true;
-						stop();
-						return;
-					}
-					setTickDelay(1);
-					player.removeAttribute("busy");
-				}
-			});
+		if (BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "Kraken")) {
+			started = true;
+			System.out.println("started kraken");
+			return;
 		}
-		respawnTimer = 1;
+		respawnTimer = 5;
 	}
 
 	@Override
@@ -54,10 +45,8 @@ public class KrakenContent extends Content {
 			Location loc = KrakenServiceImpl.SPAWN_LOCATION;
 			if (player.getLocation().distanceToPoint(loc) >= 40) {
 				player.getContentManager().stop(this);
+				respawnTimer = -1;
 				return;
-			}
-			if (player.getAttribute("busy") != null) {
-				player.removeAttribute("busy");
 			}
 		}
 		if (kraken != null && World.getWorld().getNPCs().contains(kraken) && !kraken.getCombatState().isDead()) {
@@ -66,7 +55,7 @@ public class KrakenContent extends Content {
 			if (respawnTimer == 0)
 				spawnKraken();
 			if (respawnTimer == -1)
-				respawnTimer = 30;
+				respawnTimer = 15;
 		}
 
 	}
@@ -75,11 +64,13 @@ public class KrakenContent extends Content {
 	public void stop() {
 		if (kraken != null) {
 			kraken.destroySelf();
+			started = false;
 			kraken = null;
 		}
-		if (player.isMultiplayerDisabled()) {
+		if (player.isMultiplayerDisabled())
 			player.setMultiplayerDisabled(false);
-		}
+		player.resetFace();
+		respawnTimer = 5;
 	}
 
 	@Override

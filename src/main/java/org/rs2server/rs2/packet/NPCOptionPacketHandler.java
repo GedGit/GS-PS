@@ -64,33 +64,36 @@ public class NPCOptionPacketHandler implements PacketHandler {
 		player.getActionQueue().clearAllActions();
 		player.getActionManager().stopAction();
 		player.getInterfaceState().setOpenShop(-1);
-		switch (packet.getOpcode())
 
-		{
-		case OPTION_1:
-			handleOption1(player, packet);
-			break;
-		case OPTION_2:
-			handleOption2(player, packet);
-			break;
-		case OPTION_3:
-			handleOption3(player, packet);
-			break;
-		case OPTION_TRADE:
-			handleOptionTrade(player, packet);
-			break;
-		case OPTION_ATTACK:
-			handleOptionAttack(player, packet);
-			break;
-		case OPTION_SPELL:
-			handleOptionSpell(player, packet);
-			break;
-		case OPTION_ITEM_ON_NPC:
-			handleOptionItemOnNpc(player, packet);
-			break;
-		case OPTION_EXAMINE:
-			handleOptionExamine(player, packet);
-			break;
+		try {
+			switch (packet.getOpcode()) {
+			case OPTION_1:
+				handleOption1(player, packet);
+				break;
+			case OPTION_2:
+				handleOption2(player, packet);
+				break;
+			case OPTION_3:
+				handleOption3(player, packet);
+				break;
+			case OPTION_TRADE:
+				handleOptionTrade(player, packet);
+				break;
+			case OPTION_ATTACK:
+				handleOptionAttack(player, packet);
+				break;
+			case OPTION_SPELL:
+				handleOptionSpell(player, packet);
+				break;
+			case OPTION_ITEM_ON_NPC:
+				handleOptionItemOnNpc(player, packet);
+				break;
+			case OPTION_EXAMINE:
+				handleOptionExamine(player, packet);
+				break;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 

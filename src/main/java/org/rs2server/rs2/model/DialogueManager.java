@@ -1415,6 +1415,12 @@ public class DialogueManager {
 			player.getInterfaceState().setNextDialogueId(0, -1);
 			break;
 		case 2000:
+			if (!player.hasAttribute("talkingNpc")) {
+				player.getActionSender().sendDialogue("Error", DialogueType.MESSAGE, 0, FacialAnimation.DEFAULT, "There was an error "
+						+ "loading your dialogue, please report this to an administrator.");
+				player.getInterfaceState().setNextDialogueId(0, -1);
+				return;
+			}
 			boolean trimmed = player.trimmed();
 			boolean skillMaster = player.getSkills()
 					.getLevelForExperience(Skills.getSkillId((int) player.getAttribute("talkingNpc"))) == 99;

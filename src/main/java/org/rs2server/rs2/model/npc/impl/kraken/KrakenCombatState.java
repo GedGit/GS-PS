@@ -21,6 +21,10 @@ public class KrakenCombatState<T extends CombatNpc<?>> extends NpcCombatState<T>
 
 	@Override
 	public void perform() {
+		if (npc.getTransformId() == 496) {
+			System.out.println("transform: "+npc.getTransformId()+" real "+npc.getId());
+			return;
+		}
 		magicAttack();
 	}
 

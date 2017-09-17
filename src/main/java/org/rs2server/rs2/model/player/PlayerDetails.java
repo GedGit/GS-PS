@@ -10,40 +10,40 @@ import java.util.Objects;
 
 import static java.util.stream.Collectors.toList;
 
-
 /**
  * Contains details about a player (but not the actual <code>Player</code>
  * object itself) that has not logged in yet.
+ * 
  * @author Graham Edgecombe
  *
  */
 public class PlayerDetails {
-	
+
 	/**
 	 * The session.
 	 */
 	private IoSession session;
-	
+
 	/**
 	 * The player name.
 	 */
 	private String name;
-	
+
 	private int userId;
 	private int forumRights;
-	
+
 	/**
 	 * The player password.
 	 */
 	private String pass;
-	
+
 	private int version;
-	
+
 	/**
 	 * The incoming ISAAC cipher.
 	 */
 	private ISAACCipher inCipher;
-	
+
 	/**
 	 * The outgoing ISAAC cipher.
 	 */
@@ -53,13 +53,20 @@ public class PlayerDetails {
 
 	/**
 	 * Creates the player details class.
-	 * @param session The session.
-	 * @param name The name.
-	 * @param pass The password.
-	 * @param inCipher The incoming cipher.
-	 * @param outCipher The outgoing cipher.
+	 * 
+	 * @param session
+	 *            The session.
+	 * @param name
+	 *            The name.
+	 * @param pass
+	 *            The password.
+	 * @param inCipher
+	 *            The incoming cipher.
+	 * @param outCipher
+	 *            The outgoing cipher.
 	 */
-	public PlayerDetails(IoSession session, String name, String pass, int version, ISAACCipher inCipher, ISAACCipher outCipher, String UUID) {
+	public PlayerDetails(IoSession session, String name, String pass, int version, ISAACCipher inCipher,
+			ISAACCipher outCipher, String UUID) {
 		this.session = session;
 		this.name = name;
 		this.pass = pass;
@@ -73,48 +80,52 @@ public class PlayerDetails {
 		if (session == null || session.getRemoteAddress() == null) {
 			return ImmutableList.of();
 		}
-		return World.getWorld().getPlayers().stream()
-				.filter(Objects::nonNull)
-				.filter(p -> p.getSession() != null
-						&& p.getSession().getRemoteAddress() != null
+		return World.getWorld().getPlayers().stream().filter(Objects::nonNull)
+				.filter(p -> p.getSession() != null && p.getSession().getRemoteAddress() != null
 						&& p.getSession().getRemoteAddress().toString().split(":")[0].replaceFirst("/", "")
-						.equals(session.getRemoteAddress().toString().split(":")[0].replaceFirst("/", ""))).collect(toList());
+								.equals(session.getRemoteAddress().toString().split(":")[0].replaceFirst("/", "")))
+				.collect(toList());
 	}
-	
+
 	/**
 	 * Gets the <code>IoSession</code>.
+	 * 
 	 * @return The <code>IoSession</code>.
 	 */
 	public IoSession getSession() {
 		return session;
 	}
-	
+
 	/**
-	 * Gets the name. 
+	 * Gets the name.
+	 * 
 	 * @return The name.
 	 */
 	public String getName() {
 		return name;
 	}
-	
+
 	/**
 	 * Gets the password.
+	 * 
 	 * @return The password.
 	 */
 	public String getPassword() {
 		return pass;
 	}
-	
+
 	/**
 	 * Gets the incoming ISAAC cipher.
+	 * 
 	 * @return The incoming ISAAC cipher.
 	 */
 	public ISAACCipher getInCipher() {
 		return inCipher;
 	}
-	
+
 	/**
 	 * Gets the outgoing ISAAC cipher.
+	 * 
 	 * @return The outgoing ISAAC cipher.
 	 */
 	public ISAACCipher getOutCipher() {
@@ -141,9 +152,13 @@ public class PlayerDetails {
 		return version;
 	}
 
-	public String getUUID() { return UUID;}
+	public String getUUID() {
+		return UUID;
+	}
 
 	public String getIP() {
+		if (session.getRemoteAddress() == null)
+			return "IP NOT FOUND";
 		String ip = session.getRemoteAddress().toString();
 		return ip.substring(0, ip.indexOf(":")).replaceAll("/", "");
 	}

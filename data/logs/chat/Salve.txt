@@ -1,0 +1,102 @@
+17-Sep-2017 13:57:15]:  ::item
+17-Sep-2017 13:58:29]: my first guesses were wrong
+17-Sep-2017 13:58:35]: then i started thinking what i've done
+17-Sep-2017 13:58:45]: only guesses are zulrah/cerb/zulrah
+17-Sep-2017 13:59:00]: yeah, the time i patched up all dupes and exploits
+17-Sep-2017 13:59:09]: it works fine for me on local
+17-Sep-2017 13:59:17]: it starts doing the glitch after like
+17-Sep-2017 13:59:19]: 10-20 mins
+17-Sep-2017 13:59:24]: or when somebody triggers it
+17-Sep-2017 13:59:25]: not sure
+17-Sep-2017 13:59:28]: not sure
+17-Sep-2017 13:59:45]: 10828
+17-Sep-2017 13:59:46]: 10551
+17-Sep-2017 13:59:49]: 10551
+17-Sep-2017 13:59:52]: 6585
+17-Sep-2017 13:59:54]: 7462
+17-Sep-2017 13:59:57]: 6737
+17-Sep-2017 14:00:07]: don rememb others
+17-Sep-2017 14:00:07]: lol
+17-Sep-2017 14:00:23]: anyways
+17-Sep-2017 14:00:26]: stop chatting on disc
+17-Sep-2017 14:00:32]: have to get this patched as soon as possible
+17-Sep-2017 14:00:55]: /try like spam clicking some objects/content starters
+17-Sep-2017 14:01:03]: /try and exploit the game
+17-Sep-2017 14:06:54]: /just stat changing and chest chance increase
+17-Sep-2017 14:06:59]: /not sure if that would cause it tbh
+17-Sep-2017 14:08:34]: /added them
+17-Sep-2017 14:27:33]: /nah
+17-Sep-2017 14:27:41]: /it wouldn't kick players on tele then
+17-Sep-2017 14:27:47]: /means something with regionchanging/content managing
+17-Sep-2017 14:28:00]: /aka instances, player monsters etcf
+17-Sep-2017 14:28:58]: /yeah after a couple kills people could spam-click get in
+17-Sep-2017 14:29:04]: /fixing that rn 
+17-Sep-2017 14:37:21]: /fuck
+17-Sep-2017 14:37:23]: /thought i found it
+17-Sep-2017 14:37:24]: /ncm
+17-Sep-2017 14:37:26]: /nvm
+17-Sep-2017 14:37:35]: it dc'd
+17-Sep-2017 14:37:39]: but i got back on
+17-Sep-2017 14:37:40]: .-.
+17-Sep-2017 14:37:54]: one is cerberus
+17-Sep-2017 14:38:02]: gotta update and see if i patched it
+17-Sep-2017 14:43:03]: hm
+17-Sep-2017 15:33:53]: /multi-spawning
+17-Sep-2017 15:33:58]: /nulling game-world npc's
+17-Sep-2017 15:34:06]: /making crashes
+17-Sep-2017 15:34:10]: /that's 1 problem
+17-Sep-2017 15:34:40]: /spam-click entrances, re-enter multiple times, teleprot away come back
+17-Sep-2017 15:34:47]: /abuse the living crap out of them
+17-Sep-2017 15:35:05]: oh  yea
+17-Sep-2017 15:35:06]: wait
+17-Sep-2017 15:35:10]: i gotta update this
+17-Sep-2017 15:35:11]: my bad
+17-Sep-2017 15:38:14]: :;home
+17-Sep-2017 17:23:08]: yeah
+17-Sep-2017 17:23:11]: i made it liek that
+17-Sep-2017 17:23:18]: cant fkn fix it my head dsnt work
+17-Sep-2017 17:23:26]: yeah
+17-Sep-2017 17:23:53]: /you can ::item
+17-Sep-2017 17:23:59]: i think so
+17-Sep-2017 17:24:21]: /spawn some idams and go kill stuff
+17-Sep-2017 17:24:33]: /mainly cerb
+17-Sep-2017 17:26:41]: /nubs coming on to spawn items only
+17-Sep-2017 17:26:43]: /#fun
+17-Sep-2017 17:28:19]: /it's not there for them lol
+17-Sep-2017 17:29:15]: /well then
+17-Sep-2017 17:30:51]: for testing
+17-Sep-2017 17:31:02]: oh right
+17-Sep-2017 17:31:03]: lel
+17-Sep-2017 17:31:13]: you came on to test
+17-Sep-2017 17:31:16]: not to fuck around
+17-Sep-2017 17:33:55]: thanks for all the help
+17-Sep-2017 17:33:58]: <.<
+17-Sep-2017 17:35:04]: :;home
+17-Sep-2017 17:38:08]: /exploit all bugs while you can
+17-Sep-2017 17:38:14]: /go hard, smack the glitches
+17-Sep-2017 17:38:23]: /i want to see this crash
+17-Sep-2017 17:39:20]: /twsited bow isn't coded
+17-Sep-2017 17:40:18]: /inb4sigildrops
+17-Sep-2017 17:42:24]: /cmon bois, make the server crash lul
+17-Sep-2017 17:43:39]: /l0l0l
+17-Sep-2017 17:44:06]: /in an unbelievable kc
+17-Sep-2017 17:44:09]: /a total of 2
+17-Sep-2017 17:44:32]: /11889
+17-Sep-2017 17:45:23]: /there ain't be no cheatin bruh
+17-Sep-2017 17:45:25]: /p ring is useless anyway
+17-Sep-2017 17:48:01]: /i'm certain, though, it might be anything
+17-Sep-2017 17:48:49]: /not to be rude or anything
+17-Sep-2017 17:48:56]: /dad knows
+17-Sep-2017 17:49:38]: /i'm not gona do some left right crap on the main game l0l
+17-Sep-2017 17:51:44]: /npc vs npc was already added before
+17-Sep-2017 17:51:49]: /and the npc limit is 2k per region
+17-Sep-2017 17:52:25]: gg
+17-Sep-2017 17:52:39]: /there's a lot more behind the scenes work i do
+17-Sep-2017 17:52:42]: /;/
+17-Sep-2017 17:53:39]: /could we try no
+17-Sep-2017 17:53:43]: /watcha think
+17-Sep-2017 17:55:09]: /mlm
+17-Sep-2017 18:01:41]: /just whatever you would do on the main game try here
+17-Sep-2017 18:01:52]: /the most common things people do
+17-Sep-2017 18:22:24]: /welp
+17-Sep-2017 18:22:32]: /let's try the live game now.

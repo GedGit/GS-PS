@@ -178,14 +178,14 @@
         "rarity": 37.0
       },
       {
-        "itemId": 7054,
+        "itemId": 7055,
         "minAmount": 10,
-        "maxAmount": 10,
+        "maxAmount": 30,
         "rarity": 95.0
       },
       {
-        "itemId": 3024,
-        "minAmount": 4,
+        "itemId": 3025,
+        "minAmount": 8,
         "maxAmount": 4,
         "rarity": 38.0
       },
@@ -310,15 +310,9 @@
         "rarity": 48.0
       },
       {
-        "itemId": 5522,
-        "minAmount": 25,
-        "maxAmount": 25,
-        "rarity": 49.0
-      },
-      {
         "itemId": 995,
         "minAmount": 9000,
-        "maxAmount": 52000,
+        "maxAmount": 100000,
         "rarity": 52.0
       }
     ]

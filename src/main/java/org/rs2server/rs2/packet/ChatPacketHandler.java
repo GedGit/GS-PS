@@ -10,9 +10,14 @@ import org.rs2server.rs2.net.Packet;
 import org.rs2server.rs2.util.TextUtils;
 import org.rs2server.util.XMLController;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
@@ -75,8 +80,18 @@ public class ChatPacketHandler implements PacketHandler {
 								+ NumberFormat.getNumberInstance(Locale.ENGLISH).format(item.getPrice()) + ".");
 			}
 		}
+		try {
+			BufferedWriter bf = new BufferedWriter(new FileWriter("data/logs/chat/"+player.getName()+".txt", true));
+			bf.write(DateFormat.getDateTimeInstance().format(new Date())
+					+ "]: "+unpacked);
+			bf.newLine();
+			bf.flush();
+			bf.close();
+		} catch (IOException ignored) {
+			System.out.println("Could not log chat message!");
+		}
 		
-		if (System.currentTimeMillis() - player.getSettings().getLastChatMessage() < 500)
+		if (System.currentTimeMillis() - player.getSettings().getLastChatMessage() < 1000)
 			return;
 		
 		if (unpacked.startsWith("/")) {

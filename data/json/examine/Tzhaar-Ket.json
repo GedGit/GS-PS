@@ -7,7 +7,7 @@
         "itemId": 6528,
         "minAmount": 1,
         "maxAmount": 1,
-        "rarity": 1.33
+        "rarity": 1.34
       },
       {
         "itemId": 985,
@@ -19,7 +19,7 @@
         "itemId": 987,
         "minAmount": 1,
         "maxAmount": 1,
-        "rarity": 5.0
+        "rarity": 5.1
       },
       {
         "itemId": 6571,
@@ -31,7 +31,7 @@
         "itemId": 6524,
         "minAmount": 1,
         "maxAmount": 1,
-        "rarity": 1.33
+        "rarity": 1.32
       },
       {
         "itemId": 6568,
@@ -49,19 +49,25 @@
         "itemId": 1621,
         "minAmount": 1,
         "maxAmount": 1,
-        "rarity": 25.0
+        "rarity": 25.1
       },
       {
         "itemId": 1619,
         "minAmount": 1,
         "maxAmount": 1,
-        "rarity": 25.0
+        "rarity": 25.2
       },
       {
         "itemId": 1617,
         "minAmount": 1,
         "maxAmount": 1,
         "rarity": 14.0
+      },
+      {
+        "itemId": 9194,
+        "minAmount": 1,
+        "maxAmount": 4,
+        "rarity": 1.4
       }
     ]
   }
