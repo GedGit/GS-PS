@@ -45,25 +45,21 @@ public class FightCave {
 		return wave;
 	}
 
-	public void setWave(Wave wave) { 
+	public void setWave(Wave wave) {
 		this.wave = wave;
 	}
 
 	public void start() {
 		player.setTeleportTarget(Location.create(2413, 5117, 0));
 		player.setMultiplayerDisabled(true);
-		player.setAttribute("busy", true);
 		wave = null;
 		World.getWorld().submit(new Tickable(1) {
-			@Override
 			public void execute() {
 				stop();
-				player.sendMessage("hello");
 				player.getActionSender().sendDialogue("TzHaar-Mej-Jal", DialogueType.NPC, 2180, FacialAnimation.DEFAULT,
 						"You're on your own now, Jalyt.<br>Prepare to fight for your life!");
 				started = true;
 				IN_CAVES.add(player);
-				player.removeAttribute("busy");
 			}
 		});
 	}

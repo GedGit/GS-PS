@@ -58,8 +58,8 @@ public final class Zulrah extends CombatNpc<Zulrah> {
 	private final Player challenger;
 	// first 5 = attack bonuses
 	private static final int[] RANGE_BONUSES = { 150, 150, 150, 150, 150, 250, 250, 250, 100, 100, 0, 100, 0 };
-	private static final int[] MELEE_BONUSES = { 150, 150, 150, 150, 150, 250, 250, 250, 100, 250, 0, 100, 0 };
-	private static final int[] MAGE_BONUSES = { 150, 150, 150, 150, 150, 250, 250, 250, 250, 50, 100, 0 };
+	private static final int[] MELEE_BONUSES = { 150, 150, 150, 150, 150, 250, 250, 250, 100, 300, 0, 100, 0 };
+	private static final int[] MAGE_BONUSES = { 150, 150, 150, 150, 150, 250, 250, 250, 300, 100, 100, 0 };
 
 	public Zulrah(Player challenger, Location location) {
 		super(ID, location);
@@ -299,7 +299,6 @@ public final class Zulrah extends CombatNpc<Zulrah> {
 
 			private int stage;
 
-			@Override
 			public void execute() {
 				stage++;
 				switch (stage) {
@@ -396,7 +395,6 @@ public final class Zulrah extends CombatNpc<Zulrah> {
 			startTransforming = false;
 			submitTimer(AN.BOSS_TRANSFORMING, 10);
 			World.getWorld().submit(new Tickable(2) {
-				@Override
 				public void execute() {
 					doNextTransition();
 					stop();

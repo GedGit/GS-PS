@@ -127,7 +127,6 @@ public class CommanderZilyana extends AbstractCombatAction {
 			maxHit = 32;
 			final int maxx = maxHit;
 			World.getWorld().submit(new Tickable(2) {
-				@Override
 				public void execute() {
 					for (final Player near : attacker.getLocalPlayers()) {
 						if (near != null && near != attacker && near != victim
@@ -135,7 +134,6 @@ public class CommanderZilyana extends AbstractCombatAction {
 							if (Misc.getDistance(near.getLocation(), attacker.getLocation()) <= 10) {
 								near.playGraphics(Graphic.create(1207));
 								World.getWorld().submit(new Tickable(1) {
-									@Override
 									public void execute() {
 										int maxHit = maxx;
 										int randomHit = MagicCombatAction.getAction().damage(maxHit, attacker, near,
@@ -149,7 +147,7 @@ public class CommanderZilyana extends AbstractCombatAction {
 												new Hit(randomHit > 0 ? HitType.NORMAL_HIT : HitType.ZERO_DAMAGE_HIT,
 														randomHit),
 												near);
-										int preDouble = randomHit / 2;
+										int preDouble = (int) (randomHit / 2);
 										int secondHit = Misc.random(preDouble);
 										if (secondHit > victim.getSkills().getLevel(Skills.HITPOINTS)) {
 											secondHit = victim.getSkills().getLevel(Skills.HITPOINTS);
@@ -190,7 +188,7 @@ public class CommanderZilyana extends AbstractCombatAction {
 			@Override
 			public void execute() {
 				victim.inflictDamage(new Hit(hit > 0 ? HitType.NORMAL_HIT : HitType.ZERO_DAMAGE_HIT, hit), attacker);
-				int preDouble = hit / 2;
+				int preDouble = (int) (hit / 2);
 				int secondHit = Misc.random(preDouble);
 				victim.inflictDamage(new Hit(secondHit > 0 ? HitType.NORMAL_HIT : HitType.ZERO_DAMAGE_HIT, secondHit),
 						victim);

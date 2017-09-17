@@ -148,7 +148,6 @@ public class Kreearra extends AbstractCombatAction {
 					final int maxHitMagic = maxHit;
 					super.hit(attacker, near);
 					World.getWorld().submit(new Tickable(hitDelay) {
-						@Override
 						public void execute() {
 							int damage = damage(maxHitMagic, attacker, near, AttackType.MAGIC, Skills.MAGIC,
 									Prayers.PROTECT_FROM_MAGIC, false, false);
@@ -231,7 +230,6 @@ public class Kreearra extends AbstractCombatAction {
 					final int maxHitRange = maxHit;
 					super.hit(attacker, near);
 					World.getWorld().submit(new Tickable(hitDelay) {
-						@Override
 						public void execute() {
 							int damage = damage(maxHitRange, attacker, near, AttackType.RANGE, Skills.RANGE,
 									Prayers.PROTECT_FROM_MISSILES, false, false); // these

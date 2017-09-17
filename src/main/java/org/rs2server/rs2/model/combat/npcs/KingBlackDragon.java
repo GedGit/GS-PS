@@ -186,14 +186,12 @@ public class KingBlackDragon extends AbstractCombatAction {
 									victim.getActionSender().sendMessage("You have been frozen!");
 								}
 								World.getWorld().submit(new Tickable(finalTimer + hitDelay) {
-									@Override
 									public void execute() {
 										victim.getCombatState().setCanMove(true);
 										this.stop();
 									}
 								});
 								World.getWorld().submit(new Tickable(finalTimer + hitDelay + 5) {
-									@Override
 									public void execute() {
 										victim.getCombatState().setCanBeFrozen(true);
 										this.stop();

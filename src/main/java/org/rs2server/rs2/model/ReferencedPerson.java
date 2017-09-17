@@ -34,8 +34,7 @@ public class ReferencedPerson extends Entity implements Communicable {
         this.username = username;
     }
 
-    @Override
-	public final String getUsername() {
+    public final String getUsername() {
         return username;
     }
 

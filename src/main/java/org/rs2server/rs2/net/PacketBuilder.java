@@ -293,7 +293,7 @@ public class PacketBuilder {
 			throw new UnsupportedOperationException("The IoBuffer implementation must support array() for bit usage.");
 		}
 
-		int bytes = (int) Math.ceil(numBits / 8D) + 1;
+		int bytes = (int) Math.ceil((double) numBits / 8D) + 1;
 		payload.expand((bitPosition + 7) / 8 + bytes);
 
 		byte[] buffer = payload.array();

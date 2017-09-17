@@ -272,8 +272,7 @@ public class CBZip2OutputStream extends OutputStream implements BZip2Constants {
     /**
      * modified by Oliver Merkel, 010128
      */
-    @Override
-	public void write(int bv) throws IOException {
+    public void write(int bv) throws IOException {
         int b = (256 + bv) % 256;
         if (currentChar != -1) {
             if (currentChar == b) {
@@ -342,14 +341,12 @@ public class CBZip2OutputStream extends OutputStream implements BZip2Constants {
 
     boolean closed = false;
 
-    @Override
-	protected void finalize() throws Throwable {
+    protected void finalize() throws Throwable {
         close();
         super.finalize();
     }
 
-    @Override
-	public void close() throws IOException {
+    public void close() throws IOException {
         if (closed) {
             return;
         }
@@ -365,8 +362,7 @@ public class CBZip2OutputStream extends OutputStream implements BZip2Constants {
         bsStream.close();
     }
 
-    @Override
-	public void flush() throws IOException {
+    public void flush() throws IOException {
         super.flush();
         bsStream.flush();
     }
@@ -1013,7 +1009,7 @@ public class CBZip2OutputStream extends OutputStream implements BZip2Constants {
                     if (unLo > unHi) {
                         break;
                     }
-                    n = (block[zptr[unLo] + d + 1]) - med;
+                    n = ((int) block[zptr[unLo] + d + 1]) - med;
                     if (n == 0) {
                         int temp = 0;
                         temp = zptr[unLo];
@@ -1032,7 +1028,7 @@ public class CBZip2OutputStream extends OutputStream implements BZip2Constants {
                     if (unLo > unHi) {
                         break;
                     }
-                    n = (block[zptr[unHi] + d + 1]) - med;
+                    n = ((int) block[zptr[unHi] + d + 1]) - med;
                     if (n == 0) {
                         int temp = 0;
                         temp = zptr[unHi];
@@ -1113,7 +1109,7 @@ public class CBZip2OutputStream extends OutputStream implements BZip2Constants {
             quadrant[i] = 0;
         }
 
-        block[0] = (block[last + 1]);
+        block[0] = (char) (block[last + 1]);
 
         if (last < 4000) {
             /*

@@ -91,8 +91,8 @@ public class GUI implements Runnable {
 		textArea.setForeground(Color.GREEN);
 		TextAreaOutputStream out = new TextAreaOutputStream(textArea, "Console");
 		panel.setLayout(new BorderLayout());
-		panel.add(new JScrollPane(textArea, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
-				ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER));
+		panel.add(new JScrollPane(textArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
+				JScrollPane.HORIZONTAL_SCROLLBAR_NEVER));
 		System.setOut(new PrintStream(out));
 
 		frame.getContentPane().add(panel);

@@ -41,7 +41,6 @@ class TradeContainer extends Container implements Iterable<Item> {
 		return Arrays.asList(getItems()).stream().filter(Objects::nonNull).iterator();
 	}
 
-	@Override
 	public Player getPlayer() {
 		return player;
 	}

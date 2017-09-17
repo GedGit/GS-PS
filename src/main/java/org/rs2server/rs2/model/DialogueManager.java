@@ -43,12 +43,16 @@ public class DialogueManager {
 	 *            the dialogue index ID.
 	 */
 	public static void advanceDialogue(Player player, int index) {
-		int dialogueId = player.getInterfaceState().getNextDialogueId(index);
-		if (dialogueId == -1) {
-			player.getActionSender().removeChatboxInterface();
-			return;
+		try {
+			int dialogueId = player.getInterfaceState().getNextDialogueId(index);
+			if (dialogueId == -1) {
+				player.getActionSender().removeChatboxInterface();
+				return;
+			}
+			openDialogue(player, dialogueId);
+		} catch (Exception e) {
+			//
 		}
-		openDialogue(player, dialogueId);
 	}
 
 	/**
@@ -701,7 +705,8 @@ public class DialogueManager {
 			break;
 
 		case 311:
-			if (!player.getPermissionService().isAny(player, PlayerPermissions.IRON_MAN, PlayerPermissions.ULTIMATE_IRON_MAN, PlayerPermissions.HARDCORE_IRON_MAN)) {
+			if (!player.getPermissionService().isAny(player, PlayerPermissions.IRON_MAN,
+					PlayerPermissions.ULTIMATE_IRON_MAN, PlayerPermissions.HARDCORE_IRON_MAN)) {
 				player.getActionSender().sendDialogue("Ironman Advisor", DialogueType.NPC, 311, FacialAnimation.ANNOYED,
 						"I don't speak to your kind.");
 				player.getInterfaceState().setNextDialogueId(0, -1);

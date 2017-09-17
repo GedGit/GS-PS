@@ -8,7 +8,7 @@ import org.rs2server.rs2.model.player.Player;
 
 /**
  * The main executor of the login server.
- *  
+ * 
  * @author Mack
  *
  */

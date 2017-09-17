@@ -605,7 +605,6 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 							player.setAttribute("busy", true);
 							World.getWorld().submit(new Tickable(2) {
 
-								@Override
 								public void execute() {
 									this.stop();
 									int spellbook = player.getCombatState().getSpellBook();
@@ -687,6 +686,7 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 							 * World.getWorld().sendWorldMessage( "<col=ff0000>News: " + player.getName() +
 							 * " Has just entered the raids dungeon."); break;
 							 */
+
 						case 29312:
 							if (!player.getInventory().contains(20695)) {
 								player.sendMessage("You'll need some bruma roots to light the brazier!");
@@ -995,11 +995,8 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 
 						case 10068:
 							if (player.getContentManager().getActiveContent(Content.ZULRAH) != null) {
-								player.sendMessage(
-										"[ERROR] Cannot enter boat, please report this to an administrator!");
 								return;
 							}
-							player.setAttribute("busy", true);
 							player.getContentManager().start(Content.ZULRAH);
 							break;
 						case 17384:
@@ -1606,7 +1603,6 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 						player.setAttribute("busy", true);
 						World.getWorld().submit(new Tickable(2) {
 
-							@Override
 							public void execute() {
 								this.stop();
 								int spellbook = player.getCombatState().getSpellBook();

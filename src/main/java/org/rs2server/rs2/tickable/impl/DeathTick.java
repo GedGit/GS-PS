@@ -141,7 +141,7 @@ public class DeathTick extends Tickable {
 			/*
 			 * The location to teleport to.
 			 */
-			Location teleportTo = Entity.DEFAULT_LOCATION;
+			Location teleportTo = Mob.DEFAULT_LOCATION;
 
 			/*
 			 * Resets the opponents tag timer. Player only as NPC's reset their killer as
@@ -295,7 +295,6 @@ public class DeathTick extends Tickable {
 					}
 					if (spawn) {
 						World.getWorld().submit(new Tickable(50) {
-							@Override
 							public void execute() {
 								for (int i = 0; i < 4; i++) {
 									final NPC godnpc = godNPCS[index][i];
@@ -362,7 +361,6 @@ public class DeathTick extends Tickable {
 				} else if (npc.getCombatDefinition() != null && npc.getCombatDefinition().getRespawnTicks() > 0) {
 					teleportTo = Location.create(1, 1, 0);
 					World.getWorld().submit(new Tickable(npc.getCombatDefinition().getRespawnTicks()) {
-						@Override
 						public void execute() {
 							npc.setTeleportTarget(npc.getSpawnLocation());
 							npc.setLocation(npc.getSpawnLocation());

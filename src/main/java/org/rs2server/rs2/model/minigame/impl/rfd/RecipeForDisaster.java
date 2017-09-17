@@ -79,7 +79,6 @@ public class RecipeForDisaster {
 		player.setMultiplayerDisabled(true);
 		player.getCombatState().resetPrayers();
 		World.getWorld().submit(new Tickable(1) {
-			@Override
 			public void execute() {
 				stop();
 				if (player.getSettings().getRFDState() == 4) {
@@ -142,7 +141,6 @@ public class RecipeForDisaster {
 						started = false; // stops checking on each tick
 						player.teleport(Location.create(1655, 3671, 0), 3, 3, false);
 						World.getWorld().submit(new Tickable(3) {
-							@Override
 							public void execute() {
 								player.getActionSender().sendMessage(
 										"Congratulations, you have finished the Recipe for Disaster mini-quest!");

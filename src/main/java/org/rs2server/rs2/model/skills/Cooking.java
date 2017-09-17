@@ -174,7 +174,7 @@ public class Cooking extends ProductionAction {
 		}
 
 		public int getEndXp() {
-			return endXp;
+			return (int) endXp;
 		}
 
 		public Item getBurntProduct() {

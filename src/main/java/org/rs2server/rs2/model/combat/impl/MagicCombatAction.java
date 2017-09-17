@@ -524,7 +524,6 @@ public class MagicCombatAction extends AbstractCombatAction {
 			mob.playGraphics(Graphic.create(308, 48, 100));
 			mob.setAttribute("lastBountyTele", System.currentTimeMillis());
 			World.getWorld().submit(new Tickable(4) {
-				@Override
 				public void execute() {
 					mob.setTeleportTarget(locations.get(mob.getRandom().nextInt(locations.size())));
 					mob.playAnimation(Animation.create(-1, 0));
@@ -739,7 +738,6 @@ public class MagicCombatAction extends AbstractCombatAction {
 								enemy.getActionSender().sendMessage("You have been frozen!");
 
 							World.getWorld().submit(new Tickable(finalTimer) {
-								@Override
 								public void execute() {
 									enemy.getCombatState().setCanMove(true);
 									enemy.setFrozenBy(null);
@@ -747,7 +745,6 @@ public class MagicCombatAction extends AbstractCombatAction {
 								}
 							});
 							World.getWorld().submit(new Tickable(finalTimer + 3) {
-								@Override
 								public void execute() {
 									enemy.getCombatState().setCanBeFrozen(true);
 									this.stop();
@@ -769,7 +766,6 @@ public class MagicCombatAction extends AbstractCombatAction {
 			hits.add(i, hit);
 		}
 		World.getWorld().submit(new Tickable(delay) {
-			@Override
 			public void execute() {
 				for (int i = 0; i < enemies.size(); i++) {
 					final Mob enemy = enemies.get(i);
@@ -899,7 +895,6 @@ public class MagicCombatAction extends AbstractCombatAction {
 								levelDifference = 1;
 							}
 							World.getWorld().submit(new Tickable(levelDifference * SkillsUpdateTick.CYCLE_TIME) {
-								@Override
 								public void execute() {
 									switch (spell) {
 									case CONFUSE:

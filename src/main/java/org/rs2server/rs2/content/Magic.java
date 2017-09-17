@@ -245,9 +245,9 @@ public class Magic {
 						player.getActionSender().switchTab(4);
 						staffService.removeRune(player, new Item(555));
 						staffService.removeRune(player, new Item(564));
-					}
+					}player.getInventory().remove(slot, new Item(item.getId()));
 					
-						if (item.getId() == 11071) { // Sapphire bracelet
+						if (item.getId() == 11071) { // Sapphire braclet
 							player.playAnimation(Animation.create(712)); // SET CORRECT ONE
 							player.playGraphics(Graphic.create(114, (100 << 16)));
 							player.getSkills().addExperience(Skills.MAGIC, 3 * 150);
@@ -257,7 +257,6 @@ public class Magic {
 							player.getActionSender().switchTab(4);
 							staffService.removeRune(player, new Item(555, 1));
 							staffService.removeRune(player, new Item(564, 1));
-							
 					}
 					if (item.getId() == 1656) { // Sapphire necklace
 						player.playAnimation(Animation.create(712)); // SET CORRECT ONE

@@ -461,7 +461,7 @@ public class Shop {
 
 				// Prevent people from abusing selling of runes for tokkul
 				if (shop.getCurrency() == 6529)
-					reward.setCount(reward.getCount() / 4);
+					reward.setCount((int) (reward.getCount() / 4));
 
 				Container temporaryInventory = new Container(Type.STANDARD, Inventory.SIZE);
 				for (Item invItem : player.getInventory().toArray())
@@ -736,7 +736,7 @@ public class Shop {
 						: ItemDefinition.forId(item.getId()).getStorePrice() * 0.9);
 			case SPECIALIST_STORE_BUY:
 			case SPECIALIST_STORE_NO_BUY:
-				return ItemDefinition.forId(item.getId()).getStorePrice();
+				return (int) ItemDefinition.forId(item.getId()).getStorePrice();
 			}
 			break;
 		case 2: // Player stock

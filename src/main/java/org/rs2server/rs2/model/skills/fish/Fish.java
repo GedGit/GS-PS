@@ -59,7 +59,7 @@ public enum Fish {
 	}
 
 	public int getXp() {
-		return xp;
+		return (int) xp;
 	}
 
 	public int getLevel() {

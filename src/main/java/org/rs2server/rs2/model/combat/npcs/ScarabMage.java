@@ -85,7 +85,6 @@ public class ScarabMage extends AbstractCombatAction {
 			attacker.playGraphics(Graphic.create(194, 0, 100));
 			final int clientSpeedz = clientSpeed;
 			World.getWorld().submit(new Tickable(1) {
-				@Override
 				public void execute() {
 					attacker.playProjectile(Projectile.create(attacker.getCentreLocation(), victim.getCentreLocation(), 195, 45, 50, clientSpeedz, 43, 32, victim.getProjectileLockonIndex(), 10, 48));
 					this.stop();

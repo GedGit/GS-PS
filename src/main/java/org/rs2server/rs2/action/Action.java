@@ -161,7 +161,6 @@ public abstract class Action extends Tickable {
 		this.currentTicks -= amount;
 	}
 	
-	@Override
 	public void stop() {
 		running = false;
 	}
@@ -169,7 +168,6 @@ public abstract class Action extends Tickable {
 	/**
 	 * @return The running.
 	 */
-	@Override
 	public boolean isRunning() {
 		return running;
 	}
@@ -178,7 +176,6 @@ public abstract class Action extends Tickable {
 	 * The execute method is called when the tick is run. The general contract
 	 * of the execute method is that it may take any action whatsoever.
 	 */
-	@Override
 	public abstract void execute();
 
 }

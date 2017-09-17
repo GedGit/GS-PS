@@ -41,7 +41,7 @@ public class BlastCrafting extends ProductionAction {
         }
 
         public int getXp() {
-            return xp;
+            return (int) xp;
         }
 
         private BoneType(int id, int xp) {

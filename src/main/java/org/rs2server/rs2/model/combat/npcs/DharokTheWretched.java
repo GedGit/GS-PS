@@ -36,8 +36,8 @@ public class DharokTheWretched extends AbstractCombatAction {
 		attacker.playAnimation(Animation.create(2066));
 		double dharokMultiplier = (startHp - attacker.getSkills().getLevel(Skills.HITPOINTS)) / 2;
 		double base = 0;
-		base += 1.05D + attacker.getCombatState().getBonus(10) * 121.77 * 0.00175D;
-		base += 121.77 * 0.09D;
+		base += 1.05D + (double) (attacker.getCombatState().getBonus(10) * 121.77) * 0.00175D;
+		base += (double) 121.77 * 0.09D;
 		base += dharokMultiplier;
 		int finalDamage = victim.getCombatState().getPrayer(Prayers.PROTECT_FROM_MELEE) ? 0 : Misc.random((int) base);
 		attacker.getCombatState().setAttackDelay(5);

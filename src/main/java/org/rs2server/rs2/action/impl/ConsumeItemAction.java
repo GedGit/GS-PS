@@ -180,7 +180,6 @@ public class ConsumeItemAction extends Action {
 					 */
 					getMob().getCombatState().setCanDrink(false);
 					World.getWorld().submit(new Tickable(2) {
-						@Override
 						public void execute() {
 							getMob().getCombatState().setCanDrink(true);
 							this.stop();
@@ -255,7 +254,7 @@ public class ConsumeItemAction extends Action {
 						getMob().getActionSender().sendMessage("You drink some of your " + potionName + " potion.");
 						for (int i = 0; i < drink.getSkills().length; i++) {
 							int skill = drink.getSkill(i);
-							int modification = getMob().getSkills().getLevelForExperience(skill) / 3;
+							int modification = (int) (getMob().getSkills().getLevelForExperience(skill) / 3);
 
 							if (getMob().isPlayer() && skill == Skills.PRAYER) {
 								Player player = (Player) getMob();
@@ -285,7 +284,7 @@ public class ConsumeItemAction extends Action {
 						getMob().getActionSender().sendMessage("You drink some of your " + potionName + " potion.");
 						for (int i = 0; i < drink.getSkills().length; i++) {
 							int skill = drink.getSkill(i);
-							int modification = getMob().getSkills().getLevelForExperience(skill) / 3;
+							int modification = (int) (getMob().getSkills().getLevelForExperience(skill) / 3);
 
 							if (getMob().isPlayer() && skill == Skills.PRAYER) {
 								Player player = (Player) getMob();
@@ -309,7 +308,6 @@ public class ConsumeItemAction extends Action {
 							getMob().getCombatState().setCanBePoisoned(false);
 							World.getWorld()
 									.submit(new Tickable(drink.getPotionType() == PotionType.ANTIPOISON ? 150 : 1000) {
-										@Override
 										public void execute() {
 											getMob().getCombatState().setCanBePoisoned(true);
 											this.stop();
@@ -395,7 +393,6 @@ public class ConsumeItemAction extends Action {
 									: drink.getPotionType() == PotionType.ANTIDOTE_PLUS ? 1500
 											: drink.getPotionType() == PotionType.ANTIDOTE_PLUS_PLUS ? 2000 : 1000;
 							World.getWorld().submit(new Tickable(ticks) {
-								@Override
 								public void execute() {
 									getMob().getCombatState().setCanBePoisoned(true);
 									this.stop();
@@ -453,7 +450,6 @@ public class ConsumeItemAction extends Action {
 						if (getMob().getCombatState().canBePoisoned()) {
 							getMob().getCombatState().setCanBePoisoned(false);
 							World.getWorld().submit(new Tickable(150) {
-								@Override
 								public void execute() {
 									getMob().getCombatState().setCanBePoisoned(true);
 									this.stop();
@@ -473,7 +469,6 @@ public class ConsumeItemAction extends Action {
 						if (getMob().getCombatState().canBePoisoned()) {
 							getMob().getCombatState().setCanBePoisoned(false);
 							World.getWorld().submit(new Tickable(150) {
-								@Override
 								public void execute() {
 									getMob().getCombatState().setCanBePoisoned(true);
 									this.stop();

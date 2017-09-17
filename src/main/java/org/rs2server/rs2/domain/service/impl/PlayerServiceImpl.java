@@ -30,7 +30,6 @@ public class PlayerServiceImpl implements PlayerService {
 	 * @param item The item to give
 	 * @param fallbackToGround true if the item should be dropped as a ground item if the player has no space in their inventory
 	 */
-	@Override
 	public void giveItem(@Nonnull final Player player, @Nonnull final Item item, boolean fallbackToGround) {
 		Objects.requireNonNull(player, "player");
 		Objects.requireNonNull(item, "item");
@@ -42,7 +41,6 @@ public class PlayerServiceImpl implements PlayerService {
 		}
 	}
 
-	@Override
 	public String getIpAddress(@Nonnull final Player player) {
 		Objects.requireNonNull(player, "player");
 		return player.getSession().getRemoteAddress().toString().split(":")[0].replaceFirst("/", "");

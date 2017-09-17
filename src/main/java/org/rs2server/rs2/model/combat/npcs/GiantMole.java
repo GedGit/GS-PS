@@ -106,7 +106,6 @@ public class GiantMole extends AbstractCombatAction {
 			}
 			attacker.playAnimation(Animation.create(3314));
 			World.getWorld().submit(new Tickable(2) {
-				@Override
 				public void execute() {
 					attacker.setTeleportTarget(random());
 					attacker.playAnimation(Animation.create(3315));

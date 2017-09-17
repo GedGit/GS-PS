@@ -295,8 +295,8 @@ public final class InputStream extends Stream
 
     public long readLong()
     {
-        long l = readInt() & 0xffffffffL;
-        long l1 = readInt() & 0xffffffffL;
+        long l = (long)readInt() & 0xffffffffL;
+        long l1 = (long)readInt() & 0xffffffffL;
         return (l << 32) + l1;
     }
 

@@ -2,6 +2,7 @@ package org.rs2server.rs2.domain.service.impl;
 
 import org.rs2server.cache.format.CacheNPCDefinition;
 import org.rs2server.rs2.content.dialogue.Dialogue;
+import org.rs2server.rs2.content.dialogue.TalkingDialogue;
 import org.rs2server.rs2.domain.model.player.PlayerSkillSlayerEntity;
 import org.rs2server.rs2.domain.model.player.PlayerStatisticsEntity;
 import org.rs2server.rs2.domain.service.api.PlayerStatisticsService;
@@ -57,8 +58,9 @@ public class SlayerServiceImpl implements SlayerService {
 	public SlayerTask assignTask(@Nonnull Player player, @Nonnull SlayerTask.Master master) {
 		if (player.getSkills().getCombatLevel() < master.getCombatRequired()) {
 
-			Dialogue dialogue = Dialogue.npcSaying(master.getId(), CacheNPCDefinition.get(master.getId()).getName(),
-					Animation.FacialAnimation.SAD, "You are not strong enough to select this difficulty..");
+			Dialogue dialogue = TalkingDialogue.npcSaying(master.getId(),
+					CacheNPCDefinition.get(master.getId()).getName(), Animation.FacialAnimation.SAD,
+					"You are not strong enough to select this Slayer task difficulty..");
 
 			dialogue.open(player, 0);
 
@@ -68,10 +70,16 @@ public class SlayerServiceImpl implements SlayerService {
 		}
 		int iterations = 0;
 		while (true) {
+			// Hacky solution to solve a stack overflow where the player has too
+			// many blocked tasks which leaves no more available tasks since
+			// their
+			// combat level is too low. Keep in mind that to have enough points
+			// to block several tasks, this is impossible.
 			iterations++;
 			if (iterations >= 20) {
-				Dialogue dialogue = Dialogue.npcSaying(master.getId(), CacheNPCDefinition.get(master.getId()).getName(),
-						Animation.FacialAnimation.SAD, "You are not strong enough to receive a boss task..");
+				Dialogue dialogue = TalkingDialogue.npcSaying(master.getId(),
+						CacheNPCDefinition.get(master.getId()).getName(), Animation.FacialAnimation.SAD,
+						"You are not strong enough to receive a boss task..");
 
 				dialogue.open(player, 0);
 				break;
@@ -99,14 +107,10 @@ public class SlayerServiceImpl implements SlayerService {
 			int amount = Misc.random(minimum, maximum);
 
 			final SlayerTask task = new SlayerTask(master, random, (int) (amount * 0.75));
-			if (task.getName().equals(player.getSlayer().taskName)) {
-				System.out.println("we already had this task, shuffling..");
-				continue;
-			}
 			player.getSlayer().setSlayerTask(task);
-			player.getSlayer().taskName = task.getName();
 			return task;
 		}
+
 		return null;
 	}
 

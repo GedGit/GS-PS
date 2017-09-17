@@ -148,10 +148,6 @@ public class Firemaking {// don't use that system. o lol, try looking for firema
 				return;
 			}
 		}
-		if (player.getRegionId() == 6200) {
-			player.sendMessage("You cannot light a fire at the home area.");
-			return;
-		}
 
 		player.setLighting(true);
 		player.getInventory().remove(item);
@@ -269,7 +265,7 @@ public class Firemaking {// don't use that system. o lol, try looking for firema
 	 * @return The light delay.
 	 */
 	private int lightDelay(Log log) {
-		return random(800, (int) ((Math.sqrt(log.getRequiredLevel() * 1000)
+		return random(400, (int) ((Math.sqrt(log.getRequiredLevel() * 1000)
 				* (99 - player.getSkills().getLevel(Skills.FIREMAKING)))));
 	}
 

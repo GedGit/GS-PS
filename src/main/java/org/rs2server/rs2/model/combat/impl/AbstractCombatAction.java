@@ -223,7 +223,6 @@ public abstract class AbstractCombatAction implements CombatAction {
 		attacker.getCombatState().setWeaponSwitchTimer(2);
 		attacker.getCombatState().setCanAnimate(false);
 		World.getWorld().submit(new Tickable(1) {
-			@Override
 			public void execute() {
 				attacker.getCombatState().setCanAnimate(true);
 				this.stop();
@@ -514,14 +513,12 @@ public abstract class AbstractCombatAction implements CombatAction {
 				if (victim.getActionSender() != null)
 					victim.getActionSender().sendMessage("You have been frozen!");
 				World.getWorld().submit(new Tickable(freezeTimer) {
-					@Override
 					public void execute() {
 						victim.getCombatState().setCanMove(true);
 						this.stop();
 					}
 				});
 				World.getWorld().submit(new Tickable(freezeTimer + 5) {
-					@Override
 					public void execute() {
 						victim.getCombatState().setCanBeFrozen(true);
 						this.stop();
@@ -561,7 +558,6 @@ public abstract class AbstractCombatAction implements CombatAction {
 			attacker.playAnimation(Animation.create(1074));
 			attacker.playGraphics(Graphic.create(256, 0, 100));
 			World.getWorld().submit(new Tickable(1) {
-				@Override
 				public void execute() {
 					attacker.playGraphics(Graphic.create(256, 0, 100));
 					this.stop();
@@ -1025,7 +1021,7 @@ public abstract class AbstractCombatAction implements CombatAction {
 		}
 		if (random.nextFloat() <= 0.25f && CombatFormula.fullDharok(attacker)
 				&& CombatFormula.hasAmuletOfTheDamned(attacker) && damage > 0) {
-			int recoil = (int) Math.ceil(damage * 0.15);
+			int recoil = (int) Math.ceil((float) damage * 0.15);
 
 			if (recoil < 1) {
 				recoil = 1;

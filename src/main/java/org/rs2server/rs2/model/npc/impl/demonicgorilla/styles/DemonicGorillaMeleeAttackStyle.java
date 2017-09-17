@@ -23,8 +23,7 @@ public class DemonicGorillaMeleeAttackStyle<T extends DemonicGorilla> extends Np
         super(npc);
     }
 
-    @Override
-	public void perform() {
+    public void perform() {
 		if (npc.isDestroyed() || npc.getSkills().getLevel(Skills.HITPOINTS) <= 0) {
 			return;
 		}

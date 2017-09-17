@@ -172,7 +172,7 @@ public class TreasureTrailServiceImpl implements TreasureTrailService {
 					&& npc.getId() == TreasureTrailUriStep.URI_NPC_ID) {
 				final TreasureTrailUriStep uriStep = (TreasureTrailUriStep) getNextUncompletedStep(trail);
 				final DialogueChain dialogue = DialogueChain.build(Dialogue.oneOf(TreasureTrailUriStep.URI_DIALOGUES))
-						.then(Dialogue.playerSaying(player, Animation.FacialAnimation.ON_ONE_HAND, "What?"))
+						.then(TalkingDialogue.playerSaying(player, Animation.FacialAnimation.ON_ONE_HAND, "What?"))
 						.then(CASKET_DIALOGUE).onClose(new Dialogue() {
 							@Override
 							public void open(@Nonnull Player player, int index) {
@@ -256,8 +256,11 @@ public class TreasureTrailServiceImpl implements TreasureTrailService {
 	 */
 	private boolean hasClueInInventory(final Player player, final PlayerTreasureTrail trail) {
 		boolean hasClue = player.getInventory().contains(trail.getType().getClueScrollItemId());
-		if (!hasClue && player.getInventory().containsOneItem(12179, 12029, 12542, 12073, 19835))
+		if (!hasClue && player.getInventory().containsOneItem(12179, 12029, 12542, 12073, 19835)) {
+			player.getActionSender().sendItemDialogue(12542, "You don't have the RIGHT clue scroll in your inventory."
+					+ "If you're having issues, simply ::empty ALL of your clue scrolls and get a new one.");
 			return false;
+		}
 		return hasClue;
 	}
 

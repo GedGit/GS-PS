@@ -1,5 +1,6 @@
 package org.rs2server.rs2.packet;
 
+import org.rs2server.rs2.model.GameObject;
 import org.rs2server.rs2.model.Location;
 import org.rs2server.rs2.model.player.Player;
 import org.rs2server.rs2.net.Packet;
@@ -23,6 +24,8 @@ public class CommandPacketHandlerOld implements PacketHandler {
 		String commandString = packet.getRS2String();
 		if (player.getAttribute("cutScene") != null)
 			return;
+
+		GameObject obj2 = new GameObject(Location.create(3093, 3493, 0), 6, 10, 0, false);
 		commandString = commandString.replaceAll(":", "");
 		String[] args = commandString.split(" ");
 		String command = args[0].toLowerCase();

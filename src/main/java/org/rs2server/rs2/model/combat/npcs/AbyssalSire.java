@@ -104,7 +104,6 @@ public class AbyssalSire extends AbstractCombatAction {
 				}
 			}
 			World.getWorld().submit(new Tickable(2) {
-				@Override
 				public void execute() {
 					stop();
 					for (final Player near : localPlayers) {

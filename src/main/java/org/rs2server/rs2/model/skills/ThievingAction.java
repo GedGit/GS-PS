@@ -350,7 +350,7 @@ public class ThievingAction extends Action {
 		}
 		for (PickpocketableNPC data : PickpocketableNPC.values()) {
 			for (int id : data.npcIds)
-				NPCS.put(id, data);
+				NPCS.put((int) id, data);
 		}
 	}
 
@@ -500,7 +500,7 @@ public class ThievingAction extends Action {
 					this.stop();
 					return;
 				}
-				player.getSkills().addExperience(Skills.THIEVING, npcData.getExperience());
+				((Skills) player.getSkills()).addExperience(Skills.THIEVING, npcData.getExperience());
 				npcData.handlePet(player, npcData.getPetRate());
 				Item item = npcData.getLoot()[RANDOM.nextInt(npcData.getLoot().length)];
 				if (player.getInventory().hasRoomFor(item))

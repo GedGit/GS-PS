@@ -834,7 +834,6 @@ public class Player extends Mob implements Persistable {
 	 *
 	 * @return The interface state.
 	 */
-	@Override
 	public InterfaceState getInterfaceState() {
 		return interfaceState;
 	}
@@ -916,7 +915,6 @@ public class Player extends Mob implements Persistable {
 	 *
 	 * @return The action sender.
 	 */
-	@Override
 	public ActionSender getActionSender() {
 		return actionSender;
 	}
@@ -1586,7 +1584,6 @@ public class Player extends Mob implements Persistable {
 
 		if (gfx == 308) {
 			World.getWorld().submit(new Tickable(2) {
-				@Override
 				public void execute() {
 					playGraphics(Graphic.create(gfx, 20, 100));
 					this.stop();
@@ -1595,24 +1592,22 @@ public class Player extends Mob implements Persistable {
 		}
 
 		World.getWorld().submit(new Tickable(ticks) {
-			@Override
 			public void execute() {
 				resetInteractingEntity();
 				Location teleLoc = Location.create(x + (xOffset > 0 ? random.nextInt(xOffset) : 0),
 						y + (yOffset > 0 ? random.nextInt(yOffset) : 0), z);
 				setTeleportTarget(teleLoc);
 				playAnimation(Animation.create(-1));
-
+				
 				// Delay by 4 more ticks incase a projectile or something
 				World.getWorld().submit(new Tickable(4) {
-					@Override
 					public void execute() {
 						setCanBeDamaged(true);
 						removeAttribute("teleporting");
 						this.stop();
 					}
 				});
-
+				
 				if (getPet() != null) {
 					pet.setTeleportTarget(teleLoc);
 					pet.setInteractingEntity(InteractionMode.FOLLOW, getPet().getInstancedPlayer());
@@ -2764,17 +2759,17 @@ public class Player extends Mob implements Persistable {
 	public void resetAfkTolerance() {
 		this.afkTolerance = 0;
 	}
-
+	
 	private long imbuedHeart;
 
 	public void setImbuedHeart(long l) {
 		this.imbuedHeart = l;
 	}
-
+	
 	public long getImbuedHeart() {
 		return imbuedHeart;
 	}
-
+	
 	/**
 	 * Used to send exp drops past 200m exp
 	 */

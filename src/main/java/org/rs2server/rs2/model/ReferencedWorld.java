@@ -60,8 +60,7 @@ public class ReferencedWorld {
         this.released = syncCount == -1;
     }
 
-    @Override
-	public final String toString() {
+    public final String toString() {
         return "[id="+id+(released ? "" :  ", online="+ players.size()+ (syncCount > 0 ? ":"+syncCount+", act="+getActivity() : ""))+"]";
     }
 }

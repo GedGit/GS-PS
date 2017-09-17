@@ -39,6 +39,7 @@ public class KrakenContent extends Content {
 						return;
 					}
 					setTickDelay(1);
+					player.removeAttribute("busy");
 				}
 			});
 		}
@@ -55,8 +56,9 @@ public class KrakenContent extends Content {
 				player.getContentManager().stop(this);
 				return;
 			}
-			if (player.getAttribute("busy") != null)
+			if (player.getAttribute("busy") != null) {
 				player.removeAttribute("busy");
+			}
 		}
 		if (kraken != null && World.getWorld().getNPCs().contains(kraken) && !kraken.getCombatState().isDead()) {
 			// Hello

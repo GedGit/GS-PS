@@ -40,6 +40,8 @@ import org.rs2server.util.XMLController;
 
 import plugin.discord.utils.Message;
 
+import java.awt.*;
+import java.awt.datatransfer.*;
 import java.io.*;
 import java.text.DateFormat;
 import java.util.*;
@@ -215,7 +217,7 @@ public class CommandPacketHandler implements PacketHandler {
 
 			// TODO colors for each rank
 			if (permissionService.is(player, PermissionService.PlayerPermissions.DEV))
-				formattedMsg = (icon != -1 ? ("[<col=FF0000>Developer</col>]") : "<col=FF0000>") + "<col=FF0000><img="
+				formattedMsg = (icon != -1 ? ("[<col=FF0000>Owner</col>]") : "<col=FF0000>") + "<col=FF0000><img="
 						+ icon + ">" + player.getName() + "<col=FF0000>: <col=FF0000>" + msg;
 			else if (permissionService.is(player, PermissionService.PlayerPermissions.ADMINISTRATOR))
 				formattedMsg = (icon != -1 ? ("[<col=FF0000>Administrator</col>]") : "<col=FF0000>")
@@ -253,9 +255,6 @@ public class CommandPacketHandler implements PacketHandler {
 			else if (permissionService.is(player, PermissionService.PlayerPermissions.BRONZE_MEMBER))
 				formattedMsg = (icon != -1 ? ("[<col=FF0000>Bronze Member</col>]") : "<col=FF0000>")
 						+ "<col=FF0000><img=" + icon + ">" + player.getName() + "<col=FF0000>: <col=FF0000>" + msg;
-			else if (player.getName().equalsIgnoreCase("salve"))
-				formattedMsg = (icon != -1 ? ("[<col=FF0000>Owner</col>]") : "<col=FF0000>") + "<col=FF0000><img="
-						+ icon + ">" + player.getName() + "<col=FF0000>: <col=FF0000>" + msg;
 			else {
 				player.sendMessage("You do not have access to this command.");
 				return;
@@ -1251,7 +1250,6 @@ public class CommandPacketHandler implements PacketHandler {
 		}
 		if (command.equals("saveall")) {
 			engineService.offerToSingle(new Runnable() {
-				@Override
 				public void run() {
 					for (Player player : World.getWorld().getPlayers()) {
 						if (player != null) {
@@ -1481,12 +1479,48 @@ public class CommandPacketHandler implements PacketHandler {
 			player.setPnpc(Integer.parseInt(args[1]));
 			player.getUpdateFlags().flag(UpdateFlags.UpdateFlag.APPEARANCE);
 		}
+		if (command.equals("here")) {
+			String loc = "498 " + player.getX() + " " + player.getY() + " " + player.getPlane()
+					+ " SOUTH true // Smoke Devil";
+			StringSelection stringSelection = new StringSelection(loc);
+			Clipboard board = Toolkit.getDefaultToolkit().getSystemClipboard();
+			board.setContents(stringSelection, null);
+		}
 		if (command.equals("coords")) {
 			player.getActionSender()
 					.sendMessage("You are at: " + player.getLocation() + " local [" + player.getLocation().getLocalX()
 							+ "," + player.getLocation().getLocalY() + "] region ["
 							+ player.getRegion().getCoordinates().getX() + ","
-							+ player.getRegion().getCoordinates().getY() + "], id: ["+player.getRegionId()+"].");
+							+ player.getRegion().getCoordinates().getY() + "].");
+		}
+		if (command.equals("veinat")) {
+			int x = Integer.parseInt(args[1]);
+			int y = Integer.parseInt(args[2]);
+			final Location loc = Location.create(x, y);
+			final Region region = World.getWorld().getRegionManager().getRegionByLocation(loc);
+			for (final GameObject obj : region.getGameObjects()) {
+				if (obj != null && obj.getLocation().equals(loc)) {
+					System.out.println("Object at [" + x + ", " + y + ", " + loc.getRegionX() + ", " + loc.getRegionY()
+							+ "] has id: " + obj.getId());
+				}
+			}
+		}
+		if (command.equals("swapvein")) {
+			int id = Integer.parseInt(args[1]);
+			int newId = Integer.parseInt(args[2]);
+			final Region region = World.getWorld().getRegionManager().getRegionByLocation(player.getLocation());
+			List<GameObject> toremove = new ArrayList<>();
+
+			for (final GameObject obj : region.getGameObjects()) {
+				if (obj != null && obj.getId() == id) {
+					toremove.add(obj);
+				}
+			}
+
+			for (final GameObject obj : toremove) {
+				World.getWorld().replaceObject(obj,
+						new GameObject(obj.getCentreLocation(), newId, obj.getType(), obj.getDirection(), false), 500);
+			}
 		}
 		if (command.equals("shutdown")) {
 			World.SYSTEM_UPDATE = true;
@@ -1512,6 +1546,13 @@ public class CommandPacketHandler implements PacketHandler {
 						return;
 					}
 					player.getActionSender().sendConfig(173, i++);
+					/*
+					 * this.stop(); System.out.println("Value 1: " + Integer.parseInt(args[1]) +
+					 * ", " + Integer.parseInt(args[2])); for (int i = Integer.parseInt(args[1]); i
+					 * < Integer.parseInt(args[2]); i++) { for (int i2 = 0; i2 <
+					 * Integer.parseInt(args[3]); i2++) { player.getActionSender().sendConfig(i,
+					 * i2); } }
+					 */
 				}
 			});
 		}

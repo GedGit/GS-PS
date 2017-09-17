@@ -201,7 +201,6 @@ public class SolusDellagar extends AbstractCombatAction {
 				switch(preStyle) {
 				case RAPID:
 					World.getWorld().submit(new Tickable(1) {
-						@Override
 						public void execute() {
 							if(npc.completedRapidAttacks >= 4) {
 								this.stop();
@@ -228,7 +227,6 @@ public class SolusDellagar extends AbstractCombatAction {
 					World.getWorld().register(mage2);
 					npc.spawnedAssistants += 2;
 					World.getWorld().submit(new Tickable(2) {
-						@Override
 						public void execute() {
 							mage1.setAggressiveDistance(10);
 							mage2.setAggressiveDistance(10);
@@ -238,7 +236,6 @@ public class SolusDellagar extends AbstractCombatAction {
 							//DialogueManager.openDialogue((Player) victim, 746);	
 							this.stop();
 							World.getWorld().submit(new Tickable(50) {
-								@Override
 								public void execute() {
 									if(mage1 == null || mage2 == null) {
 										this.stop();
@@ -249,7 +246,6 @@ public class SolusDellagar extends AbstractCombatAction {
 									mage1.playAnimation(Animation.create(6994));
 									mage2.playAnimation(Animation.create(6994));
 									World.getWorld().submit(new Tickable(4) {
-										@Override
 										public void execute() {
 											if(mage1 == null || mage2 == null) {
 												this.stop();
@@ -274,14 +270,12 @@ public class SolusDellagar extends AbstractCombatAction {
 					victim.playGraphics(Graphic.create(hit > 0 ? 369 : 85));
 					victim.getCombatState().setCanMove(false);
 					World.getWorld().submit(new Tickable(20) {
-						@Override
 						public void execute() {
 							victim.getCombatState().setCanMove(true);
 							this.stop();
 						}
 					});
 					World.getWorld().submit(new Tickable(1) {
-						@Override
 						public void execute() {
 							if(Misc.getDistance(attacker.getLocation(), victim.getLocation()) > 1) {
 								this.stop();

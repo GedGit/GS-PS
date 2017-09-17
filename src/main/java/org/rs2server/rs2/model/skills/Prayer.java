@@ -43,8 +43,7 @@ public class Prayer {
         player.getActionSender().sendMessage("You dig a hole in the ground...");
         player.getInventory().remove(bone, slot);
         World.getWorld().submit(new Event(1250) {
-            @Override
-			public void execute() {
+            public void execute() {
                 player.getSkills().addExperience(Skills.PRAYER, type.getXp());
                 player.getActionSender().sendMessage("...you bury the bones.");
                 player.setAttribute("can_bury", true);

@@ -44,7 +44,6 @@ public final class ZulrahAttack {
 				//Arrays.stream(locations).forEach(l -> zulrah.playProjectile(Projectile.create(zulrah.getCentreLocation(), l.transform(1, 1, zulrah.getZ()), 1045, 30, 50, 100, 60, 25, 0, 10, 48)));
                 Arrays.stream(locations).forEach(l -> challenger.getActionSender().sendProjectile(zulrah.getCentreLocation(), l.transform(1, 1, zulrah.getPlane()), 1045, 30, 50, 100, 60, 25, 10, 48, 0));
 				World.getWorld().submit(new Tickable(3) {
-					@Override
 					public void execute() {
 						Arrays.stream(locations).map(l -> {
 							GameObject venomCloud = new GameObject(l.transform(0, 0, zulrah.getPlane()), ZulrahBehavior.VENOM_CLOUD, 10, 0, true);
@@ -78,7 +77,6 @@ public final class ZulrahAttack {
 				//zulrah.playProjectile(Projectile.create(zulrah.getCentreLocation(), challenger.getLocation(), 1044, 30, 50, 100, 60, 25, challenger.getProjectileLockonIndex(), 10, 48));
                 challenger.getActionSender().sendProjectile(zulrah.getCentreLocation(), challenger.getLocation(), 1044, 30, 50, 100, 60, 25, 10, 48, challenger.getProjectileLockonIndex());
                 World.getWorld().submit(new Tickable(getHitDelay(zulrah, challenger)) {
-					@Override
 					public void execute() {
                         int dmg = challenger.getCombatState().getPrayer(Prayers.PROTECT_FROM_MISSILES) ? 0 : Misc.random(41);
                         Hit damage = new Hit(dmg);
@@ -94,7 +92,6 @@ public final class ZulrahAttack {
 				//zulrah.playProjectile(Projectile.create(zulrah.getCentreLocation(), challenger.getLocation(), 1046, 30, 50, 100, 60, 25, challenger.getProjectileLockonIndex(), 10, 48));
                 challenger.getActionSender().sendProjectile(zulrah.getCentreLocation(), challenger.getLocation(), 1046, 30, 50, 100, 60, 25, 10, 48, challenger.getProjectileLockonIndex());
                 World.getWorld().submit(new Tickable(getHitDelay(zulrah, challenger)) {
-					@Override
 					public void execute() {
 
                         int dmg = challenger.getCombatState().getPrayer(Prayers.PROTECT_FROM_MAGIC) ? 0 : Misc.random(41);
@@ -113,7 +110,6 @@ public final class ZulrahAttack {
 				//zulrah.playProjectile(Projectile.create(zulrah.getCentreLocation(), spawn, 1047, 30, 50, 100, 60, 25, 0, 10, 48));
                 challenger.getActionSender().sendProjectile(zulrah.getCentreLocation(), spawn, 1047, 30, 50, 100, 60, 25, 10, 48, 0);
                 World.getWorld().submit(new Tickable(3) {
-					@Override
 					public void execute() {
 						stop();
 						createMinion(zulrah, challenger, spawn);

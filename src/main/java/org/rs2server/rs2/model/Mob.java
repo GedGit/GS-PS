@@ -500,8 +500,18 @@ public abstract class Mob extends Entity {
 			if (this.getInteractionMode() == InteractionMode.TALK
 					&& this.getInteractingEntity().getInteractionMode() == InteractionMode.TALK
 					&& this.getInteractingEntity().getInteractingEntity() == this) {
-				this.getInteractingEntity().setInteractingEntity(null, null);
+				this.getInteractingEntity().setInteractingEntity(null, null); // endGame
+																				// an
+																				// infinite
+																				// for
+																				// loop
+																				// of
+																				// each
+																				// other
+																				// cancelling
 				this.getInteractingEntity().resetInteractingEntity();
+				// this will be used for an NPC, as NPC's do not walk whilst in
+				// dialogue with someone.
 			}
 		}
 		this.interactionMode = null;
@@ -797,7 +807,6 @@ public abstract class Mob extends Entity {
 	 * @param index
 	 *            The index.
 	 */
-	@Override
 	public void setIndex(int index) {
 		this.index = index;
 	}
@@ -807,7 +816,6 @@ public abstract class Mob extends Entity {
 	 *
 	 * @return The index.
 	 */
-	@Override
 	public int getIndex() {
 		return index;
 	}
@@ -1421,14 +1429,12 @@ public abstract class Mob extends Entity {
 				}
 			}
 			World.getWorld().submit(new Tickable(1) {
-				@Override
 				public void execute() {
 					playAnimation(getDeathAnimation());
 					this.stop();
 				}
 			});
 			World.getWorld().submit(new Tickable(4) {
-				@Override
 				public void execute() {
 					playAnimation(Animation.create(-1));
 					getCombatState().setCanMove(true);
@@ -1848,7 +1854,6 @@ public abstract class Mob extends Entity {
 	/**
 	 * This method IS used, don't remove it lmao Processes a mob every tick
 	 */
-	@Override
 	public void processTicks() {
 		if (ticks.isEmpty())
 			return;

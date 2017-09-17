@@ -59,7 +59,6 @@ public class FletchingAction extends ProductionAction {
 				new Item[] { new Item(72), new Item(70) }),
 
 		BRUMA_ROOT(new Item(20695), new Item[] { new Item(20696) });
-		
 		private Item itemUsed;
 		private Item[] possibleCreations;
 
@@ -147,7 +146,7 @@ public class FletchingAction extends ProductionAction {
 		YEW_STOCK(69, 50, CUT_ANIM, new Item[] { new Item(1515) }, new Item[] { new Item(9452) },
 				FletchingType.CUTTING),
 
-		BRUMA_ROOT(1, 5, CUT_ANIM, new Item[] { new Item(20695) }, new Item[] { new Item(20696) },
+		BRUMA_ROOT(1, 30, CUT_ANIM, new Item[] { new Item(20695) }, new Item[] { new Item(20696) },
 				FletchingType.CUTTING_BRUMA),
 
 		/*
@@ -594,8 +593,9 @@ public class FletchingAction extends ProductionAction {
 				}
 			}
 			if (item.getType() == FletchingType.CUTTING_BRUMA) {
-				if (hasKnife(used, usedWith))
+				if (hasKnife(used, usedWith)) {
 					return item;
+				}
 			} else if ((materials[0].getId() == used && item.getMaterials()[1].getId() == usedWith)
 					|| (materials[0].getId() == usedWith && item.getMaterials()[1].getId() == used)) {
 				return item;

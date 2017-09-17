@@ -42,7 +42,6 @@ public final class ClojureServiceImpl implements ClojureService {
 		register("commands.clj", new ClojureScript("commands.clj"));
 	}
 
-	@Override
 	@Subscribe
 	public final void invokeScriptsOnStartup(@Nonnull GameWorldLoadedEvent event) {
 		LOGGER.info("Invoking scripts in order to increase execution speed.");

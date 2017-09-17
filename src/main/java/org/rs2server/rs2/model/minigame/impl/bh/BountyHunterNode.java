@@ -76,7 +76,6 @@ public class BountyHunterNode {
 			initiatedTime = 0;
 		}
 		World.getWorld().submit(new Tickable(1) {
-			@Override
 			public void execute() {
 				stop();
 				player.getActionSender().sendWalkableInterface(653);

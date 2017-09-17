@@ -103,7 +103,7 @@ public class HiscoresManager implements Runnable {
 			stmt2.setInt(3, getGameMode()); // game mode number
 			stmt2.setInt(4, player.getSkills().getTotalLevel());
 
-			stmt2.setLong(5, player.getSkills().getTotalExperience());
+			stmt2.setLong(5, (long) player.getSkills().getTotalExperience());
 
 			// We don't have summoning as an actually train-able skill,
 			// stopping at construction

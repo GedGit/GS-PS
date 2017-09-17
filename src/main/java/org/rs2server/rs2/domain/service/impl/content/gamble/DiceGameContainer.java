@@ -44,7 +44,6 @@ class DiceGameContainer extends Container implements Iterable<Item>{
 		return accepted;
 	}
 
-	@Override
 	public Player getPlayer() {
 		// TODO Auto-generated method stub
 		return player;

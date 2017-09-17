@@ -43,8 +43,7 @@ public abstract class CerberusGhost extends NPC {
         return new DelayedGhostAttack(projectile, delay);
     }
 
-    @Override
-	public abstract int getProjectileId();
+    public abstract int getProjectileId();
     public abstract int getProjectileStartHeight();
     public abstract int getProjectileEndHeight();
 
