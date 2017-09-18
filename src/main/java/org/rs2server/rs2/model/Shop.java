@@ -15,8 +15,11 @@ import org.rs2server.rs2.util.Misc;
 import org.rs2server.util.ShopUtils;
 import org.rs2server.util.XMLController;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.util.*;
 import java.util.logging.Logger;
@@ -335,7 +338,7 @@ public class Shop {
 	/**
 	 * Int array containing recipe for disaster glove ID's.
 	 */
-	public static final int[] RFD_GLOVES = { 7458, 7459, 7460, 7461, 7462 }; 
+	public static final int[] RFD_GLOVES = { 7458, 7459, 7460, 7461, 7462 };
 
 	/**
 	 * Opens the shop for the specified player.
@@ -475,6 +478,8 @@ public class Shop {
 				shop.getMainStock().add(new Item(item.getId(), amount));
 				player.getInventory().add(reward);
 				World.getWorld().submit(new ShopItemRemoveTick(item, shop));
+
+				handleLog(player, item, amount, false);
 			}
 		} else
 			player.getActionSender().sendMessage("This shop will not buy that item.");
@@ -560,6 +565,8 @@ public class Shop {
 						shop.getMainStock().add(new Item(reward.getId(), 0));
 				}
 				World.getWorld().submit(new ShopItemRestoreTick(item, shop, slot - 1));
+
+				handleLog(player, item, amount, true);
 			}
 			return;
 		}
@@ -598,6 +605,7 @@ public class Shop {
 							shop.getMainStock().add(new Item(reward.getId(), 0));
 					}
 					World.getWorld().submit(new ShopItemRestoreTick(item, shop, slot - 1));
+					handleLog(player, item, amount, true);
 				}
 			}
 			return;
@@ -666,6 +674,7 @@ public class Shop {
 					shop.getMainStock().add(new Item(reward.getId(), 0));
 			}
 			World.getWorld().submit(new ShopItemRestoreTick(item, shop, slot - 1));
+			handleLog(player, item, amount, true);
 		}
 	}
 
@@ -863,6 +872,28 @@ public class Shop {
 			Shop.init();
 		} catch (IOException e) {
 			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Handles logging of shop items bought and sold.
+	 * @param player
+	 * @param item
+	 * @param amount
+	 * @param buy
+	 */
+	private static void handleLog(Player player, Item item, int amount, boolean buy) {
+		try {
+			BufferedWriter bf = new BufferedWriter(new FileWriter(
+					"data/logs/shops/shop-" + player.getInterfaceState().getOpenShop() + ".txt", true));
+			bf.write("[Player: " + player.getName() + ", on "
+					+ DateFormat.getDateTimeInstance().format(new Date()) + "]: "+(buy ? "BOUGHT" : "SOLD")+" :  " + amount + " x "
+					+ item.getId() + ".");
+			bf.newLine();
+			bf.flush();
+			bf.close();
+		} catch (IOException ignored) {
+			System.out.println("Failed writing SHOP logs..");
 		}
 	}
 }

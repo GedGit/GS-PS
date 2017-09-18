@@ -5299,6 +5299,10 @@
 10553:These gloves seem unbelievably light!
 10554:These gloves seem unbelievably light!
 10555:A skirt made from the skin of a Penance Ranger.
+10556:Your icon.
+10557:Your icon.
+10558:Your icon.
+10559:Your icon.
 10561:Spiky!
 10562:A book about the Penance Queen.
 10564:Provides excellent protection.
@@ -6811,6 +6815,7 @@
 19550:A deep sense of suffering burns within this powerful ring.
 19553:A deep sense of torture burns within this powerful amulet.
 20718:It's still warm to the touch.
+20851:The cuddly Spawn of the Guardian in the Deep.
 13116:Crushes dropped bones for Prayer experience; charge with coins.
 20834:You too can look like Santa.
 21009:A very powerful sword.

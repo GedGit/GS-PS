@@ -7,3 +7,5 @@
  - skotizo boss and kourend catacombs dropping the pieces to get to the boss
  - add darklight as vote point store item for like 20 points, make it upgradable to arclight
  - finish off kalphite queen, dump all osrs npc spawns from the kalphite lair
+ - wrong drops and definitions for suqahs
+ - ignatius vulcan error dialogue (talkingNpc thing)

@@ -1,0 +1,9 @@
+[Player: Alpha, logged IN, on 18-sep-2017 2:31:10]: logged in, from: [ 127.0.0.1 ] [ System Serial Number20170704064114.000000+120 ].
+[Player: Alpha, logged OUT, on 18-sep-2017 2:31:19]: logged in, from: [ IP NOT FOUND ] [ System Serial Number20170704064114.000000+120 ].
+[Player: Alpha, logged OUT, on 18-sep-2017 2:31:19]: logged in, from: [ IP NOT FOUND ] [ System Serial Number20170704064114.000000+120 ].
+[Player: Alpha, logged OUT, on 18-sep-2017 2:31:19]: logged in, from: [ IP NOT FOUND ] [ System Serial Number20170704064114.000000+120 ].
+[Player: Alpha, logged IN, on 18-sep-2017 2:31:30]: logged in, from: [ 127.0.0.1 ] [ System Serial Number20170704064114.000000+120 ].
+[Player: Alpha, logged IN, on 18-sep-2017 17:18:00]: logged in, from: [ 127.0.0.1 ] [ System Serial Number20170704064114.000000+120 ].
+[Player: Alpha, logged OUT, on 18-sep-2017 17:19:57]: logged in, from: [ IP NOT FOUND ] [ System Serial Number20170704064114.000000+120 ].
+[Player: Alpha, logged IN, on 18-sep-2017 17:57:23]: logged in, from: [ 127.0.0.1 ] [ System Serial Number20170704064114.000000+120 ].
+[Player: Alpha, logged IN, on 18-sep-2017 18:07:28]: logged in, from: [ 127.0.0.1 ] [ System Serial Number20170704064114.000000+120 ].
