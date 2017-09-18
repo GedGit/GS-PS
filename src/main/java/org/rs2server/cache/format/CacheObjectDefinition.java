@@ -1,12 +1,11 @@
 package org.rs2server.cache.format;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.rs2server.cache.CacheManager;
 import org.rs2server.io.InputStream;
 import org.rs2server.rs2.model.GameObjectDefinition;
-
-import java.io.BufferedWriter;
-import java.util.HashMap;
-import java.util.Map;
 
 /* Class23_Sub13_Sub7 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
@@ -83,9 +82,6 @@ public class CacheObjectDefinition {
 	public int clipType;
 	public byte[] description;
 
-	@SuppressWarnings("unused")
-	private static BufferedWriter writer;
-
 	private final void readValues(InputStream class23_sub5, int i, boolean bool) {
 
 		if (i == 1) {
@@ -104,6 +100,13 @@ public class CacheObjectDefinition {
 					}
 				}
 			}
+			/**
+			 * int len = stream.readUnsignedByte(); if (len > 0) { if (anIntArray773 == null
+			 * || lowMem) { anIntArray776 = new int[len]; anIntArray773 = new int[len]; for
+			 * (int k1 = 0; k1 < len; k1++) { anIntArray773[k1] = stream.readUnsignedWord();
+			 * anIntArray776[k1] = stream.readUnsignedByte(); } } else {
+			 * stream.currentOffset += len * 3; } }
+			 */
 		} else if (i == 2) {
 			objectName = class23_sub5.readString();
 		} else if (i == 3) {
@@ -243,7 +246,11 @@ public class CacheObjectDefinition {
 																					^ 0xffffffff) == -65536) {
 																				playerSetting = -1;
 																			}
-																			
+																			/*
+																			 * if (i == 92) { i_10_ =
+																			 * class23_sub5.readShortLE((byte) -116); if
+																			 * (i_10_ == 65535) { i_10_ = -1; } }
+																			 */
 																			int i_11_ = class23_sub5.readByte() & 0xff;
 																			anIntArray3746 = new int[i_11_ + 2];
 																			for (int i_12_ = 0; (i_12_
@@ -405,6 +412,9 @@ public class CacheObjectDefinition {
 
 		byte[] data = null;
 		try {
+			// data = World.cache.read(2, 6, i).array();
+
+			// data = World.store.getData(2, 6, i);
 			data = CacheManager.getData(2, 6, i);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -420,6 +430,7 @@ public class CacheObjectDefinition {
 	}
 
 	public String getName() {
+		// TODO Auto-generated method stub
 		return this.objectName;
 	}
 
@@ -440,9 +451,8 @@ public class CacheObjectDefinition {
 	}
 
 	public int getBiggestSize() {
-		if (sizeY > sizeX) {
+		if (sizeY > sizeX)
 			return sizeY;
-		}
 		return sizeX;
 	}
 

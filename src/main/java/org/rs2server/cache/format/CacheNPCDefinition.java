@@ -1,12 +1,12 @@
 package org.rs2server.cache.format;
 
-import org.rs2server.cache.Cache;
-import org.rs2server.cache.CacheManager;
-import org.rs2server.util.BufferUtils;
-
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
+
+import org.rs2server.cache.Cache;
+import org.rs2server.cache.CacheManager;
+import org.rs2server.util.BufferUtils;
 
 public class CacheNPCDefinition {
 	short[] recolorToFind;
@@ -44,26 +44,27 @@ public class CacheNPCDefinition {
 	public boolean aBool2190 = false;
 	public int id;
 	static byte aByte2194;
+	private int anInt2187 = -1;
+	private int anInt2174 = -1;
 
 	public static CacheNPCDefinition[] npcs;
-//	public static final Map<Integer, NpcDefinition> CACHE = new HashMap<Integer, NpcDefinition>();
+	// public static final Map<Integer, NpcDefinition> CACHE = new HashMap<Integer,
+	// NpcDefinition>();
 
 	public static final CacheNPCDefinition get(int i) {
-		
-		if (npcs == null) {
+
+		if (npcs == null)
 			npcs = new CacheNPCDefinition[Cache.getAmountOfNpcs()];
-		}
-		
+
 		CacheNPCDefinition definition = npcs[i];
 
-		if (definition != null) {
+		if (definition != null)
 			return definition;
-		}
 
 		definition = new CacheNPCDefinition();
 
 		definition.id = i;
-		
+
 		try {
 
 			byte[] npc = CacheManager.getData(2, 9, i);
@@ -72,7 +73,7 @@ public class CacheNPCDefinition {
 			}
 			ByteBuffer data = ByteBuffer.wrap(npc);
 			if (data != null) {
-				while(true) {
+				while (true) {
 					try {
 						int op = data.get() & 0xFF;
 
@@ -94,136 +95,166 @@ public class CacheNPCDefinition {
 		return definition;
 	}
 
-
-
 	public static void writeDWordBigEndian(DataOutputStream dat, int i) throws IOException {
 		dat.write((byte) (i >> 16));
 		dat.write((byte) (i >> 8));
 		dat.write((byte) (i >> 8));
 	}
-	
+
 	private void decode(ByteBuffer buffer, int opcode) {
-		if(1 == opcode) {
+		if (1 == opcode) {
 			int length = buffer.get() & 0xFF;
 			this.models = new int[length];
 
-			for(int index = 0; index < length; ++index) {
+			for (int index = 0; index < length; ++index) {
 				this.models[index] = buffer.getShort() & 0xFFFF;
 			}
 
-		} else if(2 == opcode) {
+		} else if (2 == opcode) {
 			this.name = BufferUtils.getString(buffer);
-		} else if(12 == opcode) {
+		} else if (12 == opcode) {
 			this.occupiedTiles = buffer.get() & 0xFF;
-		} else if(opcode == 13) {
+		} else if (opcode == 13) {
 			this.stanceAnimation = buffer.getShort() & 0xFFFF;
-		} else if(opcode == 14) {
+		} else if (opcode == 14) {
 			this.walkAnimation = buffer.getShort() & 0xFFFF;
-		} else if(15 == opcode) {
+		} else if (15 == opcode) {
 			this.standTurnAnimation = buffer.getShort() & 0xFFFF;
-		} else if(opcode == 16) {
+		} else if (opcode == 16) {
 			this.runAnimation = buffer.getShort() & 0xFFFF;
-		} else if(17 == opcode) {
+		} else if (17 == opcode) {
 			this.walkAnimation = buffer.getShort() & 0xFFFF;
 			this.rotate180Animation = buffer.getShort() & 0xFFFF;
 			this.rotate90RightAnimation = buffer.getShort() & 0xFFFF;
 			this.rotate90LeftAnimation = buffer.getShort() & 0xFFFF;
-		} else if(opcode >= 30 && opcode < 35) {
+		} else if (opcode >= 30 && opcode < 35) {
 			this.options[opcode - 30] = BufferUtils.getString(buffer);
-			if(this.options[opcode - 30].equalsIgnoreCase("hidden")) {
+			if (this.options[opcode - 30].equalsIgnoreCase("hidden")) {
 				this.options[opcode - 30] = null;
 			}
-		} else if(opcode == 40) {
+		} else if (opcode == 40) {
 			int length = buffer.get() & 0xFF;
 			this.recolorToFind = new short[length];
 			this.recolorToReplace = new short[length];
 
-			for(int index = 0; index < length; ++index) {
+			for (int index = 0; index < length; ++index) {
 				this.recolorToFind[index] = (short) (buffer.getShort() & 0xFFFF);
 				this.recolorToReplace[index] = (short) (buffer.getShort() & 0xFFFF);
 			}
 
-		} else if(opcode == 41) {
+		} else if (opcode == 41) {
 			int length = buffer.get() & 0xFF;
 			this.retextureToFind = new short[length];
 			this.retextureToReplace = new short[length];
 
-			for(int index = 0; index < length; ++index) {
+			for (int index = 0; index < length; ++index) {
 				this.retextureToFind[index] = (short) (buffer.getShort() & 0xFFFF);
 				this.retextureToReplace[index] = (short) (buffer.getShort() & 0xFFFF);
 			}
 
-		} else if(60 != opcode) {
-			if(opcode == 93) {
+		} else if (60 != opcode) {
+			if (opcode == 93) {
 				this.renderOnMinimap = false;
-			} else if(95 == opcode) {
+			} else if (95 == opcode) {
 				this.combatLevel = buffer.getShort() & 0xFFFF;
-			} else if(97 == opcode) {
+			} else if (97 == opcode) {
 				this.resizeX = buffer.getShort() & 0xFFFF;
-			} else if(98 == opcode) {
+			} else if (98 == opcode) {
 				this.resizeY = buffer.getShort() & 0xFFFF;
-			} else if(opcode == 99) {
+			} else if (opcode == 99) {
 				this.hasRenderPriority = true;
-			} else if(100 == opcode) {
+			} else if (100 == opcode) {
 				this.ambient = buffer.get();
-			} else if(101 == opcode) {
+			} else if (101 == opcode) {
 				this.contrast = buffer.get();
-			} else if(opcode == 102) {
+			} else if (opcode == 102) {
 				this.headIcon = buffer.getShort() & 0xFFFF;
-			} else if(103 == opcode) {
+			} else if (103 == opcode) {
 				this.anInt2156 = buffer.getShort() & 0xFFFF;
-			} else if(opcode == 106) {
+			} else if (opcode == 106) {
 				this.playerVariable = buffer.getShort() & 0xFFFF;
-				if(65535 == this.playerVariable) {
+				if (65535 == this.playerVariable) {
 					this.playerVariable = -1;
 				}
 
 				this.playerSetting = buffer.getShort() & 0xFFFF;
-				if(65535 == this.playerSetting) {
+				if (65535 == this.playerSetting) {
 					this.playerSetting = -1;
 				}
 
 				int length = buffer.get() & 0xFF;
 				this.anIntArray2185 = new int[length + 1];
 
-				for(int index = 0; index <= length; ++index) {
+				for (int index = 0; index <= length; ++index) {
 					this.anIntArray2185[index] = buffer.getShort() & 0xFFFF;
-					if(this.anIntArray2185[index] == 65535) {
+					if (this.anIntArray2185[index] == 65535) {
 						this.anIntArray2185[index] = -1;
 					}
 				}
 
-			} else if(107 == opcode) {
+			} else if (107 == opcode) {
 				this.isClickable = false;
-			} else if(opcode == 109) {
+			} else if (opcode == 109) {
 				this.aBool2170 = false;
-			} else if(opcode == 111) {
+			} else if (opcode == 111) {
 				this.aBool2190 = true;
-			} else if(opcode == 112) {
+			} else if (opcode == 112) {
 				this.anInt2184 = buffer.get() & 0xFF;
-			} else {
-				System.out.println("Unrecognized opcode: "+opcode);
-			}
+			} else if (opcode == 118) {
+				anInt2174 = buffer.getShort() & 0xFFFF;
+				if (0xFFFF == anInt2174) {
+					anInt2174 = -1;
+				}
+
+				anInt2187 = buffer.getShort() & 0xFFFF;
+				if (0xFFFF == anInt2187) {
+					anInt2187 = -1;
+				}
+
+				int var = buffer.getShort() & 0xFFFF;
+				if (var == 0xFFFF) {
+					var = -1;
+				}
+
+				int length = buffer.get() & 0xFF;
+				anIntArray2185 = new int[length + 2];
+
+				for (int idx = 0; idx <= length; ++idx) {
+					anIntArray2185[idx] = buffer.getShort() & 0xFFFF;
+					if (anIntArray2185[idx] == 0xFFFF) {
+						anIntArray2185[idx] = -1;
+					}
+				}
+
+				anIntArray2185[length + 1] = var;
+			} else if (opcode == 249) {
+				int len = buffer.get() & 0xFF;
+				for (int i = 0; i < len; i++) {
+					boolean isString = buffer.get() == 1;
+					@SuppressWarnings("unused")
+					int key = BufferUtils.getMediumInt(buffer);
+					@SuppressWarnings("unused")
+					Object value = isString ? BufferUtils.getJagexString(buffer) : buffer.getInt();
+				}
+			} else
+				System.out.println("Unrecognized opcode: " + opcode);
 		} else {
 			int length = buffer.get() & 0xFF;
 			this.models_2 = new int[length];
 
-			for(int index = 0; index < length; ++index) {
+			for (int index = 0; index < length; ++index)
 				this.models_2[index] = buffer.getShort() & 0xFFFF;
-			}
 		}
 	}
-	
+
 	public String[] getOptions() {
 		return options;
 	}
 
-
-
 	public String getName() {
 		return name;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
@@ -232,13 +263,9 @@ public class CacheNPCDefinition {
 		return combatLevel;
 	}
 
-
-
 	public int getSize() {
 		return occupiedTiles;
 	}
-
-
 
 	public int getOccupiedTiles() {
 		return occupiedTiles;

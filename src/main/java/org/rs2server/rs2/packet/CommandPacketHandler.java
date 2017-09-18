@@ -35,6 +35,9 @@ import org.rs2server.rs2.tickable.Tickable;
 import org.rs2server.rs2.tickable.impl.SystemUpdateTick;
 import org.rs2server.rs2.util.*;
 import org.rs2server.rs2.varp.PlayerVariable;
+import org.rs2server.tools.ItemListDumper;
+import org.rs2server.tools.NPCListDumper;
+import org.rs2server.tools.ObjectListDumper;
 import org.rs2server.tools.ReadCharacterFiles;
 import org.rs2server.util.XMLController;
 
@@ -1205,6 +1208,11 @@ public class CommandPacketHandler implements PacketHandler {
 		}
 		if (command.equals("addvotes")) {
 			World.getWorld().increaseVotes(Integer.parseInt(args[1]));
+		}
+		if (command.equals("dumplists")) {
+			NPCListDumper.dump(0, Cache.getAmountOfNpcs() - 1);
+			ObjectListDumper.dump(0, Cache.getAmountOfObjects() - 1);
+			ItemListDumper.dump(0, Cache.getAmountOfItems() - 1);
 		}
 		if (command.equals("dueltest")) {
 			player.getActionSender().removeAllInterfaces();
