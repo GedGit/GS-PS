@@ -184,6 +184,8 @@ public final class ShopUtils {
 	 */
 	public static int getVotePrice(Item item) {
 		switch (item.getId()) {
+		case 6746: //DarkLight
+			return 200;
 		case 989: // crystal key
 		case 6199: // mistery box
 		case 11738: // herb box
